@@ -1,0 +1,35 @@
+#home-page
+{
+  background-color: #FF6E80;
+  width: 100vw; min-height: 100vh;
+  padding: 30px;
+
+  #main
+  {
+    #container
+    {
+      width: 100%;
+      z-index: 1;
+      margin: auto;
+
+      img
+      {
+        margin-right: 50px;
+        margin-top: 50px;
+        user-select: none;
+        z-index: 1;
+      }
+
+      @media(max-width: 1599px)
+      {
+        img
+        {
+          position: relative;
+          transform: translateY(0);
+          left: 0px; right: 0px; top: 50px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

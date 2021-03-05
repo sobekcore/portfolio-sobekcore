@@ -1,0 +1,86 @@
+#home-page
+{
+  #title
+  {
+    margin: 50px;
+
+    h1
+    {
+      font: bold 90px "Ubuntu", sans-serif;
+      font-size: clamp(1rem, 7.4vw, 5.6rem);
+      text-shadow: 5px 5px #008672;
+      color: #00E0BE;
+      margin: 0;
+      text-align: center;
+    }
+
+    p
+    {
+      font: bold 26px "Ubuntu", sans-serif;
+      font-size: clamp(1rem, 5vw, 1.65rem);
+      color: #263238;
+      line-height: 1.4;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    #buttons
+    {
+      text-align: center;
+      margin-bottom: -50px;
+
+      button
+      {
+        font: 22px "Ubuntu", sans-serif;
+        color: #263238;
+        padding: 20px;
+        margin: 0px 15px 30px 15px;
+        border-radius: 15px;
+        outline: none;
+        background-color: #00E0BE;
+        transition: .3s all;
+        border: 1px solid #00E0BE;
+        border-top: 10px solid #7FEFDE;
+        border-left: 10px solid #00B398;
+      }
+
+      button:last-child
+      { margin-bottom: 60px; }
+
+      button:hover
+      {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      @media(max-width: 599px)
+      {
+        button
+        {
+          font: 18px "Ubuntu", sans-serif;
+          padding: 10px;
+        }
+      }
+    }
+
+    #home-path { color: #5B41BA; text-shadow: 4px 4px #2C2252; }
+    .violet { font-weight: 600; color: #5B41BA; }
+  }
+
+  @media(max-width: 1200px)
+  {
+    #title
+    { margin: 20px;}
+  }
+
+  @media(max-width: 799px)
+  {
+    #title
+    {
+      margin: 12px;
+
+      h1 { text-shadow: 3px 3px #008672; }
+      #home-path { text-shadow: 2px 2px #2C2252; }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+// Lasers Styling
+
+$shooting-time: 12000ms;
+$screen-offset-w: calc(100vw - 60px);
+$screen-offset-h: calc(100vh - 60px);
+
+#main
+{
+  position: relative;
+  background: linear-gradient(
+    #FFA69E 0%,
+    #E29578 100%
+  );
+  width: $screen-offset-w;
+  min-height: $screen-offset-h;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+
+  .laser
+  {
+    position: absolute;
+    left: 0; top: 0;
+    height: 2px;
+    background: linear-gradient(
+      -45deg,
+      #FF6E80,
+      rgba(0, 0, 255, 0)
+    );
+    filter: drop-shadow(0 0 5px #FF6E80);
+    animation:
+      tail $shooting-time ease-in-out infinite,
+      shooting $shooting-time ease-in-out infinite;
+
+    &::before
+    {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      height: 2px;
+      transform: translateX(50%);
+      border-radius: 100%;
+      background: linear-gradient(
+        -45deg, rgba(0, 0, 255, 0),
+        #FF6E80,
+        rgba(0, 0, 255, 0)
+      );
+    }
+
+    &::after
+    {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      height: 2px;
+      transform: translateX(50%);
+      background: linear-gradient(
+        -45deg,
+        rgba(0, 0, 255, 0),
+        #FF6E80,
+        rgba(0, 0, 255, 0)
+      );
+    }
+
+    @for $i from 1 through 33
+    {
+      &:nth-child(#{$i})
+      {
+        $delay: random(9999) + 0ms; left: 0;
+        top: calc(98% - #{random(96) + 0%});
+        animation-delay: $delay;
+
+        &::before, &::after
+        { animation-delay: $delay; }
+      }
+    }
+  }
+
+  // Keyframes
+  @keyframes tail
+  {
+    0% { width: 0; }
+    30% { width: 100px; }
+    100% { width: 0; }
+  }
+
+  @keyframes shooting
+  {
+    0% { transform: translateX(0); }
+    100% { transform: translateX($screen-offset-w); }
+  }
+}

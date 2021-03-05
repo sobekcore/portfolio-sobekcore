@@ -1,0 +1,522 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  background: #FF6E80;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #FF6E80;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #00E0BE;
+  border-radius: 8px;
+}
+
+#loading {
+  position: fixed;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: 1fr 1fr;
+  animation: disableLoading 3.4s;
+  animation-fill-mode: forwards;
+  z-index: 99;
+}
+#loading #top-loader {
+  background-color: #FF6E80;
+  animation: loadInTop 2.7s;
+  animation-fill-mode: forwards;
+  animation-delay: 600ms;
+}
+#loading #bottom-loader {
+  background-color: #FF6E80;
+  animation: loadInBottom 2.7s;
+  animation-fill-mode: forwards;
+  animation-delay: 600ms;
+}
+@keyframes loadInTop {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+    display: none;
+  }
+}
+@keyframes loadInBottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+    display: none;
+  }
+}
+@keyframes disableLoading {
+  0% {
+    visibility: initial;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+#home-page {
+  background-color: #FF6E80;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 30px;
+}
+#home-page #main #container {
+  width: 100%;
+  z-index: 1;
+  margin: auto;
+}
+#home-page #main #container img {
+  margin-right: 50px;
+  margin-top: 50px;
+  user-select: none;
+  z-index: 1;
+}
+@media (max-width: 1599px) {
+  #home-page #main #container img {
+    position: relative;
+    transform: translateY(0);
+    left: 0px;
+    right: 0px;
+    top: 50px;
+    width: 100%;
+  }
+}
+
+#tech-page {
+  width: 100vw;
+  height: 100vh;
+  background: #F1B0B8;
+}
+#tech-page img {
+  width: 100vw;
+}
+#tech-page h1 {
+  font: bold 90px "Ubuntu", sans-serif;
+  font-size: clamp(1rem, 13vw, 5.6rem);
+  text-shadow: 5px 5px #008672;
+  color: #00E0BE;
+  padding-top: 40px;
+  margin: 0;
+  text-align: center;
+}
+@media (max-width: 799px) {
+  #tech-page h1 {
+    text-shadow: 3px 3px #008672;
+  }
+}
+
+#home-page #title {
+  margin: 50px;
+}
+#home-page #title h1 {
+  font: bold 90px "Ubuntu", sans-serif;
+  font-size: clamp(1rem, 7.4vw, 5.6rem);
+  text-shadow: 5px 5px #008672;
+  color: #00E0BE;
+  margin: 0;
+  text-align: center;
+}
+#home-page #title p {
+  font: bold 26px "Ubuntu", sans-serif;
+  font-size: clamp(1rem, 5vw, 1.65rem);
+  color: #263238;
+  line-height: 1.4;
+  margin: 40px 0;
+  text-align: center;
+}
+#home-page #title #buttons {
+  text-align: center;
+  margin-bottom: -50px;
+}
+#home-page #title #buttons button {
+  font: 22px "Ubuntu", sans-serif;
+  color: #263238;
+  padding: 20px;
+  margin: 0px 15px 30px 15px;
+  border-radius: 15px;
+  outline: none;
+  background-color: #00E0BE;
+  transition: 0.3s all;
+  border: 1px solid #00E0BE;
+  border-top: 10px solid #7FEFDE;
+  border-left: 10px solid #00B398;
+}
+#home-page #title #buttons button:last-child {
+  margin-bottom: 60px;
+}
+#home-page #title #buttons button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+@media (max-width: 599px) {
+  #home-page #title #buttons button {
+    font: 18px "Ubuntu", sans-serif;
+    padding: 10px;
+  }
+}
+#home-page #title #home-path {
+  color: #5B41BA;
+  text-shadow: 4px 4px #2C2252;
+}
+#home-page #title .violet {
+  font-weight: 600;
+  color: #5B41BA;
+}
+@media (max-width: 1200px) {
+  #home-page #title {
+    margin: 20px;
+  }
+}
+@media (max-width: 799px) {
+  #home-page #title {
+    margin: 12px;
+  }
+  #home-page #title h1 {
+    text-shadow: 3px 3px #008672;
+  }
+  #home-page #title #home-path {
+    text-shadow: 2px 2px #2C2252;
+  }
+}
+
+#main {
+  position: relative;
+  background: linear-gradient(#FFA69E 0%, #E29578 100%);
+  width: calc(100vw - 60px);
+  min-height: calc(100vh - 60px);
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+}
+#main .laser {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(-45deg, #FF6E80, rgba(0, 0, 255, 0));
+  filter: drop-shadow(0 0 5px #FF6E80);
+  animation: tail 12000ms ease-in-out infinite, shooting 12000ms ease-in-out infinite;
+}
+#main .laser::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  transform: translateX(50%);
+  border-radius: 100%;
+  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #FF6E80, rgba(0, 0, 255, 0));
+}
+#main .laser::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  transform: translateX(50%);
+  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #FF6E80, rgba(0, 0, 255, 0));
+}
+#main .laser:nth-child(1) {
+  left: 0;
+  top: calc(98% - 85%);
+  animation-delay: 7159ms;
+}
+#main .laser:nth-child(1)::before, #main .laser:nth-child(1)::after {
+  animation-delay: 7159ms;
+}
+#main .laser:nth-child(2) {
+  left: 0;
+  top: calc(98% - 31%);
+  animation-delay: 1446ms;
+}
+#main .laser:nth-child(2)::before, #main .laser:nth-child(2)::after {
+  animation-delay: 1446ms;
+}
+#main .laser:nth-child(3) {
+  left: 0;
+  top: calc(98% - 36%);
+  animation-delay: 7667ms;
+}
+#main .laser:nth-child(3)::before, #main .laser:nth-child(3)::after {
+  animation-delay: 7667ms;
+}
+#main .laser:nth-child(4) {
+  left: 0;
+  top: calc(98% - 28%);
+  animation-delay: 7061ms;
+}
+#main .laser:nth-child(4)::before, #main .laser:nth-child(4)::after {
+  animation-delay: 7061ms;
+}
+#main .laser:nth-child(5) {
+  left: 0;
+  top: calc(98% - 35%);
+  animation-delay: 1913ms;
+}
+#main .laser:nth-child(5)::before, #main .laser:nth-child(5)::after {
+  animation-delay: 1913ms;
+}
+#main .laser:nth-child(6) {
+  left: 0;
+  top: calc(98% - 43%);
+  animation-delay: 9395ms;
+}
+#main .laser:nth-child(6)::before, #main .laser:nth-child(6)::after {
+  animation-delay: 9395ms;
+}
+#main .laser:nth-child(7) {
+  left: 0;
+  top: calc(98% - 63%);
+  animation-delay: 6139ms;
+}
+#main .laser:nth-child(7)::before, #main .laser:nth-child(7)::after {
+  animation-delay: 6139ms;
+}
+#main .laser:nth-child(8) {
+  left: 0;
+  top: calc(98% - 76%);
+  animation-delay: 7815ms;
+}
+#main .laser:nth-child(8)::before, #main .laser:nth-child(8)::after {
+  animation-delay: 7815ms;
+}
+#main .laser:nth-child(9) {
+  left: 0;
+  top: calc(98% - 28%);
+  animation-delay: 6233ms;
+}
+#main .laser:nth-child(9)::before, #main .laser:nth-child(9)::after {
+  animation-delay: 6233ms;
+}
+#main .laser:nth-child(10) {
+  left: 0;
+  top: calc(98% - 53%);
+  animation-delay: 5998ms;
+}
+#main .laser:nth-child(10)::before, #main .laser:nth-child(10)::after {
+  animation-delay: 5998ms;
+}
+#main .laser:nth-child(11) {
+  left: 0;
+  top: calc(98% - 23%);
+  animation-delay: 2211ms;
+}
+#main .laser:nth-child(11)::before, #main .laser:nth-child(11)::after {
+  animation-delay: 2211ms;
+}
+#main .laser:nth-child(12) {
+  left: 0;
+  top: calc(98% - 22%);
+  animation-delay: 5034ms;
+}
+#main .laser:nth-child(12)::before, #main .laser:nth-child(12)::after {
+  animation-delay: 5034ms;
+}
+#main .laser:nth-child(13) {
+  left: 0;
+  top: calc(98% - 80%);
+  animation-delay: 8748ms;
+}
+#main .laser:nth-child(13)::before, #main .laser:nth-child(13)::after {
+  animation-delay: 8748ms;
+}
+#main .laser:nth-child(14) {
+  left: 0;
+  top: calc(98% - 88%);
+  animation-delay: 7214ms;
+}
+#main .laser:nth-child(14)::before, #main .laser:nth-child(14)::after {
+  animation-delay: 7214ms;
+}
+#main .laser:nth-child(15) {
+  left: 0;
+  top: calc(98% - 5%);
+  animation-delay: 1732ms;
+}
+#main .laser:nth-child(15)::before, #main .laser:nth-child(15)::after {
+  animation-delay: 1732ms;
+}
+#main .laser:nth-child(16) {
+  left: 0;
+  top: calc(98% - 32%);
+  animation-delay: 2253ms;
+}
+#main .laser:nth-child(16)::before, #main .laser:nth-child(16)::after {
+  animation-delay: 2253ms;
+}
+#main .laser:nth-child(17) {
+  left: 0;
+  top: calc(98% - 67%);
+  animation-delay: 2326ms;
+}
+#main .laser:nth-child(17)::before, #main .laser:nth-child(17)::after {
+  animation-delay: 2326ms;
+}
+#main .laser:nth-child(18) {
+  left: 0;
+  top: calc(98% - 72%);
+  animation-delay: 3666ms;
+}
+#main .laser:nth-child(18)::before, #main .laser:nth-child(18)::after {
+  animation-delay: 3666ms;
+}
+#main .laser:nth-child(19) {
+  left: 0;
+  top: calc(98% - 29%);
+  animation-delay: 5889ms;
+}
+#main .laser:nth-child(19)::before, #main .laser:nth-child(19)::after {
+  animation-delay: 5889ms;
+}
+#main .laser:nth-child(20) {
+  left: 0;
+  top: calc(98% - 17%);
+  animation-delay: 5670ms;
+}
+#main .laser:nth-child(20)::before, #main .laser:nth-child(20)::after {
+  animation-delay: 5670ms;
+}
+#main .laser:nth-child(21) {
+  left: 0;
+  top: calc(98% - 7%);
+  animation-delay: 7944ms;
+}
+#main .laser:nth-child(21)::before, #main .laser:nth-child(21)::after {
+  animation-delay: 7944ms;
+}
+#main .laser:nth-child(22) {
+  left: 0;
+  top: calc(98% - 19%);
+  animation-delay: 9143ms;
+}
+#main .laser:nth-child(22)::before, #main .laser:nth-child(22)::after {
+  animation-delay: 9143ms;
+}
+#main .laser:nth-child(23) {
+  left: 0;
+  top: calc(98% - 73%);
+  animation-delay: 2884ms;
+}
+#main .laser:nth-child(23)::before, #main .laser:nth-child(23)::after {
+  animation-delay: 2884ms;
+}
+#main .laser:nth-child(24) {
+  left: 0;
+  top: calc(98% - 8%);
+  animation-delay: 9419ms;
+}
+#main .laser:nth-child(24)::before, #main .laser:nth-child(24)::after {
+  animation-delay: 9419ms;
+}
+#main .laser:nth-child(25) {
+  left: 0;
+  top: calc(98% - 3%);
+  animation-delay: 1871ms;
+}
+#main .laser:nth-child(25)::before, #main .laser:nth-child(25)::after {
+  animation-delay: 1871ms;
+}
+#main .laser:nth-child(26) {
+  left: 0;
+  top: calc(98% - 12%);
+  animation-delay: 7730ms;
+}
+#main .laser:nth-child(26)::before, #main .laser:nth-child(26)::after {
+  animation-delay: 7730ms;
+}
+#main .laser:nth-child(27) {
+  left: 0;
+  top: calc(98% - 36%);
+  animation-delay: 8042ms;
+}
+#main .laser:nth-child(27)::before, #main .laser:nth-child(27)::after {
+  animation-delay: 8042ms;
+}
+#main .laser:nth-child(28) {
+  left: 0;
+  top: calc(98% - 68%);
+  animation-delay: 7638ms;
+}
+#main .laser:nth-child(28)::before, #main .laser:nth-child(28)::after {
+  animation-delay: 7638ms;
+}
+#main .laser:nth-child(29) {
+  left: 0;
+  top: calc(98% - 94%);
+  animation-delay: 3873ms;
+}
+#main .laser:nth-child(29)::before, #main .laser:nth-child(29)::after {
+  animation-delay: 3873ms;
+}
+#main .laser:nth-child(30) {
+  left: 0;
+  top: calc(98% - 15%);
+  animation-delay: 1383ms;
+}
+#main .laser:nth-child(30)::before, #main .laser:nth-child(30)::after {
+  animation-delay: 1383ms;
+}
+#main .laser:nth-child(31) {
+  left: 0;
+  top: calc(98% - 37%);
+  animation-delay: 8123ms;
+}
+#main .laser:nth-child(31)::before, #main .laser:nth-child(31)::after {
+  animation-delay: 8123ms;
+}
+#main .laser:nth-child(32) {
+  left: 0;
+  top: calc(98% - 39%);
+  animation-delay: 6221ms;
+}
+#main .laser:nth-child(32)::before, #main .laser:nth-child(32)::after {
+  animation-delay: 6221ms;
+}
+#main .laser:nth-child(33) {
+  left: 0;
+  top: calc(98% - 63%);
+  animation-delay: 3739ms;
+}
+#main .laser:nth-child(33)::before, #main .laser:nth-child(33)::after {
+  animation-delay: 3739ms;
+}
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 100px;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes shooting {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw - 60px));
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
