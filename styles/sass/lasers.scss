@@ -1,4 +1,4 @@
-// Lasers Styling
+// Home page animated lasers styling
 
 $shooting-time: 12000ms;
 $screen-offset-w: calc(100vw - 60px);
@@ -8,8 +8,8 @@ $screen-offset-h: calc(100vh - 60px);
 {
   position: relative;
   background: linear-gradient(
-    #FFA69E 0%,
-    #E29578 100%
+    $melon-color 0%,
+    $salmon-color 100%
   );
   width: $screen-offset-w;
   min-height: $screen-offset-h;
@@ -24,10 +24,10 @@ $screen-offset-h: calc(100vh - 60px);
     height: 2px;
     background: linear-gradient(
       -45deg,
-      #FF6E80,
+      $main-pink-color,
       rgba(0, 0, 255, 0)
     );
-    filter: drop-shadow(0 0 5px #FF6E80);
+    filter: drop-shadow(0 0 5px $main-pink-color);
     animation:
       tail $shooting-time ease-in-out infinite,
       shooting $shooting-time ease-in-out infinite;
@@ -42,7 +42,7 @@ $screen-offset-h: calc(100vh - 60px);
       border-radius: 100%;
       background: linear-gradient(
         -45deg, rgba(0, 0, 255, 0),
-        #FF6E80,
+        $main-pink-color,
         rgba(0, 0, 255, 0)
       );
     }
@@ -57,7 +57,7 @@ $screen-offset-h: calc(100vh - 60px);
       background: linear-gradient(
         -45deg,
         rgba(0, 0, 255, 0),
-        #FF6E80,
+        $main-pink-color,
         rgba(0, 0, 255, 0)
       );
     }

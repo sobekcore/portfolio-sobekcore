@@ -3,24 +3,24 @@
   position: fixed; display: grid;
   width: 100vw; height: 100vh;
   grid-template-rows: 1fr 1fr;
-  animation: disableLoading 3.4s;
+  animation: disableLoading 2.2s;
   animation-fill-mode: forwards;
   z-index: 99;
 
   #top-loader
   {
-    background-color: #FF6E80;
-    animation: loadInTop 2.7s;
+    background-color: $main-pink-color;
+    animation: loadInTop 1.7s;
     animation-fill-mode: forwards;
-    animation-delay: 600ms;
+    animation-delay: 500ms;
   }
 
   #bottom-loader
   {
-    background-color: #FF6E80;
-    animation: loadInBottom 2.7s;
+    background-color: $main-pink-color;
+    animation: loadInBottom 1.7s;
     animation-fill-mode: forwards;
-    animation-delay: 600ms;
+    animation-delay: 500ms;
   }
 
   @keyframes loadInTop

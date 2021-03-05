@@ -1,0 +1,24 @@
+#footer-separator
+{
+  width: 100vw;
+  background: $melon-color;
+  padding-top: 50px;
+}
+
+footer
+{
+  position: relative;
+  background: $main-pink-color;
+  height: 200px;
+
+  h2
+  {
+    position: absolute;
+    top: 50%; width: 100%;
+    transform: translateY(-50%);
+    font: bold 22px "Ubuntu", sans-serif;
+    color: $main-gray-color;
+    text-align: center;
+    margin: 0;
+  }
+}

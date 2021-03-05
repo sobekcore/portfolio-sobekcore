@@ -1,23 +1,121 @@
 #tech-page
 {
-  width: 100vw; height: 100vh;
-  background: #F1B0B8;
+  width: 100vw; min-height: 100vh;
+  background: linear-gradient(
+    $salmon-color 0%,
+    $melon-color 100%
+  );
 
-  img { width: 100vw; }
+  img
+  { width: 100vw; }
 
-  h1
+  #tech
   {
-    font: bold 90px "Ubuntu", sans-serif;
-    font-size: clamp(1rem, 13vw, 5.6rem);
-    text-shadow: 5px 5px #008672;
-    color: #00E0BE;
-    padding-top: 40px;
-    margin: 0;
-    text-align: center;
-  }
+    min-height: 100vh;
+    margin-top: 40px;
 
-  @media(max-width: 799px)
-  {
-    h1 { text-shadow: 3px 3px #008672; }
+    h1
+    {
+      font: bold 90px "Ubuntu", sans-serif;
+      font-size: clamp(1rem, 13vw, 5.6rem);
+      text-shadow: 5px 5px $dark-turq-color;
+      color: $main-turq-color;
+      margin: 0;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    @media(max-width: 799px)
+    { h1 { text-shadow: 3px 3px $dark-turq-color; } }
+
+    article
+    {
+      padding: 30px;
+      margin: 0 auto;
+      max-width: 1110px;
+
+      #tech-all
+      {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        font: bold 19px "Ubuntu", sans-serif;
+        grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
+        grid-column-gap: 30px; grid-row-gap: 30px;
+        -webkit-tap-highlight-color: transparent;
+        list-style-type: none;
+        user-select: none;
+        padding-left: 0;
+
+        .tech-single
+        {
+          background-color: $main-turq-color;
+          border-top: 16px solid $light-turq-color;
+          border-left: 16px solid $middle-truq-color;
+          box-shadow: 2px 6px 10px $main-gray-color;
+          width: 240px; height: 340px;
+          border-radius: 15px;
+          cursor: pointer;
+
+          &:hover .tech-card
+          { transform: rotateY(180deg); }
+
+          .tech-card
+          {
+            position: relative;
+            width: 100%; height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+
+            .tech-card-front, .tech-card-back
+            {
+              position: absolute;
+              width: 100%; height: 100%;
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+            }
+
+            .tech-card-front
+            {
+              color: $main-gray-color;
+              text-align: center;
+
+              h2 { margin-top: 26px; }
+              img { margin-top: 20px; }
+            }
+
+            .tech-card-back
+            {
+              background-color: $main-turq-color;
+              color: $main-gray-color;
+              transform: rotateY(180deg);
+              border-radius: 15px;
+
+              .skills
+              {
+                list-style-type: none;
+                text-align: left;
+                padding: 12px 18px;
+
+                li
+                {
+                  padding: 5px 0;
+
+                  &::before
+                  {
+                    font: bold 19px "Ubuntu";
+                    color: $main-purple-color;
+                    content: "</> ";
+
+// :V: Lots of curly braces LMAO
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

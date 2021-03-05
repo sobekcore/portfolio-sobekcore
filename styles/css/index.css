@@ -5,6 +5,7 @@
 
 body, html {
   background: #FF6E80;
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -24,27 +25,36 @@ body::-webkit-scrollbar-thumb {
   border-radius: 8px;
 }
 
+::selection {
+  background-color: #5B41BA;
+  color: #7FEFDE;
+}
+
+img {
+  user-select: none;
+}
+
 #loading {
   position: fixed;
   display: grid;
   width: 100vw;
   height: 100vh;
   grid-template-rows: 1fr 1fr;
-  animation: disableLoading 3.4s;
+  animation: disableLoading 2.2s;
   animation-fill-mode: forwards;
   z-index: 99;
 }
 #loading #top-loader {
   background-color: #FF6E80;
-  animation: loadInTop 2.7s;
+  animation: loadInTop 1.7s;
   animation-fill-mode: forwards;
-  animation-delay: 600ms;
+  animation-delay: 500ms;
 }
 #loading #bottom-loader {
   background-color: #FF6E80;
-  animation: loadInBottom 2.7s;
+  animation: loadInBottom 1.7s;
   animation-fill-mode: forwards;
-  animation-delay: 600ms;
+  animation-delay: 500ms;
 }
 @keyframes loadInTop {
   0% {
@@ -70,57 +80,6 @@ body::-webkit-scrollbar-thumb {
   }
   100% {
     visibility: hidden;
-  }
-}
-
-#home-page {
-  background-color: #FF6E80;
-  width: 100vw;
-  min-height: 100vh;
-  padding: 30px;
-}
-#home-page #main #container {
-  width: 100%;
-  z-index: 1;
-  margin: auto;
-}
-#home-page #main #container img {
-  margin-right: 50px;
-  margin-top: 50px;
-  user-select: none;
-  z-index: 1;
-}
-@media (max-width: 1599px) {
-  #home-page #main #container img {
-    position: relative;
-    transform: translateY(0);
-    left: 0px;
-    right: 0px;
-    top: 50px;
-    width: 100%;
-  }
-}
-
-#tech-page {
-  width: 100vw;
-  height: 100vh;
-  background: #F1B0B8;
-}
-#tech-page img {
-  width: 100vw;
-}
-#tech-page h1 {
-  font: bold 90px "Ubuntu", sans-serif;
-  font-size: clamp(1rem, 13vw, 5.6rem);
-  text-shadow: 5px 5px #008672;
-  color: #00E0BE;
-  padding-top: 40px;
-  margin: 0;
-  text-align: center;
-}
-@media (max-width: 799px) {
-  #tech-page h1 {
-    text-shadow: 3px 3px #008672;
   }
 }
 
@@ -237,267 +196,267 @@ body::-webkit-scrollbar-thumb {
 }
 #main .laser:nth-child(1) {
   left: 0;
-  top: calc(98% - 85%);
-  animation-delay: 7159ms;
+  top: calc(98% - 78%);
+  animation-delay: 8920ms;
 }
 #main .laser:nth-child(1)::before, #main .laser:nth-child(1)::after {
-  animation-delay: 7159ms;
+  animation-delay: 8920ms;
 }
 #main .laser:nth-child(2) {
   left: 0;
-  top: calc(98% - 31%);
-  animation-delay: 1446ms;
+  top: calc(98% - 24%);
+  animation-delay: 8671ms;
 }
 #main .laser:nth-child(2)::before, #main .laser:nth-child(2)::after {
-  animation-delay: 1446ms;
+  animation-delay: 8671ms;
 }
 #main .laser:nth-child(3) {
   left: 0;
-  top: calc(98% - 36%);
-  animation-delay: 7667ms;
+  top: calc(98% - 49%);
+  animation-delay: 3055ms;
 }
 #main .laser:nth-child(3)::before, #main .laser:nth-child(3)::after {
-  animation-delay: 7667ms;
+  animation-delay: 3055ms;
 }
 #main .laser:nth-child(4) {
   left: 0;
-  top: calc(98% - 28%);
-  animation-delay: 7061ms;
+  top: calc(98% - 90%);
+  animation-delay: 8014ms;
 }
 #main .laser:nth-child(4)::before, #main .laser:nth-child(4)::after {
-  animation-delay: 7061ms;
+  animation-delay: 8014ms;
 }
 #main .laser:nth-child(5) {
   left: 0;
-  top: calc(98% - 35%);
-  animation-delay: 1913ms;
+  top: calc(98% - 76%);
+  animation-delay: 1243ms;
 }
 #main .laser:nth-child(5)::before, #main .laser:nth-child(5)::after {
-  animation-delay: 1913ms;
+  animation-delay: 1243ms;
 }
 #main .laser:nth-child(6) {
   left: 0;
-  top: calc(98% - 43%);
-  animation-delay: 9395ms;
+  top: calc(98% - 44%);
+  animation-delay: 7522ms;
 }
 #main .laser:nth-child(6)::before, #main .laser:nth-child(6)::after {
-  animation-delay: 9395ms;
+  animation-delay: 7522ms;
 }
 #main .laser:nth-child(7) {
   left: 0;
-  top: calc(98% - 63%);
-  animation-delay: 6139ms;
+  top: calc(98% - 7%);
+  animation-delay: 7334ms;
 }
 #main .laser:nth-child(7)::before, #main .laser:nth-child(7)::after {
-  animation-delay: 6139ms;
+  animation-delay: 7334ms;
 }
 #main .laser:nth-child(8) {
   left: 0;
-  top: calc(98% - 76%);
-  animation-delay: 7815ms;
+  top: calc(98% - 10%);
+  animation-delay: 4458ms;
 }
 #main .laser:nth-child(8)::before, #main .laser:nth-child(8)::after {
-  animation-delay: 7815ms;
+  animation-delay: 4458ms;
 }
 #main .laser:nth-child(9) {
   left: 0;
-  top: calc(98% - 28%);
-  animation-delay: 6233ms;
+  top: calc(98% - 41%);
+  animation-delay: 5431ms;
 }
 #main .laser:nth-child(9)::before, #main .laser:nth-child(9)::after {
-  animation-delay: 6233ms;
+  animation-delay: 5431ms;
 }
 #main .laser:nth-child(10) {
   left: 0;
-  top: calc(98% - 53%);
-  animation-delay: 5998ms;
+  top: calc(98% - 5%);
+  animation-delay: 4712ms;
 }
 #main .laser:nth-child(10)::before, #main .laser:nth-child(10)::after {
-  animation-delay: 5998ms;
+  animation-delay: 4712ms;
 }
 #main .laser:nth-child(11) {
   left: 0;
-  top: calc(98% - 23%);
-  animation-delay: 2211ms;
+  top: calc(98% - 24%);
+  animation-delay: 4319ms;
 }
 #main .laser:nth-child(11)::before, #main .laser:nth-child(11)::after {
-  animation-delay: 2211ms;
+  animation-delay: 4319ms;
 }
 #main .laser:nth-child(12) {
   left: 0;
-  top: calc(98% - 22%);
-  animation-delay: 5034ms;
+  top: calc(98% - 14%);
+  animation-delay: 5473ms;
 }
 #main .laser:nth-child(12)::before, #main .laser:nth-child(12)::after {
-  animation-delay: 5034ms;
+  animation-delay: 5473ms;
 }
 #main .laser:nth-child(13) {
   left: 0;
-  top: calc(98% - 80%);
-  animation-delay: 8748ms;
+  top: calc(98% - 56%);
+  animation-delay: 8509ms;
 }
 #main .laser:nth-child(13)::before, #main .laser:nth-child(13)::after {
-  animation-delay: 8748ms;
+  animation-delay: 8509ms;
 }
 #main .laser:nth-child(14) {
   left: 0;
-  top: calc(98% - 88%);
-  animation-delay: 7214ms;
+  top: calc(98% - 92%);
+  animation-delay: 9472ms;
 }
 #main .laser:nth-child(14)::before, #main .laser:nth-child(14)::after {
-  animation-delay: 7214ms;
+  animation-delay: 9472ms;
 }
 #main .laser:nth-child(15) {
   left: 0;
-  top: calc(98% - 5%);
-  animation-delay: 1732ms;
+  top: calc(98% - 25%);
+  animation-delay: 6746ms;
 }
 #main .laser:nth-child(15)::before, #main .laser:nth-child(15)::after {
-  animation-delay: 1732ms;
+  animation-delay: 6746ms;
 }
 #main .laser:nth-child(16) {
   left: 0;
-  top: calc(98% - 32%);
-  animation-delay: 2253ms;
+  top: calc(98% - 71%);
+  animation-delay: 2156ms;
 }
 #main .laser:nth-child(16)::before, #main .laser:nth-child(16)::after {
-  animation-delay: 2253ms;
+  animation-delay: 2156ms;
 }
 #main .laser:nth-child(17) {
   left: 0;
-  top: calc(98% - 67%);
-  animation-delay: 2326ms;
+  top: calc(98% - 6%);
+  animation-delay: 1750ms;
 }
 #main .laser:nth-child(17)::before, #main .laser:nth-child(17)::after {
-  animation-delay: 2326ms;
+  animation-delay: 1750ms;
 }
 #main .laser:nth-child(18) {
   left: 0;
-  top: calc(98% - 72%);
-  animation-delay: 3666ms;
+  top: calc(98% - 36%);
+  animation-delay: 1619ms;
 }
 #main .laser:nth-child(18)::before, #main .laser:nth-child(18)::after {
-  animation-delay: 3666ms;
+  animation-delay: 1619ms;
 }
 #main .laser:nth-child(19) {
   left: 0;
-  top: calc(98% - 29%);
-  animation-delay: 5889ms;
+  top: calc(98% - 68%);
+  animation-delay: 766ms;
 }
 #main .laser:nth-child(19)::before, #main .laser:nth-child(19)::after {
-  animation-delay: 5889ms;
+  animation-delay: 766ms;
 }
 #main .laser:nth-child(20) {
   left: 0;
-  top: calc(98% - 17%);
-  animation-delay: 5670ms;
+  top: calc(98% - 80%);
+  animation-delay: 6488ms;
 }
 #main .laser:nth-child(20)::before, #main .laser:nth-child(20)::after {
-  animation-delay: 5670ms;
+  animation-delay: 6488ms;
 }
 #main .laser:nth-child(21) {
   left: 0;
-  top: calc(98% - 7%);
-  animation-delay: 7944ms;
+  top: calc(98% - 31%);
+  animation-delay: 7804ms;
 }
 #main .laser:nth-child(21)::before, #main .laser:nth-child(21)::after {
-  animation-delay: 7944ms;
+  animation-delay: 7804ms;
 }
 #main .laser:nth-child(22) {
   left: 0;
-  top: calc(98% - 19%);
-  animation-delay: 9143ms;
+  top: calc(98% - 95%);
+  animation-delay: 3218ms;
 }
 #main .laser:nth-child(22)::before, #main .laser:nth-child(22)::after {
-  animation-delay: 9143ms;
+  animation-delay: 3218ms;
 }
 #main .laser:nth-child(23) {
   left: 0;
-  top: calc(98% - 73%);
-  animation-delay: 2884ms;
+  top: calc(98% - 24%);
+  animation-delay: 8085ms;
 }
 #main .laser:nth-child(23)::before, #main .laser:nth-child(23)::after {
-  animation-delay: 2884ms;
+  animation-delay: 8085ms;
 }
 #main .laser:nth-child(24) {
   left: 0;
-  top: calc(98% - 8%);
-  animation-delay: 9419ms;
+  top: calc(98% - 91%);
+  animation-delay: 715ms;
 }
 #main .laser:nth-child(24)::before, #main .laser:nth-child(24)::after {
-  animation-delay: 9419ms;
+  animation-delay: 715ms;
 }
 #main .laser:nth-child(25) {
   left: 0;
-  top: calc(98% - 3%);
-  animation-delay: 1871ms;
+  top: calc(98% - 92%);
+  animation-delay: 276ms;
 }
 #main .laser:nth-child(25)::before, #main .laser:nth-child(25)::after {
-  animation-delay: 1871ms;
+  animation-delay: 276ms;
 }
 #main .laser:nth-child(26) {
   left: 0;
-  top: calc(98% - 12%);
-  animation-delay: 7730ms;
+  top: calc(98% - 91%);
+  animation-delay: 4725ms;
 }
 #main .laser:nth-child(26)::before, #main .laser:nth-child(26)::after {
-  animation-delay: 7730ms;
+  animation-delay: 4725ms;
 }
 #main .laser:nth-child(27) {
   left: 0;
-  top: calc(98% - 36%);
-  animation-delay: 8042ms;
+  top: calc(98% - 76%);
+  animation-delay: 1642ms;
 }
 #main .laser:nth-child(27)::before, #main .laser:nth-child(27)::after {
-  animation-delay: 8042ms;
+  animation-delay: 1642ms;
 }
 #main .laser:nth-child(28) {
   left: 0;
-  top: calc(98% - 68%);
-  animation-delay: 7638ms;
+  top: calc(98% - 58%);
+  animation-delay: 2886ms;
 }
 #main .laser:nth-child(28)::before, #main .laser:nth-child(28)::after {
-  animation-delay: 7638ms;
+  animation-delay: 2886ms;
 }
 #main .laser:nth-child(29) {
   left: 0;
-  top: calc(98% - 94%);
-  animation-delay: 3873ms;
+  top: calc(98% - 81%);
+  animation-delay: 155ms;
 }
 #main .laser:nth-child(29)::before, #main .laser:nth-child(29)::after {
-  animation-delay: 3873ms;
+  animation-delay: 155ms;
 }
 #main .laser:nth-child(30) {
   left: 0;
-  top: calc(98% - 15%);
-  animation-delay: 1383ms;
+  top: calc(98% - 23%);
+  animation-delay: 5791ms;
 }
 #main .laser:nth-child(30)::before, #main .laser:nth-child(30)::after {
-  animation-delay: 1383ms;
+  animation-delay: 5791ms;
 }
 #main .laser:nth-child(31) {
   left: 0;
-  top: calc(98% - 37%);
-  animation-delay: 8123ms;
+  top: calc(98% - 66%);
+  animation-delay: 684ms;
 }
 #main .laser:nth-child(31)::before, #main .laser:nth-child(31)::after {
-  animation-delay: 8123ms;
+  animation-delay: 684ms;
 }
 #main .laser:nth-child(32) {
   left: 0;
-  top: calc(98% - 39%);
-  animation-delay: 6221ms;
+  top: calc(98% - 74%);
+  animation-delay: 8366ms;
 }
 #main .laser:nth-child(32)::before, #main .laser:nth-child(32)::after {
-  animation-delay: 6221ms;
+  animation-delay: 8366ms;
 }
 #main .laser:nth-child(33) {
   left: 0;
-  top: calc(98% - 63%);
-  animation-delay: 3739ms;
+  top: calc(98% - 34%);
+  animation-delay: 6797ms;
 }
 #main .laser:nth-child(33)::before, #main .laser:nth-child(33)::after {
-  animation-delay: 3739ms;
+  animation-delay: 6797ms;
 }
 @keyframes tail {
   0% {
@@ -517,6 +476,141 @@ body::-webkit-scrollbar-thumb {
   100% {
     transform: translateX(calc(100vw - 60px));
   }
+}
+
+#home-page {
+  background-color: #FF6E80;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 30px;
+}
+#home-page #main #container {
+  width: 100%;
+  z-index: 1;
+  margin: auto;
+}
+
+#tech-page {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(#E29578 0%, #FFA69E 100%);
+}
+#tech-page img {
+  width: 100vw;
+}
+#tech-page #tech {
+  min-height: 100vh;
+  margin-top: 40px;
+}
+#tech-page #tech h1 {
+  font: bold 90px "Ubuntu", sans-serif;
+  font-size: clamp(1rem, 13vw, 5.6rem);
+  text-shadow: 5px 5px #008672;
+  color: #00E0BE;
+  margin: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+@media (max-width: 799px) {
+  #tech-page #tech h1 {
+    text-shadow: 3px 3px #008672;
+  }
+}
+#tech-page #tech article {
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 1110px;
+}
+#tech-page #tech article #tech-all {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  font: bold 19px "Ubuntu", sans-serif;
+  grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  -webkit-tap-highlight-color: transparent;
+  list-style-type: none;
+  user-select: none;
+  padding-left: 0;
+}
+#tech-page #tech article #tech-all .tech-single {
+  background-color: #00E0BE;
+  border-top: 16px solid #7FEFDE;
+  border-left: 16px solid #00B398;
+  box-shadow: 2px 6px 10px #263238;
+  width: 240px;
+  height: 340px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#tech-page #tech article #tech-all .tech-single:hover .tech-card {
+  transform: rotateY(180deg);
+}
+#tech-page #tech article #tech-all .tech-single .tech-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+#tech-page #tech article #tech-all .tech-single .tech-card .tech-card-front, #tech-page #tech article #tech-all .tech-single .tech-card .tech-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#tech-page #tech article #tech-all .tech-single .tech-card .tech-card-front {
+  color: #263238;
+  text-align: center;
+}
+#tech-page #tech article #tech-all .tech-single .tech-card .tech-card-front h2 {
+  margin-top: 26px;
+}
+#tech-page #tech article #tech-all .tech-single .tech-card .tech-card-front img {
+  margin-top: 20px;
+}
+#tech-page #tech article #tech-all .tech-single .tech-card .tech-card-back {
+  background-color: #00E0BE;
+  color: #263238;
+  transform: rotateY(180deg);
+  border-radius: 15px;
+}
+#tech-page #tech article #tech-all .tech-single .tech-card .tech-card-back .skills {
+  list-style-type: none;
+  text-align: left;
+  padding: 12px 18px;
+}
+#tech-page #tech article #tech-all .tech-single .tech-card .tech-card-back .skills li {
+  padding: 5px 0;
+}
+#tech-page #tech article #tech-all .tech-single .tech-card .tech-card-back .skills li::before {
+  font: bold 19px "Ubuntu";
+  color: #5B41BA;
+  content: "</> ";
+}
+
+#footer-separator {
+  width: 100vw;
+  background: #FFA69E;
+  padding-top: 50px;
+}
+
+footer {
+  position: relative;
+  background: #FF6E80;
+  height: 200px;
+}
+footer h2 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  font: bold 22px "Ubuntu", sans-serif;
+  color: #263238;
+  text-align: center;
+  margin: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

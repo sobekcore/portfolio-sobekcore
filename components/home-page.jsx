@@ -1,5 +1,5 @@
-import Lasers from "../components/lasers";
-import Title from "../components/title";
+import Lasers from "./lasers";
+import Title from "./title";
 
 export default function HomePage()
 {

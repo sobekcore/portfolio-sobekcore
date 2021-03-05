@@ -8,8 +8,8 @@
     {
       font: bold 90px "Ubuntu", sans-serif;
       font-size: clamp(1rem, 7.4vw, 5.6rem);
-      text-shadow: 5px 5px #008672;
-      color: #00E0BE;
+      text-shadow: 5px 5px $dark-turq-color;
+      color: $main-turq-color;
       margin: 0;
       text-align: center;
     }
@@ -18,7 +18,7 @@
     {
       font: bold 26px "Ubuntu", sans-serif;
       font-size: clamp(1rem, 5vw, 1.65rem);
-      color: #263238;
+      color: $main-gray-color;
       line-height: 1.4;
       margin: 40px 0;
       text-align: center;
@@ -32,16 +32,16 @@
       button
       {
         font: 22px "Ubuntu", sans-serif;
-        color: #263238;
+        color: $main-gray-color;
         padding: 20px;
         margin: 0px 15px 30px 15px;
         border-radius: 15px;
         outline: none;
-        background-color: #00E0BE;
+        background-color: $main-turq-color;
         transition: .3s all;
-        border: 1px solid #00E0BE;
-        border-top: 10px solid #7FEFDE;
-        border-left: 10px solid #00B398;
+        border: 1px solid $main-turq-color;
+        border-top: 10px solid $light-turq-color;
+        border-left: 10px solid $middle-truq-color;
       }
 
       button:last-child
@@ -63,8 +63,8 @@
       }
     }
 
-    #home-path { color: #5B41BA; text-shadow: 4px 4px #2C2252; }
-    .violet { font-weight: 600; color: #5B41BA; }
+    #home-path { color: $main-purple-color; text-shadow: 4px 4px $dark-purple-color; }
+    .violet { font-weight: 600; color: $main-purple-color; }
   }
 
   @media(max-width: 1200px)
@@ -79,8 +79,8 @@
     {
       margin: 12px;
 
-      h1 { text-shadow: 3px 3px #008672; }
-      #home-path { text-shadow: 2px 2px #2C2252; }
+      h1 { text-shadow: 3px 3px $dark-turq-color; }
+      #home-path { text-shadow: 2px 2px $dark-purple-color; }
     }
   }
 }

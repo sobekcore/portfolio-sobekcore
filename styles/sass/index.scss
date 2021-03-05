@@ -1,10 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
+// Sass Color variables
+$main-pink-color: #FF6E80;
+
+$light-turq-color: #7FEFDE;
+$main-turq-color: #00E0BE;
+$middle-truq-color: #00B398;
+$dark-turq-color: #008672;
+
+$salmon-color: #E29578;
+$melon-color: #FFA69E;
+
+$main-purple-color: #5B41BA;
+$dark-purple-color: #2C2252;
+
+$main-gray-color: #263238;
+
+
 * { box-sizing: border-box; }
 
 body, html
 {
-  background: #FF6E80;
+  background: $main-pink-color;
+  scroll-behavior: smooth;
   padding: 0; margin: 0;
   overflow-x: hidden;
   width: 100vw;
@@ -14,14 +32,24 @@ body::-webkit-scrollbar
 { width: 8px; }
 
 body::-webkit-scrollbar-track
-{ background: #FF6E80; }
+{ background: $main-pink-color; }
 
 body::-webkit-scrollbar-thumb
-{ background: #00E0BE; border-radius: 8px; }
+{ background: $main-turq-color; border-radius: 8px; }
+
+::selection
+{
+  background-color: $main-purple-color;
+  color: $light-turq-color;
+}
+
+img { user-select: none; }
+
 
 // Importing Sass modules
 @import "./loader.scss";
-@import "./home-page.scss";
-@import "./tech-page.scss";
 @import "./title.scss";
 @import "./lasers.scss";
+@import "./home-page.scss";
+@import "./tech-page.scss";
+@import "./footer.scss";
