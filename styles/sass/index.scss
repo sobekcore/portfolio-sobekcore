@@ -39,7 +39,7 @@ body::-webkit-scrollbar-thumb
 
 ::selection
 {
-  background-color: $main-purple-color;
+  background: $main-purple-color;
   color: $light-turq-color;
 }
 
@@ -50,6 +50,10 @@ img { user-select: none; }
 @import "./loader.scss";
 @import "./title.scss";
 @import "./lasers.scss";
+@import "./tech-cards.scss";
+
+// Importing Sass pages
 @import "./home-page.scss";
 @import "./tech-page.scss";
+@import "./projects-page.scss";
 @import "./footer.scss";

@@ -1,7 +1,7 @@
 export default function Technologies()
 {
   return(
-    <article>
+    <section>
       <ul id="tech-all">
         <li className="tech-single">
           <div className="tech-card">
@@ -139,6 +139,6 @@ export default function Technologies()
           </div>
         </li>
       </ul>
-    </article>
+    </section>
   );
 }

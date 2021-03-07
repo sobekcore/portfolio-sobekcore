@@ -9,7 +9,7 @@
 
   #top-loader
   {
-    background-color: $main-pink-color;
+    background: $main-pink-color;
     animation: loadInTop 1.7s;
     animation-fill-mode: forwards;
     animation-delay: 500ms;
@@ -17,7 +17,7 @@
 
   #bottom-loader
   {
-    background-color: $main-pink-color;
+    background: $main-pink-color;
     animation: loadInBottom 1.7s;
     animation-fill-mode: forwards;
     animation-delay: 500ms;
