@@ -1,17 +1,17 @@
-import Loader from "../components/loader";
-import HomePage from "../components/home-page";
-import TechPage from "../components/tech-page";
-import ProjectsPage from "../components/projects-page";
-import Footer from "../components/footer";
+import Loader from "../components/atoms/loader";
+import HomeSection from "../components/organisms/home-section";
+import TechSection from "../components/organisms/tech-section";
+import ProjectsSection from "../components/organisms/projects-section";
+import Footer from "../components/molecules/footer";
 
-export default function Home()
+export default function HomePage()
 {
   return(
     <>
       <Loader />
-      <HomePage />
-      <TechPage />
-      <ProjectsPage />
+      <HomeSection />
+      <TechSection />
+      <ProjectsSection />
       <Footer />
     </>
   );

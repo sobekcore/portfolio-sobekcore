@@ -1,6 +1,6 @@
-import Projects from "./projects";
+import Projects from "../molecules/projects";
 
-export default function ProjectsPage()
+export default function ProjectsSection()
 {
   return(
     <div id="projects-page">
@@ -8,6 +8,7 @@ export default function ProjectsPage()
         <h1 id="projects">Projects</h1>
         <Projects />
       </article>
+      <img id="footer-separator" src="separator-footer.svg" />
     </div>
   );
 }

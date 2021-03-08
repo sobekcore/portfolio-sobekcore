@@ -2,17 +2,18 @@
 {
   width: 100vw;
   padding-top: 170px;
-  padding-bottom: 20px;
-  margin-bottom: -18px;
+  margin-bottom: -5px;
   background: linear-gradient(
     $melon-color 0%,
     $salmon-color 100%
   );
 
+  #footer-separator
+  { width: 100vw; }
+
   article
   {
     min-height: 100vh;
-    margin-bottom: 20px;
 
     h1
     {
@@ -25,7 +26,7 @@
       padding-top: 20px;
 
       @media(max-width: 799px)
-      { & { text-shadow: 3px 3px $dark-turq-color; } }
+      { text-shadow: 3px 3px $dark-turq-color; }
     }
 
     section
@@ -55,16 +56,26 @@
           {
             display: flex;
             margin: 0 0 22px 0;
-            row-gap: 12px;
+            row-gap: 14px;
 
-            h2
+            a
             {
-              font: bold 36px "Ubuntu", sans-serif;
-              color: $main-gray-color;
-              letter-spacing: 1px;
-              word-wrap: break-word;
-              cursor: pointer;
+              text-decoration: none;
               margin: auto 0;
+
+              h2
+              {
+                font: bold 36px "Ubuntu", sans-serif;
+                color: $main-gray-color;
+                letter-spacing: 1px;
+                word-wrap: break-word;
+                transition: .15s ease-in-out;
+                cursor: pointer;
+                margin: auto 0;
+
+                &:hover
+                { color: $main-purple-color; }
+              }
             }
 
             .logo
@@ -90,7 +101,7 @@
             font: bold 19px "Ubuntu", sans-serif;
             flex-flow: row wrap;
             list-style-type: none;
-            margin: -8px 0 14px -45px;
+            margin: -8px 0 10px -45px;
 
             li
             {
@@ -110,17 +121,14 @@
           }
         }
 
-        @media(max-width: 999px)
+        @media(max-width: 939px)
         {
-          &
-          {
-            grid-template-columns: 1fr;
+          grid-template-columns: 1fr;
 
-            .project-single
-            {
-              .project-name
-              { h2 { font-size: 27px; } }
-            }
+          .project-single
+          {
+            .project-name
+            { a { h2 { font-size: 26px; } } }
           }
         }
 
@@ -128,17 +136,14 @@
 
       @media(max-width: 1229px)
       {
-        &
-        {
-          width: 100vw;
+        width: 100vw;
 
-          #projects-all
+        #projects-all
+        {
+          .project-single
           {
-            .project-single
-            {
-              padding: 14px;
-              border-radius: 12px;
-            }
+            padding: 14px;
+            border-radius: 12px;
           }
         }
       }

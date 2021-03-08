@@ -17,65 +17,29 @@
     p
     {
       font: bold 26px "Ubuntu", sans-serif;
-      font-size: clamp(1rem, 5vw, 1.65rem);
+      font-size: clamp(1rem, 5.6vw, 1.65rem);
       color: $main-gray-color;
       line-height: 1.4;
       margin: 40px 0;
       text-align: center;
     }
 
-    #buttons
+    #home-path
     {
-      text-align: center;
-      margin-bottom: -50px;
-
-      button
-      {
-        font: bold 22px "Ubuntu", sans-serif;
-        color: $main-gray-color;
-        padding: 20px;
-        margin: 0px 15px 30px 15px;
-        border-radius: 15px;
-        outline: none;
-        background-color: $main-turq-color;
-        transition: .3s all;
-        border: 1px solid $main-turq-color;
-        border-top: 10px solid $light-turq-color;
-        border-left: 10px solid $middle-truq-color;
-      }
-
-      button:last-child
-      { margin-bottom: 60px; }
-
-      button:hover
-      {
-        transform: scale(1.1);
-        cursor: pointer;
-      }
-
-      @media(max-width: 599px)
-      {
-        button
-        {
-          font: bold 18px "Ubuntu", sans-serif;
-          padding: 10px;
-        }
-      }
+      color: $main-purple-color;
+      text-shadow: 4px 4px $dark-purple-color;
     }
 
-    #home-path { color: $main-purple-color; text-shadow: 4px 4px $dark-purple-color; }
-    .violet { font-weight: 600; color: $main-purple-color; }
-  }
+    .violet
+    {
+      font-weight: 600;
+      color: $main-purple-color;
+    }
 
-  @media(max-width: 1200px)
-  {
-    #title
-    { margin: 20px;}
-  }
+    @media(max-width: 1200px)
+    { margin: 20px; }
 
-  @media(max-width: 799px)
-  {
-    #title
+    @media(max-width: 799px)
     {
       margin: 12px;
 

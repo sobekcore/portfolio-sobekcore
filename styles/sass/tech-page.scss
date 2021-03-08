@@ -6,7 +6,7 @@
     $melon-color 100%
   );
 
-  img
+  #tech-separator
   { width: 100vw; }
 
   article
@@ -23,9 +23,9 @@
       margin: 0;
       text-align: center;
       padding-top: 20px;
-    }
 
-    @media(max-width: 799px)
-    { h1 { text-shadow: 3px 3px $dark-turq-color; } }
+      @media(max-width: 799px)
+      { text-shadow: 3px 3px $dark-turq-color; }
+    }
   }
 }

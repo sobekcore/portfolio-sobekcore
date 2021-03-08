@@ -1,9 +1,7 @@
-import Link from "next/link";
-
-export default function Title()
+export default function TitleLogo()
 {
   return(
-    <header id="title">
+    <>
       <h1><span id="home-path">~$</span> Hello! I'm Sobek</h1>
       <h1>Front-end developer</h1>
       <p>
@@ -13,14 +11,6 @@ export default function Title()
         one of my biggest passions, and things that i'm the most committed to. <br />
         I try to make things as good as i possibly can. <br />
       </p>
-      <section id="buttons">
-        <Link href="#technologies">
-          <button>Get to know <span className="violet">technologies</span> that i use</button>
-        </Link>
-        <Link href="#projects">
-          <button>Check out my <span className="violet">projects</span></button>
-        </Link>
-      </section>
-    </header>
+    </>
   );
 }

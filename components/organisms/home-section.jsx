@@ -1,7 +1,7 @@
-import Lasers from "./lasers";
-import Title from "./title";
+import Lasers from "../molecules/lasers";
+import Title from "../molecules/title";
 
-export default function HomePage()
+export default function HomeSection()
 {
   return(
     <div id="home-page">
