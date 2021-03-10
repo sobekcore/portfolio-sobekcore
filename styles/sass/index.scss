@@ -12,6 +12,7 @@ $dark-turq-color: #008672;
 $salmon-color: #E29578;
 $melon-color: #FFA69E;
 
+$light-purple-color: #755ECA;
 $main-purple-color: #5B41BA;
 $dark-purple-color: #2C2252;
 
@@ -53,6 +54,7 @@ img { user-select: none; }
 @import "./buttons.scss";
 @import "./lasers.scss";
 @import "./tech-cards.scss";
+@import "./contact.scss";
 
 // Importing Sass pages
 @import "./home-page.scss";

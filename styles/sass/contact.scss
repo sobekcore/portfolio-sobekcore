@@ -1,0 +1,147 @@
+#contact
+{
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 110px;
+  background: $main-purple-color;
+  width: 1130px; max-width: 90vw;
+  margin: 0 auto; padding: 30px;
+  margin-top: -280px;
+  box-shadow: 0 0 12px $main-gray-color;
+  border-radius: 20px;
+  z-index: 1;
+
+  #contact-intro
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+
+    h3
+    {
+      font: bold 34px "Ubuntu", sans-serif;
+      color: #E8FFFC;
+      margin: 0;
+    }
+
+    p
+    {
+      font: 22px "Ubuntu";
+      color: #E8FFFC;
+      margin: 0;
+    }
+
+    #contact-icons
+    {
+      img
+      {
+        width: 60px;
+        padding: 10px; margin: 0 15px;
+        transition: .2s transform;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover
+        { transform: scale(1.25); }
+      }
+    }
+  }
+
+  form
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+
+    input, textarea
+    {
+      width: 450px;
+      max-width: 80vw;
+      color: #E8FFFC;
+
+      &::placeholder
+      { color: #E8FFFC; }
+    }
+
+    input, textarea
+    {
+      font: 17px "Ubuntu";
+      padding: 10px;
+      background: $light-purple-color;
+      border-radius: 8px;
+      outline: none; border: none;
+      border-bottom: 5px solid $dark-purple-color;
+      transition: .2s box-shadow;
+
+      &:focus
+      { box-shadow: 0 0 0 3px $main-turq-color; }
+    }
+
+    textarea
+    {
+      min-height: 200px;
+      resize: none;
+
+      &::-webkit-scrollbar
+      { width: 8px; }
+
+      &::-webkit-scrollbar-track
+      { background: $main-purple-color; }
+
+      &::-webkit-scrollbar-thumb
+      { background: $dark-purple-color; border-radius: 8px; }
+    }
+
+    button
+    {
+      font: 21px "Ubuntu", sans-serif;
+      background: $light-purple-color;
+      border: none; outline: none;
+      border-bottom: 5px solid $dark-purple-color;
+      border-radius: 8px;
+      color: #E8FFFC;
+      padding: 12px 34px;
+      transition: .25s box-shadow;
+      cursor: pointer;
+
+
+      &:hover
+      { box-shadow: 0 0 0 3px $main-turq-color; }
+    }
+  }
+
+  ::selection
+  {
+    background: $main-turq-color;
+    color: $dark-purple-color;
+  }
+
+  @media(max-width: 1039px)
+  {
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+    padding: 24px 16px;
+  }
+
+  @media(max-width: 390px)
+  {
+    #contact-intro
+    {
+      h3
+      { font: bold 27px "Ubuntu"; }
+
+      #contact-icons
+      {
+        img
+        {
+          width: 55px;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}

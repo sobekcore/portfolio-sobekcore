@@ -2,14 +2,13 @@
 {
   width: 100vw;
   padding-top: 170px;
-  margin-bottom: -5px;
   background: linear-gradient(
     $melon-color 0%,
     $salmon-color 100%
   );
 
   #footer-separator
-  { width: 100vw; }
+  { width: 100vw; margin-bottom: -5px;}
 
   article
   {
@@ -31,7 +30,8 @@
 
     section
     {
-      width: 80vw;
+      width: 90vw;
+      max-width: 1500px;
       margin: 0 auto;
       margin-top: 30px;
 
@@ -40,7 +40,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         list-style-type: none;
-        padding-bottom: 50px;
+        padding-bottom: 430px;
         padding-left: 0;
 
         .project-single
@@ -69,7 +69,7 @@
                 color: $main-gray-color;
                 letter-spacing: 1px;
                 word-wrap: break-word;
-                transition: .15s ease-in-out;
+                transition: .2s color;
                 cursor: pointer;
                 margin: auto 0;
 
