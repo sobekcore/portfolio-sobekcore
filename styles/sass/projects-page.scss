@@ -20,9 +20,9 @@
       font-size: clamp(1rem, 15vw, 5.6rem);
       text-shadow: 5px 5px $dark-turq-color;
       color: $main-turq-color;
-      margin: 0;
       text-align: center;
       padding-top: 20px;
+      margin: 0;
 
       @media(max-width: 799px)
       { text-shadow: 3px 3px $dark-turq-color; }
@@ -40,7 +40,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         list-style-type: none;
-        padding-bottom: 430px;
+        padding-bottom: 390px;
         padding-left: 0;
 
         .project-single
@@ -70,6 +70,7 @@
                 letter-spacing: 1px;
                 word-wrap: break-word;
                 transition: .2s color;
+                padding: 4px 8px 4px 0px;
                 cursor: pointer;
                 margin: auto 0;
 
@@ -124,6 +125,7 @@
         @media(max-width: 939px)
         {
           grid-template-columns: 1fr;
+          padding-bottom: 430px;
 
           .project-single
           {

@@ -36,15 +36,22 @@
 
     #contact-icons
     {
-      img
+      a
       {
-        width: 60px;
-        padding: 10px; margin: 0 15px;
-        transition: .2s transform;
-        border-radius: 8px;
-        cursor: pointer;
+        display: inline-flex;
+        margin: 0 16px;
+        width: 58px;
 
-        &:hover
+        img
+        {
+          width: 100%;
+          padding: 8px;
+          transition: .2s transform;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+
+        &:hover > img
         { transform: scale(1.25); }
       }
     }
@@ -136,9 +143,9 @@
 
       #contact-icons
       {
-        img
+        a
         {
-          width: 55px;
+          width: 52px;
           margin: 0 10px;
         }
       }

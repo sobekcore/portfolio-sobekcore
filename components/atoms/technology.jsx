@@ -62,7 +62,7 @@ export default function Technology()
         <div className="tech-card-back">
           <ul className="skills">
             <li>Creating well-desinged UI's</li>
-            <li>Good React practics and optimal structure</li>
+            <li>Knowledge of implementing Atomic Design</li>
             <li>Coding efficient {"&"} functional components</li>
             <li>Ability to effectively fetch data</li>
           </ul>
