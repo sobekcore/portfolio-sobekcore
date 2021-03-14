@@ -3,3 +3,6 @@
 
 # next.js
 /.next/
+
+# static
+/out
