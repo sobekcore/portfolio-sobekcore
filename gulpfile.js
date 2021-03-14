@@ -37,11 +37,12 @@ function commit()
   { console.log("Commit message is missing!") }
 }
 
-function push()
+function push(done)
 {
   git.push("origin", "development", function(err)
     { if(err) throw err; }
   );
+  done();
 }
 
 exports.build = series(add, commit, push);
