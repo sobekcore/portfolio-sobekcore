@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body, html {
   background: #FF6E80;
@@ -9,30 +8,24 @@ body, html {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  width: 100vw;
-}
+  width: 100vw; }
 
 body::-webkit-scrollbar {
-  width: 8px;
-}
+  width: 8px; }
 
 body::-webkit-scrollbar-track {
-  background: #FF6E80;
-}
+  background: #FF6E80; }
 
 body::-webkit-scrollbar-thumb {
   background: #00E0BE;
-  border-radius: 8px;
-}
+  border-radius: 8px; }
 
 ::selection {
   background: #5B41BA;
-  color: #7FEFDE;
-}
+  color: #7FEFDE; }
 
 img {
-  user-select: none;
-}
+  user-select: none; }
 
 #loading {
   position: fixed;
@@ -42,150 +35,120 @@ img {
   grid-template-rows: 1fr 1fr;
   animation: disableLoading 2.2s;
   animation-fill-mode: forwards;
-  z-index: 99;
-}
-#loading #top-loader {
-  background: #FF6E80;
-  animation: loadInTop 1.7s;
-  animation-fill-mode: forwards;
-  animation-delay: 500ms;
-}
-#loading #bottom-loader {
-  background: #FF6E80;
-  animation: loadInBottom 1.7s;
-  animation-fill-mode: forwards;
-  animation-delay: 500ms;
-}
+  z-index: 99; }
+  #loading #top-loader {
+    background: #FF6E80;
+    animation: loadInTop 1.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms; }
+  #loading #bottom-loader {
+    background: #FF6E80;
+    animation: loadInBottom 1.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms; }
+
 @keyframes loadInTop {
   0% {
-    height: 100%;
-  }
+    height: 100%; }
   100% {
     height: 0%;
-    display: none;
-  }
-}
+    display: none; } }
+
 @keyframes loadInBottom {
   0% {
-    transform: translateY(0);
-  }
+    transform: translateY(0); }
   100% {
     transform: translateY(100%);
-    display: none;
-  }
-}
+    display: none; } }
+
 @keyframes disableLoading {
   0% {
-    visibility: initial;
-  }
+    visibility: initial; }
   100% {
-    visibility: hidden;
-  }
-}
+    visibility: hidden; } }
 
 #home-page #title {
-  margin: 50px;
-}
-#home-page #title h1 {
-  font: bold 90px "Ubuntu", sans-serif;
-  font-size: clamp(1rem, 7.4vw, 5.6rem);
-  text-shadow: 5px 5px #008672;
-  color: #00E0BE;
-  margin: 0;
-  text-align: center;
-}
-#home-page #title p {
-  font: bold 26px "Ubuntu", sans-serif;
-  font-size: clamp(1rem, 5.6vw, 1.65rem);
-  color: #263238;
-  line-height: 1.4;
-  margin: 40px 0;
-  text-align: center;
-}
-#home-page #title #home-path {
-  color: #5B41BA;
-  text-shadow: 4px 4px #2C2252;
-}
-#home-page #title .violet {
-  font-weight: 600;
-  color: #5B41BA;
-}
-@media (max-width: 1200px) {
-  #home-page #title {
-    margin: 20px;
-  }
-}
-@media (max-width: 799px) {
-  #home-page #title {
-    margin: 12px;
-  }
+  margin: 50px; }
   #home-page #title h1 {
-    text-shadow: 3px 3px #008672;
-  }
+    font: bold 90px "Ubuntu", sans-serif;
+    font-size: clamp(1rem, 7.4vw, 5.6rem);
+    text-shadow: 5px 5px #008672;
+    color: #00E0BE;
+    margin: 0;
+    text-align: center; }
+  #home-page #title p {
+    font: bold 26px "Ubuntu", sans-serif;
+    font-size: clamp(1rem, 5.6vw, 1.65rem);
+    color: #263238;
+    line-height: 1.4;
+    margin: 40px 0;
+    text-align: center; }
   #home-page #title #home-path {
-    text-shadow: 2px 2px #2C2252;
-  }
-}
+    color: #5B41BA;
+    text-shadow: 4px 4px #2C2252; }
+  #home-page #title .violet {
+    font-weight: 600;
+    color: #5B41BA; }
+  @media (max-width: 1200px) {
+    #home-page #title {
+      margin: 20px; } }
+  @media (max-width: 799px) {
+    #home-page #title {
+      margin: 12px; }
+      #home-page #title h1 {
+        text-shadow: 3px 3px #008672; }
+      #home-page #title #home-path {
+        text-shadow: 2px 2px #2C2252; } }
 
 #home-page #title #buttons {
-  text-align: center;
-}
-#home-page #title #buttons button {
-  position: relative;
-  display: inline-block;
-  outline: none;
-  border: none;
-  vertical-align: middle;
-  font: bold 26px "Ubuntu", sans-serif;
-  color: #263238;
-  padding: 25px;
-  margin: 10px 20px 30px 20px;
-  background: #36EBD0;
-  border-radius: 0.75em;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transition: transform 180ms cubic-bezier(0, 0, 0.58, 1), background 180ms cubic-bezier(0, 0, 0.58, 1);
-}
-#home-page #title #buttons button:last-child {
-  margin-bottom: 30px;
-}
-#home-page #title #buttons button::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #00B398;
-  border-radius: inherit;
-  box-shadow: 0 0 0 3px #008672, 0 0.5em 0 0 rgba(0, 0, 0, 0.15);
-  transform: translate3d(0, 0.6em, -1em);
-  transition: transform 180ms cubic-bezier(0, 0, 0.58, 1), box-shadow 180ms cubic-bezier(0, 0, 0.58, 1);
-}
-#home-page #title #buttons button:hover {
-  background: #00E0BE;
-  transform: translate(0, 0.2em);
-}
-#home-page #title #buttons button:hover::before {
-  box-shadow: 0 0 0 3px #008672, 0 0.4em 0 0 rgba(0, 0, 0, 0.15);
-  transform: translate3d(0, 0.4em, -1em);
-}
-#home-page #title #buttons button:active {
-  background: #00E0BE;
-  transform: translate(0em, 0.6em);
-}
-#home-page #title #buttons button:active::before {
-  box-shadow: 0 0 0 3px #008672, 0 0 rgba(0, 0, 0, 0.15);
-  transform: translate3d(0, 0.08em, -1em);
-}
-@media (max-width: 599px) {
+  text-align: center; }
   #home-page #title #buttons button {
-    font: bold 18px "Ubuntu", sans-serif;
-    padding: 16px;
-  }
-}
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border: none;
+    vertical-align: middle;
+    font: bold 26px "Ubuntu", sans-serif;
+    color: #263238;
+    padding: 25px;
+    margin: 10px 20px 30px 20px;
+    background: #36EBD0;
+    border-radius: 0.75em;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 180ms cubic-bezier(0, 0, 0.58, 1), background 180ms cubic-bezier(0, 0, 0.58, 1); }
+    #home-page #title #buttons button:last-child {
+      margin-bottom: 30px; }
+    #home-page #title #buttons button::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #00B398;
+      border-radius: inherit;
+      box-shadow: 0 0 0 3px #008672, 0 0.5em 0 0 rgba(0, 0, 0, 0.15);
+      transform: translate3d(0, 0.6em, -1em);
+      transition: transform 180ms cubic-bezier(0, 0, 0.58, 1), box-shadow 180ms cubic-bezier(0, 0, 0.58, 1); }
+    #home-page #title #buttons button:hover {
+      background: #00E0BE;
+      transform: translate(0, 0.2em); }
+      #home-page #title #buttons button:hover::before {
+        box-shadow: 0 0 0 3px #008672, 0 0.4em 0 0 rgba(0, 0, 0, 0.15);
+        transform: translate3d(0, 0.4em, -1em); }
+    #home-page #title #buttons button:active {
+      background: #00E0BE;
+      transform: translate(0em, 0.6em); }
+      #home-page #title #buttons button:active::before {
+        box-shadow: 0 0 0 3px #008672, 0 0 rgba(0, 0, 0, 0.15);
+        transform: translate3d(0, 0.08em, -1em); }
+    @media (max-width: 599px) {
+      #home-page #title #buttons button {
+        font: bold 18px "Ubuntu", sans-serif;
+        padding: 16px; } }
 
 #main {
   position: relative;
@@ -194,395 +157,307 @@ img {
   min-height: calc(100vh - 60px);
   border-radius: 20px;
   display: flex;
-  overflow: hidden;
-}
-#main .laser {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 2px;
-  background: linear-gradient(-45deg, #FF6E80, rgba(0, 0, 255, 0));
-  filter: drop-shadow(0 0 5px #FF6E80);
-  animation: tail 12000ms ease-in-out infinite, shooting 12000ms ease-in-out infinite;
-}
-#main .laser::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 2px;
-  transform: translateX(50%);
-  border-radius: 100%;
-  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #FF6E80, rgba(0, 0, 255, 0));
-}
-#main .laser::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 2px;
-  transform: translateX(50%);
-  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #FF6E80, rgba(0, 0, 255, 0));
-}
-#main .laser:nth-child(1) {
-  left: 0;
-  top: calc(98% - 79%);
-  animation-delay: 5133ms;
-}
-#main .laser:nth-child(1)::before, #main .laser:nth-child(1)::after {
-  animation-delay: 5133ms;
-}
-#main .laser:nth-child(2) {
-  left: 0;
-  top: calc(98% - 87%);
-  animation-delay: 9878ms;
-}
-#main .laser:nth-child(2)::before, #main .laser:nth-child(2)::after {
-  animation-delay: 9878ms;
-}
-#main .laser:nth-child(3) {
-  left: 0;
-  top: calc(98% - 6%);
-  animation-delay: 2626ms;
-}
-#main .laser:nth-child(3)::before, #main .laser:nth-child(3)::after {
-  animation-delay: 2626ms;
-}
-#main .laser:nth-child(4) {
-  left: 0;
-  top: calc(98% - 53%);
-  animation-delay: 6736ms;
-}
-#main .laser:nth-child(4)::before, #main .laser:nth-child(4)::after {
-  animation-delay: 6736ms;
-}
-#main .laser:nth-child(5) {
-  left: 0;
-  top: calc(98% - 55%);
-  animation-delay: 5177ms;
-}
-#main .laser:nth-child(5)::before, #main .laser:nth-child(5)::after {
-  animation-delay: 5177ms;
-}
-#main .laser:nth-child(6) {
-  left: 0;
-  top: calc(98% - 13%);
-  animation-delay: 3749ms;
-}
-#main .laser:nth-child(6)::before, #main .laser:nth-child(6)::after {
-  animation-delay: 3749ms;
-}
-#main .laser:nth-child(7) {
-  left: 0;
-  top: calc(98% - 30%);
-  animation-delay: 6125ms;
-}
-#main .laser:nth-child(7)::before, #main .laser:nth-child(7)::after {
-  animation-delay: 6125ms;
-}
-#main .laser:nth-child(8) {
-  left: 0;
-  top: calc(98% - 17%);
-  animation-delay: 8950ms;
-}
-#main .laser:nth-child(8)::before, #main .laser:nth-child(8)::after {
-  animation-delay: 8950ms;
-}
-#main .laser:nth-child(9) {
-  left: 0;
-  top: calc(98% - 17%);
-  animation-delay: 5624ms;
-}
-#main .laser:nth-child(9)::before, #main .laser:nth-child(9)::after {
-  animation-delay: 5624ms;
-}
-#main .laser:nth-child(10) {
-  left: 0;
-  top: calc(98% - 7%);
-  animation-delay: 5074ms;
-}
-#main .laser:nth-child(10)::before, #main .laser:nth-child(10)::after {
-  animation-delay: 5074ms;
-}
-#main .laser:nth-child(11) {
-  left: 0;
-  top: calc(98% - 4%);
-  animation-delay: 7843ms;
-}
-#main .laser:nth-child(11)::before, #main .laser:nth-child(11)::after {
-  animation-delay: 7843ms;
-}
-#main .laser:nth-child(12) {
-  left: 0;
-  top: calc(98% - 46%);
-  animation-delay: 3712ms;
-}
-#main .laser:nth-child(12)::before, #main .laser:nth-child(12)::after {
-  animation-delay: 3712ms;
-}
-#main .laser:nth-child(13) {
-  left: 0;
-  top: calc(98% - 54%);
-  animation-delay: 4434ms;
-}
-#main .laser:nth-child(13)::before, #main .laser:nth-child(13)::after {
-  animation-delay: 4434ms;
-}
-#main .laser:nth-child(14) {
-  left: 0;
-  top: calc(98% - 83%);
-  animation-delay: 2375ms;
-}
-#main .laser:nth-child(14)::before, #main .laser:nth-child(14)::after {
-  animation-delay: 2375ms;
-}
-#main .laser:nth-child(15) {
-  left: 0;
-  top: calc(98% - 50%);
-  animation-delay: 9479ms;
-}
-#main .laser:nth-child(15)::before, #main .laser:nth-child(15)::after {
-  animation-delay: 9479ms;
-}
-#main .laser:nth-child(16) {
-  left: 0;
-  top: calc(98% - 19%);
-  animation-delay: 4100ms;
-}
-#main .laser:nth-child(16)::before, #main .laser:nth-child(16)::after {
-  animation-delay: 4100ms;
-}
-#main .laser:nth-child(17) {
-  left: 0;
-  top: calc(98% - 67%);
-  animation-delay: 2759ms;
-}
-#main .laser:nth-child(17)::before, #main .laser:nth-child(17)::after {
-  animation-delay: 2759ms;
-}
-#main .laser:nth-child(18) {
-  left: 0;
-  top: calc(98% - 81%);
-  animation-delay: 4589ms;
-}
-#main .laser:nth-child(18)::before, #main .laser:nth-child(18)::after {
-  animation-delay: 4589ms;
-}
-#main .laser:nth-child(19) {
-  left: 0;
-  top: calc(98% - 52%);
-  animation-delay: 7539ms;
-}
-#main .laser:nth-child(19)::before, #main .laser:nth-child(19)::after {
-  animation-delay: 7539ms;
-}
-#main .laser:nth-child(20) {
-  left: 0;
-  top: calc(98% - 64%);
-  animation-delay: 8544ms;
-}
-#main .laser:nth-child(20)::before, #main .laser:nth-child(20)::after {
-  animation-delay: 8544ms;
-}
-#main .laser:nth-child(21) {
-  left: 0;
-  top: calc(98% - 28%);
-  animation-delay: 3778ms;
-}
-#main .laser:nth-child(21)::before, #main .laser:nth-child(21)::after {
-  animation-delay: 3778ms;
-}
-#main .laser:nth-child(22) {
-  left: 0;
-  top: calc(98% - 78%);
-  animation-delay: 7634ms;
-}
-#main .laser:nth-child(22)::before, #main .laser:nth-child(22)::after {
-  animation-delay: 7634ms;
-}
-#main .laser:nth-child(23) {
-  left: 0;
-  top: calc(98% - 28%);
-  animation-delay: 2382ms;
-}
-#main .laser:nth-child(23)::before, #main .laser:nth-child(23)::after {
-  animation-delay: 2382ms;
-}
-#main .laser:nth-child(24) {
-  left: 0;
-  top: calc(98% - 95%);
-  animation-delay: 6152ms;
-}
-#main .laser:nth-child(24)::before, #main .laser:nth-child(24)::after {
-  animation-delay: 6152ms;
-}
-#main .laser:nth-child(25) {
-  left: 0;
-  top: calc(98% - 84%);
-  animation-delay: 2146ms;
-}
-#main .laser:nth-child(25)::before, #main .laser:nth-child(25)::after {
-  animation-delay: 2146ms;
-}
-#main .laser:nth-child(26) {
-  left: 0;
-  top: calc(98% - 20%);
-  animation-delay: 843ms;
-}
-#main .laser:nth-child(26)::before, #main .laser:nth-child(26)::after {
-  animation-delay: 843ms;
-}
-#main .laser:nth-child(27) {
-  left: 0;
-  top: calc(98% - 88%);
-  animation-delay: 8159ms;
-}
-#main .laser:nth-child(27)::before, #main .laser:nth-child(27)::after {
-  animation-delay: 8159ms;
-}
-#main .laser:nth-child(28) {
-  left: 0;
-  top: calc(98% - 85%);
-  animation-delay: 9774ms;
-}
-#main .laser:nth-child(28)::before, #main .laser:nth-child(28)::after {
-  animation-delay: 9774ms;
-}
-#main .laser:nth-child(29) {
-  left: 0;
-  top: calc(98% - 89%);
-  animation-delay: 9115ms;
-}
-#main .laser:nth-child(29)::before, #main .laser:nth-child(29)::after {
-  animation-delay: 9115ms;
-}
-#main .laser:nth-child(30) {
-  left: 0;
-  top: calc(98% - 46%);
-  animation-delay: 5633ms;
-}
-#main .laser:nth-child(30)::before, #main .laser:nth-child(30)::after {
-  animation-delay: 5633ms;
-}
-#main .laser:nth-child(31) {
-  left: 0;
-  top: calc(98% - 51%);
-  animation-delay: 9129ms;
-}
-#main .laser:nth-child(31)::before, #main .laser:nth-child(31)::after {
-  animation-delay: 9129ms;
-}
-#main .laser:nth-child(32) {
-  left: 0;
-  top: calc(98% - 8%);
-  animation-delay: 4732ms;
-}
-#main .laser:nth-child(32)::before, #main .laser:nth-child(32)::after {
-  animation-delay: 4732ms;
-}
-#main .laser:nth-child(33) {
-  left: 0;
-  top: calc(98% - 13%);
-  animation-delay: 9823ms;
-}
-#main .laser:nth-child(33)::before, #main .laser:nth-child(33)::after {
-  animation-delay: 9823ms;
-}
+  overflow: hidden; }
+  #main .laser {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, #FF6E80, rgba(0, 0, 255, 0));
+    filter: drop-shadow(0 0 5px #FF6E80);
+    animation: tail 12000ms ease-in-out infinite, shooting 12000ms ease-in-out infinite; }
+    #main .laser::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+      transform: translateX(50%);
+      border-radius: 100%;
+      background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #FF6E80, rgba(0, 0, 255, 0)); }
+    #main .laser::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+      transform: translateX(50%);
+      background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #FF6E80, rgba(0, 0, 255, 0)); }
+    #main .laser:nth-child(1) {
+      left: 0;
+      top: calc(98% - 10%);
+      animation-delay: 9869ms; }
+      #main .laser:nth-child(1)::before, #main .laser:nth-child(1)::after {
+        animation-delay: 9869ms; }
+    #main .laser:nth-child(2) {
+      left: 0;
+      top: calc(98% - 52%);
+      animation-delay: 4020ms; }
+      #main .laser:nth-child(2)::before, #main .laser:nth-child(2)::after {
+        animation-delay: 4020ms; }
+    #main .laser:nth-child(3) {
+      left: 0;
+      top: calc(98% - 64%);
+      animation-delay: 9331ms; }
+      #main .laser:nth-child(3)::before, #main .laser:nth-child(3)::after {
+        animation-delay: 9331ms; }
+    #main .laser:nth-child(4) {
+      left: 0;
+      top: calc(98% - 43%);
+      animation-delay: 1599ms; }
+      #main .laser:nth-child(4)::before, #main .laser:nth-child(4)::after {
+        animation-delay: 1599ms; }
+    #main .laser:nth-child(5) {
+      left: 0;
+      top: calc(98% - 21%);
+      animation-delay: 9289ms; }
+      #main .laser:nth-child(5)::before, #main .laser:nth-child(5)::after {
+        animation-delay: 9289ms; }
+    #main .laser:nth-child(6) {
+      left: 0;
+      top: calc(98% - 11%);
+      animation-delay: 6913ms; }
+      #main .laser:nth-child(6)::before, #main .laser:nth-child(6)::after {
+        animation-delay: 6913ms; }
+    #main .laser:nth-child(7) {
+      left: 0;
+      top: calc(98% - 22%);
+      animation-delay: 3488ms; }
+      #main .laser:nth-child(7)::before, #main .laser:nth-child(7)::after {
+        animation-delay: 3488ms; }
+    #main .laser:nth-child(8) {
+      left: 0;
+      top: calc(98% - 88%);
+      animation-delay: 8250ms; }
+      #main .laser:nth-child(8)::before, #main .laser:nth-child(8)::after {
+        animation-delay: 8250ms; }
+    #main .laser:nth-child(9) {
+      left: 0;
+      top: calc(98% - 60%);
+      animation-delay: 3508ms; }
+      #main .laser:nth-child(9)::before, #main .laser:nth-child(9)::after {
+        animation-delay: 3508ms; }
+    #main .laser:nth-child(10) {
+      left: 0;
+      top: calc(98% - 46%);
+      animation-delay: 3796ms; }
+      #main .laser:nth-child(10)::before, #main .laser:nth-child(10)::after {
+        animation-delay: 3796ms; }
+    #main .laser:nth-child(11) {
+      left: 0;
+      top: calc(98% - 52%);
+      animation-delay: 3169ms; }
+      #main .laser:nth-child(11)::before, #main .laser:nth-child(11)::after {
+        animation-delay: 3169ms; }
+    #main .laser:nth-child(12) {
+      left: 0;
+      top: calc(98% - 87%);
+      animation-delay: 8356ms; }
+      #main .laser:nth-child(12)::before, #main .laser:nth-child(12)::after {
+        animation-delay: 8356ms; }
+    #main .laser:nth-child(13) {
+      left: 0;
+      top: calc(98% - 57%);
+      animation-delay: 6361ms; }
+      #main .laser:nth-child(13)::before, #main .laser:nth-child(13)::after {
+        animation-delay: 6361ms; }
+    #main .laser:nth-child(14) {
+      left: 0;
+      top: calc(98% - 86%);
+      animation-delay: 661ms; }
+      #main .laser:nth-child(14)::before, #main .laser:nth-child(14)::after {
+        animation-delay: 661ms; }
+    #main .laser:nth-child(15) {
+      left: 0;
+      top: calc(98% - 10%);
+      animation-delay: 7169ms; }
+      #main .laser:nth-child(15)::before, #main .laser:nth-child(15)::after {
+        animation-delay: 7169ms; }
+    #main .laser:nth-child(16) {
+      left: 0;
+      top: calc(98% - 43%);
+      animation-delay: 3489ms; }
+      #main .laser:nth-child(16)::before, #main .laser:nth-child(16)::after {
+        animation-delay: 3489ms; }
+    #main .laser:nth-child(17) {
+      left: 0;
+      top: calc(98% - 23%);
+      animation-delay: 7376ms; }
+      #main .laser:nth-child(17)::before, #main .laser:nth-child(17)::after {
+        animation-delay: 7376ms; }
+    #main .laser:nth-child(18) {
+      left: 0;
+      top: calc(98% - 96%);
+      animation-delay: 7442ms; }
+      #main .laser:nth-child(18)::before, #main .laser:nth-child(18)::after {
+        animation-delay: 7442ms; }
+    #main .laser:nth-child(19) {
+      left: 0;
+      top: calc(98% - 2%);
+      animation-delay: 6215ms; }
+      #main .laser:nth-child(19)::before, #main .laser:nth-child(19)::after {
+        animation-delay: 6215ms; }
+    #main .laser:nth-child(20) {
+      left: 0;
+      top: calc(98% - 41%);
+      animation-delay: 1303ms; }
+      #main .laser:nth-child(20)::before, #main .laser:nth-child(20)::after {
+        animation-delay: 1303ms; }
+    #main .laser:nth-child(21) {
+      left: 0;
+      top: calc(98% - 53%);
+      animation-delay: 3841ms; }
+      #main .laser:nth-child(21)::before, #main .laser:nth-child(21)::after {
+        animation-delay: 3841ms; }
+    #main .laser:nth-child(22) {
+      left: 0;
+      top: calc(98% - 51%);
+      animation-delay: 8908ms; }
+      #main .laser:nth-child(22)::before, #main .laser:nth-child(22)::after {
+        animation-delay: 8908ms; }
+    #main .laser:nth-child(23) {
+      left: 0;
+      top: calc(98% - 50%);
+      animation-delay: 9278ms; }
+      #main .laser:nth-child(23)::before, #main .laser:nth-child(23)::after {
+        animation-delay: 9278ms; }
+    #main .laser:nth-child(24) {
+      left: 0;
+      top: calc(98% - 67%);
+      animation-delay: 280ms; }
+      #main .laser:nth-child(24)::before, #main .laser:nth-child(24)::after {
+        animation-delay: 280ms; }
+    #main .laser:nth-child(25) {
+      left: 0;
+      top: calc(98% - 13%);
+      animation-delay: 3135ms; }
+      #main .laser:nth-child(25)::before, #main .laser:nth-child(25)::after {
+        animation-delay: 3135ms; }
+    #main .laser:nth-child(26) {
+      left: 0;
+      top: calc(98% - 53%);
+      animation-delay: 461ms; }
+      #main .laser:nth-child(26)::before, #main .laser:nth-child(26)::after {
+        animation-delay: 461ms; }
+    #main .laser:nth-child(27) {
+      left: 0;
+      top: calc(98% - 9%);
+      animation-delay: 6609ms; }
+      #main .laser:nth-child(27)::before, #main .laser:nth-child(27)::after {
+        animation-delay: 6609ms; }
+    #main .laser:nth-child(28) {
+      left: 0;
+      top: calc(98% - 95%);
+      animation-delay: 8742ms; }
+      #main .laser:nth-child(28)::before, #main .laser:nth-child(28)::after {
+        animation-delay: 8742ms; }
+    #main .laser:nth-child(29) {
+      left: 0;
+      top: calc(98% - 65%);
+      animation-delay: 4676ms; }
+      #main .laser:nth-child(29)::before, #main .laser:nth-child(29)::after {
+        animation-delay: 4676ms; }
+    #main .laser:nth-child(30) {
+      left: 0;
+      top: calc(98% - 82%);
+      animation-delay: 3485ms; }
+      #main .laser:nth-child(30)::before, #main .laser:nth-child(30)::after {
+        animation-delay: 3485ms; }
+    #main .laser:nth-child(31) {
+      left: 0;
+      top: calc(98% - 12%);
+      animation-delay: 2099ms; }
+      #main .laser:nth-child(31)::before, #main .laser:nth-child(31)::after {
+        animation-delay: 2099ms; }
+    #main .laser:nth-child(32) {
+      left: 0;
+      top: calc(98% - 44%);
+      animation-delay: 6798ms; }
+      #main .laser:nth-child(32)::before, #main .laser:nth-child(32)::after {
+        animation-delay: 6798ms; }
+    #main .laser:nth-child(33) {
+      left: 0;
+      top: calc(98% - 24%);
+      animation-delay: 4050ms; }
+      #main .laser:nth-child(33)::before, #main .laser:nth-child(33)::after {
+        animation-delay: 4050ms; }
+
 @keyframes tail {
   0% {
-    width: 0;
-  }
+    width: 0; }
   30% {
-    width: 100px;
-  }
+    width: 100px; }
   100% {
-    width: 0;
-  }
-}
+    width: 0; } }
+
 @keyframes shooting {
   0% {
-    transform: translateX(0);
-  }
+    transform: translateX(0); }
   100% {
-    transform: translateX(calc(100vw - 60px));
-  }
-}
+    transform: translateX(calc(100vw - 60px)); } }
 
 #tech-page article section {
   padding: 30px;
   margin: 0 auto;
-  max-width: 1110px;
-}
-#tech-page article section #tech-all {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  font: bold 19px "Ubuntu", sans-serif;
-  grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  -webkit-tap-highlight-color: transparent;
-  list-style-type: none;
-  user-select: none;
-  padding-left: 0;
-}
-#tech-page article section #tech-all .tech-single {
-  background: #00E0BE;
-  border-top: 16px solid #7FEFDE;
-  border-left: 16px solid #00B398;
-  box-shadow: 2px 6px 10px #263238;
-  width: 240px;
-  height: 338px;
-  border-radius: 15px;
-  cursor: pointer;
-}
-#tech-page article section #tech-all .tech-single:hover .tech-card {
-  transform: rotateY(180deg);
-}
-#tech-page article section #tech-all .tech-single .tech-card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
-#tech-page article section #tech-all .tech-single .tech-card .tech-card-front, #tech-page article section #tech-all .tech-single .tech-card .tech-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-#tech-page article section #tech-all .tech-single .tech-card .tech-card-front {
-  color: #263238;
-  text-align: center;
-}
-#tech-page article section #tech-all .tech-single .tech-card .tech-card-front h2 {
-  margin-top: 26px;
-}
-#tech-page article section #tech-all .tech-single .tech-card .tech-card-front img {
-  margin-top: 20px;
-}
-#tech-page article section #tech-all .tech-single .tech-card .tech-card-back {
-  background: #00E0BE;
-  color: #263238;
-  transform: rotateY(180deg);
-  border-radius: 15px;
-}
-#tech-page article section #tech-all .tech-single .tech-card .tech-card-back .skills {
-  list-style-type: none;
-  text-align: left;
-  padding: 12px 18px;
-}
-#tech-page article section #tech-all .tech-single .tech-card .tech-card-back .skills li {
-  padding: 5px 0;
-}
-#tech-page article section #tech-all .tech-single .tech-card .tech-card-back .skills li::before {
-  font: bold 19px "Ubuntu";
-  color: #5B41BA;
-  content: "</> ";
-}
+  max-width: 1110px; }
+  #tech-page article section #tech-all {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font: bold 19px "Ubuntu", sans-serif;
+    grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    -webkit-tap-highlight-color: transparent;
+    list-style-type: none;
+    user-select: none;
+    padding-left: 0; }
+    #tech-page article section #tech-all .tech-single {
+      background: #00E0BE;
+      border-top: 16px solid #7FEFDE;
+      border-left: 16px solid #00B398;
+      box-shadow: 2px 6px 10px #263238;
+      width: 240px;
+      height: 338px;
+      border-radius: 15px;
+      cursor: pointer; }
+      #tech-page article section #tech-all .tech-single:hover .tech-card {
+        transform: rotateY(180deg); }
+      #tech-page article section #tech-all .tech-single .tech-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        perspective: 1000px; }
+        #tech-page article section #tech-all .tech-single .tech-card .tech-card-front, #tech-page article section #tech-all .tech-single .tech-card .tech-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
+        #tech-page article section #tech-all .tech-single .tech-card .tech-card-front {
+          color: #263238;
+          text-align: center; }
+          #tech-page article section #tech-all .tech-single .tech-card .tech-card-front h2 {
+            margin-top: 26px; }
+          #tech-page article section #tech-all .tech-single .tech-card .tech-card-front img {
+            margin-top: 20px; }
+        #tech-page article section #tech-all .tech-single .tech-card .tech-card-back {
+          background: #00E0BE;
+          color: #263238;
+          transform: rotateY(180deg);
+          border-radius: 15px; }
+          #tech-page article section #tech-all .tech-single .tech-card .tech-card-back .skills {
+            list-style-type: none;
+            text-align: left;
+            padding: 12px 18px; }
+            #tech-page article section #tech-all .tech-single .tech-card .tech-card-back .skills li {
+              padding: 5px 0; }
+              #tech-page article section #tech-all .tech-single .tech-card .tech-card-back .skills li::before {
+                font: bold 19px "Ubuntu";
+                color: #5B41BA;
+                content: "</> "; }
 
 #contact {
   display: grid;
@@ -597,277 +472,221 @@ img {
   margin-top: -280px;
   box-shadow: 0 0 12px #263238;
   border-radius: 20px;
-  z-index: 1;
-}
-#contact #contact-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  row-gap: 25px;
-}
-#contact #contact-intro h3 {
-  font: bold 34px "Ubuntu", sans-serif;
-  color: #E8FFFC;
-  margin: 0;
-}
-#contact #contact-intro p {
-  font: 22px "Ubuntu";
-  color: #E8FFFC;
-  margin: 0;
-}
-#contact #contact-intro #contact-icons a {
-  display: inline-flex;
-  margin: 0 16px;
-  width: 58px;
-}
-#contact #contact-intro #contact-icons a img {
-  width: 100%;
-  padding: 8px;
-  transition: 0.2s transform;
-  border-radius: 8px;
-  cursor: pointer;
-}
-#contact #contact-intro #contact-icons a:hover > img {
-  transform: scale(1.25);
-}
-#contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 25px;
-}
-#contact form input, #contact form textarea {
-  width: 450px;
-  max-width: 80vw;
-  color: #E8FFFC;
-}
-#contact form input::placeholder, #contact form textarea::placeholder {
-  color: #E8FFFC;
-}
-#contact form input, #contact form textarea {
-  font: 17px "Ubuntu";
-  padding: 10px;
-  background: #755ECA;
-  border-radius: 8px;
-  outline: none;
-  border: none;
-  border-bottom: 5px solid #2C2252;
-  transition: 0.2s box-shadow;
-}
-#contact form input:focus, #contact form textarea:focus {
-  box-shadow: 0 0 0 3px #00E0BE;
-}
-#contact form textarea {
-  min-height: 200px;
-  resize: none;
-}
-#contact form textarea::-webkit-scrollbar {
-  width: 8px;
-}
-#contact form textarea::-webkit-scrollbar-track {
-  background: #5B41BA;
-}
-#contact form textarea::-webkit-scrollbar-thumb {
-  background: #2C2252;
-  border-radius: 8px;
-}
-#contact form button {
-  font: 21px "Ubuntu", sans-serif;
-  background: #755ECA;
-  border: none;
-  outline: none;
-  border-bottom: 5px solid #2C2252;
-  border-radius: 8px;
-  color: #E8FFFC;
-  padding: 12px 34px;
-  transition: 0.25s box-shadow;
-  cursor: pointer;
-}
-#contact form button:hover {
-  box-shadow: 0 0 0 3px #00E0BE;
-}
-#contact ::selection {
-  background: #00E0BE;
-  color: #2C2252;
-}
-@media (max-width: 1039px) {
-  #contact {
-    grid-template-columns: 1fr;
-    row-gap: 60px;
-    padding: 24px 16px;
-  }
-}
-@media (max-width: 390px) {
-  #contact #contact-intro h3 {
-    font: bold 27px "Ubuntu";
-  }
-  #contact #contact-intro #contact-icons a {
-    width: 52px;
-    margin: 0 10px;
-  }
-}
+  z-index: 1; }
+  #contact #contact-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px; }
+    #contact #contact-intro h3 {
+      font: bold 34px "Ubuntu", sans-serif;
+      color: #E8FFFC;
+      margin: 0; }
+    #contact #contact-intro p {
+      font: 22px "Ubuntu";
+      color: #E8FFFC;
+      margin: 0; }
+    #contact #contact-intro #contact-icons a {
+      display: inline-flex;
+      margin: 0 16px;
+      width: 58px; }
+      #contact #contact-intro #contact-icons a img {
+        width: 100%;
+        padding: 8px;
+        transition: .2s transform;
+        border-radius: 8px;
+        cursor: pointer; }
+      #contact #contact-intro #contact-icons a:hover > img {
+        transform: scale(1.25); }
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px; }
+    #contact form input, #contact form textarea {
+      width: 450px;
+      max-width: 80vw;
+      color: #E8FFFC; }
+      #contact form input::placeholder, #contact form textarea::placeholder {
+        color: #E8FFFC; }
+    #contact form input, #contact form textarea {
+      font: 17px "Ubuntu";
+      padding: 10px;
+      background: #755ECA;
+      border-radius: 8px;
+      outline: none;
+      border: none;
+      border-bottom: 5px solid #2C2252;
+      transition: .2s box-shadow; }
+      #contact form input:focus, #contact form textarea:focus {
+        box-shadow: 0 0 0 3px #00E0BE; }
+    #contact form textarea {
+      min-height: 200px;
+      resize: none; }
+      #contact form textarea::-webkit-scrollbar {
+        width: 8px; }
+      #contact form textarea::-webkit-scrollbar-track {
+        background: #5B41BA; }
+      #contact form textarea::-webkit-scrollbar-thumb {
+        background: #2C2252;
+        border-radius: 8px; }
+    #contact form button {
+      font: 21px "Ubuntu", sans-serif;
+      background: #755ECA;
+      border: none;
+      outline: none;
+      border-bottom: 5px solid #2C2252;
+      border-radius: 8px;
+      color: #E8FFFC;
+      padding: 12px 34px;
+      transition: .25s box-shadow;
+      cursor: pointer; }
+      #contact form button:hover {
+        box-shadow: 0 0 0 3px #00E0BE; }
+  #contact ::selection {
+    background: #00E0BE;
+    color: #2C2252; }
+  @media (max-width: 1039px) {
+    #contact {
+      grid-template-columns: 1fr;
+      row-gap: 60px;
+      padding: 24px 16px; } }
+  @media (max-width: 390px) {
+    #contact #contact-intro h3 {
+      font: bold 27px "Ubuntu"; }
+    #contact #contact-intro #contact-icons a {
+      width: 52px;
+      margin: 0 10px; } }
 
 #home-page {
   background: #FF6E80;
   width: 100vw;
   min-height: 100vh;
-  padding: 30px;
-}
-#home-page #main #container {
-  width: 100%;
-  z-index: 1;
-  margin: auto;
-}
+  padding: 30px; }
+  #home-page #main #container {
+    width: 100%;
+    z-index: 1;
+    margin: auto; }
 
 #tech-page {
   width: 100vw;
   min-height: 100vh;
-  background: linear-gradient(#E29578 0%, #FFA69E 100%);
-}
-#tech-page #tech-separator {
-  width: 100vw;
-}
-#tech-page article {
-  min-height: 100vh;
-  margin-top: 40px;
-}
-#tech-page article h1 {
-  font: bold 90px "Ubuntu", sans-serif;
-  font-size: clamp(1rem, 13vw, 5.6rem);
-  text-shadow: 5px 5px #008672;
-  color: #00E0BE;
-  margin: 0;
-  text-align: center;
-  padding-top: 20px;
-}
-@media (max-width: 799px) {
-  #tech-page article h1 {
-    text-shadow: 3px 3px #008672;
-  }
-}
+  background: linear-gradient(#E29578 0%, #FFA69E 100%); }
+  #tech-page #tech-separator {
+    width: 100vw; }
+  #tech-page article {
+    min-height: 100vh;
+    margin-top: 40px; }
+    #tech-page article h1 {
+      font: bold 90px "Ubuntu", sans-serif;
+      font-size: clamp(1rem, 13vw, 5.6rem);
+      text-shadow: 5px 5px #008672;
+      color: #00E0BE;
+      margin: 0;
+      text-align: center;
+      padding-top: 20px; }
+      @media (max-width: 799px) {
+        #tech-page article h1 {
+          text-shadow: 3px 3px #008672; } }
 
 #projects-page {
   width: 100vw;
   padding-top: 170px;
-  background: linear-gradient(#FFA69E 0%, #E29578 100%);
-}
-#projects-page #footer-separator {
-  width: 100vw;
-  margin-bottom: -5px;
-}
-#projects-page article {
-  min-height: 100vh;
-}
-#projects-page article h1 {
-  font: bold 90px "Ubuntu", sans-serif;
-  font-size: clamp(1rem, 15vw, 5.6rem);
-  text-shadow: 5px 5px #008672;
-  color: #00E0BE;
-  text-align: center;
-  padding-top: 20px;
-  margin: 0;
-}
-@media (max-width: 799px) {
-  #projects-page article h1 {
-    text-shadow: 3px 3px #008672;
-  }
-}
-#projects-page article section {
-  width: 90vw;
-  max-width: 1500px;
-  margin: 0 auto;
-  margin-top: 30px;
-}
-#projects-page article section #projects-all {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  list-style-type: none;
-  padding-bottom: 390px;
-  padding-left: 0;
-}
-#projects-page article section #projects-all .project-single {
-  background: #00E0BE;
-  margin: 20px 20px;
-  padding: 30px;
-  border-bottom: 9px solid #008672;
-  border-right: 9px solid #008672;
-  box-shadow: 0px 0px 12px #263238;
-  border-radius: 16px;
-}
-#projects-page article section #projects-all .project-single .project-name {
-  display: flex;
-  margin: 0 0 22px 0;
-  row-gap: 14px;
-}
-#projects-page article section #projects-all .project-single .project-name a {
-  text-decoration: none;
-  margin: auto 0;
-}
-#projects-page article section #projects-all .project-single .project-name a h2 {
-  font: bold 36px "Ubuntu", sans-serif;
-  color: #263238;
-  letter-spacing: 1px;
-  word-wrap: break-word;
-  transition: 0.2s color;
-  padding: 4px 8px 4px 0px;
-  cursor: pointer;
-  margin: auto 0;
-}
-#projects-page article section #projects-all .project-single .project-name a h2:hover {
-  color: #5B41BA;
-}
-#projects-page article section #projects-all .project-single .project-name .logo {
-  width: 60px;
-  height: 60px;
-  image-rendering: high-quality;
-  background: #008672;
-  margin-right: 12px;
-  border-radius: 8px;
-  padding: 6px;
-}
-#projects-page article section #projects-all .project-single .project-name .click {
-  width: 26px;
-  margin-left: 8px;
-}
-#projects-page article section #projects-all .project-single ul {
-  display: flex;
-  font: bold 19px "Ubuntu", sans-serif;
-  flex-flow: row wrap;
-  list-style-type: none;
-  margin: -8px 0 10px -45px;
-}
-#projects-page article section #projects-all .project-single ul li {
-  padding: 8px;
-  margin: 5px;
-  background: #00B398;
-  color: #2C2252;
-  border-radius: 12px;
-}
-#projects-page article section #projects-all .project-single p {
-  font: bold 19px "Ubuntu", sans-serif;
-  color: #263238;
-  line-height: 1.3;
-  margin: 0;
-}
-@media (max-width: 939px) {
-  #projects-page article section #projects-all {
-    grid-template-columns: 1fr;
-    padding-bottom: 430px;
-  }
-  #projects-page article section #projects-all .project-single .project-name a h2 {
-    font-size: 26px;
-  }
-}
-@media (max-width: 1229px) {
-  #projects-page article section {
+  background: linear-gradient(#FFA69E 0%, #E29578 100%); }
+  #projects-page #footer-separator {
     width: 100vw;
-  }
-  #projects-page article section #projects-all .project-single {
-    padding: 14px;
-    border-radius: 12px;
-  }
-}
+    margin-bottom: -5px; }
+  #projects-page article {
+    min-height: 100vh; }
+    #projects-page article h1 {
+      font: bold 90px "Ubuntu", sans-serif;
+      font-size: clamp(1rem, 15vw, 5.6rem);
+      text-shadow: 5px 5px #008672;
+      color: #00E0BE;
+      text-align: center;
+      padding-top: 20px;
+      margin: 0; }
+      @media (max-width: 799px) {
+        #projects-page article h1 {
+          text-shadow: 3px 3px #008672; } }
+    #projects-page article section {
+      width: 90vw;
+      max-width: 1500px;
+      margin: 0 auto;
+      margin-top: 30px; }
+      #projects-page article section #projects-all {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        list-style-type: none;
+        padding-bottom: 390px;
+        padding-left: 0; }
+        #projects-page article section #projects-all .project-single {
+          background: #00E0BE;
+          margin: 20px 20px;
+          padding: 30px;
+          border-bottom: 9px solid #008672;
+          border-right: 9px solid #008672;
+          box-shadow: 0px 0px 12px #263238;
+          border-radius: 16px; }
+          #projects-page article section #projects-all .project-single .project-name {
+            display: flex;
+            margin: 0 0 22px 0;
+            row-gap: 14px; }
+            #projects-page article section #projects-all .project-single .project-name a {
+              text-decoration: none;
+              margin: auto 0; }
+              #projects-page article section #projects-all .project-single .project-name a h2 {
+                font: bold 36px "Ubuntu", sans-serif;
+                color: #263238;
+                letter-spacing: 1px;
+                word-wrap: break-word;
+                transition: .2s color;
+                padding: 4px 8px 4px 0px;
+                cursor: pointer;
+                margin: auto 0; }
+                #projects-page article section #projects-all .project-single .project-name a h2:hover {
+                  color: #5B41BA; }
+            #projects-page article section #projects-all .project-single .project-name .logo {
+              width: 60px;
+              height: 60px;
+              image-rendering: high-quality;
+              background: #008672;
+              margin-right: 12px;
+              border-radius: 8px;
+              padding: 6px; }
+            #projects-page article section #projects-all .project-single .project-name .click {
+              width: 26px;
+              margin-left: 8px; }
+          #projects-page article section #projects-all .project-single ul {
+            display: flex;
+            font: bold 19px "Ubuntu", sans-serif;
+            flex-flow: row wrap;
+            list-style-type: none;
+            margin: -8px 0 10px -45px; }
+            #projects-page article section #projects-all .project-single ul li {
+              padding: 8px;
+              margin: 5px;
+              background: #00B398;
+              color: #2C2252;
+              border-radius: 12px; }
+          #projects-page article section #projects-all .project-single p {
+            font: bold 19px "Ubuntu", sans-serif;
+            color: #263238;
+            line-height: 1.3;
+            margin: 0; }
+        @media (max-width: 939px) {
+          #projects-page article section #projects-all {
+            grid-template-columns: 1fr;
+            padding-bottom: 430px; }
+            #projects-page article section #projects-all .project-single .project-name a h2 {
+              font-size: 26px; } }
+      @media (max-width: 1229px) {
+        #projects-page article section {
+          width: 100vw; }
+          #projects-page article section #projects-all .project-single {
+            padding: 14px;
+            border-radius: 12px; } }
 
 footer {
   position: relative;
@@ -877,15 +696,11 @@ footer {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  padding-top: 200px;
-}
-footer h2 {
-  width: 80%;
-  transform: translateY(-50%);
-  font: bold 22px "Ubuntu", sans-serif;
-  color: #263238;
-  text-align: center;
-  margin: 20px;
-}
-
-/*# sourceMappingURL=index.css.map */
+  padding-top: 200px; }
+  footer h2 {
+    width: 80%;
+    transform: translateY(-50%);
+    font: bold 22px "Ubuntu", sans-serif;
+    color: #263238;
+    text-align: center;
+    margin: 20px; }

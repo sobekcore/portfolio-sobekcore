@@ -79,7 +79,7 @@ export default function Project()
         </ul>
         <p>
           A simple Single Page App made with React, which focus is to
-          show main diferences between React and Vanilla JavaScript.
+          show main differences between React and Vanilla JavaScript.
           It contains a lot of animations and modern and clear design.
         </p>
       </li>
