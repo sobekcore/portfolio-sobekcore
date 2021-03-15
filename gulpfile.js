@@ -40,8 +40,7 @@ function commit()
 function push(done)
 {
   git.push("origin", "development", function(err)
-    { if(err) throw err; }
-  );
+    { if(err) throw err; });
   done();
 }
 
