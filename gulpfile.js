@@ -17,12 +17,12 @@ function compile_sass(done)
 function watch_sass()
 { watch("./styles/sass/*", compile_sass); }
 
-exports.dev = series(watch_sass);
+exports.dev = watch_sass;
 
 // Build Gulp setup
 function add()
 {
-  return src('.')
+  return src(".")
     .pipe(git.add());
 }
 
@@ -30,7 +30,7 @@ function commit()
 {
   if(argv.m)
   {
-    return src('.')
+    return src(".")
       .pipe(git.commit(argv.m));
   }
   else

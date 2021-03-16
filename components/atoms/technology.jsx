@@ -5,7 +5,7 @@ export default function Technology()
       <li className="tech-single">
       <div className="tech-card">
         <div className="tech-card-front">
-          <img src="./technologies/html.png" style={{width: "200px"}}/>
+          <img src="./technologies/html.png" />
           <h2>HTML</h2>
         </div>
         <div className="tech-card-back">
@@ -22,15 +22,15 @@ export default function Technology()
       <li className="tech-single">
       <div className="tech-card">
         <div className="tech-card-front">
-          <img src="./technologies/css.png" style={{width: "200px"}}/>
+          <img src="./technologies/css.png" />
           <h2>CSS</h2>
         </div>
         <div className="tech-card-back">
           <ul className="skills">
             <li>Creating advanced and layered animations</li>
             <li>Able to use Sass and use its advantages</li>
-            <li>Good awarness of CSS styling dependencies </li>
-            <li>Understaing of OOCSS</li>
+            <li>Good awareness of CSS styling dependencies</li>
+            <li>Understanding of OOCSS</li>
           </ul>
         </div>
       </div>
@@ -39,7 +39,7 @@ export default function Technology()
       <li className="tech-single">
       <div className="tech-card">
         <div className="tech-card-front">
-          <img src="./technologies/javascript.png" style={{width: "200px"}}/>
+          <img src="./technologies/javascript.png" />
           <h2>JavaScript</h2>
         </div>
         <div className="tech-card-back">
@@ -56,7 +56,7 @@ export default function Technology()
       <li className="tech-single">
       <div className="tech-card">
         <div className="tech-card-front">
-          <img src="./technologies/react.png" style={{width: "200px"}}/>
+          <img src="./technologies/react.png" />
           <h2>React</h2>
         </div>
         <div className="tech-card-back">
@@ -73,7 +73,7 @@ export default function Technology()
       <li className="tech-single">
       <div className="tech-card">
         <div className="tech-card-front">
-          <img src="./technologies/golang.png" style={{width: "200px"}}/>
+          <img src="./technologies/golang.png" />
           <h2>Go</h2>
         </div>
         <div className="tech-card-back">
@@ -90,7 +90,7 @@ export default function Technology()
       <li className="tech-single">
       <div className="tech-card">
         <div className="tech-card-front">
-          <img src="./technologies/cms.png" style={{width: "200px"}}/>
+          <img src="./technologies/cms.png" />
           <h2>Headless CMS</h2>
         </div>
         <div className="tech-card-back">
@@ -107,7 +107,7 @@ export default function Technology()
       <li className="tech-single">
       <div className="tech-card">
         <div className="tech-card-front">
-          <img src="./technologies/serverless.png" style={{width: "200px"}}/>
+          <img src="./technologies/serverless.png" />
           <h2>Serverless</h2>
         </div>
         <div className="tech-card-back">
@@ -124,7 +124,7 @@ export default function Technology()
       <li className="tech-single">
       <div className="tech-card">
         <div className="tech-card-front">
-          <img src="./technologies/git.png" style={{width: "200px"}}/>
+          <img src="./technologies/git.png" />
           <h2>Git</h2>
         </div>
         <div className="tech-card-back">
