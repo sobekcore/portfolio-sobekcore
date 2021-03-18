@@ -4,6 +4,19 @@ const { src, dest, watch, series } = require("gulp");
 const sass = require("gulp-sass");
 const argv = require("yargs").argv;
 const git = require("gulp-git");
+const awspublish = require("gulp-awspublish");
+const aws = require("aws-sdk");
+
+// AWS S3 publish credentials
+var publisher = awspublish.create(
+  {
+    region: "eu-central-1",
+    params: {
+      Bucket: "portfolio-sobekcore"
+    },
+    credentials: new aws.SharedIniFileCredentials({ profile: "default" })
+  }
+);
 
 // Development Gulp setup
 function compile_sass(done)
@@ -45,3 +58,28 @@ function push(done)
 }
 
 exports.build = series(add, commit, push);
+
+// Production Gulp setup
+function checkout()
+{
+  git.checkout("master", {args:"-b"}, function (err) {
+    if (err) throw err;
+  });
+}
+
+function master(done)
+{
+  git.push("origin", "master", function(err)
+    { if(err) throw err; });
+  done();
+}
+
+function aws_s3()
+{
+  return src("./out/**/*")
+    .pipe(publisher.publish())
+    .pipe(publisher.sync())
+    .pipe(awspublish.reporter());
+}
+
+exports.production = series(checkout, add, commit, master, aws_s3);

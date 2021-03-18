@@ -26,5 +26,11 @@ npm run build -- -m "<your message>"
 ```
 which will run **`next build`**, **`next export`** and **`gulp build`**. Everything with 1 command! Remember: to run build command you must either have development branch in your git repository, or change branch name in the **`gulpfile.js`**.
 
+However, if you'd like to publish it on your own AWS S3 type:
+```
+npm run production
+```
+and before that setup your AWS CLI locally and your bucket.
+
 ## Contribution
 If you'd like to contribute in any way, feel free to. Write a message to me in any media im in. If you have literally any idea, any bug, anything - just write me it. You can find my media on my main README file on GitHub. If you have read up to this point, thank you! It means alot to me.
