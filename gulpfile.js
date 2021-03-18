@@ -74,6 +74,13 @@ function merge(done)
   done();
 }
 
+function master(done)
+{
+  git.push("origin", "master", function(err)
+    { if(err) throw err; });
+  done();
+}
+
 function aws_s3()
 {
   return src("./out/**/*")
@@ -82,4 +89,17 @@ function aws_s3()
     .pipe(awspublish.reporter());
 }
 
-exports.production = series(checkout, merge, aws_s3);
+function development(done)
+{
+  git.checkout("development", function(err)
+    { if (err) throw err; });
+  done();
+}
+
+exports.production = series(
+  checkout,
+  merge,
+  master,
+  aws_s3,
+  development
+);

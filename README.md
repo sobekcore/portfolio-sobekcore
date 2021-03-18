@@ -17,6 +17,8 @@ The site's core is Next.js and Sass, Next is firstly build and then exported int
 * building & exporting static Next.js site with pushing to development GitHub branch
 * creating production build and pushing files to AWS S3, as well as pushing to master branch
 
+Everything might seems simple, but AWS is a whole different beast, and its a lot more complicated than i've shown here. Below there will be a diagram which will show more or less how my AWS is setted. Currently it is worked on, someday it will be done ¯\_(ツ)_/¯
+
 ## How to run it locally?
 Running various tasks is a lot easier thanks to Gulp, and chaining tasks with him. For example, one of the convenient commands is to run development environment, to do so use:
 ```
@@ -31,9 +33,9 @@ which will run **`next build`**, **`next export`** and **`gulp build`**. Everyth
 
 However, if you'd like to publish it on your own AWS S3 bucket type:
 ```
-npm run production -- -m "<your master message>"
+npm run production
 ```
-which will run **`gulp production`**. And before that you must setup your AWS locally and your bucket. There are few things you must do, like enable public bucket, configure user rights & create admin profile on AWS IAM etc. You'll find tons of great tutorial on the web for sure!
+which will run **`gulp production`**. And before that you must setup your AWS locally and your bucket. There are few things you must do, like enable public bucket, configure user rights & create admin profile on AWS IAM etc. You'll find tons of great tutorials on the web for sure!
 
 ## Contribution
 If you'd like to contribute in any way, feel free to. Write a message to me in any media im in. If you have literally any idea, any bug, anything - just write me it. You can find my media on my main README file on GitHub. If you have read up to this point, thank you! It means alot to me.
