@@ -67,9 +67,9 @@ function checkout(done)
   done();
 }
 
-function master(done)
+function merge(done)
 {
-  git.push("origin", "master", function(err)
+  git.merge("development", function(err)
     { if(err) throw err; });
   done();
 }
@@ -82,4 +82,4 @@ function aws_s3()
     .pipe(awspublish.reporter());
 }
 
-exports.production = series(checkout, add, commit, master, aws_s3);
+exports.production = series(checkout, merge, aws_s3);
