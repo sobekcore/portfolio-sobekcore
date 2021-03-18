@@ -60,11 +60,11 @@ function push(done)
 exports.build = series(add, commit, push);
 
 // Production Gulp setup
-function checkout()
+function checkout(done)
 {
-  git.checkout("master", {args:"-b"}, function (err) {
-    if (err) throw err;
-  });
+  git.checkout("master", function(err)
+    { if (err) throw err; });
+  done();
 }
 
 function master(done)
