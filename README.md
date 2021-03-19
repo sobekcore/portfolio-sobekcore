@@ -12,7 +12,7 @@ This portfolio is a showcase of my skills and known technologies, as well as bri
   src="https://user-images.githubusercontent.com/74379676/111089845-d21bec80-852d-11eb-8a9a-841a2d0e803f.png"
 />
 
-The site's core is Next.js and Sass, Next is firstly build and then exported into static files. Sass is complied into one chonky optimized .css file. Then most of the tasks are automated with Gulp, it helps alot with development and deployment. The automated tasks are:
+The site's core is Next.js and Sass, Next is firstly build and then exported into static files. Sass is complied into one chonky optimized .css file. Then most of the tasks are automated with Gulp combined with npm-scripts, it helps alot with development and deployment. The automated tasks are:
 * creating development enviroment (node server, watching .scss files, compiling it to .css)
 * building & exporting static Next.js site with pushing to development GitHub branch
 * creating production build and pushing files to AWS S3, as well as pushing to master branch
@@ -20,7 +20,7 @@ The site's core is Next.js and Sass, Next is firstly build and then exported int
 Everything might seems simple, but AWS is a whole different beast, and its a lot more complicated than i've shown here. If you are interested in a bit more detailed AWS setup, then this section is for you. Below there will be a diagram which will show more or less how my AWS is setted up. Currently it is worked on, someday it will be done.
 
 ## How to run it locally?
-Running various tasks is a lot easier thanks to Gulp, and chaining tasks with him. For example, one of the convenient commands is to run development environment, to do so use:
+Running various tasks is a lot easier thanks to Gulp, and chaining tasks with it. For example, one of the convenient commands is to run development environment, to do so use:
 ```
 npm run dev
 ```

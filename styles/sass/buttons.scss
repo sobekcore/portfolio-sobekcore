@@ -31,9 +31,9 @@
         {
           position: absolute;
           content: "";
-          width: 100%;height: 100%;
           top: 0; left: 0;
           right: 0; bottom: 0;
+          width: 100%; height: 100%;
           background: $middle-truq-color;
           border-radius: inherit;
           box-shadow:
@@ -47,7 +47,7 @@
 
         &:hover
         {
-          background: $main-turq-color;
+          background: $button-hover-color;
           transform: translate(0, 0.2em);
 
           &::before
@@ -61,7 +61,7 @@
 
         &:active
         {
-          background: $main-turq-color;
+          background: $button-hover-color;
           transform: translate(0em, 0.6em);
 
           &::before

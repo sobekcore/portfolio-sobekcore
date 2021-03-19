@@ -78,19 +78,19 @@
 
                   &::before
                   {
-                    font: bold 19px "Ubuntu";
+                    font: bold 19px "Ubuntu", sans-serif;
                     color: $main-purple-color;
                     content: "</> ";
-
-// Lots of curly braces :G
-
                   }
                 }
               }
-            }
+            } // .tech-card-back
+
           }
-        }
+        } // .tech-single
+
       }
-    }
+    } // section
+
   }
 }
