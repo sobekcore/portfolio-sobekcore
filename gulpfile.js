@@ -11,10 +11,9 @@ const aws = require("aws-sdk");
 var publisher = awspublish.create(
   {
     region: "eu-central-1",
-    params: {
-      Bucket: "portfolio-sobekcore"
-    },
-    credentials: new aws.SharedIniFileCredentials({ profile: "default" })
+    params: { Bucket: "portfolio-sobekcore" },
+    credentials: new aws.SharedIniFileCredentials(
+      { profile: "default" })
   }
 );
 
@@ -89,7 +88,7 @@ function aws_s3()
     .pipe(awspublish.reporter());
 }
 
-function development(done)
+function back_to_dev(done)
 {
   git.checkout("development", function(err)
     { if (err) throw err; });
@@ -101,5 +100,5 @@ exports.production = series(
   merge,
   master,
   aws_s3,
-  development
+  back_to_dev
 );

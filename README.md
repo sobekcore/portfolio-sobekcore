@@ -17,7 +17,7 @@ The site's core is Next.js and Sass, Next is firstly build and then exported int
 * building & exporting static Next.js site with pushing to development GitHub branch
 * creating production build and pushing files to AWS S3, as well as pushing to master branch
 
-Everything might seems simple, but AWS is a whole different beast, and its a lot more complicated than i've shown here. Below there will be a diagram which will show more or less how my AWS is setted. Currently it is worked on, someday it will be done ¯\_(ツ)_/¯
+Everything might seems simple, but AWS is a whole different beast, and its a lot more complicated than i've shown here. If you are interested in a bit more detailed AWS setup, then this section is for you. Below there will be a diagram which will show more or less how my AWS is setted up. Currently it is worked on, someday it will be done.
 
 ## How to run it locally?
 Running various tasks is a lot easier thanks to Gulp, and chaining tasks with him. For example, one of the convenient commands is to run development environment, to do so use:
@@ -36,6 +36,11 @@ However, if you'd like to publish it on your own AWS S3 bucket type:
 npm run production
 ```
 which will run **`gulp production`**. And before that you must setup your AWS locally and your bucket. There are few things you must do, like enable public bucket, configure user rights & create admin profile on AWS IAM etc. You'll find tons of great tutorials on the web for sure!
+
+## Project structure
+Project is made with Atomic Design, which is focused on creating better maintained components & breaking them into more simpler ones. You can find all the smallest possible components in **`/components/atoms`** folder, there should be stuff like single buttons, inputs, titles etc. Slightly bigger ones like collections of buttons, multpiple entries listed etc. should be in **`/components/molecules`** folder. And the biggest ones like whole forms, sections etc. should be in the **`/components/organisms`** folder. From on there you can "build" your pages in either templates folder or if its SPA simply in index.jsx.
+
+Branches are structured in a way that all the smaller builds are deployed to **`development`** branch and are avaiable there, those might be sometimes ahead of the current live website state. However main builds that are live on the website are avaiable on **`master`** branch, and are 100% matched with the current website state.
 
 ## Contribution
 If you'd like to contribute in any way, feel free to. Write a message to me in any media im in. If you have literally any idea, any bug, anything - just write me it. You can find my media on my main README file on GitHub. If you have read up to this point, thank you! It means alot to me.
