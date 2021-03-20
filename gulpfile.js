@@ -80,6 +80,13 @@ function master(done)
   done();
 }
 
+function back_to_dev(done)
+{
+  git.checkout("development", function(err)
+    { if (err) throw err; });
+  done();
+}
+
 function aws_s3()
 {
   return src("./out/**/*")
@@ -88,17 +95,10 @@ function aws_s3()
     .pipe(awspublish.reporter());
 }
 
-function back_to_dev(done)
-{
-  git.checkout("development", function(err)
-    { if (err) throw err; });
-  done();
-}
-
 exports.production = series(
   checkout,
   merge,
   master,
+  back_to_dev,
   aws_s3,
-  back_to_dev
 );
