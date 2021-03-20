@@ -17,7 +17,7 @@ var publisher = awspublish.create(
   }
 );
 
-// Development Gulp setup
+// DEVELOPMENT GULP SETUP
 function compile_sass(done)
 {
   src("./styles/sass/index.scss")
@@ -31,7 +31,7 @@ function watch_sass()
 
 exports.dev = watch_sass;
 
-// Build Gulp setup
+// BUILD GULP SETUP
 function add()
 {
   return src(".")
@@ -58,47 +58,50 @@ function push(done)
 
 exports.build = series(add, commit, push);
 
-// Production Gulp setup
-function checkout(done)
-{
-  git.checkout("master", function(err)
-    { if (err) throw err; });
-  done();
-}
+// PRODUCTION GULP SETUP
 
+// This task is written in a weird way due to AWS S3, because it's Gulp SDK works in async,
+// which means some of the Git tasks may behave strangely, chaining it with ifs fixes that problem.
+// Also this syntax help with error handling much more due to its stepped structure.
+// Which of course is important when publishing to production.
 function merge(done)
 {
-  git.merge("development", function(err)
-    { if(err) throw err; });
+  // 1. Checkout to master branch
+  git.checkout("master", function(err) {
+    if(err) { throw err; }
+    else {
+      // 2. Merge from development branch
+      git.merge("development", function(err) {
+        if(err) throw err;
+        else {
+          // 3. Push to master
+          git.push("origin", "master", function(err) {
+            if(err) throw err;
+            else {
+              // 4. Go back to development branch
+              git.checkout("development", function(err) {
+                if(err) throw err;
+              });
+            }
+          });
+        }
+      });
+    }
+  });
+
   done();
 }
 
-function master(done)
+function aws_s3(done)
 {
-  git.push("origin", "master", function(err)
-    { if(err) throw err; });
-  done();
-}
-
-function back_to_dev(done)
-{
-  git.checkout("development", function(err)
-    { if (err) throw err; });
-  done();
-}
-
-function aws_s3()
-{
-  return src("./out/**/*")
+  src("./out/**/*")
     .pipe(publisher.publish())
     .pipe(publisher.sync())
     .pipe(awspublish.reporter());
+  done();
 }
 
 exports.production = series(
-  checkout,
   merge,
-  master,
-  back_to_dev,
   aws_s3,
 );
