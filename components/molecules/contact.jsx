@@ -9,13 +9,6 @@ export default function Contact()
         <ContactText />
         <ContactIcons />
       </div>
-      {/*
-      <form action="mailto:sobekcore@gmail.com">
-        <input type="email" valuename="email" autoComplete="off" placeholder="your@email.com"></input>
-        <textarea id="message" placeholder="Message..."></textarea>
-        <button>Send</button>
-      </form>
-      */}
     </div>
   );
 }

@@ -32,18 +32,20 @@ function watch_sass()
 exports.dev = watch_sass;
 
 // BUILD GULP SETUP
-function add()
+function add(done)
 {
-  return src(".")
+  src(".")
     .pipe(git.add());
+  done();
 }
 
-function commit()
+function commit(done)
 {
   if(argv.m)
   {
-    return src(".")
+    src(".")
       .pipe(git.commit(argv.m));
+    done();
   }
   else
   { console.log("Commit message is missing!") }
@@ -72,15 +74,15 @@ function merge(done)
     else {
       // 2. Merge from development branch
       git.merge("development", function(err) {
-        if(err) throw err;
+        if(err) { throw err; }
         else {
           // 3. Push to master
           git.push("origin", "master", function(err) {
-            if(err) throw err;
+            if(err) { throw err; }
             else {
               // 4. Go back to development branch
               git.checkout("development", function(err) {
-                if(err) throw err;
+                if(err) { throw err; }
               });
             }
           });

@@ -21,7 +21,7 @@ $screen-offset-h: calc(100vh - 60px);
   {
     position: absolute;
     left: 0; top: 0;
-    height: 2px;
+    height: 3px;
     background: linear-gradient(
       -45deg,
       $main-pink-color,
@@ -37,7 +37,7 @@ $screen-offset-h: calc(100vh - 60px);
       content: '';
       position: absolute;
       top: 0; right: 0;
-      height: 2px;
+      height: 3px;
       transform: translateX(50%);
       border-radius: 100%;
       background: linear-gradient(
@@ -52,7 +52,7 @@ $screen-offset-h: calc(100vh - 60px);
       content: '';
       position: absolute;
       top: 0; right: 0;
-      height: 2px;
+      height: 3px;
       transform: translateX(50%);
       background: linear-gradient(
         -45deg,
@@ -62,7 +62,7 @@ $screen-offset-h: calc(100vh - 60px);
       );
     }
 
-    @for $i from 1 through 33
+    @for $i from 1 through 25
     {
       &:nth-child(#{$i})
       {

@@ -29,14 +29,6 @@ export default function Lasers()
       <Laser />
       <Laser />
       <Laser />
-      <Laser />
-      <Laser />
-      <Laser />
-      <Laser />
-      <Laser />
-      <Laser />
-      <Laser />
-      <Laser />
     </>
   );
 }
