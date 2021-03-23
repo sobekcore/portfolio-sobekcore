@@ -3,21 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"next dev\" \"gulp dev\"",
+    "dev": "concurrently 'next dev' 'gulp dev'",
     "build": "next build && next export && gulp build",
-    "production": "gulp production",
-    "start": "next start"
+    "lint": "eslint './pages/**/*.jsx' './components/**/*.jsx' --fix",
+    "production": "gulp production"
   },
   "dependencies": {
-    "aws-sdk": "^2.866.0",
+    "next": "^10.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.870.0",
     "concurrently": "^6.0.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.0",
     "gulp": "^4.0.2",
     "gulp-awspublish": "^4.1.2",
     "gulp-git": "^2.10.1",
     "gulp-sass": "^4.1.0",
-    "next": "^10.0.7",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "prettier": "^2.2.1",
     "yargs": "^16.2.0"
   }
 }

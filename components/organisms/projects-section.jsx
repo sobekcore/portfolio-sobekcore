@@ -1,8 +1,7 @@
 import Projects from "../molecules/projects";
 
-export default function ProjectsSection()
-{
-  return(
+export default function ProjectsSection() {
+  return (
     <div id="projects-page">
       <article>
         <h1 id="projects">Projects</h1>

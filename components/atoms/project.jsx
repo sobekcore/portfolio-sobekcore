@@ -1,6 +1,5 @@
-export default function Project()
-{
-  return(
+export default function Project() {
+  return (
     <>
       <li className="project-single">
         <div className="project-name">
@@ -17,10 +16,9 @@ export default function Project()
           <li>Netlify</li>
         </ul>
         <p>
-          Keyboards World is a example e-commerce website.
-          It's made with the most basic web tools, yet has great
-          performance. It contains finished shop managed by Contentful
-          and ready to connect paying system out of the box.
+          Keyboards World is a example e-commerce website. It's made with the most basic web tools,
+          yet has great performance. It contains finished shop managed by Contentful and ready to
+          connect paying system out of the box.
         </p>
       </li>
 
@@ -38,9 +36,8 @@ export default function Project()
           <li>Vercel</li>
         </ul>
         <p>
-          Gamedev Website is a simple Server Side Rendered site.
-          It has CMS managed blog, and comments system where every
-          visitor can comment any blog post they want to! It's highly
+          Gamedev Website is a simple Server Side Rendered site. It has CMS managed blog, and
+          comments system where every visitor can comment any blog post they want to! It's highly
           flexible and can be adjusted to any requirements.
         </p>
       </li>
@@ -59,9 +56,8 @@ export default function Project()
           <li>Netlify</li>
         </ul>
         <p>
-          Druidism is a web browser platformer game. The game is focused
-          on skill expression thanks do advanced and precise movement.
-          It's made with Vanilla JavaScript and HTML Canvas tag.
+          Druidism is a web browser platformer game. The game is focused on skill expression thanks
+          do advanced and precise movement. It's made with Vanilla JavaScript and HTML Canvas tag.
         </p>
       </li>
 
@@ -78,9 +74,8 @@ export default function Project()
           <li>Netlify</li>
         </ul>
         <p>
-          A simple Single Page App made with React, which focus is to
-          show main differences between React and Vanilla JavaScript.
-          It contains a lot of animations and modern and clear design.
+          A simple Single Page App made with React, which focus is to show main differences between
+          React and Vanilla JavaScript. It contains a lot of animations and modern and clear design.
         </p>
       </li>
     </>

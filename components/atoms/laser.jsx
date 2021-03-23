@@ -1,2 +1,3 @@
-export default function Laser()
-{ return <div className="laser"></div> }
+export default function Laser() {
+  return <div className="laser"></div>;
+}

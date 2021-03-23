@@ -1,8 +1,7 @@
 import Laser from "../atoms/laser";
 
-export default function Lasers()
-{
-  return(
+export default function Lasers() {
+  return (
     <>
       <Laser />
       <Laser />

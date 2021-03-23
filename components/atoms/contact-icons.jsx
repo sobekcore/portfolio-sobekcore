@@ -1,20 +1,19 @@
 import { useState } from "react";
 
-export default function ContactIcons()
-{
+export default function ContactIcons() {
   const [isFlying, setFlying] = useState(false);
 
-  const planeFly = () =>
-  {
+  const planeFly = () => {
     setFlying(true);
 
-    setTimeout(function()
-    { setFlying(false); }
-    , 1600);
-  }
+    setTimeout(function () {
+      setFlying(false);
+    }, 1600);
+  };
 
-  return(
+  return (
     <div id="contact-icons">
+      {/* eslint-disable */}
       <a
         title="Follow my Twitter"
         href="https://twitter.com/sobekcore"
@@ -40,6 +39,7 @@ export default function ContactIcons()
         target="_blank">
         <img src="icons/github.svg" />
       </a>
+      {/* eslint-enable */}
     </div>
   );
 }
