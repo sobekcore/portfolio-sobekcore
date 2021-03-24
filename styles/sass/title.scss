@@ -1,11 +1,8 @@
-#home-page
-{
-  #title
-  {
+#home-page {
+  #title {
     margin: 50px;
 
-    h1
-    {
+    h1 {
       font: bold 90px "Ubuntu", sans-serif;
       font-size: clamp(1rem, 7.4vw, 5.6rem);
       text-shadow: 5px 5px $dark-turq-color;
@@ -14,8 +11,7 @@
       text-align: center;
     }
 
-    p
-    {
+    p {
       font: bold 26px "Ubuntu", sans-serif;
       font-size: clamp(1rem, 5.6vw, 1.65rem);
       color: $main-gray-color;
@@ -24,30 +20,36 @@
       text-align: center;
     }
 
-    #home-path
-    {
+    #home-path {
       color: $main-purple-color;
       text-shadow: 4px 4px $dark-purple-color;
     }
 
-    .violet
-    {
+    .violet {
       font-weight: 600;
       color: $main-purple-color;
     }
 
-    @media(max-width: 1200px)
-    { margin: 20px; }
-
-    @media(max-width: 799px)
-    {
-      margin: 12px;
-
-      h1 { text-shadow: 3px 3px $dark-turq-color; }
-      #home-path { text-shadow: 2px 2px $dark-purple-color; }
+    @media (max-width: 1200px) {
+      margin: 20px;
     }
 
-    @media(max-width: 499px)
-    { h1 { text-shadow: 2px 2px $dark-turq-color; } }
+    @media (max-width: 799px) {
+      margin: 12px;
+
+      h1 {
+        text-shadow: 3px 3px $dark-turq-color;
+      }
+
+      #home-path {
+        text-shadow: 2px 2px $dark-purple-color;
+      }
+    }
+
+    @media (max-width: 499px) {
+      h1 {
+        text-shadow: 2px 2px $dark-turq-color;
+      }
+    }
   }
 }

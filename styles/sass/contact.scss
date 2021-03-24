@@ -1,5 +1,4 @@
-#contact
-{
+#contact {
   position: relative;
   background: $main-purple-color;
   width: 1130px; max-width: 90vw;
@@ -9,8 +8,7 @@
   border-radius: 20px;
   z-index: 1;
 
-  #contact-intro
-  {
+  #contact-intro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,47 +17,43 @@
     margin: 0 auto;
     row-gap: 25px;
 
-    h3
-    {
+    h3 {
       font: bold 34px "Ubuntu", sans-serif;
       color: #E8FFFC;
       margin: 0;
     }
 
-    p
-    {
+    p {
       font: 22px "Ubuntu", sans-serif;
       text-align: center;
       color: #E8FFFC;
       margin: 0;
     }
 
-    #contact-icons
-    {
-      a
-      {
+    #contact-icons {
+      a {
         display: inline-flex;
         margin: 0 16px;
         width: 58px;
 
-        img
-        {
+        img {
           width: 100%;
           padding: 8px;
-          transition: .2s transform;
+          transition: 0.2s transform;
           border-radius: 8px;
           cursor: pointer;
         }
 
-        &:hover > img
-        { transform: scale(1.25); }
+        &:hover > img {
+          transform: scale(1.25);
+        }
       }
 
-      #paper-plane-flying
-      { animation: Fly 1500ms ease; }
+      #paper-plane-flying {
+        animation: Fly 1500ms ease;
+      }
 
-      @keyframes Fly
-      {
+      @keyframes Fly {
         6% { transform: translate(-10px, 10px); }
         24% { transform: translate(-15px, 15px); opacity: 1; }
         70% { transform: translate(75vw, -100vh); opacity: 0; }
@@ -70,31 +64,23 @@
     }
   }
 
-  ::selection
-  {
+  ::selection {
     background: $main-turq-color;
     color: $dark-purple-color;
   }
 
-  @media(max-width: 749px)
-  { padding: 24px 16px; }
+  @media (max-width: 749px) { padding: 24px 16px; }
 
-  @media(max-width: 439px)
-  {
-    #contact-intro
-    {
-      h3
-      { font: bold 27px "Ubuntu", sans-serif; }
+  @media (max-width: 439px) {
+    #contact-intro {
+      h3 { font: bold 27px "Ubuntu", sans-serif; }
 
-      #contact-icons
-      {
-        a
-        {
+      #contact-icons {
+        a {
           width: 52px;
           margin: 0 5px;
         }
       }
     }
   }
-
 }

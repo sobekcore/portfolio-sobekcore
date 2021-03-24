@@ -72,7 +72,7 @@ export default function Technology() {
       <li className="tech-single">
         <div className="tech-card">
           <div className="tech-card-front">
-            <img src="./technologies/golang.png" />
+            <img src="./technologies/go.png" />
             <h2>Go</h2>
           </div>
           <div className="tech-card-back">
@@ -95,8 +95,8 @@ export default function Technology() {
           <div className="tech-card-back">
             <ul className="skills">
               <li>Administrating sites with CMS's</li>
-              <li>Using more complex ones like Sanity.io</li>
-              <li>Connecting to their API with most technologies</li>
+              <li>Using more complex structured ones</li>
+              <li>Connecting to their API {"&"} its data processing</li>
               <li>Ability to easily learn new CMS systems</li>
             </ul>
           </div>
@@ -106,15 +106,15 @@ export default function Technology() {
       <li className="tech-single">
         <div className="tech-card">
           <div className="tech-card-front">
-            <img src="./technologies/serverless.png" />
-            <h2>Serverless</h2>
+            <img src="./technologies/eslint.png" />
+            <h2>Modern Tools</h2>
           </div>
           <div className="tech-card-back">
             <ul className="skills">
-              <li>Create Continuous Deployments with Git</li>
-              <li>Hosting sites within few minutes</li>
-              <li>Building easy-to-maintain hosting</li>
-              <li>On the way to learn more advanced serverless, it's my goal!</li>
+              <li>Using linters to keep code clean {"&"} consistent</li>
+              <li>Ability to automate various tasks via Gulp</li>
+              <li>Fluent usage of package managers</li>
+              <li>Creating friendly developer environments</li>
             </ul>
           </div>
         </div>
@@ -130,8 +130,8 @@ export default function Technology() {
             <ul className="skills">
               <li>Good understanding of branches concept</li>
               <li>Correct workflow with Git commits {"&"} keeping them clean</li>
-              <li>Clear description writing</li>
-              <li>Ability to use and learn any online Git repo service</li>
+              <li>Advanced Markdown usage</li>
+              <li>Ability to use and learn any online Git provider service</li>
             </ul>
           </div>
         </div>

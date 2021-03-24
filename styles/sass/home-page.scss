@@ -1,13 +1,10 @@
-#home-page
-{
+#home-page {
   background: $main-pink-color;
   width: 100vw; min-height: 100vh;
   padding: 30px;
 
-  #main
-  {
-    #container
-    {
+  #main {
+    #container {
       width: 100%;
       z-index: 1;
       margin: auto;

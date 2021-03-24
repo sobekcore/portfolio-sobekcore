@@ -1,21 +1,20 @@
-#tech-page
-{
+#tech-page {
   width: 100vw; min-height: 100vh;
-  background: linear-gradient(
-    $salmon-color 0%,
-    $melon-color 100%
-  );
+  background:
+    linear-gradient(
+      $salmon-color 0%,
+      $melon-color 100%
+    );
 
-  #tech-separator
-  { width: 100vw; }
+  #tech-separator {
+    width: 100vw;
+  }
 
-  article
-  {
+  article {
     min-height: 100vh;
     margin-top: 40px;
 
-    h1
-    {
+    h1 {
       font: bold 90px "Ubuntu", sans-serif;
       font-size: clamp(1rem, 14.5vw, 5.6rem);
       text-shadow: 5px 5px $dark-turq-color;
@@ -24,8 +23,9 @@
       text-align: center;
       padding-top: 20px;
 
-      @media(max-width: 799px)
-      { text-shadow: 3px 3px $dark-turq-color; }
+      @media (max-width: 799px) {
+        text-shadow: 3px 3px $dark-turq-color;
+      }
     }
   }
 }

@@ -1,5 +1,4 @@
-footer
-{
+footer {
   position: relative;
   background: $main-pink-color;
   height: 500px;
@@ -9,8 +8,7 @@ footer
   flex-direction: column;
   padding-top: 200px;
 
-  h2
-  {
+  h2 {
     width: 80%;
     transform: translateY(-50%);
     font: bold 22px "Ubuntu", sans-serif;

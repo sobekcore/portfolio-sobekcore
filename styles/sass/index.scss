@@ -21,10 +21,12 @@ $dark-purple-color: #2C2252;
 $main-gray-color: #263238;
 
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-body, html
-{
+body,
+html {
   background: $main-pink-color;
   scroll-behavior: smooth;
   padding: 0; margin: 0;
@@ -32,22 +34,26 @@ body, html
   width: 100vw;
 }
 
-body::-webkit-scrollbar
-{ width: 8px; }
+body::-webkit-scrollbar {
+  width: 8px;
+}
 
-body::-webkit-scrollbar-track
-{ background: $main-pink-color; }
+body::-webkit-scrollbar-track {
+  background: $main-pink-color;
+}
 
-body::-webkit-scrollbar-thumb
-{ background: $main-turq-color; border-radius: 8px; }
+body::-webkit-scrollbar-thumb {
+  background: $main-turq-color; border-radius: 8px;
+}
 
-::selection
-{
+::selection {
   background: $main-purple-color;
   color: $light-turq-color;
 }
 
-img { user-select: none; }
+img {
+  user-select: none;
+}
 
 
 // Importing Sass modules
