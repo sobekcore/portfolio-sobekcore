@@ -8,18 +8,15 @@ const awspublish = require("gulp-awspublish");
 const aws = require("aws-sdk");
 
 // AWS S3 publish credentials
-var publisher = awspublish.create(
-  {
-    region: "eu-central-1",
-    params: { Bucket: "portfolio-sobekcore" },
-    credentials: new aws.SharedIniFileCredentials(
-      { profile: "default" })
-  }
-);
+var publisher = awspublish.create({
+  region: "eu-central-1",
+  params: { Bucket: "portfolio-sobekcore" },
+  credentials: new aws.SharedIniFileCredentials(
+    { profile: "default" })
+});
 
 // DEVELOPMENT GULP SETUP
-function compile_sass(done)
-{
+function compile_sass(done) {
   src("./styles/sass/index.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(dest("./styles/css"));
@@ -32,27 +29,21 @@ function watch_sass()
 exports.dev = watch_sass;
 
 // BUILD GULP SETUP
-function add(done)
-{
-  src(".")
+function add() {
+  return src(".")
     .pipe(git.add());
-  done();
 }
 
-function commit(done)
-{
-  if(argv.m)
-  {
-    src(".")
+function commit() {
+  if(argv.m) {
+    return src(".")
       .pipe(git.commit(argv.m));
-    done();
   }
   else
   { console.log("Commit message is missing!") }
 }
 
-function push(done)
-{
+function push(done) {
   git.push("origin", "development", function(err)
     { if(err) throw err; });
   done();
@@ -66,8 +57,7 @@ exports.build = series(add, commit, push);
 // which means some of the Git tasks may behave strangely, chaining it with ifs fixes that problem.
 // Also this syntax help with error handling much more due to its stepped structure.
 // Which of course is important when publishing to production.
-function merge(done)
-{
+function merge(done) {
   // 1. Checkout to master branch
   git.checkout("master", function(err) {
     if(err) { throw err; }
@@ -94,8 +84,7 @@ function merge(done)
   done();
 }
 
-function aws_s3(done)
-{
+function aws_s3(done) {
   src("./out/**/*")
     .pipe(publisher.publish())
     .pipe(publisher.sync())

@@ -2,22 +2,23 @@
   Sobek's Developer Portfolio
 </h1>
 
-This portfolio is a showcase of my skills and known technologies, as well as brief description about me and projects that i've made. It's made with Next.js, Sass and Gulp. Hosted on AWS S3. Modern, simple and clear. Hopefully somewhat eye-pleasing :wink:
+This portfolio is a showcase of my skills and known technologies, as well as brief description about me and projects that i've made. It's made with Next.js, Sass and Gulp. Hosted on AWS S3. Also uses best web practises and modern front-end technologies. Hopefully also somewhat eye-pleasing...
 
 ## How it's working?
 <img
   align="center"
   alt="Project Block Diagram"
   title="Click if its too small"
-  src="https://user-images.githubusercontent.com/74379676/111089845-d21bec80-852d-11eb-8a9a-841a2d0e803f.png"
+  src="https://user-images.githubusercontent.com/74379676/112236588-1ea7ac00-8c41-11eb-910f-68d3d8a21b99.png"
 />
 
-The site's core is Next.js and Sass, Next is firstly build and then exported into static files. In the meantime ESLint and Prettier helps me with maintaining same coding style all along. After that Sass is complied into one chonky optimized .css file. Then most of the tasks are automated with Gulp combined with npm-scripts, it helps alot with development and deployment. The automated tasks are:
+The site's core is **`Next.js`** and **`Sass`**, Next is firstly build and then exported into static files. In the meantime **`ESLint`** and **`Prettier`** helps me with maintaining same coding style all along. After that Sass is complied into one chonky optimized .css file. Then most of the tasks are automated with **`Gulp`** combined with npm-scripts, it helps alot with development and deployment. The automated tasks are:
 * creating development enviroment (node server, watching .scss files, compiling it to .css)
 * building & exporting static Next.js site with pushing to development GitHub branch
 * creating production build and pushing files to AWS S3, as well as pushing to master branch
+* running linter through whole project in the form of ESLint and Prettier
 
-Everything might seems simple, but AWS is a whole different beast, and its a lot more complicated than i've shown here. If you are interested in a bit more detailed AWS setup, then this section is for you. Below there will be a diagram which will show more or less how my AWS is setted up. Currently it is worked on, someday it will be done.
+Everything might seems simple, but **`AWS`** is a whole different beast, and its a lot more complicated than i've shown here. If you are interested in a bit more detailed AWS setup, then this section is for you. Below there will be a diagram which will show more or less how my AWS is setted up. Currently it is worked on, someday it will be done.
 
 ## How to run it locally?
 Running various tasks is a lot easier thanks to Gulp, and chaining tasks with it. For example, one of the convenient commands is to run development environment, to do so use:
