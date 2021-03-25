@@ -10,7 +10,7 @@ const aws = require("aws-sdk");
 // AWS S3 publish credentials
 var publisher = awspublish.create({
   region: "eu-central-1",
-  params: { Bucket: "portfolio-sobekcore" },
+  params: { Bucket: "www.sobekcore.com" },
   credentials: new aws.SharedIniFileCredentials(
     { profile: "default" })
 });
