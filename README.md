@@ -24,8 +24,10 @@ Everything might seems simple, but **`AWS`** is a whole different beast, and its
   align="center"
   alt="AWS Block Diagram"
   title="Click if its too small"
-  src="https://user-images.githubusercontent.com/74379676/112518359-9852ad80-8d99-11eb-884a-8e9b0e9e9a81.png"
+  src="https://user-images.githubusercontent.com/74379676/112520131-64788780-8d9b-11eb-9886-694b71099503.png"
 />
+
+As you can see firstly static files are imported into AWS S3 which if configured in a way to serve static websites. Then it is passed thru CloudFront which certificates site with SSL as well as optimazies it to work as fast and as good as possible. Then the optimized site is connected to Route 53 which holds domain from Google Domains with DNS, and then connects the bucket static site to the domain. Thats' how it works in a nutshell.
 
 ## How to run it locally?
 Running various tasks is a lot easier thanks to Gulp and npm scripts, and chaining tasks with them. For example, one of the convenient commands is to run development environment, to do so use:
