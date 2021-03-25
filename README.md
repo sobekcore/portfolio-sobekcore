@@ -9,7 +9,7 @@ This portfolio is a showcase of my skills and known technologies, as well as bri
   align="center"
   alt="Project Block Diagram"
   title="Click if its too small"
-  src="https://user-images.githubusercontent.com/74379676/112363969-5ad91c00-8cd6-11eb-8652-c32e79aeffa3.png"
+  src="https://user-images.githubusercontent.com/74379676/112515748-d8646100-8d96-11eb-84b4-4acd577de46f.png"
 />
 
 The site's core is **`Next.js`** and **`Sass`**, Next is firstly build and then exported into static files. In the meantime **`ESLint`**, **`Stylelint`** and **`Prettier`** helps me with maintaining same coding style all along. After that Sass is complied into one chonky optimized .css file. Then most of the tasks are automated with **`Gulp`** combined with **`npm scripts`**, it helps alot with development and deployment. The automated tasks are:
@@ -18,7 +18,14 @@ The site's core is **`Next.js`** and **`Sass`**, Next is firstly build and then 
 * creating production build and pushing files to AWS S3, as well as pushing to master branch
 * running linter through whole project in the form of ESLint, Stylelint and Prettier
 
-Everything might seems simple, but **`AWS`** is a whole different beast, and its a lot more complicated than i've shown here. If you are interested in a bit more detailed AWS setup, then this section is for you. Below there will be a diagram which will show more or less how my AWS is setted up. Currently it is worked on, someday it will be done...
+Everything might seems simple, but **`AWS`** is a whole different beast, and its a lot more complicated than i've shown here. If you are interested in a bit more detailed AWS setup, then this section is for you. Below there is a diagram which shows more or less how my AWS is setted up.
+
+<img
+  align="center"
+  alt="AWS Block Diagram"
+  title="Click if its too small"
+  src="https://user-images.githubusercontent.com/74379676/112518359-9852ad80-8d99-11eb-884a-8e9b0e9e9a81.png"
+/>
 
 ## How to run it locally?
 Running various tasks is a lot easier thanks to Gulp and npm scripts, and chaining tasks with them. For example, one of the convenient commands is to run development environment, to do so use:
