@@ -35,6 +35,7 @@ $screen-offset-h: calc(100vh - 60px);
     @for $i from 1 through 25 {
       &:nth-child(#{$i}) {
         $delay: random(9999) + 0ms;
+
         left: 0;
         top: calc(98% - #{random(96) + 0%});
         animation-delay: $delay;
