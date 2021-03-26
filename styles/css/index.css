@@ -2,7 +2,8 @@
 * {
   box-sizing: border-box; }
 
-body, html {
+body,
+html {
   background: #FF6E80;
   scroll-behavior: smooth;
   padding: 0;
@@ -71,7 +72,7 @@ img {
   margin: 50px; }
   #home-page #title h1 {
     font: bold 90px "Ubuntu", sans-serif;
-    font-size: clamp(1rem, 7.4vw, 5.6rem);
+    font-size: clamp(1rem, 8.6vw, 5.6rem);
     text-shadow: 5px 5px #008672;
     color: #00E0BE;
     margin: 0;
@@ -167,175 +168,108 @@ img {
     top: 0;
     height: 3px;
     background: linear-gradient(-45deg, #FF6E80, rgba(0, 0, 255, 0));
-    filter: drop-shadow(0 0 5px #FF6E80);
+    border-radius: 8px;
     animation: tail 12000ms ease-in-out infinite, shooting 12000ms ease-in-out infinite; }
-    #main .laser::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 3px;
-      transform: translateX(50%);
-      border-radius: 100%;
-      background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #FF6E80, rgba(0, 0, 255, 0)); }
-    #main .laser::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 3px;
-      transform: translateX(50%);
-      background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #FF6E80, rgba(0, 0, 255, 0)); }
     #main .laser:nth-child(1) {
       left: 0;
-      top: calc(98% - 4%);
-      animation-delay: 7477ms; }
-      #main .laser:nth-child(1)::before, #main .laser:nth-child(1)::after {
-        animation-delay: 7477ms; }
+      top: calc(98% - 64%);
+      animation-delay: 1979ms; }
     #main .laser:nth-child(2) {
       left: 0;
-      top: calc(98% - 90%);
-      animation-delay: 8938ms; }
-      #main .laser:nth-child(2)::before, #main .laser:nth-child(2)::after {
-        animation-delay: 8938ms; }
+      top: calc(98% - 20%);
+      animation-delay: 1784ms; }
     #main .laser:nth-child(3) {
       left: 0;
-      top: calc(98% - 62%);
-      animation-delay: 9070ms; }
-      #main .laser:nth-child(3)::before, #main .laser:nth-child(3)::after {
-        animation-delay: 9070ms; }
+      top: calc(98% - 1%);
+      animation-delay: 4650ms; }
     #main .laser:nth-child(4) {
       left: 0;
-      top: calc(98% - 50%);
-      animation-delay: 7713ms; }
-      #main .laser:nth-child(4)::before, #main .laser:nth-child(4)::after {
-        animation-delay: 7713ms; }
+      top: calc(98% - 35%);
+      animation-delay: 231ms; }
     #main .laser:nth-child(5) {
       left: 0;
-      top: calc(98% - 65%);
-      animation-delay: 8753ms; }
-      #main .laser:nth-child(5)::before, #main .laser:nth-child(5)::after {
-        animation-delay: 8753ms; }
+      top: calc(98% - 69%);
+      animation-delay: 5070ms; }
     #main .laser:nth-child(6) {
       left: 0;
-      top: calc(98% - 90%);
-      animation-delay: 9382ms; }
-      #main .laser:nth-child(6)::before, #main .laser:nth-child(6)::after {
-        animation-delay: 9382ms; }
+      top: calc(98% - 73%);
+      animation-delay: 9983ms; }
     #main .laser:nth-child(7) {
       left: 0;
-      top: calc(98% - 81%);
-      animation-delay: 557ms; }
-      #main .laser:nth-child(7)::before, #main .laser:nth-child(7)::after {
-        animation-delay: 557ms; }
+      top: calc(98% - 53%);
+      animation-delay: 4141ms; }
     #main .laser:nth-child(8) {
       left: 0;
-      top: calc(98% - 22%);
-      animation-delay: 599ms; }
-      #main .laser:nth-child(8)::before, #main .laser:nth-child(8)::after {
-        animation-delay: 599ms; }
+      top: calc(98% - 7%);
+      animation-delay: 5986ms; }
     #main .laser:nth-child(9) {
       left: 0;
-      top: calc(98% - 77%);
-      animation-delay: 9778ms; }
-      #main .laser:nth-child(9)::before, #main .laser:nth-child(9)::after {
-        animation-delay: 9778ms; }
+      top: calc(98% - 50%);
+      animation-delay: 8871ms; }
     #main .laser:nth-child(10) {
       left: 0;
-      top: calc(98% - 7%);
-      animation-delay: 8020ms; }
-      #main .laser:nth-child(10)::before, #main .laser:nth-child(10)::after {
-        animation-delay: 8020ms; }
+      top: calc(98% - 94%);
+      animation-delay: 4373ms; }
     #main .laser:nth-child(11) {
       left: 0;
-      top: calc(98% - 19%);
-      animation-delay: 2ms; }
-      #main .laser:nth-child(11)::before, #main .laser:nth-child(11)::after {
-        animation-delay: 2ms; }
+      top: calc(98% - 72%);
+      animation-delay: 9652ms; }
     #main .laser:nth-child(12) {
       left: 0;
-      top: calc(98% - 73%);
-      animation-delay: 1727ms; }
-      #main .laser:nth-child(12)::before, #main .laser:nth-child(12)::after {
-        animation-delay: 1727ms; }
+      top: calc(98% - 23%);
+      animation-delay: 61ms; }
     #main .laser:nth-child(13) {
       left: 0;
       top: calc(98% - 95%);
-      animation-delay: 8972ms; }
-      #main .laser:nth-child(13)::before, #main .laser:nth-child(13)::after {
-        animation-delay: 8972ms; }
+      animation-delay: 8830ms; }
     #main .laser:nth-child(14) {
       left: 0;
-      top: calc(98% - 11%);
-      animation-delay: 5609ms; }
-      #main .laser:nth-child(14)::before, #main .laser:nth-child(14)::after {
-        animation-delay: 5609ms; }
+      top: calc(98% - 95%);
+      animation-delay: 7274ms; }
     #main .laser:nth-child(15) {
       left: 0;
-      top: calc(98% - 66%);
-      animation-delay: 5516ms; }
-      #main .laser:nth-child(15)::before, #main .laser:nth-child(15)::after {
-        animation-delay: 5516ms; }
+      top: calc(98% - 91%);
+      animation-delay: 5156ms; }
     #main .laser:nth-child(16) {
       left: 0;
-      top: calc(98% - 79%);
-      animation-delay: 8839ms; }
-      #main .laser:nth-child(16)::before, #main .laser:nth-child(16)::after {
-        animation-delay: 8839ms; }
+      top: calc(98% - 87%);
+      animation-delay: 7769ms; }
     #main .laser:nth-child(17) {
       left: 0;
-      top: calc(98% - 41%);
-      animation-delay: 3423ms; }
-      #main .laser:nth-child(17)::before, #main .laser:nth-child(17)::after {
-        animation-delay: 3423ms; }
+      top: calc(98% - 46%);
+      animation-delay: 922ms; }
     #main .laser:nth-child(18) {
       left: 0;
-      top: calc(98% - 43%);
-      animation-delay: 2588ms; }
-      #main .laser:nth-child(18)::before, #main .laser:nth-child(18)::after {
-        animation-delay: 2588ms; }
+      top: calc(98% - 1%);
+      animation-delay: 784ms; }
     #main .laser:nth-child(19) {
       left: 0;
       top: calc(98% - 37%);
-      animation-delay: 1964ms; }
-      #main .laser:nth-child(19)::before, #main .laser:nth-child(19)::after {
-        animation-delay: 1964ms; }
+      animation-delay: 1930ms; }
     #main .laser:nth-child(20) {
       left: 0;
-      top: calc(98% - 33%);
-      animation-delay: 8126ms; }
-      #main .laser:nth-child(20)::before, #main .laser:nth-child(20)::after {
-        animation-delay: 8126ms; }
+      top: calc(98% - 13%);
+      animation-delay: 4749ms; }
     #main .laser:nth-child(21) {
       left: 0;
-      top: calc(98% - 21%);
-      animation-delay: 9318ms; }
-      #main .laser:nth-child(21)::before, #main .laser:nth-child(21)::after {
-        animation-delay: 9318ms; }
+      top: calc(98% - 6%);
+      animation-delay: 8445ms; }
     #main .laser:nth-child(22) {
       left: 0;
-      top: calc(98% - 20%);
-      animation-delay: 8410ms; }
-      #main .laser:nth-child(22)::before, #main .laser:nth-child(22)::after {
-        animation-delay: 8410ms; }
+      top: calc(98% - 73%);
+      animation-delay: 4377ms; }
     #main .laser:nth-child(23) {
       left: 0;
-      top: calc(98% - 26%);
-      animation-delay: 2219ms; }
-      #main .laser:nth-child(23)::before, #main .laser:nth-child(23)::after {
-        animation-delay: 2219ms; }
+      top: calc(98% - 52%);
+      animation-delay: 1587ms; }
     #main .laser:nth-child(24) {
       left: 0;
-      top: calc(98% - 70%);
-      animation-delay: 4163ms; }
-      #main .laser:nth-child(24)::before, #main .laser:nth-child(24)::after {
-        animation-delay: 4163ms; }
+      top: calc(98% - 8%);
+      animation-delay: 6229ms; }
     #main .laser:nth-child(25) {
       left: 0;
-      top: calc(98% - 2%);
-      animation-delay: 357ms; }
-      #main .laser:nth-child(25)::before, #main .laser:nth-child(25)::after {
-        animation-delay: 357ms; }
+      top: calc(98% - 10%);
+      animation-delay: 2150ms; }
 
 @keyframes tail {
   0% {
@@ -350,6 +284,15 @@ img {
     transform: translateX(0); }
   100% {
     transform: translateX(calc(100vw - 60px)); } }
+  @media (max-width: 599px) {
+    #main {
+      width: calc(100vw - 32px);
+      min-height: calc(100vh - 32px); }
+    @keyframes shooting {
+      0% {
+        transform: translateX(0); }
+      100% {
+        transform: translateX(calc(100vw - 32px)); } } }
 
 #tech-page article section {
   padding: 30px;
@@ -385,7 +328,8 @@ img {
         transition: transform 0.6s;
         transform-style: preserve-3d;
         perspective: 1000px; }
-        #tech-page article section #tech-all .tech-single .tech-card .tech-card-front, #tech-page article section #tech-all .tech-single .tech-card .tech-card-back {
+        #tech-page article section #tech-all .tech-single .tech-card .tech-card-front,
+        #tech-page article section #tech-all .tech-single .tech-card .tech-card-back {
           position: absolute;
           width: 100%;
           height: 100%;
@@ -450,7 +394,7 @@ img {
       #contact #contact-intro #contact-icons a img {
         width: 100%;
         padding: 8px;
-        transition: .2s transform;
+        transition: 0.2s transform;
         border-radius: 8px;
         cursor: pointer; }
       #contact #contact-intro #contact-icons a:hover > img {
@@ -496,6 +440,9 @@ img {
     width: 100%;
     z-index: 1;
     margin: auto; }
+  @media (max-width: 599px) {
+    #home-page {
+      padding: 16px; } }
 
 #tech-page {
   width: 100vw;
@@ -569,7 +516,7 @@ img {
                 color: #263238;
                 letter-spacing: 1px;
                 word-wrap: break-word;
-                transition: .2s color;
+                transition: 0.2s color;
                 padding: 4px 8px 4px 0px;
                 cursor: pointer;
                 margin: auto 0; }
