@@ -50,7 +50,6 @@
           .project-name {
             display: flex;
             margin: 0 0 22px 0;
-            line-break: strict;
             row-gap: 14px;
 
             a {
@@ -131,7 +130,7 @@
           }
         }
 
-        @media (max-width: 1069px) {
+        @media (max-width: 1139px) {
           grid-template-columns: 1fr;
           padding-bottom: 430px;
         }
@@ -145,8 +144,8 @@
         }
       }
 
-      @media (max-width: 1229px) {
-        width: 100vw;
+      @media (max-width: 1339px) {
+        width: 95vw;
 
         #projects-all {
           .project-single {
@@ -154,6 +153,10 @@
             border-radius: 12px;
           }
         }
+      }
+
+      @media (max-width: 849px) {
+        width: 100vw;
       }
     }
   }
