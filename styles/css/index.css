@@ -172,104 +172,104 @@ img {
     animation: tail 12000ms ease-in-out infinite, shooting 12000ms ease-in-out infinite; }
     #main .laser:nth-child(1) {
       left: 0;
-      top: calc(98% - 21%);
-      animation-delay: 4252ms; }
+      top: calc(98% - 68%);
+      animation-delay: 7712ms; }
     #main .laser:nth-child(2) {
       left: 0;
-      top: calc(98% - 29%);
-      animation-delay: 3741ms; }
+      top: calc(98% - 32%);
+      animation-delay: 7565ms; }
     #main .laser:nth-child(3) {
       left: 0;
-      top: calc(98% - 95%);
-      animation-delay: 2258ms; }
+      top: calc(98% - 74%);
+      animation-delay: 7438ms; }
     #main .laser:nth-child(4) {
       left: 0;
-      top: calc(98% - 76%);
-      animation-delay: 496ms; }
+      top: calc(98% - 54%);
+      animation-delay: 1795ms; }
     #main .laser:nth-child(5) {
       left: 0;
-      top: calc(98% - 74%);
-      animation-delay: 1750ms; }
+      top: calc(98% - 7%);
+      animation-delay: 9774ms; }
     #main .laser:nth-child(6) {
       left: 0;
-      top: calc(98% - 29%);
-      animation-delay: 1778ms; }
+      top: calc(98% - 94%);
+      animation-delay: 2355ms; }
     #main .laser:nth-child(7) {
       left: 0;
-      top: calc(98% - 34%);
-      animation-delay: 2035ms; }
+      top: calc(98% - 89%);
+      animation-delay: 1176ms; }
     #main .laser:nth-child(8) {
       left: 0;
-      top: calc(98% - 92%);
-      animation-delay: 9719ms; }
+      top: calc(98% - 50%);
+      animation-delay: 9672ms; }
     #main .laser:nth-child(9) {
       left: 0;
-      top: calc(98% - 38%);
-      animation-delay: 2559ms; }
+      top: calc(98% - 16%);
+      animation-delay: 5433ms; }
     #main .laser:nth-child(10) {
       left: 0;
-      top: calc(98% - 25%);
-      animation-delay: 3732ms; }
+      top: calc(98% - 93%);
+      animation-delay: 5950ms; }
     #main .laser:nth-child(11) {
       left: 0;
-      top: calc(98% - 35%);
-      animation-delay: 1571ms; }
+      top: calc(98% - 43%);
+      animation-delay: 6549ms; }
     #main .laser:nth-child(12) {
       left: 0;
-      top: calc(98% - 90%);
-      animation-delay: 2499ms; }
+      top: calc(98% - 43%);
+      animation-delay: 5897ms; }
     #main .laser:nth-child(13) {
       left: 0;
-      top: calc(98% - 83%);
-      animation-delay: 6339ms; }
+      top: calc(98% - 69%);
+      animation-delay: 7956ms; }
     #main .laser:nth-child(14) {
       left: 0;
-      top: calc(98% - 72%);
-      animation-delay: 2050ms; }
+      top: calc(98% - 94%);
+      animation-delay: 7467ms; }
     #main .laser:nth-child(15) {
       left: 0;
-      top: calc(98% - 61%);
-      animation-delay: 7454ms; }
+      top: calc(98% - 92%);
+      animation-delay: 5508ms; }
     #main .laser:nth-child(16) {
       left: 0;
-      top: calc(98% - 45%);
-      animation-delay: 6612ms; }
+      top: calc(98% - 50%);
+      animation-delay: 6192ms; }
     #main .laser:nth-child(17) {
       left: 0;
-      top: calc(98% - 70%);
-      animation-delay: 8308ms; }
+      top: calc(98% - 85%);
+      animation-delay: 6455ms; }
     #main .laser:nth-child(18) {
       left: 0;
-      top: calc(98% - 16%);
-      animation-delay: 8455ms; }
+      top: calc(98% - 15%);
+      animation-delay: 9319ms; }
     #main .laser:nth-child(19) {
       left: 0;
-      top: calc(98% - 80%);
-      animation-delay: 2290ms; }
+      top: calc(98% - 61%);
+      animation-delay: 1341ms; }
     #main .laser:nth-child(20) {
       left: 0;
-      top: calc(98% - 30%);
-      animation-delay: 5875ms; }
+      top: calc(98% - 15%);
+      animation-delay: 9958ms; }
     #main .laser:nth-child(21) {
       left: 0;
-      top: calc(98% - 80%);
-      animation-delay: 3524ms; }
+      top: calc(98% - 69%);
+      animation-delay: 2264ms; }
     #main .laser:nth-child(22) {
       left: 0;
-      top: calc(98% - 21%);
-      animation-delay: 6952ms; }
+      top: calc(98% - 69%);
+      animation-delay: 4551ms; }
     #main .laser:nth-child(23) {
       left: 0;
-      top: calc(98% - 91%);
-      animation-delay: 157ms; }
+      top: calc(98% - 87%);
+      animation-delay: 3189ms; }
     #main .laser:nth-child(24) {
       left: 0;
-      top: calc(98% - 27%);
-      animation-delay: 8499ms; }
+      top: calc(98% - 55%);
+      animation-delay: 1756ms; }
     #main .laser:nth-child(25) {
       left: 0;
-      top: calc(98% - 75%);
-      animation-delay: 9399ms; }
+      top: calc(98% - 23%);
+      animation-delay: 5005ms; }
 
 @keyframes tail {
   0% {
@@ -391,14 +391,25 @@ img {
       display: inline-flex;
       margin: 0 16px;
       width: 58px; }
-      #contact #contact-intro #contact-icons a img {
+      #contact #contact-intro #contact-icons a img,
+      #contact #contact-intro #contact-icons a img::before {
         width: 100%;
         padding: 8px;
-        transition: 0.2s transform;
-        border-radius: 8px;
-        cursor: pointer; }
+        border-radius: 8px; }
       #contact #contact-intro #contact-icons a:hover > img {
-        transform: scale(1.25); }
+        animation: GlitchedIcon 220ms infinite; }
+
+@keyframes GlitchedIcon {
+  0% {
+    filter: drop-shadow(4px 3px #00E0BE) drop-shadow(-4px -5px #FF6E80); }
+  25% {
+    filter: drop-shadow(-4px -5px #00E0BE) drop-shadow(4px 3px #FF6E80); }
+  50% {
+    filter: drop-shadow(-4px -3px #00E0BE) drop-shadow(-6px 3px #FF6E80); }
+  75% {
+    filter: drop-shadow(-6px -3px #00E0BE) drop-shadow(-4px -3px #FF6E80); }
+  100% {
+    filter: drop-shadow(-4px 0px #00E0BE) drop-shadow(4px -3px #FF6E80); } }
     #contact #contact-intro #contact-icons #paper-plane-flying {
       animation: Fly 1500ms ease; }
 
@@ -507,21 +518,31 @@ img {
           #projects-page article section #projects-all .project-single .project-name {
             display: flex;
             margin: 0 0 22px 0;
+            line-break: strict;
             row-gap: 14px; }
             #projects-page article section #projects-all .project-single .project-name a {
               text-decoration: none;
-              margin: auto 0; }
+              margin: auto 16px auto 0; }
               #projects-page article section #projects-all .project-single .project-name a h2 {
                 font: bold 36px "Ubuntu", sans-serif;
                 color: #263238;
                 letter-spacing: 1px;
                 word-wrap: break-word;
                 transition: 0.2s color;
-                padding: 4px 8px 4px 0px;
                 cursor: pointer;
                 margin: auto 0; }
-                #projects-page article section #projects-all .project-single .project-name a h2:hover {
-                  color: #5B41BA; }
+                #projects-page article section #projects-all .project-single .project-name a h2 img {
+                  height: 26px; }
+                @media (max-width: 699px) {
+                  #projects-page article section #projects-all .project-single .project-name a h2 {
+                    font-size: 26px; }
+                    #projects-page article section #projects-all .project-single .project-name a h2 img {
+                      height: 20px; } }
+              #projects-page article section #projects-all .project-single .project-name a:hover > h2 {
+                color: #5B41BA; }
+              @media (max-width: 399px) {
+                #projects-page article section #projects-all .project-single .project-name a {
+                  margin-right: 0; } }
             #projects-page article section #projects-all .project-single .project-name .logo {
               width: 60px;
               height: 60px;
@@ -530,9 +551,13 @@ img {
               margin-right: 12px;
               border-radius: 8px;
               padding: 6px; }
-            #projects-page article section #projects-all .project-single .project-name .click {
-              width: 26px;
-              margin-left: 8px; }
+            #projects-page article section #projects-all .project-single .project-name .code-link {
+              margin-left: auto;
+              margin-right: 0;
+              user-select: none; }
+              @media (max-width: 339px) {
+                #projects-page article section #projects-all .project-single .project-name .code-link {
+                  display: none; } }
           #projects-page article section #projects-all .project-single ul {
             display: flex;
             font: bold 19px "Ubuntu", sans-serif;
@@ -550,12 +575,13 @@ img {
             color: #263238;
             line-height: 1.3;
             margin: 0; }
-        @media (max-width: 939px) {
+        @media (max-width: 1069px) {
           #projects-page article section #projects-all {
             grid-template-columns: 1fr;
-            padding-bottom: 430px; }
-            #projects-page article section #projects-all .project-single .project-name a h2 {
-              font-size: 26px; } }
+            padding-bottom: 430px; } }
+        @media (max-width: 699px) {
+          #projects-page article section #projects-all .project-single .project-name a h2 {
+            font-size: 26px; } }
       @media (max-width: 1229px) {
         #projects-page article section {
           width: 100vw; }

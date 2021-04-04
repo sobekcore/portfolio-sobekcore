@@ -36,16 +36,23 @@
         margin: 0 16px;
         width: 58px;
 
-        img {
+        img,
+        img::before {
           width: 100%;
           padding: 8px;
-          transition: 0.2s transform;
           border-radius: 8px;
-          cursor: pointer;
         }
 
         &:hover > img {
-          transform: scale(1.25);
+          animation: GlitchedIcon 220ms infinite;
+        }
+
+        @keyframes GlitchedIcon {
+          0% { filter: drop-shadow(4px 3px $main-turq-color) drop-shadow(-4px -5px $main-pink-color); }
+          25% { filter: drop-shadow(-4px -5px $main-turq-color) drop-shadow(4px 3px $main-pink-color); }
+          50% { filter: drop-shadow(-4px -3px $main-turq-color) drop-shadow(-6px 3px $main-pink-color); }
+          75% { filter: drop-shadow(-6px -3px $main-turq-color) drop-shadow(-4px -3px $main-pink-color); }
+          100% { filter: drop-shadow(-4px 0px $main-turq-color) drop-shadow(4px -3px $main-pink-color); }
         }
       }
 

@@ -3,9 +3,19 @@ export default function Project() {
     <>
       <li className="project-single">
         <div className="project-name">
-          <img className="logo" src="./projects/keyboards-world-logo.png" />
+          <img alt="Logo" className="logo" src="./projects/keyboards-world-logo.png" />
           <a href="https://keyboards-world.netlify.app" target="_blank">
-            <h2>Keyboards World</h2>
+            <h2 title="Open live website">
+              Keyboards World <img alt="Link" src="./icons/link.svg" />
+            </h2>
+          </a>
+          <a
+            className="code-link"
+            href="https://github.com/sobekcore/keyboards-world"
+            target="_blank">
+            <h2 role="img" title="Open code on GitHub">
+              {"</>"}
+            </h2>
           </a>
         </div>
         <ul>
@@ -13,7 +23,7 @@ export default function Project() {
           <li>CSS</li>
           <li>JavaScript</li>
           <li>Contentful</li>
-          <li>Netlify</li>
+          <li>Webpack</li>
         </ul>
         <p>
           Keyboards World is a example e-commerce website. It's made with the most basic web tools,
@@ -24,9 +34,19 @@ export default function Project() {
 
       <li className="project-single">
         <div className="project-name">
-          <img className="logo" src="./projects/gamedev-logo.png" />
+          <img alt="Logo" className="logo" src="./projects/gamedev-logo.png" />
           <a href="https://gamedev-example.vercel.app" target="_blank">
-            <h2>Gamedev Website</h2>
+            <h2 title="Open live website">
+              Gamedev Website <img alt="Link" src="./icons/link.svg" />
+            </h2>
+          </a>
+          <a
+            className="code-link"
+            href="https://github.com/sobekcore/gamedev-website"
+            target="_blank">
+            <h2 role="img" title="Open code on GitHub">
+              {"</>"}
+            </h2>
           </a>
         </div>
         <ul>
@@ -44,9 +64,19 @@ export default function Project() {
 
       <li className="project-single">
         <div className="project-name">
-          <img className="logo" src="./projects/druidism-logo.png" />
+          <img alt="Logo" className="logo" src="./projects/druidism-logo.png" />
           <a href="https://druidism.net" target="_blank">
-            <h2>Druidism</h2>
+            <h2 title="Open live website">
+              Druidism <img alt="Link" src="./icons/link.svg" />
+            </h2>
+          </a>
+          <a
+            className="code-link"
+            href="https://github.com/sobekcore/druidism-web-game"
+            target="_blank">
+            <h2 role="img" title="Open code on GitHub">
+              {"</>"}
+            </h2>
           </a>
         </div>
         <ul>
@@ -63,9 +93,19 @@ export default function Project() {
 
       <li className="project-single">
         <div className="project-name">
-          <img className="logo" src="./projects/react-vs-vanilla-logo.png" />
-          <a href="https://react-vs-vanilla.netlify.app/" target="_blank">
-            <h2>React vs Vanilla</h2>
+          <img alt="Logo" className="logo" src="./projects/react-vs-vanilla-logo.png" />
+          <a href="https://react-vs-vanilla.netlify.app" target="_blank">
+            <h2 title="Open live website">
+              React vs Vanilla <img alt="Link" src="./icons/link.svg" />
+            </h2>
+          </a>
+          <a
+            className="code-link"
+            href="https://github.com/sobekcore/react-vs-vanilla"
+            target="_blank">
+            <h2 role="img" title="Open code on GitHub">
+              {"</>"}
+            </h2>
           </a>
         </div>
         <ul>

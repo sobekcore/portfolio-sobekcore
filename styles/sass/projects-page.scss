@@ -50,11 +50,12 @@
           .project-name {
             display: flex;
             margin: 0 0 22px 0;
+            line-break: strict;
             row-gap: 14px;
 
             a {
               text-decoration: none;
-              margin: auto 0;
+              margin: auto 16px auto 0;
 
               h2 {
                 font: bold 36px "Ubuntu", sans-serif;
@@ -62,11 +63,28 @@
                 letter-spacing: 1px;
                 word-wrap: break-word;
                 transition: 0.2s color;
-                padding: 4px 8px 4px 0px;
                 cursor: pointer;
                 margin: auto 0;
 
-                &:hover { color: $main-purple-color; }
+                img {
+                  height: 26px;
+                }
+
+                @media (max-width: 699px) {
+                  font-size: 26px;
+
+                  img {
+                    height: 20px;
+                  }
+                }
+              }
+
+              &:hover > h2 {
+                color: $main-purple-color;
+              }
+
+              @media (max-width: 399px) {
+                margin-right: 0;
               }
             }
 
@@ -79,9 +97,14 @@
               padding: 6px;
             }
 
-            .click {
-              width: 26px;
-              margin-left: 8px;
+            .code-link {
+              margin-left: auto;
+              margin-right: 0;
+              user-select: none;
+
+              @media (max-width: 339px) {
+                display: none;
+              }
             }
           }
 
@@ -108,10 +131,12 @@
           }
         }
 
-        @media (max-width: 939px) {
+        @media (max-width: 1069px) {
           grid-template-columns: 1fr;
           padding-bottom: 430px;
+        }
 
+        @media (max-width: 699px) {
           .project-single {
             .project-name {
               a { h2 { font-size: 26px; } }

@@ -4,7 +4,7 @@ export default function Technology() {
       <li className="tech-single">
         <div className="tech-card">
           <div className="tech-card-front">
-            <img src="./technologies/html.png" />
+            <img alt="HTML" src="./technologies/html.png" />
             <h2>HTML</h2>
           </div>
           <div className="tech-card-back">
@@ -21,7 +21,7 @@ export default function Technology() {
       <li className="tech-single">
         <div className="tech-card">
           <div className="tech-card-front">
-            <img src="./technologies/css.png" />
+            <img alt="CSS" src="./technologies/css.png" />
             <h2>CSS</h2>
           </div>
           <div className="tech-card-back">
@@ -38,7 +38,7 @@ export default function Technology() {
       <li className="tech-single">
         <div className="tech-card">
           <div className="tech-card-front">
-            <img src="./technologies/javascript.png" />
+            <img alt="JavaScript" src="./technologies/javascript.png" />
             <h2>JavaScript</h2>
           </div>
           <div className="tech-card-back">
@@ -55,7 +55,7 @@ export default function Technology() {
       <li className="tech-single">
         <div className="tech-card">
           <div className="tech-card-front">
-            <img src="./technologies/react.png" />
+            <img alt="React" src="./technologies/react.png" />
             <h2>React</h2>
           </div>
           <div className="tech-card-back">
@@ -72,7 +72,7 @@ export default function Technology() {
       <li className="tech-single">
         <div className="tech-card">
           <div className="tech-card-front">
-            <img src="./technologies/go.png" />
+            <img alt="Go" src="./technologies/go.png" />
             <h2>Go</h2>
           </div>
           <div className="tech-card-back">
@@ -89,7 +89,7 @@ export default function Technology() {
       <li className="tech-single">
         <div className="tech-card">
           <div className="tech-card-front">
-            <img src="./technologies/cms.png" />
+            <img alt="Headless CMS" src="./technologies/cms.png" />
             <h2>Headless CMS</h2>
           </div>
           <div className="tech-card-back">
@@ -106,7 +106,7 @@ export default function Technology() {
       <li className="tech-single">
         <div className="tech-card">
           <div className="tech-card-front">
-            <img src="./technologies/eslint.png" />
+            <img alt="Modern Tools" src="./technologies/eslint.png" />
             <h2>Modern Tools</h2>
           </div>
           <div className="tech-card-back">
@@ -123,7 +123,7 @@ export default function Technology() {
       <li className="tech-single">
         <div className="tech-card">
           <div className="tech-card-front">
-            <img src="./technologies/git.png" />
+            <img alt="Git" src="./technologies/git.png" />
             <h2>Git</h2>
           </div>
           <div className="tech-card-back">

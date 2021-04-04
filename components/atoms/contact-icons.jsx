@@ -18,26 +18,26 @@ export default function ContactIcons() {
         title="Follow my Twitter"
         href="https://twitter.com/sobekcore"
         target="_blank">
-        <img src="icons/twitter.svg" />
+        <img alt="Icon" src="./icons/twitter.svg" />
       </a>
       <a
         title="Find me on LinkedIn"
         href="https://www.linkedin.com/in/dawid-sobotka/"
         target="_blank">
-        <img src="icons/linkedin.svg" />
+        <img alt="Icon" src="./icons/linkedin.svg" />
       </a>
       <a
         id={isFlying ? "paper-plane-flying" : "paper-plane"}
         onClick={planeFly}
         title="Send me an email"
         href="mailto:sobekcore@gmail.com">
-        <img src="icons/mail.svg" />
+        <img alt="Icon" src="./icons/mail.svg" />
       </a>
       <a
         title="Check out my GitHub"
         href="https://github.com/sobekcore"
         target="_blank">
-        <img src="icons/github.svg" />
+        <img alt="Icon" src="./icons/github.svg" />
       </a>
       {/* eslint-enable */}
     </div>
