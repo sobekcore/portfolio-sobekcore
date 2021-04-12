@@ -34,6 +34,37 @@ export default function Project() {
 
       <li className="project-single">
         <div className="project-name">
+          <img alt="Logo" className="logo" src="./projects/yerba-mate-home-logo.png" />
+          <a href="https://yerba-mate-home.herokuapp.com" target="_blank">
+            <h2 title="Open live website">
+              Yerba Mate Home <img alt="Link" src="./icons/link.svg" />
+            </h2>
+          </a>
+          <a
+            className="code-link"
+            href="https://github.com/sobekcore/yerba-mate-home"
+            target="_blank">
+            <h2 role="img" title="Open code on GitHub">
+              {"</>"}
+            </h2>
+          </a>
+        </div>
+        <ul>
+          <li>React</li>
+          <li>Sass</li>
+          <li>Go</li>
+          <li>MySQL</li>
+          <li>API</li>
+        </ul>
+        <p>
+          Yerba Mate Home is a web service containing comprehensive yerba mate database as well as
+          its own API for public use. Backend is created with Go which handles and processes MySQL
+          data and serves a static React site. Highly customizable and very efficient.
+        </p>
+      </li>
+
+      <li className="project-single">
+        <div className="project-name">
           <img alt="Logo" className="logo" src="./projects/gamedev-logo.png" />
           <a href="https://gamedev-example.vercel.app" target="_blank">
             <h2 title="Open live website">
@@ -57,7 +88,7 @@ export default function Project() {
         </ul>
         <p>
           Gamedev Website is a simple Server Side Rendered site. It has CMS managed blog, and
-          comments system where every visitor can comment any blog post they want to! It's highly
+          comments system where every visitor can comment any blog post they want to. It's highly
           flexible and can be adjusted to any requirements.
         </p>
       </li>
@@ -88,34 +119,7 @@ export default function Project() {
         <p>
           Druidism is a web browser platformer game. The game is focused on skill expression thanks
           do advanced and precise movement. It's made with Vanilla JavaScript and HTML Canvas tag.
-        </p>
-      </li>
-
-      <li className="project-single">
-        <div className="project-name">
-          <img alt="Logo" className="logo" src="./projects/react-vs-vanilla-logo.png" />
-          <a href="https://react-vs-vanilla.netlify.app" target="_blank">
-            <h2 title="Open live website">
-              React vs Vanilla <img alt="Link" src="./icons/link.svg" />
-            </h2>
-          </a>
-          <a
-            className="code-link"
-            href="https://github.com/sobekcore/react-vs-vanilla"
-            target="_blank">
-            <h2 role="img" title="Open code on GitHub">
-              {"</>"}
-            </h2>
-          </a>
-        </div>
-        <ul>
-          <li>React</li>
-          <li>Sass</li>
-          <li>Netlify</li>
-        </ul>
-        <p>
-          A simple Single Page App made with React, which focus is to show main differences between
-          React and Vanilla JavaScript. It contains a lot of animations and modern and clear design.
+          It has great performance despite having few big modules.
         </p>
       </li>
     </>
