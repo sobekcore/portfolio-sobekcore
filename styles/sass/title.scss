@@ -9,6 +9,14 @@
       color: $main-turq-color;
       margin: 0;
       text-align: center;
+
+      @media (max-width: 799px) {
+        text-shadow: 3px 3px $dark-turq-color;
+      }
+
+      @media (max-width: 499px) {
+        text-shadow: 2px 2px $dark-turq-color;
+      }
     }
 
     p {
@@ -23,6 +31,10 @@
     #home-path {
       color: $main-purple-color;
       text-shadow: 4px 4px $dark-purple-color;
+
+      @media (max-width: 799px) {
+        text-shadow: 2px 2px $dark-purple-color;
+      }
     }
 
     .violet {
@@ -36,20 +48,6 @@
 
     @media (max-width: 799px) {
       margin: 12px;
-
-      h1 {
-        text-shadow: 3px 3px $dark-turq-color;
-      }
-
-      #home-path {
-        text-shadow: 2px 2px $dark-purple-color;
-      }
-    }
-
-    @media (max-width: 499px) {
-      h1 {
-        text-shadow: 2px 2px $dark-turq-color;
-      }
     }
   }
 }

@@ -5,9 +5,7 @@ export default function Project() {
         <div className="project-name">
           <img alt="Logo" className="logo" src="./projects/keyboards-world-logo.png" />
           <a href="https://keyboards-world.netlify.app" target="_blank">
-            <h2 title="Open live website">
-              Keyboards World <img alt="Link" src="./icons/link.svg" />
-            </h2>
+            <h2 title="Open live website">Keyboards World</h2>
           </a>
           <a
             className="code-link"
@@ -36,9 +34,7 @@ export default function Project() {
         <div className="project-name">
           <img alt="Logo" className="logo" src="./projects/yerba-mate-home-logo.png" />
           <a href="https://yerba-mate-home.herokuapp.com" target="_blank">
-            <h2 title="Open live website">
-              Yerba Mate Home <img alt="Link" src="./icons/link.svg" />
-            </h2>
+            <h2 title="Open live website">Yerba Mate Home</h2>
           </a>
           <a
             className="code-link"
@@ -67,9 +63,7 @@ export default function Project() {
         <div className="project-name">
           <img alt="Logo" className="logo" src="./projects/gamedev-logo.png" />
           <a href="https://gamedev-example.vercel.app" target="_blank">
-            <h2 title="Open live website">
-              Gamedev Website <img alt="Link" src="./icons/link.svg" />
-            </h2>
+            <h2 title="Open live website">Gamedev Website</h2>
           </a>
           <a
             className="code-link"
@@ -97,9 +91,7 @@ export default function Project() {
         <div className="project-name">
           <img alt="Logo" className="logo" src="./projects/druidism-logo.png" />
           <a href="https://druidism.net" target="_blank">
-            <h2 title="Open live website">
-              Druidism <img alt="Link" src="./icons/link.svg" />
-            </h2>
+            <h2 title="Open live website">Druidism</h2>
           </a>
           <a
             className="code-link"

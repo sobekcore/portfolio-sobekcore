@@ -21,6 +21,10 @@
       font: bold 34px "Ubuntu", sans-serif;
       color: #E8FFFC;
       margin: 0;
+
+      @media (max-width: 439px) {
+        font-size: 27px;
+      }
     }
 
     p {
@@ -36,8 +40,7 @@
         margin: 0 16px;
         width: 58px;
 
-        img,
-        img::before {
+        img {
           width: 100%;
           padding: 8px;
           border-radius: 8px;
@@ -53,6 +56,11 @@
           50% { filter: drop-shadow(-4px -3px $main-turq-color) drop-shadow(-6px 3px $main-pink-color); }
           75% { filter: drop-shadow(-6px -3px $main-turq-color) drop-shadow(-4px -3px $main-pink-color); }
           100% { filter: drop-shadow(-4px 0px $main-turq-color) drop-shadow(4px -3px $main-pink-color); }
+        }
+
+        @media (max-width: 439px) {
+          width: 52px;
+          margin: 0 5px;
         }
       }
 
@@ -76,18 +84,7 @@
     color: $dark-purple-color;
   }
 
-  @media (max-width: 749px) { padding: 24px 16px; }
-
-  @media (max-width: 439px) {
-    #contact-intro {
-      h3 { font: bold 27px "Ubuntu", sans-serif; }
-
-      #contact-icons {
-        a {
-          width: 52px;
-          margin: 0 5px;
-        }
-      }
-    }
+  @media (max-width: 749px) {
+    padding: 24px 16px;
   }
 }

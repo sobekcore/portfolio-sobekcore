@@ -77,6 +77,12 @@ img {
     color: #00E0BE;
     margin: 0;
     text-align: center; }
+    @media (max-width: 799px) {
+      #home-page #title h1 {
+        text-shadow: 3px 3px #008672; } }
+    @media (max-width: 499px) {
+      #home-page #title h1 {
+        text-shadow: 2px 2px #008672; } }
   #home-page #title p {
     font: bold 26px "Ubuntu", sans-serif;
     font-size: clamp(1rem, 5.6vw, 1.65rem);
@@ -87,6 +93,9 @@ img {
   #home-page #title #home-path {
     color: #5B41BA;
     text-shadow: 4px 4px #2C2252; }
+    @media (max-width: 799px) {
+      #home-page #title #home-path {
+        text-shadow: 2px 2px #2C2252; } }
   #home-page #title .violet {
     font-weight: 600;
     color: #5B41BA; }
@@ -95,14 +104,7 @@ img {
       margin: 20px; } }
   @media (max-width: 799px) {
     #home-page #title {
-      margin: 12px; }
-      #home-page #title h1 {
-        text-shadow: 3px 3px #008672; }
-      #home-page #title #home-path {
-        text-shadow: 2px 2px #2C2252; } }
-  @media (max-width: 499px) {
-    #home-page #title h1 {
-      text-shadow: 2px 2px #008672; } }
+      margin: 12px; } }
 
 #home-page #title #buttons {
   text-align: center; }
@@ -151,7 +153,7 @@ img {
         transform: translate3d(0, 0.08em, -1em); }
     @media (max-width: 599px) {
       #home-page #title #buttons button {
-        font: bold 18px "Ubuntu", sans-serif;
+        font-size: 18px;
         padding: 16px; } }
 
 #main {
@@ -172,104 +174,104 @@ img {
     animation: tail 12000ms ease-in-out infinite, shooting 12000ms ease-in-out infinite; }
     #main .laser:nth-child(1) {
       left: 0;
-      top: calc(98% - 27%);
-      animation-delay: 2642ms; }
+      top: calc(98% - 44%);
+      animation-delay: 4582ms; }
     #main .laser:nth-child(2) {
       left: 0;
-      top: calc(98% - 85%);
-      animation-delay: 9314ms; }
+      top: calc(98% - 47%);
+      animation-delay: 2590ms; }
     #main .laser:nth-child(3) {
       left: 0;
-      top: calc(98% - 46%);
-      animation-delay: 3311ms; }
+      top: calc(98% - 19%);
+      animation-delay: 458ms; }
     #main .laser:nth-child(4) {
       left: 0;
       top: calc(98% - 41%);
-      animation-delay: 5747ms; }
+      animation-delay: 8123ms; }
     #main .laser:nth-child(5) {
       left: 0;
-      top: calc(98% - 77%);
-      animation-delay: 9054ms; }
+      top: calc(98% - 91%);
+      animation-delay: 6725ms; }
     #main .laser:nth-child(6) {
       left: 0;
-      top: calc(98% - 91%);
-      animation-delay: 8270ms; }
+      top: calc(98% - 2%);
+      animation-delay: 8626ms; }
     #main .laser:nth-child(7) {
       left: 0;
-      top: calc(98% - 70%);
-      animation-delay: 9215ms; }
+      top: calc(98% - 73%);
+      animation-delay: 5648ms; }
     #main .laser:nth-child(8) {
       left: 0;
-      top: calc(98% - 59%);
-      animation-delay: 6205ms; }
+      top: calc(98% - 4%);
+      animation-delay: 6534ms; }
     #main .laser:nth-child(9) {
       left: 0;
-      top: calc(98% - 64%);
-      animation-delay: 9183ms; }
+      top: calc(98% - 42%);
+      animation-delay: 3185ms; }
     #main .laser:nth-child(10) {
       left: 0;
-      top: calc(98% - 19%);
-      animation-delay: 3683ms; }
+      top: calc(98% - 46%);
+      animation-delay: 2342ms; }
     #main .laser:nth-child(11) {
       left: 0;
-      top: calc(98% - 32%);
-      animation-delay: 2943ms; }
+      top: calc(98% - 94%);
+      animation-delay: 9652ms; }
     #main .laser:nth-child(12) {
       left: 0;
-      top: calc(98% - 32%);
-      animation-delay: 9432ms; }
+      top: calc(98% - 4%);
+      animation-delay: 7816ms; }
     #main .laser:nth-child(13) {
       left: 0;
-      top: calc(98% - 49%);
-      animation-delay: 3486ms; }
+      top: calc(98% - 79%);
+      animation-delay: 8446ms; }
     #main .laser:nth-child(14) {
       left: 0;
-      top: calc(98% - 70%);
-      animation-delay: 3244ms; }
+      top: calc(98% - 82%);
+      animation-delay: 9759ms; }
     #main .laser:nth-child(15) {
       left: 0;
-      top: calc(98% - 51%);
-      animation-delay: 455ms; }
+      top: calc(98% - 47%);
+      animation-delay: 3877ms; }
     #main .laser:nth-child(16) {
       left: 0;
-      top: calc(98% - 92%);
-      animation-delay: 6162ms; }
+      top: calc(98% - 21%);
+      animation-delay: 2953ms; }
     #main .laser:nth-child(17) {
       left: 0;
-      top: calc(98% - 58%);
-      animation-delay: 8107ms; }
+      top: calc(98% - 57%);
+      animation-delay: 5587ms; }
     #main .laser:nth-child(18) {
       left: 0;
-      top: calc(98% - 39%);
-      animation-delay: 7166ms; }
+      top: calc(98% - 23%);
+      animation-delay: 2198ms; }
     #main .laser:nth-child(19) {
       left: 0;
-      top: calc(98% - 46%);
-      animation-delay: 5819ms; }
+      top: calc(98% - 67%);
+      animation-delay: 5606ms; }
     #main .laser:nth-child(20) {
       left: 0;
-      top: calc(98% - 48%);
-      animation-delay: 9799ms; }
+      top: calc(98% - 81%);
+      animation-delay: 562ms; }
     #main .laser:nth-child(21) {
       left: 0;
-      top: calc(98% - 96%);
-      animation-delay: 6143ms; }
+      top: calc(98% - 25%);
+      animation-delay: 4660ms; }
     #main .laser:nth-child(22) {
       left: 0;
-      top: calc(98% - 86%);
-      animation-delay: 6512ms; }
+      top: calc(98% - 51%);
+      animation-delay: 1423ms; }
     #main .laser:nth-child(23) {
       left: 0;
-      top: calc(98% - 67%);
-      animation-delay: 1451ms; }
+      top: calc(98% - 14%);
+      animation-delay: 5814ms; }
     #main .laser:nth-child(24) {
       left: 0;
-      top: calc(98% - 59%);
-      animation-delay: 8902ms; }
+      top: calc(98% - 82%);
+      animation-delay: 107ms; }
     #main .laser:nth-child(25) {
       left: 0;
-      top: calc(98% - 34%);
-      animation-delay: 1335ms; }
+      top: calc(98% - 33%);
+      animation-delay: 3219ms; }
 
 @keyframes tail {
   0% {
@@ -382,6 +384,9 @@ img {
       font: bold 34px "Ubuntu", sans-serif;
       color: #E8FFFC;
       margin: 0; }
+      @media (max-width: 439px) {
+        #contact #contact-intro h3 {
+          font-size: 27px; } }
     #contact #contact-intro p {
       font: 22px "Ubuntu", sans-serif;
       text-align: center;
@@ -391,8 +396,7 @@ img {
       display: inline-flex;
       margin: 0 16px;
       width: 58px; }
-      #contact #contact-intro #contact-icons a img,
-      #contact #contact-intro #contact-icons a img::before {
+      #contact #contact-intro #contact-icons a img {
         width: 100%;
         padding: 8px;
         border-radius: 8px; }
@@ -410,6 +414,10 @@ img {
     filter: drop-shadow(-6px -3px #00E0BE) drop-shadow(-4px -3px #FF6E80); }
   100% {
     filter: drop-shadow(-4px 0px #00E0BE) drop-shadow(4px -3px #FF6E80); } }
+      @media (max-width: 439px) {
+        #contact #contact-intro #contact-icons a {
+          width: 52px;
+          margin: 0 5px; } }
     #contact #contact-intro #contact-icons #paper-plane-flying {
       animation: Fly 1500ms ease; }
 
@@ -435,12 +443,6 @@ img {
   @media (max-width: 749px) {
     #contact {
       padding: 24px 16px; } }
-  @media (max-width: 439px) {
-    #contact #contact-intro h3 {
-      font: bold 27px "Ubuntu", sans-serif; }
-    #contact #contact-intro #contact-icons a {
-      width: 52px;
-      margin: 0 5px; } }
 
 #home-page {
   background: #FF6E80;
@@ -560,9 +562,34 @@ img {
                 font-size: 26px;
                 color: #2C2252;
                 padding: 4px 50px; }
-              @media (max-width: 365px) {
+                @media (max-width: 1239px) {
+                  #projects-page article section #projects-all .project-single .project-name .code-link h2 {
+                    padding: 4px 44px; } }
+                @media (max-width: 699px) {
+                  #projects-page article section #projects-all .project-single .project-name .code-link h2 {
+                    font-size: 20px; } }
+                @media (max-width: 369px) {
+                  #projects-page article section #projects-all .project-single .project-name .code-link h2 {
+                    text-align: center;
+                    padding: 6px 0; }
+                    #projects-page article section #projects-all .project-single .project-name .code-link h2::after {
+                      content: " on GitHub"; } }
+              @media (max-width: 1239px) {
                 #projects-page article section #projects-all .project-single .project-name .code-link {
-                  display: none; } }
+                  margin: -11px -55px auto auto; } }
+              @media (max-width: 849px) {
+                #projects-page article section #projects-all .project-single .project-name .code-link {
+                  margin: -5px -46px auto auto; } }
+              @media (max-width: 369px) {
+                #projects-page article section #projects-all .project-single .project-name .code-link {
+                  position: absolute;
+                  width: calc(100vw - 79px);
+                  border-radius: 12px;
+                  margin-top: -55px;
+                  transform: none; } }
+            @media (max-width: 369px) {
+              #projects-page article section #projects-all .project-single .project-name {
+                margin-top: 55px; } }
           #projects-page article section #projects-all .project-single ul {
             display: flex;
             font: bold 19px "Ubuntu", sans-serif;
@@ -580,25 +607,21 @@ img {
             color: #263238;
             line-height: 1.3;
             margin: 0; }
-        @media (max-width: 1259px) {
+          @media (max-width: 1239px) {
+            #projects-page article section #projects-all .project-single {
+              padding: 22px;
+              border-radius: 14px; } }
+          @media (max-width: 849px) {
+            #projects-page article section #projects-all .project-single {
+              padding: 14px;
+              border-radius: 12px; } }
+        @media (max-width: 1199px) {
           #projects-page article section #projects-all {
             grid-template-columns: 1fr;
             padding-bottom: 430px; } }
-        @media (max-width: 699px) {
-          #projects-page article section #projects-all .project-single .project-name a h2 {
-            font-size: 26px; }
-          #projects-page article section #projects-all .project-single .project-name .code-link h2 {
-            font-size: 20px; } }
-      @media (max-width: 1379px) {
+      @media (max-width: 1329px) {
         #projects-page article section {
-          width: 95vw; }
-          #projects-page article section #projects-all .project-single {
-            padding: 14px;
-            border-radius: 12px; }
-            #projects-page article section #projects-all .project-single .project-name .code-link {
-              margin: -5px -45px auto auto; }
-              #projects-page article section #projects-all .project-single .project-name .code-link h2 {
-                padding: 4px 40px; } }
+          width: 95vw; } }
       @media (max-width: 849px) {
         #projects-page article section {
           width: 100vw; } }
@@ -619,3 +642,5 @@ footer {
     color: #263238;
     text-align: center;
     margin: 20px; }
+  footer #copyright {
+    width: 90%; }
