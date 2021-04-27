@@ -13,7 +13,8 @@
     "prettier"
   ],
   "ignorePatterns": [
-    "gulpfile.js"
+    "gulpfile.js",
+    "next.config.js"
   ],
   "parserOptions": {
     "ecmaFeatures": {

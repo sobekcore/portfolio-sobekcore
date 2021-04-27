@@ -1,0 +1,28 @@
+query sanityQuery {
+  allProjects(sort: [{ order: ASC }]) {
+    visibility,
+    order,
+    title,
+    description,
+    technologies,
+    website_link,
+    code_link,
+    image {
+      asset {
+        url
+      }
+    }
+  }
+
+  allTechnologies(sort: [{ order: ASC }]) {
+    visibility,
+    order,
+		name,
+    skills,
+    image {
+      asset {
+        url
+      }
+    }
+  }
+}

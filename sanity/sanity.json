@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "project": {
+    "name": "Sobek's Portfolio"
+  },
+  "api": {
+    "projectId": "ypl2q7wt",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "./static/css/custom.css"
+    }
+  ]
+}

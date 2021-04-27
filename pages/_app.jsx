@@ -19,9 +19,11 @@ export default function App({ Component, pageProps }) {
           property="og:description"
           content="Front-end developer portfolio containing information about my person."
         />
+        <meta name="theme-color" content="#FF6E80" />
         <meta property="og:title" content="Sobek, Front-end Developer" />
-        <meta property="og:img" content="/technologies/react.png" />
+        <meta property="og:img" content="https://www.sobekcore.com/og-image.png" />
         <meta property="og:url" content="https://www.sobekcore.com" />
+        <meta property="og:locale" content="en_US" />
       </Head>
       <Component {...pageProps} />
     </>

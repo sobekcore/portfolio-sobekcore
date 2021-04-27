@@ -1,0 +1,24 @@
+:root {
+  /* Place your custom properties here, you can find custom variables in:
+  github.com/sanity-io/sanity/tree/current/packages/%40sanity/base/src/styles/variables */
+
+  /* Brand colors */
+  --white: #FFA69E;
+  --black: #263238;
+  --brand-primary: #00E0BE;
+  --brand-secondary: #755ECA;
+  --brand-primary--inverted: #00E0BE;
+  --brand-secondary--inverted: #755ECA;
+
+  /* Body */
+  --body-bg: #FFA69E;
+  --body-text: #263238;
+
+  /* Main navigation */
+  --main-navigation-color: #FF6E80;
+  --main-navigation-color--inverted: #263238;
+
+  /* Selectable item */
+  --selectable-item-color-hover: color(#E29578 blend(#FFA69E 45%));
+  --selectable-item-color-active: none;
+}
