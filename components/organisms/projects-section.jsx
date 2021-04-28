@@ -7,7 +7,7 @@ export default function ProjectsSection({ projects }) {
         <h1 id="projects">Projects</h1>
         <Projects projects={projects} />
       </article>
-      <img id="footer-separator" src="separator-footer.svg" />
+      <img id="footer-separator" src="./decorators/separator-footer.svg" />
     </div>
   );
 }

@@ -2,14 +2,14 @@
   Sobek's Developer Portfolio
 </h1>
 
-This portfolio is a showcase of my skills and known technologies, as well as brief description about me and projects that i've made. It's made with Next.js, Sass and Gulp. Hosted on AWS S3. Uses best web practises and modern front-end technologies. Hopefully also somewhat eye-pleasing...
+This portfolio is a showcase of my skills and known technologies, as well as brief description about me and projects that i've made. It's made with Next.js, Sanity.io and Gulp. Hosted on AWS S3. Uses best web practises and modern front-end technologies. Hopefully also somewhat eye-pleasing...
 
 ## How it's working?
 <img
   align="center"
   alt="Project Block Diagram"
   title="Click if its too small"
-  src="https://user-images.githubusercontent.com/74379676/112515748-d8646100-8d96-11eb-84b4-4acd577de46f.png"
+  src="https://user-images.githubusercontent.com/74379676/116325785-47ccd680-a7c3-11eb-9ff7-8dba1d6ce929.png"
 />
 
 The site's core is **`Next.js`** and **`Sass`**, Next is firstly built into optimized build and then exported into static files. In the meantime **`ESLint`**, **`Stylelint`** and **`Prettier`** helps me with maintaining same coding style all along. After that Sass is complied into one chonky optimized .css file. Then most of the tasks are automated with **`Gulp`** combined with **`npm scripts`**, it helps alot with development and deployment. The automated tasks are:
@@ -30,6 +30,18 @@ Everything might seems simple, but **`AWS`** is a whole different beast, and its
 As you can see firstly static files are imported into AWS S3 which is configured in a way to serve static websites. Then it is passed thru **`CloudFront`** which certificates site with SSL as well as optimizes it to work as fast and as good as possible. Then the optimized site is connected to **`Route 53`** which holds domain from Google Domains with DNS, and then connects the bucket static site to the domain.
 
 After all of that one last thing is to check on the bucket temporary website link if the site looks fine, if everything looks ok i can allow acces to the CloudFront to fetch files from the S3 bucket, then the website goes live. That's how it works in a nutshell.
+
+## Data Management
+Data is a vital part of a website, however in this example it is not hard-coded but is rather fetched from a **`Sanity.io`** CMS with a help of **`GraphQL`** queries. You may think how it is possible that a static website fetches data from a CMS, well its made in a kinda hacky way. When building website into static files that data from CMS is saved into JSON file which is main source of the data when deployed to S3. So essentially when i want to update data on the website i need to build it again, but since the data doesn't change that much on this webiste, its an ok choice.
+
+The Sanity.io is super highly customizable CMS, which is one of the best functions to have. I've made it to match website aesthetic with custom CSS files, you can have a look at it below.
+
+<img
+  align="center"
+  alt="Customized Sanity.io"
+  title="Click if its too small"
+  src="https://user-images.githubusercontent.com/74379676/116326719-63d17780-a7c5-11eb-8057-965ca30fda2c.png"
+/>
 
 ## How to run it locally?
 Running various tasks is a lot easier thanks to Gulp and npm scripts, and chaining tasks with them. For example, one of the convenient commands is to run development environment, to do so use:
