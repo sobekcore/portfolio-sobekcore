@@ -1,5 +1,5 @@
-import FooterText from "../atoms/footer-text";
-import FooterCopyright from "../atoms/footer-copyright";
+import FooterText from "../atoms/about-site";
+import FooterCopyright from "../atoms/copyright";
 
 export default function Footer() {
   return (

@@ -13,33 +13,21 @@ export default function ContactIcons() {
 
   return (
     <div id="contact-icons">
-      {/* eslint-disable */}
-      <a
-        title="Follow my Twitter"
-        href="https://twitter.com/sobekcore"
-        target="_blank">
-        <img alt="Icon" src="./icons/twitter.svg" />
+      <a href="https://twitter.com/sobekcore" target="_blank">
+        <img alt="Twitter" src="./icons/twitter.svg" />
       </a>
-      <a
-        title="Find me on LinkedIn"
-        href="https://www.linkedin.com/in/dawid-sobotka/"
-        target="_blank">
-        <img alt="Icon" src="./icons/linkedin.svg" />
+      <a href="https://www.linkedin.com/in/dawid-sobotka/" target="_blank">
+        <img alt="LinkedIn" src="./icons/linkedin.svg" />
       </a>
       <a
         id={isFlying ? "paper-plane-flying" : "paper-plane"}
         onClick={planeFly}
-        title="Send me an email"
         href="mailto:sobekcore@gmail.com">
-        <img alt="Icon" src="./icons/mail.svg" />
+        <img alt="Email" src="./icons/mail.svg" />
       </a>
-      <a
-        title="Check out my GitHub"
-        href="https://github.com/sobekcore"
-        target="_blank">
-        <img alt="Icon" src="./icons/github.svg" />
+      <a alt="GitHub" href="https://github.com/sobekcore" target="_blank">
+        <img alt="Github" src="./icons/github.svg" />
       </a>
-      {/* eslint-enable */}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 #tech-page {
-  width: 100vw; min-height: 100vh;
+  width: 100vw;
   background:
     linear-gradient(
       $salmon-color 0%,
@@ -13,6 +13,7 @@
   article {
     min-height: 100vh;
     margin-top: 40px;
+    padding-bottom: 20px;
 
     h1 {
       font: bold 90px "Ubuntu", sans-serif;

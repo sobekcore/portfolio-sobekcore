@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
-// Sass Color variables
 $main-pink-color: #FF6E80;
 
 $light-turq-color: #7FEFDE;
@@ -20,14 +21,12 @@ $dark-purple-color: #2C2252;
 
 $main-gray-color: #263238;
 
-
 * {
   box-sizing: border-box;
 }
 
 body,
 html {
-  background: $main-pink-color;
   scroll-behavior: smooth;
   padding: 0; margin: 0;
   overflow-x: hidden;
@@ -35,37 +34,46 @@ html {
 }
 
 body::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 body::-webkit-scrollbar-track {
-  background: $main-pink-color;
+  background: white;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: $main-turq-color; border-radius: 8px;
+  background: $main-gray-color;
+  border: 2px solid white;
+  border-radius: 8px;
 }
 
 ::selection {
-  background: $main-purple-color;
-  color: $light-turq-color;
+  background: $main-pink-color;
+  color: $main-turq-color;
 }
 
+a {
+  color: $main-gray-color;
+  text-decoration: none;
+}
+
+.material-icons,
 img {
   user-select: none;
 }
 
+#content-wrapper {
+  margin-left: 40%;
+}
 
 // Importing Sass modules
-@import "./loader.scss";
-@import "./title.scss";
-@import "./buttons.scss";
-@import "./lasers.scss";
-@import "./tech-cards.scss";
+// @import "./tech-cards.scss";
 @import "./contact.scss";
+@import "./home-cards.scss";
 
 // Importing Sass pages
+@import "./sidebar.scss";
 @import "./home-page.scss";
-@import "./tech-page.scss";
-@import "./projects-page.scss";
+// @import "./tech-page.scss";
+// @import "./projects-page.scss";
 @import "./footer.scss";

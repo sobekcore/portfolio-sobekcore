@@ -1,7 +1,5 @@
 {
   "name": "portfolio-sobekcore",
-  "version": "1.0.0",
-  "private": true,
   "scripts": {
     "start": "sanity start",
     "build": "sanity build",

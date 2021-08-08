@@ -1,19 +1,23 @@
 footer {
-  position: relative;
-  background: $main-pink-color;
-  height: 500px;
-  display: flex;
+  background: $main-gray-color;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
-  padding-top: 200px;
+  display: flex;
 
   h2 {
-    width: 90%;
-    transform: translateY(-50%);
-    font: bold 22px "Ubuntu", sans-serif;
-    color: $main-gray-color;
+    font: 15px "Hahmlet", sans-serif;
     text-align: center;
-    margin: 20px;
+    line-height: 1.4;
+    color: white;
   }
+
+  #footer-copyright {
+    margin-bottom: 30px;
+  }
+}
+
+#footer-separator {
+  margin-bottom: -5px;
+  width: 100%;
 }

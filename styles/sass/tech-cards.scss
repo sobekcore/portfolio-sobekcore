@@ -26,7 +26,8 @@
           border-radius: 15px;
           cursor: pointer;
 
-          &:hover .tech-card {
+          &:hover .tech-card,
+          &:active .tech-card {
             transform: rotateY(180deg);
           }
 

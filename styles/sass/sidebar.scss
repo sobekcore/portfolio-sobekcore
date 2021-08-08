@@ -1,0 +1,28 @@
+#sidebar {
+  display: flex;
+  align-items: center;
+  background: white;
+  position: fixed;
+  height: 100%;
+  width: 40%;
+  padding: 30px;
+  z-index: 1;
+
+  #sidebar-content {
+    #sidebar-title,
+    #sidebar-desc {
+      color: $main-gray-color;
+      margin: 0 0 20px 0;
+    }
+
+    #sidebar-title {
+      font: bold 26px "Ubuntu", sans-serif;
+      text-transform: uppercase;
+    }
+
+    #sidebar-desc {
+      font: 15px "Hahmlet", serif;
+      line-height: 1.4;
+    }
+  }
+}

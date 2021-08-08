@@ -1,6 +1,5 @@
 #projects-page {
   width: 100vw;
-  padding-top: 170px;
   background:
     linear-gradient(
       $melon-color 0%,
@@ -38,7 +37,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         list-style-type: none;
-        padding-bottom: 390px;
+        padding-bottom: 230px;
         padding-left: 0;
 
         .project-single {
