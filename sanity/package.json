@@ -3,7 +3,8 @@
   "scripts": {
     "start": "sanity start",
     "build": "sanity build",
-    "deploy": "sanity deploy"
+    "deploy": "sanity deploy",
+    "graphql": "sanity graphql deploy"
   },
   "dependencies": {
     "@sanity/base": "^2.9.1",
@@ -16,6 +17,5 @@
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0"
-  },
-  "devDependencies": {}
+  }
 }

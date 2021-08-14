@@ -1,53 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Hahmlet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-* {
-  box-sizing: border-box; }
-
-body,
-html {
-  scroll-behavior: smooth;
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-  width: 100vw; }
-
-body::-webkit-scrollbar {
-  width: 10px; }
-
-body::-webkit-scrollbar-track {
-  background: white; }
-
-body::-webkit-scrollbar-thumb {
-  background: #263238;
-  border: 2px solid white;
-  border-radius: 8px; }
-
-::selection {
-  background: #FF6E80;
-  color: #00E0BE; }
-
-a {
-  color: #263238;
-  text-decoration: none; }
-
-.material-icons,
-img {
-  user-select: none; }
-
-#content-wrapper {
-  margin-left: 40%; }
-
-#contact-icons a {
+/* Modules */
+#contact-icons {
   display: inline-flex;
-  margin: 0 12px;
-  width: 40px; }
-  #contact-icons a img {
-    width: 100%;
-    padding: 4px;
-    border-radius: 8px; }
-  #contact-icons a:hover > img {
-    animation: GlitchedIcon 220ms infinite; }
+  align-items: center; }
+  #contact-icons a {
+    margin: 0 12px;
+    width: 40px; }
+    #contact-icons a img {
+      width: 100%;
+      padding: 4px;
+      border-radius: 8px; }
+    #contact-icons a:hover > img {
+      animation: GlitchedIcon 220ms infinite; }
 
 @keyframes GlitchedIcon {
   0% {
@@ -60,13 +27,8 @@ img {
     filter: drop-shadow(-6px -3px #00E0BE) drop-shadow(-4px -3px #FF6E80); }
   100% {
     filter: drop-shadow(-4px 0px #00E0BE) drop-shadow(4px -3px #FF6E80); } }
-  @media (max-width: 439px) {
-    #contact-icons a {
-      width: 52px;
-      margin: 0 5px; } }
-
-#contact-icons #paper-plane-flying {
-  animation: Fly 1500ms ease; }
+  #contact-icons #paper-plane-flying {
+    animation: Fly 1500ms ease; }
 
 @keyframes Fly {
   6% {
@@ -86,7 +48,7 @@ img {
     opacity: 1; } }
 
 .home-card {
-  transition: ease-in 0.15s; }
+  transition: ease-out 0.16s; }
   .home-card:hover {
     box-shadow: inset 0 0 40px #263238;
     cursor: pointer; }
@@ -107,35 +69,44 @@ img {
         margin-top: 10px; }
 
 #about-home-card {
-  background: #8ab4f8; }
+  background: #8AB4F8; }
 
 #projects-home-card {
-  background: #f28b82; }
+  background: #F28B82; }
 
-#technologies-home-card {
-  background: #81c995; }
+#skills-home-card {
+  background: #81C995; }
 
 #funfacts-home-card {
-  background: #fdd663; }
+  background: #FDD663; }
 
+/* Views */
 #sidebar {
   display: flex;
   align-items: center;
-  background: white;
+  background: #ffffff;
   position: fixed;
+  padding: 45px;
   height: 100%;
+  min-height: 410px;
   width: 40%;
-  padding: 30px;
   z-index: 1; }
+  @media (max-width: 899px) {
+    #sidebar {
+      position: relative;
+      justify-content: center;
+      height: 100vh;
+      width: 100%; } }
   #sidebar #sidebar-content #sidebar-title,
   #sidebar #sidebar-content #sidebar-desc {
     color: #263238;
-    margin: 0 0 20px 0; }
+    margin: 0 0 25px 0; }
   #sidebar #sidebar-content #sidebar-title {
-    font: bold 26px "Ubuntu", sans-serif;
+    font: bold 40px "Ubuntu", sans-serif;
     text-transform: uppercase; }
   #sidebar #sidebar-content #sidebar-desc {
-    font: 15px "Hahmlet", serif;
+    font: 16px "Open Sans", sans-serif;
+    max-width: 480px;
     line-height: 1.4; }
 
 #home-page {
@@ -145,20 +116,153 @@ img {
   height: 100vh;
   width: 100%; }
 
+#projects {
+  width: 100%; }
+  #projects .project-single {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 700px;
+    padding: 35px;
+    height: 100vh; }
+    #projects .project-single .project-name {
+      display: flex;
+      align-items: center; }
+      #projects .project-single .project-name .logo {
+        image-rendering: high-quality;
+        margin-right: 12px; }
+      #projects .project-single .project-name h2 {
+        font: bold 32px "Ubuntu", sans-serif;
+        text-transform: uppercase;
+        color: #263238;
+        margin: 0; }
+    #projects .project-single .project-img {
+      max-width: 100%;
+      width: 480px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px #263238;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      opacity: 0.75; }
+    #projects .project-single .project-desc {
+      font: 16px "Open Sans", sans-serif;
+      color: #263238;
+      max-width: 480px; }
+    #projects .project-single .project-details {
+      display: inline-flex;
+      justify-content: space-between;
+      width: 480px;
+      max-width: 100%; }
+      #projects .project-single .project-details .project-technologies {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+        #projects .project-single .project-details .project-technologies .project-technology {
+          font: bold 20px "Ubuntu", monospace;
+          color: #263238;
+          text-transform: uppercase;
+          text-align: right;
+          cursor: default;
+          opacity: 0.4;
+          transition: opacity 0.12s ease-out; }
+          #projects .project-single .project-details .project-technologies .project-technology:hover {
+            opacity: 1; }
+      #projects .project-single .project-details .project-sites {
+        display: inline-flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 8px; }
+        #projects .project-single .project-details .project-sites .project-site {
+          height: 44px; }
+          #projects .project-single .project-details .project-sites .project-site .project-link {
+            display: block;
+            height: 100%; }
+            #projects .project-single .project-details .project-sites .project-site .project-link:hover ~ .project-badge,
+            #projects .project-single .project-details .project-sites .project-site .project-link:hover > .project-icon {
+              opacity: 1; }
+            #projects .project-single .project-details .project-sites .project-site .project-link .project-icon {
+              font-size: 36px;
+              color: #263238;
+              transition: opacity 0.12s ease-out;
+              padding: 4px;
+              opacity: 0.4;
+              transition: opacity 0.12s ease-out; }
+          #projects .project-single .project-details .project-sites .project-site .project-badge {
+            position: absolute;
+            font: bold 11px "Ubuntu", sans-serif;
+            color: #ffffff;
+            text-transform: uppercase;
+            background: #263238;
+            padding: 2px 4px;
+            border-radius: 4px;
+            user-select: none;
+            opacity: 0.4;
+            z-index: 1;
+            transition: opacity 0.12s ease-out; }
+          #projects .project-single .project-details .project-sites .project-site .project-badge.live {
+            transform: translateX(6px); }
+          #projects .project-single .project-details .project-sites .project-site .project-badge.code {
+            transform: translateX(3px); }
+
 footer {
   background: #263238;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   display: flex; }
+  footer ::selection {
+    background: #ffffff;
+    color: #263238; }
   footer h2 {
-    font: 15px "Hahmlet", sans-serif;
+    font: 16px "Open Sans", sans-serif;
+    color: #ffffff;
     text-align: center;
-    line-height: 1.4;
-    color: white; }
+    line-height: 1.4; }
   footer #footer-copyright {
     margin-bottom: 30px; }
 
 #footer-separator {
   margin-bottom: -5px;
   width: 100%; }
+
+* {
+  box-sizing: border-box; }
+
+body,
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0; }
+
+body::-webkit-scrollbar {
+  width: 16px; }
+
+body::-webkit-scrollbar-track {
+  background: #ffffff; }
+
+body::-webkit-scrollbar-thumb {
+  background: #263238;
+  border: 4px solid #ffffff;
+  border-radius: 16px; }
+
+::selection {
+  background: #263238;
+  color: #ffffff; }
+
+a {
+  color: #263238;
+  text-decoration: none; }
+
+.material-icons,
+img {
+  user-select: none; }
+
+#content-wrapper {
+  margin-left: 40%; }
+  @media (max-width: 899px) {
+    #content-wrapper {
+      margin-left: 0; } }

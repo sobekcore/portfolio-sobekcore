@@ -5,7 +5,7 @@ export default function HomeCards({ name, title }) {
     iconCode = "perm_contact_calendar";
   } else if (name === "projects") {
     iconCode = "insights";
-  } else if (name === "technologies") {
+  } else if (name === "skills") {
     iconCode = "code";
   } else if (name === "funfacts") {
     iconCode = "feed";
@@ -18,7 +18,7 @@ export default function HomeCards({ name, title }) {
       <a href={`#${name}`}>
         <div className="card-content">
           <span className="material-icons card-icon">{iconCode}</span>
-          <h2>{title}.</h2>
+          <h2>{title}</h2>
         </div>
       </a>
     </section>

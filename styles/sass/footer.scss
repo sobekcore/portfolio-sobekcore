@@ -5,11 +5,16 @@ footer {
   flex-direction: column;
   display: flex;
 
+  ::selection {
+    background: $main-white-color;
+    color: $main-gray-color;
+  }
+
   h2 {
-    font: 15px "Hahmlet", sans-serif;
+    font: 16px "Open Sans", sans-serif;
+    color: $main-white-color;
     text-align: center;
     line-height: 1.4;
-    color: white;
   }
 
   #footer-copyright {

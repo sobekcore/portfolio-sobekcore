@@ -1,29 +1,29 @@
 export default {
-  name: "technologies",
-  title: "Technologies",
+  name: "skills",
+  title: "Skills",
   type: "document",
   fields: [
     {
       name: "visibility",
       title: "Visibility",
       type: "boolean",
-      description: "Technologies wont show on the site without visibility turned on.",
+      description: "Skills wont show on the site without visibility turned on.",
     },
     {
       name: "order",
       title: "Order",
       type: "number",
-      description: "Leave empty for not visible technologies.",
+      description: "Leave empty for not visible skills.",
       validation: (Rule) => Rule.min(1).max(8),
     },
     {
       name: "name",
-      title: "Technology Name",
+      title: "Skill Name",
       type: "string",
     },
     {
-      name: "skills",
-      title: "Skills",
+      name: "details",
+      title: "Details",
       type: "array",
       of: [
         {
@@ -33,7 +33,7 @@ export default {
     },
     {
       name: "image",
-      title: "Technology Logo",
+      title: "Skill Logo",
       type: "image",
       description: "Image must be the same width as height with some padding around it.",
     },

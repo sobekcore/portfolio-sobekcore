@@ -32,7 +32,7 @@ As you can see firstly static files are imported into AWS S3 which is configured
 After all of that one last thing is to check on the bucket temporary website link if the site looks fine, if everything looks ok i can allow acces to the CloudFront to fetch files from the S3 bucket, then the website goes live. That's how it works in a nutshell.
 
 ## Data Management
-Data is a vital part of a website, however in this example it is not hard-coded but is rather fetched from a **`Sanity.io`** CMS with a help of **`GraphQL`** queries. You may think how it is possible that a static website fetches data from a CMS, well its made in a kinda hacky way. When building website into static files that data from CMS is saved into JSON file which is main source of the data when deployed to S3. So essentially when i want to update data on the website i need to build it again, but since the data doesn't change that much on this webiste, its an ok choice.
+Data is a vital part of a website, in this case it is not hard-coded but is rather fetched from a **`Sanity.io`** CMS with a help of **`GraphQL`** queries. You may think how it is possible that a static website dynamically fetches data from, well its made in a kinda hacky way. When building website into static files that data from CMS is saved into JSON file which is main source of the data when deployed to S3. So essentially when i want to update data on the website i need to build it again, but since the data doesn't change that much on this webiste, its an ok choice.
 
 The Sanity.io is super highly customizable CMS, which is one of the best functions to have. I've made it to match website aesthetic with custom CSS files, you can have a look at it below.
 
@@ -40,8 +40,10 @@ The Sanity.io is super highly customizable CMS, which is one of the best functio
   align="center"
   alt="Customized Sanity.io"
   title="Click if its too small"
-  src="https://user-images.githubusercontent.com/74379676/116326719-63d17780-a7c5-11eb-8057-965ca30fda2c.png"
+  src="https://user-images.githubusercontent.com/74379676/116403767-4389d300-a82e-11eb-8449-ad9adce38fb2.png"
 />
+
+As you can see it's looking wonderful, but as you read before, the workflow to add new content might seem odd, well thanks to my setup and process automation its very easy. To add for example a new project i need to run only 3 commands, 2 on my local machine for building and exporting, and 1 on AWS for deployement. And then the website is live with everything working as intended, and still remains static.
 
 ## How to run it locally?
 Running various tasks is a lot easier thanks to Gulp and npm scripts, and chaining tasks with them. For example, one of the convenient commands is to run development environment, to do so use:

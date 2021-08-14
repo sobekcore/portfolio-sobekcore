@@ -1,6 +1,8 @@
 #contact-icons {
+  display: inline-flex;
+  align-items: center;
+
   a {
-    display: inline-flex;
     margin: 0 12px;
     width: 40px;
 
@@ -20,11 +22,6 @@
       50% { filter: drop-shadow(-4px -3px $main-turq-color) drop-shadow(-6px 3px $main-pink-color); }
       75% { filter: drop-shadow(-6px -3px $main-turq-color) drop-shadow(-4px -3px $main-pink-color); }
       100% { filter: drop-shadow(-4px 0px $main-turq-color) drop-shadow(4px -3px $main-pink-color); }
-    }
-
-    @media (max-width: 439px) {
-      width: 52px;
-      margin: 0 5px;
     }
   }
 

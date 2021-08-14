@@ -17,6 +17,12 @@ export default {
       validation: (Rule) => Rule.min(1).max(8),
     },
     {
+      name: "color",
+      title: "Color",
+      type: "string",
+      description: "Pass colors in uppercase hex values.",
+    },
+    {
       name: "title",
       title: "Project Title",
       type: "string",
@@ -47,10 +53,16 @@ export default {
       type: "string",
     },
     {
-      name: "image",
+      name: "logo",
       title: "Project Icon",
       type: "image",
       description: "Image size must be exactly 48px / 48px.",
+    },
+    {
+      name: "thumbnail",
+      title: "Project Thumbnail",
+      type: "image",
+      description: "Image must be a screenshot from a website with scrollbar removed.",
     },
   ],
   orderings: [
@@ -68,7 +80,7 @@ export default {
   preview: {
     select: {
       title: "title",
-      media: "image",
+      media: "logo",
       subtitle: "order",
     },
     prepare({ title, media, subtitle }) {

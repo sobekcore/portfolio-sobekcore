@@ -1,5 +1,5 @@
 .home-card {
-  transition: ease-in 0.15s;
+  transition: ease-out 0.16s;
 
   &:hover {
     box-shadow: inset 0 0 40px $main-gray-color;
@@ -7,8 +7,7 @@
   }
 
   a {
-    display: block;
-    height: 100%;
+    @include link;
 
     .card-content {
       display: flex;
@@ -31,17 +30,17 @@
 }
 
 #about-home-card {
-  background: rgb(138, 180, 248);
+  background: #8AB4F8;
 }
 
 #projects-home-card {
-  background: rgb(242,139,130);
+  background: #F28B82;
 }
 
-#technologies-home-card {
-  background: rgb(129,201,149);
+#skills-home-card {
+  background: #81C995;
 }
 
 #funfacts-home-card {
-  background: rgb(253,214,99);
+  background: #FDD663;
 }

@@ -2,23 +2,29 @@ query sanityQuery {
   allProjects(sort: [{ order: ASC }]) {
     visibility,
     order,
+    color,
     title,
     description,
     technologies,
     website_link,
     code_link,
-    image {
+    logo {
+      asset {
+        url
+      }
+    },
+    thumbnail {
       asset {
         url
       }
     }
   }
 
-  allTechnologies(sort: [{ order: ASC }]) {
+  allSkills(sort: [{ order: ASC }]) {
     visibility,
     order,
 		name,
-    skills,
+    details,
     image {
       asset {
         url

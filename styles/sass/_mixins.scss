@@ -1,0 +1,14 @@
+@mixin link {
+  display: block;
+  height: 100%;
+}
+
+@mixin transparentHover($hover: true) {
+  transition: opacity 0.12s ease-out;
+
+  @if ($hover == true) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
