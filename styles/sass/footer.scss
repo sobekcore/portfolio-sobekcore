@@ -23,6 +23,7 @@ footer {
 }
 
 #footer-separator {
+  background: $light-gray-color;
+  width: calc(100% + 1px);
   margin-bottom: -5px;
-  width: 100%;
 }

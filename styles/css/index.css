@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 /* Modules */
 #contact-icons {
   display: inline-flex;
-  align-items: center; }
+  align-items: center;
+  gap: 24px; }
   #contact-icons a {
-    margin: 0 12px;
-    width: 40px; }
+    width: 40px;
+    height: 40px; }
     #contact-icons a img {
       width: 100%;
+      height: 100%;
       padding: 4px;
       border-radius: 8px; }
     #contact-icons a:hover > img {
@@ -84,7 +85,7 @@
 #sidebar {
   display: flex;
   align-items: center;
-  background: #ffffff;
+  background: #FFFFFF;
   position: fixed;
   padding: 45px;
   height: 100%;
@@ -124,12 +125,14 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 700px;
+    min-height: 740px;
     padding: 35px;
     height: 100vh; }
     #projects .project-single .project-name {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      width: 480px;
+      max-width: 100%; }
       #projects .project-single .project-name .logo {
         image-rendering: high-quality;
         margin-right: 12px; }
@@ -143,37 +146,23 @@
       width: 480px;
       border-radius: 8px;
       box-shadow: 0 0 12px #263238;
-      margin-top: 24px;
-      margin-bottom: 8px;
+      margin: 24px 0;
       opacity: 0.75; }
     #projects .project-single .project-desc {
       font: 16px "Open Sans", sans-serif;
       color: #263238;
-      max-width: 480px; }
+      max-width: 480px;
+      margin: 0 0 16px; }
     #projects .project-single .project-details {
       display: inline-flex;
       justify-content: space-between;
       width: 480px;
       max-width: 100%; }
-      #projects .project-single .project-details .project-technologies {
-        list-style: none;
-        padding: 0;
-        margin: 0; }
-        #projects .project-single .project-details .project-technologies .project-technology {
-          font: bold 20px "Ubuntu", monospace;
-          color: #263238;
-          text-transform: uppercase;
-          text-align: right;
-          cursor: default;
-          opacity: 0.4;
-          transition: opacity 0.12s ease-out; }
-          #projects .project-single .project-details .project-technologies .project-technology:hover {
-            opacity: 1; }
       #projects .project-single .project-details .project-sites {
         display: inline-flex;
         list-style: none;
+        margin: -4px 0 0 -4px;
         padding: 0;
-        margin: 0;
         gap: 8px; }
         #projects .project-single .project-details .project-sites .project-site {
           height: 44px; }
@@ -193,7 +182,7 @@
           #projects .project-single .project-details .project-sites .project-site .project-badge {
             position: absolute;
             font: bold 11px "Ubuntu", sans-serif;
-            color: #ffffff;
+            color: #FFFFFF;
             text-transform: uppercase;
             background: #263238;
             padding: 2px 4px;
@@ -206,6 +195,56 @@
             transform: translateX(6px); }
           #projects .project-single .project-details .project-sites .project-site .project-badge.code {
             transform: translateX(3px); }
+      #projects .project-single .project-details .project-technologies {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+        #projects .project-single .project-details .project-technologies .project-technology {
+          font: bold 20px "Ubuntu", monospace;
+          color: #263238;
+          text-transform: uppercase;
+          text-align: right;
+          cursor: default;
+          opacity: 0.4;
+          transition: opacity 0.12s ease-out; }
+          #projects .project-single .project-details .project-technologies .project-technology:hover {
+            opacity: 1; }
+
+#skills {
+  width: 100%;
+  background: #EBE6E6;
+  padding: 50px 0; }
+  #skills .skill-single {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 35px; }
+    @media (max-width: 599px) {
+      #skills .skill-single {
+        flex-direction: column; } }
+    #skills .skill-single .skill-img {
+      image-rendering: high-quality;
+      height: 160px;
+      width: 160px; }
+    #skills .skill-single .skill-desc {
+      margin-left: 20px;
+      max-width: 100%;
+      width: 360px; }
+      @media (max-width: 599px) {
+        #skills .skill-single .skill-desc {
+          margin: 20px 0 0; } }
+      #skills .skill-single .skill-desc .skill-title {
+        font: bold 32px "Ubuntu", sans-serif;
+        color: #263238;
+        margin: 0 0 16px; }
+      #skills .skill-single .skill-desc .skill-details {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+        #skills .skill-single .skill-desc .skill-details .skill-detail {
+          font: 16px "Open Sans", sans-serif;
+          color: #263238; }
 
 footer {
   background: #263238;
@@ -214,19 +253,20 @@ footer {
   flex-direction: column;
   display: flex; }
   footer ::selection {
-    background: #ffffff;
+    background: #FFFFFF;
     color: #263238; }
   footer h2 {
     font: 16px "Open Sans", sans-serif;
-    color: #ffffff;
+    color: #FFFFFF;
     text-align: center;
     line-height: 1.4; }
   footer #footer-copyright {
     margin-bottom: 30px; }
 
 #footer-separator {
-  margin-bottom: -5px;
-  width: 100%; }
+  background: #EBE6E6;
+  width: calc(100% + 1px);
+  margin-bottom: -5px; }
 
 * {
   box-sizing: border-box; }
@@ -242,16 +282,16 @@ body::-webkit-scrollbar {
   width: 16px; }
 
 body::-webkit-scrollbar-track {
-  background: #ffffff; }
+  background: #FFFFFF; }
 
 body::-webkit-scrollbar-thumb {
   background: #263238;
-  border: 4px solid #ffffff;
+  border: 4px solid #FFFFFF;
   border-radius: 16px; }
 
 ::selection {
   background: #263238;
-  color: #ffffff; }
+  color: #FFFFFF; }
 
 a {
   color: #263238;

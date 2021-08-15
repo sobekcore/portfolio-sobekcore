@@ -12,10 +12,13 @@
     height: 100vh;
 
     $content-width: 480px;
+    $icon-padding: 4px;
 
     .project-name {
       display: flex;
       align-items: center;
+      width: $content-width;
+      max-width: 100%;
 
       .logo {
         image-rendering: high-quality;
@@ -35,8 +38,7 @@
       width: $content-width;
       border-radius: 8px;
       box-shadow: 0 0 12px $main-gray-color;
-      margin-top: 24px;
-      margin-bottom: 8px;
+      margin: 24px 0;
       opacity: 0.75;
     }
 
@@ -44,6 +46,7 @@
       font: 16px "Open Sans", sans-serif;
       color: $main-gray-color;
       max-width: $content-width;
+      margin: 0 0 16px;
     }
 
     .project-details {
@@ -52,28 +55,11 @@
       width: $content-width;
       max-width: 100%;
 
-      .project-technologies {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        .project-technology {
-          font: bold 20px "Ubuntu", monospace;
-          color: $main-gray-color;
-          text-transform: uppercase;
-          text-align: right;
-          cursor: default;
-          opacity: 0.4;
-
-          @include transparentHover;
-        }
-      }
-
       .project-sites {
         display: inline-flex;
         list-style: none;
+        margin: ($icon-padding * -1) 0 0 ($icon-padding * -1);
         padding: 0;
-        margin: 0;
         gap: 8px;
 
         .project-site {
@@ -93,7 +79,7 @@
               font-size: 36px;
               color: $main-gray-color;
               transition: opacity 0.12s ease-out;
-              padding: 4px;
+              padding: $icon-padding;
               opacity: 0.4;
 
               @include transparentHover(false);
@@ -122,6 +108,23 @@
           .project-badge.code {
             transform: translateX(3px);
           }
+        }
+      }
+
+      .project-technologies {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .project-technology {
+          font: bold 20px "Ubuntu", monospace;
+          color: $main-gray-color;
+          text-transform: uppercase;
+          text-align: right;
+          cursor: default;
+          opacity: 0.4;
+
+          @include transparentHover;
         }
       }
     }

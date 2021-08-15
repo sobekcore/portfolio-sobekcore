@@ -1,19 +1,17 @@
 export default function Skill({ skill }) {
   return (
-    <li className="skill-single">
-      <div className="skill-card">
-        <div className="skill-card-front">
-          <img alt={skill.name} src={skill.image.asset.url} />
-          <h2>{skill.name}</h2>
-        </div>
-        <div className="skill-card-back">
-          <ul className="skills">
-            {skill.details.map((detail) => (
-              <li key={detail}>{detail}</li>
-            ))}
-          </ul>
-        </div>
+    <section className="skill-single">
+      <img className="skill-img" alt={skill.name} src={skill.image.asset.url} />
+      <div className="skill-desc">
+        <h2 className="skill-title">{skill.name}</h2>
+        <ul className="skill-details">
+          {skill.details.map((detail) => (
+            <li className="skill-detail" key={detail}>
+              {detail}
+            </li>
+          ))}
+        </ul>
       </div>
-    </li>
+    </section>
   );
 }

@@ -1,0 +1,52 @@
+#skills {
+  width: 100%;
+  background: $light-gray-color;
+  padding: 50px 0;
+
+  $column-breakpoint: 599px;
+
+  .skill-single {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 35px;
+
+    @media (max-width: $column-breakpoint) {
+      flex-direction: column;
+    }
+
+    .skill-img {
+      image-rendering: high-quality;
+      height: 160px;
+      width: 160px;
+    }
+
+    .skill-desc {
+      margin-left: 20px;
+      max-width: 100%;
+      width: 360px;
+
+      @media (max-width: $column-breakpoint) {
+        margin: 20px 0 0;
+      }
+
+      .skill-title {
+        font: bold 32px "Ubuntu", sans-serif;
+        color: $main-gray-color;
+        margin: 0 0 16px;
+      }
+
+      .skill-details {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .skill-detail {
+          font: 16px "Open Sans", sans-serif;
+          color: $main-gray-color;
+        }
+      }
+    }
+  }
+}
