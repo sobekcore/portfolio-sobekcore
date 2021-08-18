@@ -6,7 +6,7 @@ export default function HomeCards() {
       <HomeCard name="about" title="About" />
       <HomeCard name="projects" title="Projects" />
       <HomeCard name="skills" title="Skills" />
-      <HomeCard name="funfacts" title="Fun Facts" />
+      <HomeCard name="other" title="Other" />
     </>
   );
 }

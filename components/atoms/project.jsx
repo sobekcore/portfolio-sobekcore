@@ -6,7 +6,6 @@ export default function Project({ project }) {
         <h2>{project.title}</h2>
       </div>
       <img className="project-img" src={project.thumbnail.asset.url} />
-      <p className="project-desc">{project.description}</p>
       <div className="project-details">
         <ul className="project-sites">
           <li className="project-site">
@@ -30,6 +29,7 @@ export default function Project({ project }) {
           ))}
         </ul>
       </div>
+      <div className="project-corner"></div>
     </section>
   );
 }

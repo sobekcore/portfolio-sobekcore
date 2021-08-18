@@ -4,10 +4,10 @@ import ContactIcons from "../atoms/contact-icons";
 
 export default function SidebarContent() {
   return (
-    <section id="sidebar-content">
+    <section className="sidebar-content">
       <SidebarTitle />
       <SidebarDesc />
-      <div id="sidebar-icons">
+      <div className="sidebar-icons">
         <ContactIcons />
       </div>
     </section>

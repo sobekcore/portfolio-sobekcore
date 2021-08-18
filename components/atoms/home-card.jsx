@@ -7,7 +7,7 @@ export default function HomeCards({ name, title }) {
     iconCode = "insights";
   } else if (name === "skills") {
     iconCode = "code";
-  } else if (name === "funfacts") {
+  } else if (name === "other") {
     iconCode = "feed";
   } else {
     iconCode = "error";

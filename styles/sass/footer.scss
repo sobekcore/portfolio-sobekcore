@@ -11,10 +11,15 @@ footer {
   }
 
   h2 {
-    font: 16px "Open Sans", sans-serif;
-    color: $main-white-color;
     text-align: center;
-    line-height: 1.4;
+    @include basicText("white");
+
+    .love {
+      transform: translateY(3px);
+      color: $main-action-color;
+      font-size: 18px;
+      margin: 0 3px;
+    }
   }
 
   #footer-copyright {
@@ -23,7 +28,6 @@ footer {
 }
 
 #footer-separator {
-  background: $light-gray-color;
   width: calc(100% + 1px);
   margin-bottom: -5px;
 }

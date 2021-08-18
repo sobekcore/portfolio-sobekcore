@@ -3,8 +3,6 @@
   background: $light-gray-color;
   padding: 50px 0;
 
-  $column-breakpoint: 599px;
-
   .skill-single {
     position: relative;
     display: flex;
@@ -12,7 +10,7 @@
     justify-content: center;
     padding: 20px 35px;
 
-    @media (max-width: $column-breakpoint) {
+    @media (max-width: $mobile-breakpoint) {
       flex-direction: column;
     }
 
@@ -27,14 +25,14 @@
       max-width: 100%;
       width: 360px;
 
-      @media (max-width: $column-breakpoint) {
+      @media (max-width: $mobile-breakpoint) {
         margin: 20px 0 0;
       }
 
       .skill-title {
         font: bold 32px "Ubuntu", sans-serif;
         color: $main-gray-color;
-        margin: 0 0 16px;
+        margin: 0 0 12px;
       }
 
       .skill-details {
@@ -43,8 +41,13 @@
         margin: 0;
 
         .skill-detail {
-          font: 16px "Open Sans", sans-serif;
-          color: $main-gray-color;
+          @include basicText;
+
+          &::before {
+            content: "# ";
+            font: 16px "Ubuntu", sans-serif;
+            color: $main-action-color;
+          }
         }
       }
     }
