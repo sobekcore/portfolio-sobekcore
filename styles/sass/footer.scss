@@ -3,6 +3,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 15px 0 30px;
   display: flex;
 
   ::selection {
@@ -21,13 +22,11 @@ footer {
       margin: 0 3px;
     }
   }
-
-  #footer-copyright {
-    margin-bottom: 30px;
-  }
 }
 
 #footer-separator {
   width: calc(100% + 1px);
+  background: lightblue;
   margin-bottom: -5px;
+  padding-top: 70px;
 }

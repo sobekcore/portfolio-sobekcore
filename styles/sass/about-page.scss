@@ -1,8 +1,9 @@
 #about {
   display: flex;
   font: 16px "Open Sans", sans-serif;
+  background: $light-gray-color;
   color: $main-gray-color;
   justify-content: center;
   align-items: center;
-  height: 250px;
+  height: 100vh;
 }

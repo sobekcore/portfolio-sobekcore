@@ -15,10 +15,12 @@ export default function HomePage({ skills, projects }) {
       <SidebarSection />
       <main id="content-wrapper">
         <HomeSection />
-        <AboutSection />
-        <ProjectsSection projects={projects} />
-        <SkillsSection skills={skills} />
-        <OtherSection />
+        <div id="content-scrolable">
+          <AboutSection />
+          <ProjectsSection projects={projects} />
+          <SkillsSection skills={skills} />
+          <OtherSection />
+        </div>
         <FooterSection />
       </main>
     </>

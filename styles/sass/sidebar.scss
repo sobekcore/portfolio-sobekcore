@@ -1,7 +1,6 @@
 #sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background: $main-white-color;
   position: fixed;
   padding: 45px;
@@ -18,6 +17,13 @@
   }
 
   .sidebar-content {
+    padding-bottom: 45px;
+    margin: auto 0;
+
+    @media (max-width: $tablet-breakpoint) {
+      padding-bottom: 0;
+    }
+
     .sidebar-title {
       font: bold 40px "Ubuntu", sans-serif;
       text-transform: uppercase;
@@ -33,7 +39,7 @@
   }
 
   .sidebar-bottom {
-    @media (max-width: 1199px) {
+    @media (max-width: $laptop-breakpoint) {
       position: absolute;
       width: 100%;
       bottom: 0;
@@ -41,7 +47,8 @@
     }
 
     @media (max-width: $tablet-breakpoint) {
-      display: none;
+      background: white;
+      position: fixed;
     }
 
     .sidebar-scroll-list {
@@ -64,10 +71,16 @@
           opacity: 1;
         }
 
+        @media (max-width: $tablet-breakpoint) {
+          border-top: 1px solid $main-gray-color;
+        }
+
         .sidebar-scroll-link {
           display: flex;
           flex-direction: column;
           text-align: center;
+          user-select: none;
+          transition: color 0.18s ease-out;
           @include basicText;
 
           .sidebar-scroll-icon {
@@ -86,6 +99,7 @@
         background: $main-action-color;
         max-width: 100%;
         height: 100%;
+        width: 0%;
       }
     }
   }

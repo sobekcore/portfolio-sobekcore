@@ -3,9 +3,9 @@ import SidebarBottom from "../molecules/sidebar-bottom";
 
 export default function SidebarSection() {
   return (
-    <div id="sidebar">
+    <aside id="sidebar">
       <SidebarContent />
       <SidebarBottom />
-    </div>
+    </aside>
   );
 }

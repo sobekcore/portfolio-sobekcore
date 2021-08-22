@@ -7,18 +7,17 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: $min-section-height;
+    min-height: 100vh;
+    height: auto;
     padding: 35px;
-    height: 100vh;
 
-    $content-width: 530px;
     $icon-padding: 4px;
 
     .project-name {
       display: flex;
       align-items: center;
-      width: $content-width;
       max-width: 100%;
+      @include projectsWidth;
 
       .logo {
         image-rendering: high-quality;
@@ -35,27 +34,27 @@
 
     .project-img {
       max-width: 100%;
-      width: $content-width - 70px;
       border-radius: 8px;
       box-shadow: 0 0 12px $main-gray-color;
       margin: 24px 0;
       opacity: 0.9;
+      @include projectsWidth(true);
     }
 
     .project-details {
       display: inline-flex;
       justify-content: space-between;
-      width: $content-width;
       max-width: 100%;
+      @include projectsWidth;
 
       .project-sites {
         display: inline-flex;
         margin: ($icon-padding * -1) 0 0 ($icon-padding * -1);
-        width: $content-width;
         max-width: 100%;
         list-style: none;
         padding: 0;
         gap: 8px;
+        @include projectsWidth;
 
         .project-site {
           height: 44px;

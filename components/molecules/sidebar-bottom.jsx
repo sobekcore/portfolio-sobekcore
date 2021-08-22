@@ -1,9 +1,9 @@
-import SidebarScroll from "../atoms/sidebar-scroll";
+import SidebarScroll from "./sidebar-scroll";
 
 export default function SidebarBottom() {
   return (
-    <div className="sidebar-bottom">
+    <nav className="sidebar-bottom">
       <SidebarScroll />
-    </div>
+    </nav>
   );
 }

@@ -1,3 +1,3 @@
 export default function OtherSection() {
-  return <div id="other">Other Section</div>;
+  return <article id="other">Other Section</article>;
 }
