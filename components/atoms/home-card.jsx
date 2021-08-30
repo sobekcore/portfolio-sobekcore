@@ -1,12 +1,14 @@
+import MaterialIcon from "./material-icon";
+
 export default function HomeCards({ name, title }) {
   let iconCode;
 
-  if (name === "about") {
-    iconCode = "perm_contact_calendar";
-  } else if (name === "projects") {
-    iconCode = "insights";
+  if (name === "projects") {
+    iconCode = "table_view";
   } else if (name === "skills") {
     iconCode = "code";
+  } else if (name === "about") {
+    iconCode = "perm_contact_calendar";
   } else if (name === "other") {
     iconCode = "feed";
   } else {
@@ -15,10 +17,10 @@ export default function HomeCards({ name, title }) {
 
   return (
     <section className="home-card" id={`${name}-home-card`}>
-      <a href={`#${name}`}>
-        <div className="card-content">
-          <span className="material-icons card-icon">{iconCode}</span>
-          <h2>{title}</h2>
+      <a className="home-card-link" href={`#${name}`}>
+        <div className="home-card-content">
+          <MaterialIcon iconCode={iconCode} className="home-card-icon" />
+          <h2 className="home-card-title">{title}</h2>
         </div>
       </a>
     </section>

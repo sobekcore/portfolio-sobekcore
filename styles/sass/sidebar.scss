@@ -7,7 +7,7 @@
   height: 100%;
   min-height: 410px;
   width: 40%;
-  z-index: 1;
+  z-index: 2;
 
   @media (max-width: $tablet-breakpoint) {
     position: relative;
@@ -20,10 +20,6 @@
     padding-bottom: 45px;
     margin: auto 0;
 
-    @media (max-width: $tablet-breakpoint) {
-      padding-bottom: 0;
-    }
-
     .sidebar-title {
       font: bold 40px "Ubuntu", sans-serif;
       text-transform: uppercase;
@@ -32,13 +28,15 @@
     }
 
     .sidebar-desc {
-      margin: 0 0 30px 0;
+      margin: 0 0 28px 0;
       max-width: 450px;
       @include basicText;
     }
   }
 
   .sidebar-bottom {
+    transition: opacity 0.18s ease-out;
+
     @media (max-width: $laptop-breakpoint) {
       position: absolute;
       width: 100%;
@@ -67,8 +65,7 @@
         }
 
         &:hover {
-          background: $light-gray-color;
-          opacity: 1;
+          background: $medium-gray-color;
         }
 
         @media (max-width: $tablet-breakpoint) {

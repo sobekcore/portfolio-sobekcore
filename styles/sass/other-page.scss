@@ -1,9 +1,45 @@
 #other {
-  display: flex;
-  font: 16px "Open Sans", sans-serif;
-  background: lightblue;
-  color: $main-gray-color;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  .other-content {
+    display: flex;
+    flex-direction: column;
+    background: $light-gray-color;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+    padding: 80px 0;
+
+    .other-section {
+      width: 520px;
+      max-width: 100%;
+      padding: 30px 35px;
+
+      .other-header {
+        display: flex;
+
+        .other-title {
+          font: bold 20px "Ubuntu", sans-serif;
+          text-transform: uppercase;
+          color: $main-gray-color;
+          margin: 0 0 8px;
+        }
+
+        .other-icon {
+          color: $main-gray-color;
+          margin-left: 7px;
+        }
+      }
+
+      .other-item {
+        margin: 2px 0;
+        @include basicText;
+
+        .other-item-icon {
+          color: $main-action-color;
+          margin-right: 4px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }

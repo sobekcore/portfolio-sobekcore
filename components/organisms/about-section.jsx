@@ -1,3 +1,9 @@
+import AboutContent from "../molecules/about-content";
+
 export default function AboutSection() {
-  return <article id="about">About Section</article>;
+  return (
+    <article id="about">
+      <AboutContent />
+    </article>
+  );
 }

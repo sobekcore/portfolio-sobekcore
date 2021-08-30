@@ -2,35 +2,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 /* Modules */
-#contact-icons {
+.contact-icons {
   display: inline-flex;
   align-items: center;
-  gap: 24px; }
-  #contact-icons a {
-    width: 36px;
-    height: 36px; }
-    #contact-icons a img {
+  gap: 18px; }
+  .contact-icons .contact-link {
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+    box-sizing: content-box;
+    cursor: pointer; }
+    .contact-icons .contact-link .contact-icon-img {
       width: 100%;
       height: 100%;
-      padding: 4px;
-      transition: opacity 0.12s ease-out, filter 0.12s ease-out;
+      transition: opacity 0.12s ease-out;
       opacity: 0.4; }
-    #contact-icons a:hover > img {
-      filter: drop-shadow(4px 3px #8AB4F8);
+    .contact-icons .contact-link:hover > .contact-icon-img {
       opacity: 1; }
-
-@keyframes GlitchedIcon {
-  0% {
-    filter: drop-shadow(4px 3px #8AB4F8) drop-shadow(-4px -5px #8AB4F8); }
-  25% {
-    filter: drop-shadow(-4px -5px #8AB4F8) drop-shadow(4px 3px #8AB4F8); }
-  50% {
-    filter: drop-shadow(-4px -3px #8AB4F8) drop-shadow(-6px 3px #8AB4F8); }
-  75% {
-    filter: drop-shadow(-6px -3px #8AB4F8) drop-shadow(-4px -3px #8AB4F8); }
-  100% {
-    filter: drop-shadow(-4px 0px #8AB4F8) drop-shadow(4px -3px #8AB4F8); } }
-  #contact-icons #paper-plane-flying {
+  .contact-icons #paper-plane-flying {
     animation: Fly 1500ms ease; }
 
 @keyframes Fly {
@@ -53,31 +42,31 @@
 .home-card {
   transition: ease-out 0.16s; }
   .home-card:hover {
-    box-shadow: inset 0 0 40px #263238;
+    box-shadow: inset 0 0 40px rgba(38, 50, 56, 0.8);
     cursor: pointer; }
-  .home-card a {
+  .home-card .home-card-link {
     display: block;
     height: 100%; }
-    .home-card a .card-content {
+    .home-card .home-card-link .home-card-content {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       height: 100%; }
-      .home-card a .card-content .card-icon {
+      .home-card .home-card-link .home-card-content .home-card-icon {
         font-size: 52px; }
-      .home-card a .card-content h2 {
+      .home-card .home-card-link .home-card-content .home-card-title {
         font: bold 22px "Ubuntu", sans-serif;
         text-transform: uppercase;
         margin-top: 10px; }
 
-#about-home-card {
+#projects-home-card {
   background: #8AB4F8; }
 
-#projects-home-card {
+#skills-home-card {
   background: #F28B82; }
 
-#skills-home-card {
+#about-home-card {
   background: #81C995; }
 
 #other-home-card {
@@ -87,13 +76,13 @@
 #sidebar {
   display: flex;
   flex-direction: column;
-  background: #FFFFFF;
+  background: #FFF;
   position: fixed;
   padding: 45px;
   height: 100%;
   min-height: 410px;
   width: 40%;
-  z-index: 1; }
+  z-index: 2; }
   @media (max-width: 899px) {
     #sidebar {
       position: relative;
@@ -103,69 +92,67 @@
   #sidebar .sidebar-content {
     padding-bottom: 45px;
     margin: auto 0; }
-    @media (max-width: 899px) {
-      #sidebar .sidebar-content {
-        padding-bottom: 0; } }
     #sidebar .sidebar-content .sidebar-title {
       font: bold 40px "Ubuntu", sans-serif;
       text-transform: uppercase;
       color: #263238;
       margin: 0 0 25px 0; }
     #sidebar .sidebar-content .sidebar-desc {
-      margin: 0 0 30px 0;
+      margin: 0 0 28px 0;
       max-width: 450px;
       font: 16px "Open Sans", sans-serif;
       font-weight: 400;
       line-height: 1.6;
       color: #263238; }
-  @media (max-width: 1199px) {
-    #sidebar .sidebar-bottom {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      left: 0; } }
-  @media (max-width: 899px) {
-    #sidebar .sidebar-bottom {
-      background: white;
-      position: fixed; } }
-  #sidebar .sidebar-bottom .sidebar-scroll-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-    #sidebar .sidebar-bottom .sidebar-scroll-list .sidebar-scroll-item {
-      border-bottom: 1px solid #263238;
-      transition: background 0.12s ease-out;
-      min-width: 60px; }
-      #sidebar .sidebar-bottom .sidebar-scroll-list .sidebar-scroll-item:not(:first-child) {
-        border-left: 1px solid #263238; }
-      #sidebar .sidebar-bottom .sidebar-scroll-list .sidebar-scroll-item:hover {
-        background: #EBE6E6;
-        opacity: 1; }
-      @media (max-width: 899px) {
-        #sidebar .sidebar-bottom .sidebar-scroll-list .sidebar-scroll-item {
-          border-top: 1px solid #263238; } }
-      #sidebar .sidebar-bottom .sidebar-scroll-list .sidebar-scroll-item .sidebar-scroll-link {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        user-select: none;
-        transition: color 0.18s ease-out;
-        font: 16px "Open Sans", sans-serif;
-        font-weight: 400;
-        line-height: 1.6;
-        color: #263238; }
-        #sidebar .sidebar-bottom .sidebar-scroll-list .sidebar-scroll-item .sidebar-scroll-link .sidebar-scroll-icon {
-          font-size: 20px;
-          padding-top: 6px; }
-  #sidebar .sidebar-bottom .sidebar-scroll-wrapper {
-    height: 8px;
-    width: 100%; }
-    #sidebar .sidebar-bottom .sidebar-scroll-wrapper .sidebar-scroll {
-      background: #8AB4F8;
-      max-width: 100%;
-      height: 100%;
-      width: 0%; }
+  #sidebar .sidebar-bottom {
+    transition: opacity 0.18s ease-out; }
+    @media (max-width: 1199px) {
+      #sidebar .sidebar-bottom {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0; } }
+    @media (max-width: 899px) {
+      #sidebar .sidebar-bottom {
+        background: white;
+        position: fixed; } }
+    #sidebar .sidebar-bottom .sidebar-scroll-list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      #sidebar .sidebar-bottom .sidebar-scroll-list .sidebar-scroll-item {
+        border-bottom: 1px solid #263238;
+        transition: background 0.12s ease-out;
+        min-width: 60px; }
+        #sidebar .sidebar-bottom .sidebar-scroll-list .sidebar-scroll-item:not(:first-child) {
+          border-left: 1px solid #263238; }
+        #sidebar .sidebar-bottom .sidebar-scroll-list .sidebar-scroll-item:hover {
+          background: #E2E2E7; }
+        @media (max-width: 899px) {
+          #sidebar .sidebar-bottom .sidebar-scroll-list .sidebar-scroll-item {
+            border-top: 1px solid #263238; } }
+        #sidebar .sidebar-bottom .sidebar-scroll-list .sidebar-scroll-item .sidebar-scroll-link {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          user-select: none;
+          transition: color 0.18s ease-out;
+          font: 16px "Open Sans", sans-serif;
+          font-weight: 400;
+          line-height: 1.6;
+          color: #263238; }
+          #sidebar .sidebar-bottom .sidebar-scroll-list .sidebar-scroll-item .sidebar-scroll-link .sidebar-scroll-icon {
+            font-size: 20px;
+            padding-top: 6px; }
+    #sidebar .sidebar-bottom .sidebar-scroll-wrapper {
+      height: 8px;
+      width: 100%; }
+      #sidebar .sidebar-bottom .sidebar-scroll-wrapper .sidebar-scroll {
+        background: #8AB4F8;
+        max-width: 100%;
+        height: 100%;
+        width: 0%; }
 
 #home-page {
   display: grid;
@@ -173,15 +160,6 @@
   grid-template-rows: 1fr 1fr;
   height: 100vh;
   width: 100%; }
-
-#about {
-  display: flex;
-  font: 16px "Open Sans", sans-serif;
-  background: #EBE6E6;
-  color: #263238;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; }
 
 #projects {
   width: 100%; }
@@ -194,40 +172,52 @@
     min-height: 100vh;
     height: auto;
     padding: 35px; }
-    #projects .project-single .project-name {
+    #projects .project-single .project-header {
       display: flex;
       align-items: center;
       max-width: 100%;
-      width: 70%; }
-      @media (max-width: 599px) {
-        #projects .project-single .project-name {
-          width: 100%; } }
-      #projects .project-single .project-name .logo {
+      width: 530px; }
+      @media (min-width: 1199px) {
+        #projects .project-single .project-header {
+          width: 70%; } }
+      #projects .project-single .project-header .project-logo {
         image-rendering: high-quality;
         margin-right: 12px; }
-      #projects .project-single .project-name h2 {
-        font: bold 32px "Ubuntu", sans-serif;
-        text-transform: uppercase;
-        color: #263238;
-        margin: 0; }
+      #projects .project-single .project-header .project-info {
+        display: flex;
+        flex-direction: column; }
+        #projects .project-single .project-header .project-info .project-title {
+          font: bold 32px "Ubuntu", sans-serif;
+          text-transform: uppercase;
+          color: #263238;
+          margin: 0; }
+        #projects .project-single .project-header .project-info .project-desc {
+          margin: 0;
+          font: 16px "Open Sans", sans-serif;
+          font-weight: 400;
+          line-height: 1.6;
+          color: #263238; }
+          @media (max-width: 599px) {
+            #projects .project-single .project-header .project-info .project-desc {
+              display: none; } }
     #projects .project-single .project-img {
       max-width: 100%;
       border-radius: 8px;
-      box-shadow: 0 0 12px #263238;
+      box-shadow: 0 0 18px rgba(38, 50, 56, 0.8);
       margin: 24px 0;
       opacity: 0.9;
-      width: calc(70% - 70px); }
-      @media (max-width: 599px) {
+      width: 460px; }
+      @media (min-width: 1199px) {
         #projects .project-single .project-img {
-          width: 100%; } }
+          width: calc(70% - 70px); } }
     #projects .project-single .project-details {
       display: inline-flex;
       justify-content: space-between;
       max-width: 100%;
-      width: 70%; }
-      @media (max-width: 599px) {
+      width: 530px; }
+      @media (min-width: 1199px) {
         #projects .project-single .project-details {
-          width: 100%; } }
+          width: 70%; } }
       #projects .project-single .project-details .project-sites {
         display: inline-flex;
         margin: -4px 0 0 -4px;
@@ -235,10 +225,10 @@
         list-style: none;
         padding: 0;
         gap: 8px;
-        width: 70%; }
-        @media (max-width: 599px) {
+        width: 530px; }
+        @media (min-width: 1199px) {
           #projects .project-single .project-details .project-sites {
-            width: 100%; } }
+            width: 70%; } }
         #projects .project-single .project-details .project-sites .project-site {
           height: 44px; }
           #projects .project-single .project-details .project-sites .project-site .project-link {
@@ -250,14 +240,13 @@
             #projects .project-single .project-details .project-sites .project-site .project-link .project-icon {
               font-size: 36px;
               color: #263238;
-              transition: opacity 0.12s ease-out;
               padding: 4px;
               opacity: 0.4;
               transition: opacity 0.12s ease-out; }
           #projects .project-single .project-details .project-sites .project-site .project-badge {
             position: absolute;
             font: bold 11px "Ubuntu", sans-serif;
-            color: #FFFFFF;
+            color: #FFF;
             text-transform: uppercase;
             background: #263238;
             padding: 2px 4px;
@@ -288,82 +277,172 @@
 
 #skills {
   width: 100%;
-  background: #EBE6E6;
-  padding: 50px 0; }
+  background: #EDEDED;
+  padding: 80px 0; }
   #skills .skill-single {
-    position: relative;
     display: flex;
-    align-items: center;
+    position: relative;
     justify-content: center;
-    padding: 30px 35px; }
-    @media (max-width: 599px) {
-      #skills .skill-single {
-        flex-direction: column; } }
-    #skills .skill-single .skill-img {
-      image-rendering: high-quality;
-      height: 160px;
-      width: 160px; }
-    #skills .skill-single .skill-desc {
-      margin-left: 20px;
+    padding: 35px 35px; }
+    #skills .skill-single:nth-child(2n) > .skill-content {
+      justify-content: flex-end; }
+    #skills .skill-single .skill-content {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
       max-width: 100%;
-      width: 360px; }
+      width: 720px; }
       @media (max-width: 599px) {
-        #skills .skill-single .skill-desc {
-          margin: 20px 0 0; } }
-      #skills .skill-single .skill-desc .skill-title {
-        font: bold 32px "Ubuntu", sans-serif;
-        color: #263238;
-        margin: 0 0 12px; }
-      #skills .skill-single .skill-desc .skill-details {
-        list-style: none;
-        padding: 0;
-        margin: 0; }
-        #skills .skill-single .skill-desc .skill-details .skill-detail {
-          font: 16px "Open Sans", sans-serif;
-          font-weight: 400;
-          line-height: 1.6;
-          color: #263238; }
-          #skills .skill-single .skill-desc .skill-details .skill-detail::before {
-            content: "# ";
-            font: 16px "Ubuntu", sans-serif;
-            color: #8AB4F8; }
+        #skills .skill-single .skill-content {
+          flex-direction: column;
+          width: auto; } }
+      #skills .skill-single .skill-content .skill-img {
+        display: flex;
+        justify-content: center;
+        image-rendering: high-quality;
+        height: 160px;
+        width: 160px; }
+      #skills .skill-single .skill-content .skill-desc {
+        margin-left: 20px;
+        max-width: 100%;
+        width: 360px; }
+        @media (max-width: 599px) {
+          #skills .skill-single .skill-content .skill-desc {
+            margin: 20px 0 0; } }
+        #skills .skill-single .skill-content .skill-desc .skill-title {
+          display: inline-block;
+          font: bold 32px "Ubuntu", sans-serif;
+          color: #263238;
+          margin: 0 0 12px; }
+        #skills .skill-single .skill-content .skill-desc .skill-details {
+          list-style: none;
+          padding: 0;
+          margin: 0; }
+          #skills .skill-single .skill-content .skill-desc .skill-details .skill-detail {
+            font: 16px "Open Sans", sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #263238; }
+            #skills .skill-single .skill-content .skill-desc .skill-details .skill-detail::before {
+              content: "# ";
+              font: 16px "Ubuntu", sans-serif;
+              color: #8AB4F8; }
 
-#other {
+#about {
   display: flex;
-  font: 16px "Open Sans", sans-serif;
-  background: lightblue;
-  color: #263238;
+  flex-direction: column;
+  background: #E2E2E7;
   justify-content: center;
   align-items: center;
-  height: 100vh; }
+  min-height: 100vh;
+  height: auto; }
+  #about .about-desc {
+    margin: 0;
+    text-align: center;
+    font: 16px "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #263238; }
+  #about .about-button {
+    border-radius: 24px;
+    background: #8AB4F8;
+    margin-top: 12px;
+    border: none;
+    padding: 0;
+    transition: background 0.16s ease-out, box-shadow 0.16s ease-out; }
+    #about .about-button:hover {
+      background: #6095EB;
+      box-shadow: 4px 4px 16px rgba(38, 50, 56, 0.4); }
+    #about .about-button .about-button-link {
+      padding: 10px 20px;
+      font: 16px "Open Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #263238;
+      display: block;
+      height: 100%; }
+  #about .about-hint-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px 0 0;
+    max-width: 100%;
+    width: 500px; }
+    #about .about-hint-wrapper .about-hint {
+      display: flex;
+      align-items: flex-end;
+      transform: rotate(8deg);
+      margin: 0; }
+      #about .about-hint-wrapper .about-hint .about-hint-arrow {
+        height: 60px; }
+      #about .about-hint-wrapper .about-hint .about-hint-desc {
+        transform: translateY(8px);
+        padding-right: 5px;
+        margin: 0 0 0 8px;
+        font: 16px "Open Sans", sans-serif;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #263238; }
 
-footer {
+#other .other-content {
+  display: flex;
+  flex-direction: column;
+  background: #EDEDED;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  padding: 80px 0; }
+  #other .other-content .other-section {
+    width: 520px;
+    max-width: 100%;
+    padding: 30px 35px; }
+    #other .other-content .other-section .other-header {
+      display: flex; }
+      #other .other-content .other-section .other-header .other-title {
+        font: bold 20px "Ubuntu", sans-serif;
+        text-transform: uppercase;
+        color: #263238;
+        margin: 0 0 8px; }
+      #other .other-content .other-section .other-header .other-icon {
+        color: #263238;
+        margin-left: 7px; }
+    #other .other-content .other-section .other-item {
+      margin: 2px 0;
+      font: 16px "Open Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #263238; }
+      #other .other-content .other-section .other-item .other-item-icon {
+        color: #8AB4F8;
+        margin-right: 4px;
+        font-size: 12px; }
+
+.footer {
   background: #263238;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 15px 0 30px;
   display: flex; }
-  footer ::selection {
-    background: #FFFFFF;
+  .footer ::selection {
+    background: #FFF;
     color: #263238; }
-  footer h2 {
+  .footer .footer-text {
     text-align: center;
     font: 16px "Open Sans", sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    color: #FFFFFF; }
-    footer h2 .love {
+    color: #FFF; }
+    .footer .footer-text .love {
       transform: translateY(3px);
       color: #8AB4F8;
-      font-size: 18px;
-      margin: 0 3px; }
+      font-size: 18px; }
 
-#footer-separator {
+.footer-separator {
   width: calc(100% + 1px);
-  background: lightblue;
+  background: #EDEDED;
   margin-bottom: -5px;
-  padding-top: 70px; }
+  padding-top: 80px; }
 
 * {
   box-sizing: border-box; }
@@ -379,16 +458,16 @@ body::-webkit-scrollbar {
   width: 16px; }
 
 body::-webkit-scrollbar-track {
-  background: #FFFFFF; }
+  background: #EDEDED; }
 
 body::-webkit-scrollbar-thumb {
   background: #263238;
-  border: 4px solid #FFFFFF;
+  border: 4px solid #EDEDED;
   border-radius: 16px; }
 
 ::selection {
   background: #263238;
-  color: #FFFFFF; }
+  color: #FFF; }
 
 a {
   color: #263238;
@@ -398,7 +477,7 @@ a {
   font: 16px "Open Sans", sans-serif;
   border-bottom: 1px solid #8AB4F8;
   box-shadow: inset 0 -2px 0 #8AB4F8;
-  transition: box-shadow 0.22s ease-in-out, border-radius 0.12s ease-out;
+  transition: box-shadow 0.22s ease-out, border-radius 0.12s ease-out;
   padding: 1px 2px 0; }
   .link:hover {
     box-shadow: inset 0 -23px 0 #8AB4F8;

@@ -1,3 +1,5 @@
+import ENUMS from "../enums";
+
 export default function FooterCopyright() {
-  return <h2 id="footer-copyright">All Rights Reserved © David Sobotka</h2>;
+  return <p className="footer-text">All Rights Reserved © {ENUMS.NAME}</p>;
 }

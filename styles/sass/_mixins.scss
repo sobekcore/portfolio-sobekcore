@@ -27,12 +27,16 @@
 
 @mixin projectsWidth($image: false) {
   @if ($image) {
-    width: calc(70% - 70px);
+    width: 460px;
   } @else {
-    width: 70%;
+    width: 530px;
   }
 
-  @media (max-width: $mobile-breakpoint) {
-    width: 100%;
+  @media (min-width: $laptop-breakpoint) {
+    @if ($image) {
+      width: calc(70% - 70px);
+    } @else {
+      width: 70%;
+    }
   }
 }

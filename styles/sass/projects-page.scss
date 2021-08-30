@@ -13,29 +13,43 @@
 
     $icon-padding: 4px;
 
-    .project-name {
+    .project-header {
       display: flex;
       align-items: center;
       max-width: 100%;
       @include projectsWidth;
 
-      .logo {
+      .project-logo {
         image-rendering: high-quality;
         margin-right: 12px;
       }
 
-      h2 {
-        font: bold 32px "Ubuntu", sans-serif;
-        text-transform: uppercase;
-        color: $main-gray-color;
-        margin: 0;
+      .project-info {
+        display: flex;
+        flex-direction: column;
+
+        .project-title {
+          font: bold 32px "Ubuntu", sans-serif;
+          text-transform: uppercase;
+          color: $main-gray-color;
+          margin: 0;
+        }
+
+        .project-desc {
+          margin: 0;
+          @include basicText;
+
+          @media (max-width: $mobile-breakpoint) {
+            display: none;
+          }
+        }
       }
     }
 
     .project-img {
       max-width: 100%;
       border-radius: 8px;
-      box-shadow: 0 0 12px $main-gray-color;
+      box-shadow: 0 0 18px $main-shadow-color;
       margin: 24px 0;
       opacity: 0.9;
       @include projectsWidth(true);
@@ -72,7 +86,6 @@
             .project-icon {
               font-size: 36px;
               color: $main-gray-color;
-              transition: opacity 0.12s ease-out;
               padding: $icon-padding;
               opacity: 0.4;
               @include transparentHover(false);

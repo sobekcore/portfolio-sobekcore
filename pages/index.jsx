@@ -1,8 +1,8 @@
 import SidebarSection from "../components/organisms/sidebar-section";
 import HomeSection from "../components/organisms/home-section";
-import AboutSection from "../components/organisms/about-section";
 import SkillsSection from "../components/organisms/skills-section";
 import ProjectsSection from "../components/organisms/projects-section";
+import AboutSection from "../components/organisms/about-section";
 import OtherSection from "../components/organisms/other-section";
 import FooterSection from "../components/organisms/footer-section";
 
@@ -16,9 +16,9 @@ export default function HomePage({ skills, projects }) {
       <main id="content-wrapper">
         <HomeSection />
         <div id="content-scrolable">
-          <AboutSection />
           <ProjectsSection projects={projects} />
           <SkillsSection skills={skills} />
+          <AboutSection />
           <OtherSection />
         </div>
         <FooterSection />

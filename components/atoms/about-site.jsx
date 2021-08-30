@@ -1,12 +1,10 @@
+import MaterialIcon from "./material-icon";
+
 export default function FooterText() {
   return (
-    <h2>
+    <p className="footer-text">
       This site was built with Next.js and Sanity.io. <br />
-      Hosted on AWS S3. Made with
-      <span className="material-icons love" role="img" alt="love">
-        favorite
-      </span>
-      in Poland.
-    </h2>
+      Hosted on AWS S3. Made with <MaterialIcon iconCode="favorite" className="love" /> in Poland.
+    </p>
   );
 }

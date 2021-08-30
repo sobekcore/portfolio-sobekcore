@@ -1,4 +1,4 @@
-footer {
+.footer {
   background: $main-gray-color;
   align-items: center;
   justify-content: center;
@@ -11,7 +11,7 @@ footer {
     color: $main-gray-color;
   }
 
-  h2 {
+  .footer-text {
     text-align: center;
     @include basicText("white");
 
@@ -19,14 +19,13 @@ footer {
       transform: translateY(3px);
       color: $main-action-color;
       font-size: 18px;
-      margin: 0 3px;
     }
   }
 }
 
-#footer-separator {
+.footer-separator {
   width: calc(100% + 1px);
-  background: lightblue;
+  background: $light-gray-color;
   margin-bottom: -5px;
-  padding-top: 70px;
+  padding-top: 80px;
 }

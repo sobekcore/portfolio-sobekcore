@@ -1,22 +1,27 @@
+import MaterialIcon from "./material-icon";
+
 export default function Project({ project }) {
   return (
     <section className="project-single" style={{ background: project.color }}>
-      <div className="project-name">
-        <img alt="Logo" className="logo" src={project.logo.asset.url} />
-        <h2>{project.title}</h2>
+      <div className="project-header">
+        <img alt="Logo" className="project-logo" src={project.logo.asset.url} />
+        <div className="project-info">
+          <h3 className="project-title">{project.title}</h3>
+          <p className="project-desc">{project.description}</p>
+        </div>
       </div>
       <img className="project-img" src={project.thumbnail.asset.url} />
       <div className="project-details">
         <ul className="project-sites">
           <li className="project-site">
             <a className="project-link" href={project.website_link} target="_blank">
-              <span className="material-icons project-icon">home</span>
+              <MaterialIcon iconCode="home" className="project-icon" />
             </a>
             <span className="project-badge live">Live</span>
           </li>
           <li className="project-site">
             <a className="project-link" href={project.code_link} target="_blank">
-              <span className="material-icons project-icon">code</span>
+              <MaterialIcon iconCode="code" className="project-icon" />
             </a>
             <span className="project-badge code">Code</span>
           </li>
@@ -29,7 +34,6 @@ export default function Project({ project }) {
           ))}
         </ul>
       </div>
-      <div className="project-corner"></div>
     </section>
   );
 }
