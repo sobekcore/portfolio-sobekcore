@@ -56,7 +56,6 @@ exports.build = series(add, commit, push);
 // This task is written in a weird way due to AWS S3, because it's Gulp SDK works in async,
 // which means some of the Git tasks may behave strangely, chaining it with ifs fixes that problem.
 // Also this syntax help with error handling much more due to its stepped structure.
-// Which of course is important when publishing to production.
 function merge(done) {
   // 1. Checkout to master branch
   git.checkout("master", function(err) {

@@ -1,23 +1,39 @@
+import MaterialIcon from "./material-icon";
+
 export default function Project({ project }) {
   return (
-    <li className="project-single">
-      <div className="project-name">
-        <img alt="Logo" className="logo" src={project.image.asset.url} />
-        <a href={project.website_link} target="_blank">
-          <h2 title="Open live website">{project.title}</h2>
-        </a>
-        <a className="code-link" href={project.code_link} target="_blank">
-          <h2 role="img" title="Open code on GitHub">
-            {"</>"}
-          </h2>
-        </a>
+    <section className="project-single" style={{ background: project.color }}>
+      <div className="project-header">
+        <img alt="Logo" className="project-logo" src={project.logo.asset.url} />
+        <div className="project-info">
+          <h3 className="project-title">{project.title}</h3>
+          <p className="project-desc">{project.description}</p>
+        </div>
       </div>
-      <ul>
-        {project.technologies.map((technology) => (
-          <li key={technology}>{technology}</li>
-        ))}
-      </ul>
-      <p>{project.description}</p>
-    </li>
+      <img className="project-img" src={project.thumbnail.asset.url} />
+      <div className="project-details">
+        <ul className="project-sites">
+          <li className="project-site">
+            <a className="project-link" href={project.website_link} target="_blank">
+              <MaterialIcon iconCode="home" className="project-icon" />
+            </a>
+            <span className="project-badge live">Live</span>
+          </li>
+          <li className="project-site">
+            <a className="project-link" href={project.code_link} target="_blank">
+              <MaterialIcon iconCode="code" className="project-icon" />
+            </a>
+            <span className="project-badge code">Code</span>
+          </li>
+        </ul>
+        <ul className="project-technologies">
+          {project.technologies.map((technology) => (
+            <li className="project-technology" key={technology}>
+              {technology}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 }

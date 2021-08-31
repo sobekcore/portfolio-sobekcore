@@ -1,17 +1,7 @@
 #home-page {
-  background: $main-pink-color;
-  width: 100vw; min-height: 100vh;
-  padding: 30px;
-
-  #main {
-    #container {
-      width: 100%;
-      z-index: 1;
-      margin: auto;
-    }
-  }
-
-  @media (max-width: 599px) {
-    padding: 16px;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+  width: 100%;
 }

@@ -1,200 +1,136 @@
-#projects-page {
-  width: 100vw;
-  padding-top: 170px;
-  background:
-    linear-gradient(
-      $melon-color 0%,
-      $salmon-color 100%
-    );
+#projects {
+  width: 100%;
 
-  #footer-separator {
-    width: 100vw; margin-bottom: -5px;
-  }
-
-  article {
+  .project-single {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     min-height: 100vh;
+    height: auto;
+    padding: 35px;
 
-    h1 {
-      font: bold 90px "Ubuntu", sans-serif;
-      font-size: clamp(1rem, 14.5vw, 5.6rem);
-      text-shadow: 5px 5px $dark-turq-color;
-      color: $main-turq-color;
-      text-align: center;
-      padding-top: 20px;
-      margin: 0;
+    $icon-padding: 4px;
 
-      @media (max-width: 799px) {
-        text-shadow: 3px 3px $dark-turq-color;
+    .project-header {
+      display: flex;
+      align-items: center;
+      max-width: 100%;
+      @include projectsWidth;
+
+      .project-logo {
+        image-rendering: high-quality;
+        margin-right: 12px;
+      }
+
+      .project-info {
+        display: flex;
+        flex-direction: column;
+
+        .project-title {
+          font: bold 32px "Ubuntu", sans-serif;
+          text-transform: uppercase;
+          color: $main-gray-color;
+          margin: 0;
+        }
+
+        .project-desc {
+          margin: 0;
+          @include basicText;
+
+          @media (max-width: $mobile-breakpoint) {
+            display: none;
+          }
+        }
       }
     }
 
-    section {
-      width: 90vw;
-      max-width: 1500px;
-      margin: 0 auto;
-      margin-top: 30px;
+    .project-img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 18px $main-shadow-color;
+      margin: 24px 0;
+      opacity: 0.9;
+      @include projectsWidth(true);
+    }
 
-      #projects-all {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        list-style-type: none;
-        padding-bottom: 390px;
-        padding-left: 0;
+    .project-details {
+      display: inline-flex;
+      justify-content: space-between;
+      max-width: 100%;
+      @include projectsWidth;
 
-        .project-single {
-          background: $main-turq-color;
-          margin: 20px 20px; padding: 30px;
-          border-bottom: 11px solid $dark-turq-color;
-          border-right: 11px solid $middle-truq-color;
-          box-shadow: 0px 0px 12px $main-gray-color;
-          border-radius: 16px;
-          overflow: hidden;
+      .project-sites {
+        display: inline-flex;
+        margin: ($icon-padding * -1) 0 0 ($icon-padding * -1);
+        max-width: 100%;
+        list-style: none;
+        padding: 0;
+        gap: 8px;
+        @include projectsWidth;
 
-          .project-name {
-            display: flex;
-            margin: 0 0 22px 0;
-            row-gap: 14px;
+        .project-site {
+          height: 44px;
 
-            a {
-              text-decoration: none;
-              margin: auto 16px auto 0;
+          .project-link {
+            @include link;
 
-              h2 {
-                font: bold 36px "Ubuntu", sans-serif;
-                color: $main-gray-color;
-                letter-spacing: 1px;
-                word-wrap: break-word;
-                transition: 0.2s color;
-                cursor: pointer;
-                margin: auto 0;
-
-                img {
-                  height: 26px;
-                }
-
-                @media (max-width: 699px) {
-                  font-size: 26px;
-
-                  img {
-                    height: 20px;
-                  }
-                }
-              }
-
-              &:hover > h2 {
-                color: $main-purple-color;
-              }
-
-              @media (max-width: 399px) {
-                margin-right: 0;
+            &:hover {
+              & ~ .project-badge,
+              & > .project-icon {
+                opacity: 1;
               }
             }
 
-            .logo {
-              width: 60px; height: 60px;
-              image-rendering: high-quality;
-              background: $dark-turq-color;
-              margin-right: 12px;
-              border-radius: 8px;
-              padding: 6px;
-            }
-
-            .code-link {
-              background: $middle-truq-color;
-              margin: -15px -65px auto auto;
-              transform: rotate(45deg);
-              user-select: none;
-
-              h2 {
-                font-size: 26px;
-                color: $dark-purple-color;
-                padding: 4px 50px;
-
-                @media (max-width: 1239px) {
-                  padding: 4px 44px;
-                }
-
-                @media (max-width: 699px) {
-                  font-size: 20px;
-                }
-
-                @media (max-width: 369px) {
-                  text-align: center;
-                  padding: 6px 0;
-
-                  &::after {
-                    content: " on GitHub";
-                  }
-                }
-              }
-
-              @media (max-width: 1239px) {
-                margin: -11px -55px auto auto;
-              }
-
-              @media (max-width: 849px) {
-                margin: -5px -46px auto auto;
-              }
-
-              @media (max-width: 369px) {
-                position: absolute;
-                width: calc(100vw - 79px);
-                border-radius: 12px;
-                margin-top: -55px;
-                transform: none;
-              }
-            }
-
-            @media (max-width: 369px) {
-              margin-top: 55px;
+            .project-icon {
+              font-size: 36px;
+              color: $main-gray-color;
+              padding: $icon-padding;
+              opacity: 0.4;
+              @include transparentHover(false);
             }
           }
 
-          ul {
-            display: flex;
-            font: bold 19px "Ubuntu", sans-serif;
-            flex-flow: row wrap;
-            list-style-type: none;
-            margin: -8px 0 10px -45px;
-
-            li {
-              padding: 8px; margin: 5px;
-              background: $middle-truq-color;
-              color: $dark-purple-color;
-              border-radius: 12px;
-            }
+          .project-badge {
+            position: absolute;
+            font: bold 11px "Ubuntu", sans-serif;
+            color: $main-white-color;
+            text-transform: uppercase;
+            background: $main-gray-color;
+            padding: 2px 4px;
+            border-radius: 4px;
+            user-select: none;
+            opacity: 0.4;
+            z-index: 1;
+            @include transparentHover(false);
           }
 
-          p {
-            font: bold 19px "Ubuntu", sans-serif;
-            color: $main-gray-color;
-            line-height: 1.3;
-            margin: 0;
+          .project-badge.live {
+            transform: translateX(6px);
           }
 
-          @media (max-width: 1239px) {
-            padding: 22px;
-            border-radius: 14px;
+          .project-badge.code {
+            transform: translateX(3px);
           }
-
-          @media (max-width: 849px) {
-            padding: 14px;
-            border-radius: 12px;
-          }
-        }
-
-        @media (max-width: 1199px) {
-          grid-template-columns: 1fr;
-          padding-bottom: 430px;
         }
       }
 
-      @media (max-width: 1329px) {
-        width: 95vw;
-      }
+      .project-technologies {
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-      @media (max-width: 849px) {
-        width: 100vw;
+        .project-technology {
+          font: bold 20px "Ubuntu", sans-serif;
+          color: $main-gray-color;
+          text-transform: uppercase;
+          white-space: nowrap;
+          text-align: right;
+          cursor: default;
+          opacity: 0.4;
+          @include transparentHover;
+        }
       }
     }
   }

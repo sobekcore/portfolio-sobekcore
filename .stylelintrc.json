@@ -9,6 +9,8 @@
   "rules": {
     "declaration-block-semicolon-newline-after": null,
     "declaration-block-single-line-max-declarations": 2,
+    "block-closing-brace-newline-after": "always-single-line",
+    "at-rule-empty-line-before": null,
     "no-descending-specificity": null,
     "length-zero-no-unit": null,
     "max-empty-lines": 2,

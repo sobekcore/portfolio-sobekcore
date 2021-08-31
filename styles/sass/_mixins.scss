@@ -1,0 +1,42 @@
+@mixin link {
+  display: block;
+  height: 100%;
+}
+
+@mixin basicText($color: "gray") {
+  font: 16px "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+
+  @if ($color == "white") {
+    color: $main-white-color;
+  } @else {
+    color: $main-gray-color;
+  }
+}
+
+@mixin transparentHover($hover: true) {
+  transition: opacity 0.12s ease-out;
+
+  @if ($hover) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin projectsWidth($image: false) {
+  @if ($image) {
+    width: 460px;
+  } @else {
+    width: 530px;
+  }
+
+  @media (min-width: $laptop-breakpoint) {
+    @if ($image) {
+      width: calc(70% - 70px);
+    } @else {
+      width: 70%;
+    }
+  }
+}

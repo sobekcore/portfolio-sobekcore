@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ENUMS from "../enums";
 
 export default function ContactIcons() {
   const [isFlying, setFlying] = useState(false);
@@ -6,40 +7,32 @@ export default function ContactIcons() {
   const planeFly = () => {
     setFlying(true);
 
-    setTimeout(function () {
+    setTimeout(() => {
+      window.location.href = `mailto:${ENUMS.EMAIL}`;
+    }, 800);
+
+    setTimeout(() => {
       setFlying(false);
     }, 1600);
   };
 
   return (
-    <div id="contact-icons">
-      {/* eslint-disable */}
-      <a
-        title="Follow my Twitter"
-        href="https://twitter.com/sobekcore"
-        target="_blank">
-        <img alt="Icon" src="./icons/twitter.svg" />
+    <div className="contact-icons">
+      <a className="contact-link" href="https://twitter.com/sobekcore" target="_blank">
+        <img className="contact-icon-img" alt="Twitter" src={ENUMS.ICONS + "twitter.svg"} />
+      </a>
+      <a className="contact-link" href="https://www.linkedin.com/in/dawid-sobotka/" target="_blank">
+        <img className="contact-icon-img" alt="LinkedIn" src={ENUMS.ICONS + "linkedin.svg"} />
       </a>
       <a
-        title="Find me on LinkedIn"
-        href="https://www.linkedin.com/in/dawid-sobotka/"
-        target="_blank">
-        <img alt="Icon" src="./icons/linkedin.svg" />
-      </a>
-      <a
+        className="contact-link"
         id={isFlying ? "paper-plane-flying" : "paper-plane"}
-        onClick={planeFly}
-        title="Send me an email"
-        href="mailto:sobekcore@gmail.com">
-        <img alt="Icon" src="./icons/mail.svg" />
+        onClick={planeFly}>
+        <img className="contact-icon-img" alt="Email" src={ENUMS.ICONS + "mail.svg"} />
       </a>
-      <a
-        title="Check out my GitHub"
-        href="https://github.com/sobekcore"
-        target="_blank">
-        <img alt="Icon" src="./icons/github.svg" />
+      <a className="contact-link" alt="GitHub" href="https://github.com/sobekcore" target="_blank">
+        <img className="contact-icon-img" alt="Github" src={ENUMS.ICONS + "github.svg"} />
       </a>
-      {/* eslint-enable */}
     </div>
   );
 }

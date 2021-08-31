@@ -1,7 +1,5 @@
 {
   "name": "portfolio-sobekcore",
-  "version": "1.0.0",
-  "private": true,
   "scripts": {
     "dev": "concurrently 'next dev' 'gulp dev'",
     "build": "next build && next export && gulp build",

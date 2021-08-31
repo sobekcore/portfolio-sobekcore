@@ -1,25 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "./_variables.scss";
+@import "./_mixins.scss";
 
-// Sass Color variables
-$main-pink-color: #FF6E80;
+/* Modules */
+@import "./contact.scss";
+@import "./home-cards.scss";
 
-$light-turq-color: #7FEFDE;
-$main-turq-color: #00E0BE;
-$middle-truq-color: #00B398;
-$dark-turq-color: #008672;
-
-$button-turq-color: #36EBD0;
-$button-hover-color: #00DABA;
-
-$salmon-color: #E29578;
-$melon-color: #FFA69E;
-
-$light-purple-color: #755ECA;
-$main-purple-color: #5B41BA;
-$dark-purple-color: #2C2252;
-
-$main-gray-color: #263238;
-
+/* Views */
+@import "./sidebar.scss";
+@import "./home-page.scss";
+@import "./projects-page.scss";
+@import "./skills-page.scss";
+@import "./about-page.scss";
+@import "./other-page.scss";
+@import "./footer.scss";
 
 * {
   box-sizing: border-box;
@@ -27,45 +23,58 @@ $main-gray-color: #263238;
 
 body,
 html {
-  background: $main-pink-color;
   scroll-behavior: smooth;
-  padding: 0; margin: 0;
   overflow-x: hidden;
-  width: 100vw;
+  padding: 0;
+  margin: 0;
 }
 
 body::-webkit-scrollbar {
-  width: 8px;
+  width: $scrollbar-width;
 }
 
 body::-webkit-scrollbar-track {
-  background: $main-pink-color;
+  background: $light-gray-color;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: $main-turq-color; border-radius: 8px;
+  background: $main-gray-color;
+  border: 4px solid $light-gray-color;
+  border-radius: 16px;
 }
 
 ::selection {
-  background: $main-purple-color;
-  color: $light-turq-color;
+  background: $main-gray-color;
+  color: $main-white-color;
 }
 
+a {
+  color: $main-gray-color;
+  text-decoration: none;
+}
+
+.link {
+  font: 16px "Open Sans", sans-serif;
+  border-bottom: 1px solid $main-action-color;
+  box-shadow: inset 0 -2px 0 $main-action-color;
+  transition: box-shadow 0.22s ease-out, border-radius 0.12s ease-out;
+  padding: 1px 2px 0;
+
+  &:hover {
+    box-shadow: inset 0 -23px 0 $main-action-color;
+    border-radius: 4px;
+  }
+}
+
+.material-icons,
 img {
   user-select: none;
 }
 
+#content-wrapper {
+  margin-left: 40%;
 
-// Importing Sass modules
-@import "./loader.scss";
-@import "./title.scss";
-@import "./buttons.scss";
-@import "./lasers.scss";
-@import "./tech-cards.scss";
-@import "./contact.scss";
-
-// Importing Sass pages
-@import "./home-page.scss";
-@import "./tech-page.scss";
-@import "./projects-page.scss";
-@import "./footer.scss";
+  @media (max-width: $tablet-breakpoint) {
+    margin-left: 0;
+  }
+}

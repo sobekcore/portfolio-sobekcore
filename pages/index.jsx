@@ -1,20 +1,28 @@
-import Loader from "../components/atoms/loader";
+import SidebarSection from "../components/organisms/sidebar-section";
 import HomeSection from "../components/organisms/home-section";
-import TechSection from "../components/organisms/tech-section";
+import SkillsSection from "../components/organisms/skills-section";
 import ProjectsSection from "../components/organisms/projects-section";
+import AboutSection from "../components/organisms/about-section";
+import OthersSection from "../components/organisms/others-section";
 import FooterSection from "../components/organisms/footer-section";
 
 import client from "../graphql/apollo-client";
 import sanityQuery from "../graphql/sanity.query.gql";
 
-export default function HomePage({ technologies, projects }) {
+export default function HomePage({ skills, projects, others }) {
   return (
     <>
-      <Loader />
-      <HomeSection />
-      <TechSection technologies={technologies} />
-      <ProjectsSection projects={projects} />
-      <FooterSection />
+      <SidebarSection />
+      <main id="content-wrapper">
+        <HomeSection />
+        <div id="content-scrolable">
+          <ProjectsSection projects={projects} />
+          <SkillsSection skills={skills} />
+          <AboutSection />
+          <OthersSection others={others} />
+        </div>
+        <FooterSection />
+      </main>
     </>
   );
 }
@@ -24,8 +32,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      technologies: data.allTechnologies,
+      skills: data.allSkills,
       projects: data.allProjects,
+      others: data.allOthers,
     },
   };
 }

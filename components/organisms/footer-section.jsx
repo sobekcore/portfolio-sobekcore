@@ -1,10 +1,10 @@
 import Footer from "../molecules/footer";
-import Contact from "../molecules/contact";
+import ENUMS from "../enums";
 
 export default function FooterSection() {
   return (
     <>
-      <Contact />
+      <img className="footer-separator" src={ENUMS.DECORATORS + "separator-footer.svg"} />
       <Footer />
     </>
   );

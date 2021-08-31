@@ -1,90 +1,37 @@
-#contact {
-  position: relative;
-  background: $main-purple-color;
-  width: 1130px; max-width: 90vw;
-  margin: 0 auto; padding: 60px 30px;
-  margin-top: -280px;
-  box-shadow: 0 0 8px $main-gray-color;
-  border-radius: 20px;
-  z-index: 1;
+.contact-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
 
-  #contact-intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 480px;
-    margin: 0 auto;
-    row-gap: 25px;
+  .contact-link {
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+    box-sizing: content-box;
+    cursor: pointer;
 
-    h3 {
-      font: bold 34px "Ubuntu", sans-serif;
-      color: #E8FFFC;
-      margin: 0;
-
-      @media (max-width: 439px) {
-        font-size: 27px;
-      }
+    .contact-icon-img {
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.12s ease-out;
+      opacity: 0.4;
     }
 
-    p {
-      font: 22px "Ubuntu", sans-serif;
-      text-align: center;
-      color: #E8FFFC;
-      margin: 0;
-    }
-
-    #contact-icons {
-      a {
-        display: inline-flex;
-        margin: 0 16px;
-        width: 58px;
-
-        img {
-          width: 100%;
-          padding: 8px;
-          border-radius: 8px;
-        }
-
-        &:hover > img {
-          animation: GlitchedIcon 220ms infinite;
-        }
-
-        @keyframes GlitchedIcon {
-          0% { filter: drop-shadow(4px 3px $main-turq-color) drop-shadow(-4px -5px $main-pink-color); }
-          25% { filter: drop-shadow(-4px -5px $main-turq-color) drop-shadow(4px 3px $main-pink-color); }
-          50% { filter: drop-shadow(-4px -3px $main-turq-color) drop-shadow(-6px 3px $main-pink-color); }
-          75% { filter: drop-shadow(-6px -3px $main-turq-color) drop-shadow(-4px -3px $main-pink-color); }
-          100% { filter: drop-shadow(-4px 0px $main-turq-color) drop-shadow(4px -3px $main-pink-color); }
-        }
-
-        @media (max-width: 439px) {
-          width: 52px;
-          margin: 0 5px;
-        }
-      }
-
-      #paper-plane-flying {
-        animation: Fly 1500ms ease;
-      }
-
-      @keyframes Fly {
-        6% { transform: translate(-10px, 10px); }
-        24% { transform: translate(-15px, 15px); opacity: 1; }
-        70% { transform: translate(75vw, -100vh); opacity: 0; }
-        71% { transform: translate(0, 0); opacity: 0; }
-        80% { opacity: 0; }
-        100% { opacity: 1; }
-      }
+    &:hover > .contact-icon-img {
+      opacity: 1;
     }
   }
 
-  ::selection {
-    background: $main-turq-color;
-    color: $dark-purple-color;
+  #paper-plane-flying {
+    animation: Fly 1500ms ease;
   }
 
-  @media (max-width: 749px) {
-    padding: 24px 16px;
+  @keyframes Fly {
+    6% { transform: translate(-10px, 10px); }
+    24% { transform: translate(-15px, 15px); opacity: 1; }
+    70% { transform: translate(75vw, -100vh); opacity: 0; }
+    71% { transform: translate(0, 0); opacity: 0; }
+    80% { opacity: 0; }
+    100% { opacity: 1; }
   }
 }

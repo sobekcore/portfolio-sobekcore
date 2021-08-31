@@ -2,11 +2,29 @@ query sanityQuery {
   allProjects(sort: [{ order: ASC }]) {
     visibility,
     order,
+    color,
     title,
     description,
     technologies,
     website_link,
     code_link,
+    logo {
+      asset {
+        url
+      }
+    },
+    thumbnail {
+      asset {
+        url
+      }
+    }
+  }
+
+  allSkills(sort: [{ order: ASC }]) {
+    visibility,
+    order,
+		name,
+    details,
     image {
       asset {
         url
@@ -14,15 +32,11 @@ query sanityQuery {
     }
   }
 
-  allTechnologies(sort: [{ order: ASC }]) {
+  allOthers(sort: [{ order: ASC }]) {
     visibility,
     order,
-		name,
-    skills,
-    image {
-      asset {
-        url
-      }
-    }
+		title,
+    icon,
+    details
   }
 }

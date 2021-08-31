@@ -1,19 +1,31 @@
-footer {
-  position: relative;
-  background: $main-pink-color;
-  height: 500px;
-  display: flex;
+.footer {
+  background: $main-gray-color;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
-  padding-top: 200px;
+  padding: 15px 0 30px;
+  display: flex;
 
-  h2 {
-    width: 90%;
-    transform: translateY(-50%);
-    font: bold 22px "Ubuntu", sans-serif;
+  ::selection {
+    background: $main-white-color;
     color: $main-gray-color;
-    text-align: center;
-    margin: 20px;
   }
+
+  .footer-text {
+    text-align: center;
+    @include basicText("white");
+
+    .love {
+      transform: translateY(3px);
+      color: $main-action-color;
+      font-size: 18px;
+    }
+  }
+}
+
+.footer-separator {
+  width: calc(100% + 1px);
+  background: $light-gray-color;
+  margin-bottom: -5px;
+  padding-top: 80px;
 }

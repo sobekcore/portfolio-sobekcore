@@ -1,15 +1,9 @@
-import Lasers from "../molecules/lasers";
-import Title from "../molecules/title";
+import HomeCards from "../molecules/home-cards";
 
 export default function HomeSection() {
   return (
     <div id="home-page">
-      <section id="main">
-        <Lasers />
-        <div id="container">
-          <Title />
-        </div>
-      </section>
+      <HomeCards />
     </div>
   );
 }
