@@ -3,13 +3,13 @@ import HomeSection from "../components/organisms/home-section";
 import SkillsSection from "../components/organisms/skills-section";
 import ProjectsSection from "../components/organisms/projects-section";
 import AboutSection from "../components/organisms/about-section";
-import OtherSection from "../components/organisms/other-section";
+import OthersSection from "../components/organisms/others-section";
 import FooterSection from "../components/organisms/footer-section";
 
 import client from "../graphql/apollo-client";
 import sanityQuery from "../graphql/sanity.query.gql";
 
-export default function HomePage({ skills, projects }) {
+export default function HomePage({ skills, projects, others }) {
   return (
     <>
       <SidebarSection />
@@ -19,7 +19,7 @@ export default function HomePage({ skills, projects }) {
           <ProjectsSection projects={projects} />
           <SkillsSection skills={skills} />
           <AboutSection />
-          <OtherSection />
+          <OthersSection others={others} />
         </div>
         <FooterSection />
       </main>
@@ -34,6 +34,7 @@ export async function getStaticProps() {
     props: {
       skills: data.allSkills,
       projects: data.allProjects,
+      others: data.allOthers,
     },
   };
 }

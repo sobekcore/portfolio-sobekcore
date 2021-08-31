@@ -31,4 +31,12 @@ query sanityQuery {
       }
     }
   }
+
+  allOthers(sort: [{ order: ASC }]) {
+    visibility,
+    order,
+		title,
+    icon,
+    details
+  }
 }

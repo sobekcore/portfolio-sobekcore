@@ -30,14 +30,20 @@
         }
       }
 
-      .other-item {
-        margin: 2px 0;
-        @include basicText;
+      .other-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-        .other-item-icon {
-          color: $main-action-color;
-          margin-right: 4px;
-          font-size: 12px;
+        .other-item {
+          margin: 2px 0;
+          @include basicText;
+
+          .other-item-icon {
+            color: $main-action-color;
+            margin-right: 4px;
+            font-size: 12px;
+          }
         }
       }
     }
