@@ -1,0 +1,30 @@
+.footer {
+  background: $main-gray-color;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px 30px 30px;
+  display: flex;
+
+  ::selection {
+    background: $main-white-color;
+    color: $main-gray-color;
+  }
+
+  .footer-text {
+    text-align: center;
+    @include typography($main-white-color);
+
+    .love {
+      transform: translateY(3px);
+      color: $main-action-color;
+      font-size: 18px;
+    }
+  }
+}
+
+.footer-separator {
+  width: calc(100% + 1px);
+  background: $light-gray-color;
+  margin-bottom: -5px;
+}

@@ -1,27 +1,26 @@
-import "../styles/css/index.css";
 import Head from "next/head";
+import "@/styles/index.css";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>David's Portfolio</title>
+        <title>Dave's Personal Website</title>
         <link rel="icon" type="image/x-icon" href="./favicon.ico" />
         <meta
           name="description"
-          content="A Young Software Developer living in Poland. Highly interested in optimization
-          and new technologies. This website provides brief information about me as well as some
-          of the projects i have done and the technologies im working with."
+          content="I'm a software developer which focuses on detailed work. Highly interested in
+          optimization and new technologies. Making stuff just right."
         />
-        <meta name="keywords" content="portfolio, front-end, developer, modern, react, dev" />
+        <meta name="keywords" content="portfolio, frontend, developer, modern, react, vue, dev" />
         <meta name="robots" content="index, follow" />
         <meta
           property="og:description"
-          content="A Young Software Developer living in Poland. Highly interested in optimization
-          and new technologies."
+          content="I'm a software developer which focuses on detailed work. Highly interested in
+          optimization and new technologies. Making stuff just right."
         />
         <meta name="theme-color" content="#263238" />
-        <meta property="og:title" content="David's Portfolio" />
+        <meta property="og:title" content="Dave's Personal Website" />
         <meta property="og:image" content="https://www.sobekcore.com/og-image.png" />
         <meta property="og:url" content="https://www.sobekcore.com" />
         <meta property="og:locale" content="en_US" />

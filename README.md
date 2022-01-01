@@ -1,5 +1,5 @@
 <h1 align="center">
-  Sobek's Developer Portfolio
+  Dave's Personal Website
 </h1>
 
 This portfolio is a showcase of my skills and known technologies, as well as brief description about me and projects that i've made. It's made with Next.js, Sanity.io and Gulp. Hosted on AWS S3. Uses best web practises and modern front-end technologies. Hopefully also somewhat eye-pleasing...
@@ -9,7 +9,7 @@ This portfolio is a showcase of my skills and known technologies, as well as bri
   align="center"
   alt="Project Block Diagram"
   title="Click if its too small"
-  src="https://user-images.githubusercontent.com/74379676/116325785-47ccd680-a7c3-11eb-9ff7-8dba1d6ce929.png"
+  src="https://user-images.githubusercontent.com/74379676/147861810-ce643142-ad38-4837-9973-d35240ecf338.png"
 />
 
 The site's core is **`Next.js`** and **`Sass`**, Next is firstly built into optimized build and then exported into static files. In the meantime **`ESLint`**, **`Stylelint`** and **`Prettier`** helps me with maintaining same coding style all along. After that Sass is complied into one chonky optimized .css file. Then most of the tasks are automated with **`Gulp`** combined with **`npm scripts`**, it helps alot with development and deployment. The automated tasks are:
@@ -24,7 +24,7 @@ Everything might seems simple, but **`AWS`** is a whole different beast, and its
   align="center"
   alt="AWS Block Diagram"
   title="Click if its too small"
-  src="https://user-images.githubusercontent.com/74379676/112554171-19c03500-8dc6-11eb-8fc4-e24975573ded.png"
+  src="https://user-images.githubusercontent.com/74379676/147861818-cde7317e-4cbc-41c6-b904-da3ae328e148.png"
 />
 
 As you can see firstly static files are imported into AWS S3 which is configured in a way to serve static websites. Then it is passed thru **`CloudFront`** which certificates site with SSL as well as optimizes it to work as fast and as good as possible. Then the optimized site is connected to **`Route 53`** which holds domain from Google Domains with DNS, and then connects the bucket static site to the domain.

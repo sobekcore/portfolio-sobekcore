@@ -1,0 +1,52 @@
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  background: $main-white-color;
+  padding: 60px;
+  position: fixed;
+  height: 100%;
+  min-height: 410px;
+  width: 40%;
+  z-index: 2;
+
+  @media (max-width: $small-breakpoint) {
+    padding: 30px;
+  }
+
+  @media (max-width: $big-breakpoint) {
+    position: relative;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .sidebar-content {
+    margin: auto auto;
+
+    .sidebar-title {
+      font: bold 44px "Ubuntu", sans-serif;
+      color: $main-gray-color;
+      margin: 0;
+
+      @media (max-width: $small-breakpoint) {
+        font-size: 35px;
+      }
+    }
+
+    .sidebar-subtitle {
+      font: bold 30px "Ubuntu", sans-serif;
+      color: $main-gray-color;
+      margin: 0 0 25px 0;
+
+      @media (max-width: $small-breakpoint) {
+        font-size: 24px;
+      }
+    }
+
+    .sidebar-desc {
+      margin: 0 0 28px 0;
+      max-width: 450px;
+      @include typography;
+    }
+  }
+}
