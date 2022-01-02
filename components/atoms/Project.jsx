@@ -15,7 +15,7 @@ export default function Project({ project }) {
         <ul className="project-sites">
           <li className="project-site">
             <a className="project-link" href={project.website_link} target="_blank">
-              <MaterialIcon icon="home" className="project-icon" />
+              <MaterialIcon icon="open_in_new" className="project-icon" />
             </a>
             <span className="project-badge live">Live</span>
           </li>
