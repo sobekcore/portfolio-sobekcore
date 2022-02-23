@@ -5,22 +5,30 @@
   color: $color;
 }
 
-@mixin transparentHover($hover: true) {
+@mixin transparentHover() {
   transition: opacity 0.12s ease-out;
 
-  @if ($hover) {
-    &:hover {
-      opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
   }
 }
 
 @mixin sectionWidth() {
-  max-width: 100%;
   width: 530px;
+  max-width: 100%;
 
-  @media (min-width: $big-breakpoint) {
+  @media (min-width: $medium-breakpoint) {
     max-width: 900px;
     width: 70%;
+  }
+}
+
+@mixin indentSectionWidth() {
+  width: 460px;
+  max-width: 100%;
+
+  @media (min-width: $medium-breakpoint) {
+    max-width: 830px;
+    width: calc(70% - 70px);
   }
 }

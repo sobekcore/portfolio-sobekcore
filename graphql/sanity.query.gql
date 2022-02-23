@@ -4,6 +4,7 @@ query sanityQuery {
     order,
     color,
     title,
+    short_description,
     description,
     technologies,
     website_link,

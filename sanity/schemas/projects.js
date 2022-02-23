@@ -28,9 +28,14 @@ export default {
       type: "string",
     },
     {
+      name: "short_description",
+      title: "Short Description",
+      type: "string",
+    },
+    {
       name: "description",
       title: "Description",
-      type: "string",
+      type: "text",
     },
     {
       name: "technologies",
@@ -46,23 +51,25 @@ export default {
       name: "website_link",
       title: "Website Link",
       type: "string",
+      description: "Link to live preview of a project.",
     },
     {
       name: "code_link",
       title: "Code Link",
       type: "string",
+      description: "Link to project repository where code can be previewed.",
     },
     {
       name: "logo",
       title: "Project Icon",
       type: "image",
-      description: "Image size must be exactly 48px / 48px.",
+      description: "Image size must be exactly 48px height and 48px width.",
     },
     {
       name: "thumbnail",
       title: "Project Thumbnail",
       type: "image",
-      description: "Image must be a screenshot from a website with scrollbar removed.",
+      description: "Image must be a screenshot of the website embedded into a mocked browser.",
     },
   ],
   orderings: [

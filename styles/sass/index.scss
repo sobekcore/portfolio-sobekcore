@@ -6,14 +6,15 @@
 @import "utility/variables";
 @import "utility/mixins";
 @import "utility/globals";
+@import "utility/keyframes";
 
-// Modules
+// Modules (one file per component)
 @import "modules/ContactIcons";
+@import "modules/SidebarContent";
+@import "modules/SidebarSection";
 @import "modules/Project";
+@import "modules/ProjectsSection";
 @import "modules/Skill";
-
-// Templates
-@import "templates/Sidebar";
-@import "templates/Projects";
-@import "templates/Skills";
-@import "templates/Footer";
+@import "modules/SkillsSection";
+@import "modules/Footer";
+@import "modules/FooterSection";

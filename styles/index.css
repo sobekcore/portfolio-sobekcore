@@ -52,9 +52,21 @@ img {
 
 #content-wrapper {
   margin-left: 40%; }
-  @media (max-width: 1099px) {
+  @media (max-width: 1199px) {
     #content-wrapper {
       margin-left: 0; } }
+
+@keyframes animateProjectForward {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes animateProjectBackward {
+  100% {
+    opacity: 1; }
+  0% {
+    opacity: 0; } }
 
 .contact-icons {
   display: inline-flex;
@@ -93,6 +105,50 @@ img {
   .contact-icons #paper-plane-flying {
     animation: Fly 1500ms ease; }
 
+.sidebar-content {
+  margin: auto auto; }
+  .sidebar-content .sidebar-title {
+    font: bold 44px "Ubuntu", sans-serif;
+    color: #263238;
+    margin: 0; }
+    @media (max-width: 599px) {
+      .sidebar-content .sidebar-title {
+        font-size: 35px; } }
+  .sidebar-content .sidebar-subtitle {
+    font: bold 30px "Ubuntu", sans-serif;
+    color: #263238;
+    margin: 0 0 25px 0; }
+    @media (max-width: 599px) {
+      .sidebar-content .sidebar-subtitle {
+        font-size: 24px; } }
+  .sidebar-content .sidebar-desc {
+    margin: 0 0 28px 0;
+    max-width: 450px;
+    font: 16px "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #263238; }
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  background: #FFF;
+  padding: 60px;
+  position: fixed;
+  height: 100%;
+  min-height: 410px;
+  width: 40%;
+  z-index: 2; }
+  @media (max-width: 599px) {
+    #sidebar {
+      padding: 30px; } }
+  @media (max-width: 1199px) {
+    #sidebar {
+      position: relative;
+      justify-content: center;
+      height: 100%;
+      width: 100%; } }
+
 .project-single {
   position: relative;
   display: flex;
@@ -110,9 +166,9 @@ img {
     display: flex;
     align-items: center;
     max-width: 100%;
-    max-width: 100%;
-    width: 530px; }
-    @media (min-width: 1099px) {
+    width: 530px;
+    max-width: 100%; }
+    @media (min-width: 899px) {
       .project-single .project-header {
         max-width: 900px;
         width: 70%; } }
@@ -129,103 +185,143 @@ img {
         @media (max-width: 599px) {
           .project-single .project-header .project-info .project-title {
             font-size: 26px; } }
-      .project-single .project-header .project-info .project-desc {
+      .project-single .project-header .project-info .project-short-desc {
         margin: 0;
         font: 16px "Open Sans", sans-serif;
         font-weight: 400;
         line-height: 1.6;
         color: #263238; }
         @media (max-width: 599px) {
-          .project-single .project-header .project-info .project-desc {
+          .project-single .project-header .project-info .project-short-desc {
             display: none; } }
   .project-single .project-img {
-    width: 460px;
-    max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 0 18px rgba(38, 50, 56, 0.8);
     margin: 24px 0;
-    opacity: 0.9; }
-    @media (min-width: 1099px) {
+    width: 460px;
+    max-width: 100%; }
+    @media (min-width: 899px) {
       .project-single .project-img {
-        width: calc(70% - 70px);
-        max-width: 830px; } }
+        max-width: 830px;
+        width: calc(70% - 70px); } }
+    .project-single .project-img.static {
+      animation: none; }
+    .project-single .project-img.forward {
+      animation: animateProjectForward .4s normal; }
+    .project-single .project-img.backward {
+      animation: animateProjectBackward .4s normal; }
   .project-single .project-details {
-    display: inline-flex;
-    justify-content: space-between;
-    max-width: 100%;
-    max-width: 100%;
-    width: 530px; }
-    @media (min-width: 1099px) {
+    display: flex;
+    row-gap: 24px;
+    flex-direction: column;
+    margin: 24px 0;
+    width: 460px;
+    max-width: 100%; }
+    @media (min-width: 899px) {
       .project-single .project-details {
-        max-width: 900px;
-        width: 70%; } }
-    .project-single .project-details .project-sites {
+        max-width: 830px;
+        width: calc(70% - 70px); } }
+    .project-single .project-details.static {
+      animation: none; }
+    .project-single .project-details.forward {
+      animation: animateProjectForward .4s normal; }
+    .project-single .project-details.backward {
+      animation: animateProjectBackward .4s normal; }
+    .project-single .project-details .project-desc {
+      text-align: justify;
+      font: 16px "Open Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #263238; }
+    .project-single .project-details .project-details-bottom {
       display: inline-flex;
-      margin: -4px 0 0 -4px;
-      max-width: 100%;
-      list-style: none;
-      padding: 0;
-      gap: 8px;
-      max-width: 100%;
-      width: 530px; }
-      @media (min-width: 1099px) {
-        .project-single .project-details .project-sites {
-          max-width: 900px;
-          width: 70%; } }
-      .project-single .project-details .project-sites .project-site {
-        height: 44px; }
-        .project-single .project-details .project-sites .project-site .project-link {
-          display: block;
-          height: 100%; }
-          .project-single .project-details .project-sites .project-site .project-link:hover ~ .project-badge,
-          .project-single .project-details .project-sites .project-site .project-link:hover > .project-icon {
-            opacity: 1; }
-          .project-single .project-details .project-sites .project-site .project-link .project-icon {
-            font-size: 36px;
-            color: #263238;
-            padding: 4px;
+      justify-content: space-between; }
+      .project-single .project-details .project-details-bottom .project-sites {
+        display: inline-flex;
+        flex-direction: column;
+        max-width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+        .project-single .project-details .project-details-bottom .project-sites .project-site {
+          height: 28px; }
+          .project-single .project-details .project-details-bottom .project-sites .project-site .project-link {
+            display: inline-flex;
+            align-items: center;
+            column-gap: 8px;
+            height: 100%;
             opacity: 0.4;
             transition: opacity 0.12s ease-out; }
-        .project-single .project-details .project-sites .project-site .project-badge {
-          position: absolute;
-          font: bold 11px "Ubuntu", sans-serif;
-          color: #FFF;
-          text-transform: uppercase;
-          background: #263238;
-          padding: 2px 4px;
-          border-radius: 4px;
-          user-select: none;
-          opacity: 0.4;
-          z-index: 1;
-          transition: opacity 0.12s ease-out; }
-        .project-single .project-details .project-sites .project-site .project-badge.live {
-          transform: translateX(6px); }
-        .project-single .project-details .project-sites .project-site .project-badge.code {
-          transform: translateX(3px); }
-    .project-single .project-details .project-technologies {
-      list-style: none;
-      padding: 0;
-      margin: 0; }
-      .project-single .project-details .project-technologies .project-technology {
-        font: bold 20px "Ubuntu", sans-serif;
-        color: #263238;
-        text-transform: uppercase;
-        white-space: nowrap;
-        text-align: right;
-        cursor: default;
-        opacity: 0.4;
-        transition: opacity 0.12s ease-out; }
-        .project-single .project-details .project-technologies .project-technology:hover {
-          opacity: 1; }
+            .project-single .project-details .project-details-bottom .project-sites .project-site .project-link:hover {
+              opacity: 1; }
+            .project-single .project-details .project-details-bottom .project-sites .project-site .project-link:hover {
+              opacity: 1; }
+            .project-single .project-details .project-details-bottom .project-sites .project-site .project-link .project-icon {
+              font-size: 24px;
+              color: #263238; }
+            .project-single .project-details .project-details-bottom .project-sites .project-site .project-link .project-link-title {
+              font: bold 20px "Ubuntu", sans-serif;
+              color: #263238;
+              text-transform: uppercase;
+              white-space: nowrap; }
+      .project-single .project-details .project-details-bottom .project-technologies {
+        display: inline-flex;
+        flex-direction: column;
+        max-width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+        .project-single .project-details .project-details-bottom .project-technologies .project-technology {
+          text-align: right;
+          height: 28px; }
+          .project-single .project-details .project-details-bottom .project-technologies .project-technology .project-technology-name {
+            font: bold 20px "Ubuntu", sans-serif;
+            color: #263238;
+            text-transform: uppercase;
+            white-space: nowrap;
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            opacity: 0.4;
+            cursor: default;
+            transition: opacity 0.12s ease-out; }
+            .project-single .project-details .project-details-bottom .project-technologies .project-technology .project-technology-name:hover {
+              opacity: 1; }
+  .project-single .project-details-toggle {
+    display: inline-flex;
+    max-width: 100%;
+    width: 530px;
+    max-width: 100%; }
+    @media (min-width: 899px) {
+      .project-single .project-details-toggle {
+        max-width: 900px;
+        width: 70%; } }
+    .project-single .project-details-toggle.left {
+      justify-content: flex-start; }
+    .project-single .project-details-toggle.right {
+      justify-content: flex-end; }
+    .project-single .project-details-toggle .project-details-toggle-click {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 8px;
+      cursor: pointer;
+      font: 16px "Open Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #263238; }
+
+#projects {
+  width: 100%; }
 
 .skill-single {
   display: flex;
   position: relative;
   justify-content: center;
   padding: 35px 0;
-  max-width: 100%;
-  width: 530px; }
-  @media (min-width: 1099px) {
+  width: 530px;
+  max-width: 100%; }
+  @media (min-width: 899px) {
     .skill-single {
       max-width: 900px;
       width: 70%; } }
@@ -275,52 +371,6 @@ img {
             content: "# ";
             font: 16px "Ubuntu", sans-serif;
             color: #41B883; }
-
-#sidebar {
-  display: flex;
-  flex-direction: column;
-  background: #FFF;
-  padding: 60px;
-  position: fixed;
-  height: 100%;
-  min-height: 410px;
-  width: 40%;
-  z-index: 2; }
-  @media (max-width: 599px) {
-    #sidebar {
-      padding: 30px; } }
-  @media (max-width: 1099px) {
-    #sidebar {
-      position: relative;
-      justify-content: center;
-      height: 100%;
-      width: 100%; } }
-  #sidebar .sidebar-content {
-    margin: auto auto; }
-    #sidebar .sidebar-content .sidebar-title {
-      font: bold 44px "Ubuntu", sans-serif;
-      color: #263238;
-      margin: 0; }
-      @media (max-width: 599px) {
-        #sidebar .sidebar-content .sidebar-title {
-          font-size: 35px; } }
-    #sidebar .sidebar-content .sidebar-subtitle {
-      font: bold 30px "Ubuntu", sans-serif;
-      color: #263238;
-      margin: 0 0 25px 0; }
-      @media (max-width: 599px) {
-        #sidebar .sidebar-content .sidebar-subtitle {
-          font-size: 24px; } }
-    #sidebar .sidebar-content .sidebar-desc {
-      margin: 0 0 28px 0;
-      max-width: 450px;
-      font: 16px "Open Sans", sans-serif;
-      font-weight: 400;
-      line-height: 1.6;
-      color: #263238; }
-
-#projects {
-  width: 100%; }
 
 #skills {
   width: 100%;

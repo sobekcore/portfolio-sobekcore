@@ -13,8 +13,6 @@
     min-height: 0;
   }
 
-  $icon-padding: 4px;
-
   .project-header {
     display: flex;
     align-items: center;
@@ -40,7 +38,7 @@
         }
       }
 
-      .project-desc {
+      .project-short-desc {
         margin: 0;
         @include typography;
 
@@ -52,96 +50,140 @@
   }
 
   .project-img {
-    width: 460px;
-    max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 0 18px $main-shadow-color;
     margin: 24px 0;
-    opacity: 0.9;
+    @include indentSectionWidth;
 
-    @media (min-width: $big-breakpoint) {
-      width: calc(70% - 70px);
-      max-width: 830px;
+    &.static {
+      animation: none;
+    }
+
+    &.forward {
+      animation: animateProjectForward .4s normal;
+    }
+
+    &.backward {
+      animation: animateProjectBackward .4s normal;
     }
   }
 
   .project-details {
-    display: inline-flex;
-    justify-content: space-between;
-    max-width: 100%;
-    @include sectionWidth;
+    display: flex;
+    row-gap: 24px;
+    flex-direction: column;
+    margin: 24px 0;
+    @include indentSectionWidth;
 
-    .project-sites {
+    &.static {
+      animation: none;
+    }
+
+    &.forward {
+      animation: animateProjectForward .4s normal;
+    }
+
+    &.backward {
+      animation: animateProjectBackward .4s normal;
+    }
+
+    .project-desc {
+      text-align: justify;
+      @include typography;
+    }
+
+    .project-details-bottom {
       display: inline-flex;
-      margin: ($icon-padding * -1) 0 0 ($icon-padding * -1);
-      max-width: 100%;
-      list-style: none;
-      padding: 0;
-      gap: 8px;
-      @include sectionWidth;
+      justify-content: space-between;
 
-      .project-site {
-        height: 44px;
+      .project-sites {
+        display: inline-flex;
+        flex-direction: column;
+        max-width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-        .project-link {
-          display: block;
-          height: 100%;
+        .project-site {
+          height: 28px;
 
-          &:hover {
-            & ~ .project-badge,
-            & > .project-icon {
+          .project-link {
+            display: inline-flex;
+            align-items: center;
+            column-gap: 8px;
+            height: 100%;
+            opacity: 0.4;
+            @include transparentHover;
+
+            &:hover {
               opacity: 1;
             }
-          }
 
-          .project-icon {
-            font-size: 36px;
+            .project-icon {
+              font-size: 24px;
+              color: $main-gray-color;
+            }
+
+            .project-link-title {
+              font: bold 20px "Ubuntu", sans-serif;
+              color: $main-gray-color;
+              text-transform: uppercase;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+
+      .project-technologies {
+        display: inline-flex;
+        flex-direction: column;
+        max-width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .project-technology {
+          text-align: right;
+          height: 28px;
+
+          .project-technology-name {
+            font: bold 20px "Ubuntu", sans-serif;
             color: $main-gray-color;
-            padding: $icon-padding;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
             opacity: 0.4;
-            @include transparentHover(false);
+            cursor: default;
+            @include transparentHover;
           }
-        }
-
-        .project-badge {
-          position: absolute;
-          font: bold 11px "Ubuntu", sans-serif;
-          color: $main-white-color;
-          text-transform: uppercase;
-          background: $main-gray-color;
-          padding: 2px 4px;
-          border-radius: 4px;
-          user-select: none;
-          opacity: 0.4;
-          z-index: 1;
-          @include transparentHover(false);
-        }
-
-        .project-badge.live {
-          transform: translateX(6px);
-        }
-
-        .project-badge.code {
-          transform: translateX(3px);
         }
       }
     }
+  }
 
-    .project-technologies {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+  .project-details-toggle {
+    display: inline-flex;
+    max-width: 100%;
+    @include sectionWidth;
 
-      .project-technology {
-        font: bold 20px "Ubuntu", sans-serif;
-        color: $main-gray-color;
-        text-transform: uppercase;
-        white-space: nowrap;
-        text-align: right;
-        cursor: default;
-        opacity: 0.4;
-        @include transparentHover;
-      }
+    &.left {
+      justify-content: flex-start;
+    }
+
+    &.right {
+      justify-content: flex-end;
+    }
+
+    .project-details-toggle-click {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 8px;
+      cursor: pointer;
+      @include typography;
     }
   }
 }
