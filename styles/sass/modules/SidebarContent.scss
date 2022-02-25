@@ -2,9 +2,8 @@
   margin: auto auto;
 
   .sidebar-title {
-    font: bold 44px "Ubuntu", sans-serif;
-    color: $main-gray-color;
     margin: 0;
+    @include titleFontBuilder(44px);
 
     @media (max-width: $small-breakpoint) {
       font-size: 35px;
@@ -12,9 +11,8 @@
   }
 
   .sidebar-subtitle {
-    font: bold 30px "Ubuntu", sans-serif;
-    color: $main-gray-color;
-    margin: 0 0 25px 0;
+    margin: 0 0 26px 0;
+    @include titleFontBuilder(30px);
 
     @media (max-width: $small-breakpoint) {
       font-size: 24px;

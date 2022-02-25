@@ -1,15 +1,24 @@
 @mixin typography($color: $main-gray-color) {
   font: 16px "Open Sans", sans-serif;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.6;
   color: $color;
 }
 
-@mixin transparentHover() {
-  transition: opacity 0.12s ease-out;
+@mixin titleFontBuilder($size: 32px) {
+  font: $size "Ubuntu", sans-serif;
+  font-weight: bold;
+  color: $main-gray-color;
+}
 
-  &:hover {
-    opacity: 1;
+@mixin transparentHover($hover: true) {
+  transition: opacity 0.12s ease-out;
+  opacity: 0.4;
+
+  @if ($hover) {
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 

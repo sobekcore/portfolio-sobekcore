@@ -1,5 +1,5 @@
 import { useState } from "react";
-import enums from "@/utility/enums.js";
+import enums from "@/services/enums.js";
 
 export default function ContactIcons() {
   const [isFlying, setFlying] = useState(false);

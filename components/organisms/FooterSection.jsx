@@ -1,5 +1,5 @@
 import Footer from "@/components/molecules/Footer";
-import enums from "@/utility/enums.js";
+import enums from "@/services/enums.js";
 
 export default function FooterSection() {
   return (

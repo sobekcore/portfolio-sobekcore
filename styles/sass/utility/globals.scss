@@ -38,14 +38,15 @@ a {
 
 .link {
   display: inline-block;
-  font: 16px "Open Sans", sans-serif;
-  color: $main-action-color;
+  @include typography($main-action-color);
 
   &::after {
     content: "";
     display: block;
+    position: relative;
     background-color: $main-action-color;
     transition: width 0.25s ease-out;
+    bottom: 3px;
     height: 1px;
     width: 0;
   }

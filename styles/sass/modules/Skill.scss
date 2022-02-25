@@ -13,6 +13,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    column-gap: 20px;
     max-width: 100%;
     width: 100%;
 
@@ -22,15 +23,12 @@
     }
 
     .skill-img {
-      display: flex;
-      justify-content: center;
       image-rendering: high-quality;
       height: 160px;
       width: 160px;
     }
 
     .skill-desc {
-      margin-left: 20px;
       max-width: 100%;
       width: 360px;
 
@@ -39,10 +37,8 @@
       }
 
       .skill-title {
-        display: inline-block;
-        font: bold 32px "Ubuntu", sans-serif;
-        color: $main-gray-color;
         margin: 0 0 12px;
+        @include titleFontBuilder(32px);
 
         @media (max-width: $small-breakpoint) {
           font-size: 26px;
@@ -58,9 +54,10 @@
           @include typography;
 
           &::before {
-            content: "# ";
+            content: "#";
             font: 16px "Ubuntu", sans-serif;
             color: $main-action-color;
+            margin-right: 5px;
           }
         }
       }

@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import MaterialIcon from "@/components/atoms/MaterialIcon";
-import { smoothScrollAsync } from "@/utility/scroll.js";
+import { smoothScrollAsync } from "@/services/scroll.js";
 
 let alreadyClicked = false;
 let alreadyInteracted = false;
@@ -84,12 +84,12 @@ export default function Project({ project }) {
       <div className={`project-details-toggle ${isToggled ? "left" : "right"}`}>
         {!isToggled && (
           <div className="project-details-toggle-click" onClick={toggleDescription}>
-            Details <MaterialIcon icon="east" />
+            Details <MaterialIcon className="project-details-toggle-icon" icon="east" />
           </div>
         )}
         {isToggled && (
           <div className="project-details-toggle-click" onClick={toggleDescription}>
-            <MaterialIcon icon="west" /> Thumbnail
+            <MaterialIcon className="project-details-toggle-icon" icon="west" /> Thumbnail
           </div>
         )}
       </div>

@@ -35,12 +35,16 @@ a {
 .link {
   display: inline-block;
   font: 16px "Open Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.6;
   color: #41B883; }
   .link::after {
     content: "";
     display: block;
+    position: relative;
     background-color: #41B883;
     transition: width 0.25s ease-out;
+    bottom: 3px;
     height: 1px;
     width: 0; }
   .link:hover::after {
@@ -63,17 +67,28 @@ img {
     opacity: 0; } }
 
 @keyframes animateProjectBackward {
-  100% {
-    opacity: 1; }
   0% {
-    opacity: 0; } }
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
-.contact-icons {
-  display: inline-flex;
-  align-items: center;
-  gap: 18px; }
+@keyframes animatePointingArrowRight {
+  0% {
+    transform: translateX(0); }
+  50% {
+    transform: translateX(6px); }
+  100% {
+    transform: translateX(0); } }
 
-@keyframes Fly {
+@keyframes animatePointingArrowLeft {
+  0% {
+    transform: translateX(0); }
+  50% {
+    transform: translateX(-6px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes paperPlaneFly {
   6% {
     transform: translate(-10px, 10px); }
   24% {
@@ -89,6 +104,11 @@ img {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.contact-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px; }
   .contact-icons .contact-link {
     width: 28px;
     height: 28px;
@@ -103,21 +123,23 @@ img {
     .contact-icons .contact-link:hover > .contact-icon-img {
       opacity: 1; }
   .contact-icons #paper-plane-flying {
-    animation: Fly 1500ms ease; }
+    animation: paperPlaneFly 1500ms ease; }
 
 .sidebar-content {
   margin: auto auto; }
   .sidebar-content .sidebar-title {
-    font: bold 44px "Ubuntu", sans-serif;
-    color: #263238;
-    margin: 0; }
+    margin: 0;
+    font: 44px "Ubuntu", sans-serif;
+    font-weight: bold;
+    color: #263238; }
     @media (max-width: 599px) {
       .sidebar-content .sidebar-title {
         font-size: 35px; } }
   .sidebar-content .sidebar-subtitle {
-    font: bold 30px "Ubuntu", sans-serif;
-    color: #263238;
-    margin: 0 0 25px 0; }
+    margin: 0 0 26px 0;
+    font: 30px "Ubuntu", sans-serif;
+    font-weight: bold;
+    color: #263238; }
     @media (max-width: 599px) {
       .sidebar-content .sidebar-subtitle {
         font-size: 24px; } }
@@ -125,20 +147,19 @@ img {
     margin: 0 0 28px 0;
     max-width: 450px;
     font: 16px "Open Sans", sans-serif;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 1.6;
     color: #263238; }
 
 #sidebar {
   display: flex;
-  flex-direction: column;
+  position: fixed;
   background: #FFF;
   padding: 60px;
-  position: fixed;
   height: 100%;
   min-height: 410px;
   width: 40%;
-  z-index: 2; }
+  z-index: 1; }
   @media (max-width: 599px) {
     #sidebar {
       padding: 30px; } }
@@ -150,7 +171,6 @@ img {
       width: 100%; } }
 
 .project-single {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,6 +185,7 @@ img {
   .project-single .project-header {
     display: flex;
     align-items: center;
+    column-gap: 12px;
     max-width: 100%;
     width: 530px;
     max-width: 100%; }
@@ -173,29 +194,29 @@ img {
         max-width: 900px;
         width: 70%; } }
     .project-single .project-header .project-logo {
-      image-rendering: high-quality;
-      margin-right: 12px; }
+      image-rendering: high-quality; }
     .project-single .project-header .project-info {
       display: flex;
       flex-direction: column; }
       .project-single .project-header .project-info .project-title {
-        font: bold 32px "Ubuntu", sans-serif;
-        color: #263238;
-        margin: 0; }
+        margin: 0;
+        font: 32px "Ubuntu", sans-serif;
+        font-weight: bold;
+        color: #263238; }
         @media (max-width: 599px) {
           .project-single .project-header .project-info .project-title {
             font-size: 26px; } }
       .project-single .project-header .project-info .project-short-desc {
         margin: 0;
         font: 16px "Open Sans", sans-serif;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 1.6;
         color: #263238; }
         @media (max-width: 599px) {
           .project-single .project-header .project-info .project-short-desc {
             display: none; } }
   .project-single .project-img {
-    border-radius: 8px;
+    border-radius: 1% / 2%;
     box-shadow: 0 0 18px rgba(38, 50, 56, 0.8);
     margin: 24px 0;
     width: 460px;
@@ -207,9 +228,9 @@ img {
     .project-single .project-img.static {
       animation: none; }
     .project-single .project-img.forward {
-      animation: animateProjectForward .4s normal; }
+      animation: animateProjectForward 0.4s normal; }
     .project-single .project-img.backward {
-      animation: animateProjectBackward .4s normal; }
+      animation: animateProjectBackward 0.4s normal; }
   .project-single .project-details {
     display: flex;
     row-gap: 24px;
@@ -224,22 +245,25 @@ img {
     .project-single .project-details.static {
       animation: none; }
     .project-single .project-details.forward {
-      animation: animateProjectForward .4s normal; }
+      animation: animateProjectForward 0.4s normal; }
     .project-single .project-details.backward {
-      animation: animateProjectBackward .4s normal; }
+      animation: animateProjectBackward 0.4s normal; }
     .project-single .project-details .project-desc {
       text-align: justify;
       font: 16px "Open Sans", sans-serif;
-      font-weight: 400;
+      font-weight: normal;
       line-height: 1.6;
       color: #263238; }
     .project-single .project-details .project-details-bottom {
-      display: inline-flex;
+      display: flex;
       justify-content: space-between; }
+      @media (max-width: 599px) {
+        .project-single .project-details .project-details-bottom {
+          flex-direction: column;
+          row-gap: 24px; } }
       .project-single .project-details .project-details-bottom .project-sites {
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
-        max-width: 100%;
         list-style: none;
         padding: 0;
         margin: 0; }
@@ -250,46 +274,48 @@ img {
             align-items: center;
             column-gap: 8px;
             height: 100%;
-            opacity: 0.4;
-            transition: opacity 0.12s ease-out; }
-            .project-single .project-details .project-details-bottom .project-sites .project-site .project-link:hover {
-              opacity: 1; }
+            transition: opacity 0.12s ease-out;
+            opacity: 0.4; }
             .project-single .project-details .project-details-bottom .project-sites .project-site .project-link:hover {
               opacity: 1; }
             .project-single .project-details .project-details-bottom .project-sites .project-site .project-link .project-icon {
               font-size: 24px;
               color: #263238; }
             .project-single .project-details .project-details-bottom .project-sites .project-site .project-link .project-link-title {
-              font: bold 20px "Ubuntu", sans-serif;
-              color: #263238;
+              white-space: nowrap;
               text-transform: uppercase;
-              white-space: nowrap; }
+              font: 20px "Ubuntu", sans-serif;
+              font-weight: bold;
+              color: #263238; }
       .project-single .project-details .project-details-bottom .project-technologies {
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
-        max-width: 100%;
         list-style: none;
         padding: 0;
         margin: 0; }
         .project-single .project-details .project-details-bottom .project-technologies .project-technology {
           text-align: right;
           height: 28px; }
+          @media (max-width: 599px) {
+            .project-single .project-details .project-details-bottom .project-technologies .project-technology {
+              text-align: left; } }
           .project-single .project-details .project-details-bottom .project-technologies .project-technology .project-technology-name {
-            font: bold 20px "Ubuntu", sans-serif;
-            color: #263238;
-            text-transform: uppercase;
-            white-space: nowrap;
             display: inline-flex;
-            justify-content: flex-end;
             align-items: center;
+            white-space: nowrap;
+            text-transform: uppercase;
             height: 100%;
-            opacity: 0.4;
+            user-select: all;
             cursor: default;
-            transition: opacity 0.12s ease-out; }
+            transition: opacity 0.12s ease-out;
+            opacity: 0.4;
+            font: 20px "Ubuntu", sans-serif;
+            font-weight: bold;
+            color: #263238; }
             .project-single .project-details .project-details-bottom .project-technologies .project-technology .project-technology-name:hover {
               opacity: 1; }
   .project-single .project-details-toggle {
-    display: inline-flex;
+    display: flex;
     max-width: 100%;
     width: 530px;
     max-width: 100%; }
@@ -299,15 +325,19 @@ img {
         width: 70%; } }
     .project-single .project-details-toggle.left {
       justify-content: flex-start; }
+      .project-single .project-details-toggle.left .project-details-toggle-click:hover .project-details-toggle-icon {
+        animation: animatePointingArrowLeft 0.7s infinite; }
     .project-single .project-details-toggle.right {
       justify-content: flex-end; }
+      .project-single .project-details-toggle.right .project-details-toggle-click:hover .project-details-toggle-icon {
+        animation: animatePointingArrowRight 0.7s infinite; }
     .project-single .project-details-toggle .project-details-toggle-click {
       display: inline-flex;
       align-items: center;
       column-gap: 8px;
       cursor: pointer;
       font: 16px "Open Sans", sans-serif;
-      font-weight: 400;
+      font-weight: normal;
       line-height: 1.6;
       color: #263238; }
 
@@ -331,6 +361,7 @@ img {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    column-gap: 20px;
     max-width: 100%;
     width: 100%; }
     @media (max-width: 599px) {
@@ -338,23 +369,20 @@ img {
         flex-direction: column;
         width: auto; } }
     .skill-single .skill-content .skill-img {
-      display: flex;
-      justify-content: center;
       image-rendering: high-quality;
       height: 160px;
       width: 160px; }
     .skill-single .skill-content .skill-desc {
-      margin-left: 20px;
       max-width: 100%;
       width: 360px; }
       @media (max-width: 599px) {
         .skill-single .skill-content .skill-desc {
           margin: 20px 0 0; } }
       .skill-single .skill-content .skill-desc .skill-title {
-        display: inline-block;
-        font: bold 32px "Ubuntu", sans-serif;
-        color: #263238;
-        margin: 0 0 12px; }
+        margin: 0 0 12px;
+        font: 32px "Ubuntu", sans-serif;
+        font-weight: bold;
+        color: #263238; }
         @media (max-width: 599px) {
           .skill-single .skill-content .skill-desc .skill-title {
             font-size: 26px; } }
@@ -364,22 +392,23 @@ img {
         margin: 0; }
         .skill-single .skill-content .skill-desc .skill-details .skill-detail {
           font: 16px "Open Sans", sans-serif;
-          font-weight: 400;
+          font-weight: normal;
           line-height: 1.6;
           color: #263238; }
           .skill-single .skill-content .skill-desc .skill-details .skill-detail::before {
-            content: "# ";
+            content: "#";
             font: 16px "Ubuntu", sans-serif;
-            color: #41B883; }
+            color: #41B883;
+            margin-right: 5px; }
 
 #skills {
-  width: 100%;
-  background: #EDEDED;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 70px 30px; }
+  background: #EDEDED;
+  padding: 70px 30px;
+  width: 100%; }
 
 .footer {
   background: #263238;
@@ -394,7 +423,7 @@ img {
   .footer .footer-text {
     text-align: center;
     font: 16px "Open Sans", sans-serif;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 1.6;
     color: #FFF; }
     .footer .footer-text .love {
