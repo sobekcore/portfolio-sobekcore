@@ -26,6 +26,7 @@
     "gulp-awspublish": "^4.1.2",
     "gulp-git": "^2.10.1",
     "gulp-sass": "^4.1.0",
+    "lodash.debounce": "^4.0.8",
     "next-plugin-graphql": "^0.0.2",
     "prettier": "^2.2.1",
     "stylelint": "^13.12.0",

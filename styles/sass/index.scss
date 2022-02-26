@@ -10,11 +10,19 @@
 
 // Modules (one file per component)
 @import "modules/ContactIcons";
+@import "modules/AboutSite";
+@import "modules/Copyright";
+
+@import "modules/SidebarDesc";
+@import "modules/SidebarTitle";
 @import "modules/SidebarContent";
 @import "modules/SidebarSection";
+
 @import "modules/Project";
 @import "modules/ProjectsSection";
+
 @import "modules/Skill";
 @import "modules/SkillsSection";
+
 @import "modules/Footer";
 @import "modules/FooterSection";

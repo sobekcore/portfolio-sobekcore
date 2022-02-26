@@ -1,5 +1,5 @@
 import enums from "@/services/enums.js";
 
-export default function FooterCopyright() {
-  return <p className="footer-text">All Rights Reserved © {enums.NAME}</p>;
+export default function Copyright() {
+  return <p className="copyright-text">All Rights Reserved © {enums.NAME}</p>;
 }

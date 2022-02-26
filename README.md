@@ -2,7 +2,7 @@
   Dave's Personal Website
 </h1>
 
-This portfolio is a showcase of my skills and known technologies, as well as brief description about me and projects that i've made. It's made with Next.js, Sanity.io and Gulp. Hosted on AWS S3. Uses best web practises and modern front-end technologies. Hopefully also somewhat eye-pleasing...
+This portfolio is a showcase of my skills and known technologies, as well as brief description about me and projects that i've made. It's made with Next.js, Sanity.io and Gulp. Hosted on AWS S3. Uses best web practises and modern front-end technologies. Hopefully also somewhat eye-pleasing.
 
 ## How it's working?
 <img

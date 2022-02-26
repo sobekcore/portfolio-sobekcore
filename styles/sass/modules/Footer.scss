@@ -10,15 +10,4 @@
     background: $main-white-color;
     color: $main-gray-color;
   }
-
-  .footer-text {
-    text-align: center;
-    @include typography($main-white-color);
-
-    .love {
-      transform: translateY(3px);
-      color: $main-action-color;
-      font-size: 18px;
-    }
-  }
 }

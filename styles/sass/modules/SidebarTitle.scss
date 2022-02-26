@@ -1,0 +1,18 @@
+.sidebar-title {
+  margin: 0;
+  @include titleFontBuilder(44px);
+
+  @media (max-width: $small-breakpoint) {
+    font-size: 35px;
+  }
+}
+
+.sidebar-subtitle {
+  margin: 0 0 26px 0;
+  @include titleFontBuilder(30px);
+
+  @media (max-width: $small-breakpoint) {
+    font-size: 24px;
+  }
+}
+

@@ -1,9 +1,9 @@
-# dependencies
+# Dependencies
 node_modules
 
-# next.js
-/.next
+# Next.js
+.next
 
-# static
-/out
+# Output
+out
 dist

@@ -125,31 +125,52 @@ img {
   .contact-icons #paper-plane-flying {
     animation: paperPlaneFly 1500ms ease; }
 
+.footer-text {
+  text-align: center;
+  font: 16px "Open Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #FFF; }
+  .footer-text .love {
+    transform: translateY(3px);
+    color: #41B883;
+    font-size: 18px; }
+
+.copyright-text {
+  text-align: center;
+  font: 16px "Open Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #FFF; }
+
+.sidebar-desc {
+  margin: 0 0 28px 0;
+  max-width: 450px;
+  font: 16px "Open Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #263238; }
+
+.sidebar-title {
+  margin: 0;
+  font: 44px "Ubuntu", sans-serif;
+  font-weight: bold;
+  color: #263238; }
+  @media (max-width: 599px) {
+    .sidebar-title {
+      font-size: 35px; } }
+
+.sidebar-subtitle {
+  margin: 0 0 26px 0;
+  font: 30px "Ubuntu", sans-serif;
+  font-weight: bold;
+  color: #263238; }
+  @media (max-width: 599px) {
+    .sidebar-subtitle {
+      font-size: 24px; } }
+
 .sidebar-content {
   margin: auto auto; }
-  .sidebar-content .sidebar-title {
-    margin: 0;
-    font: 44px "Ubuntu", sans-serif;
-    font-weight: bold;
-    color: #263238; }
-    @media (max-width: 599px) {
-      .sidebar-content .sidebar-title {
-        font-size: 35px; } }
-  .sidebar-content .sidebar-subtitle {
-    margin: 0 0 26px 0;
-    font: 30px "Ubuntu", sans-serif;
-    font-weight: bold;
-    color: #263238; }
-    @media (max-width: 599px) {
-      .sidebar-content .sidebar-subtitle {
-        font-size: 24px; } }
-  .sidebar-content .sidebar-desc {
-    margin: 0 0 28px 0;
-    max-width: 450px;
-    font: 16px "Open Sans", sans-serif;
-    font-weight: normal;
-    line-height: 1.6;
-    color: #263238; }
 
 #sidebar {
   display: flex;
@@ -420,16 +441,6 @@ img {
   .footer ::selection {
     background: #FFF;
     color: #263238; }
-  .footer .footer-text {
-    text-align: center;
-    font: 16px "Open Sans", sans-serif;
-    font-weight: normal;
-    line-height: 1.6;
-    color: #FFF; }
-    .footer .footer-text .love {
-      transform: translateY(3px);
-      color: #41B883;
-      font-size: 18px; }
 
 .footer-separator {
   width: calc(100% + 1px);

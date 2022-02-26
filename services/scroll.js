@@ -1,4 +1,4 @@
-function smoothScrollAsync(element, options) {
+const smoothScrollAsync = (element, options) => {
   return new Promise((resolve) => {
     if (!(element instanceof Element)) {
       throw new TypeError("First argument must be an Element");
@@ -28,6 +28,6 @@ function smoothScrollAsync(element, options) {
       requestAnimationFrame(check);
     }
   });
-}
+};
 
 export { smoothScrollAsync };
