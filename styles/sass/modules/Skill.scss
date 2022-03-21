@@ -26,6 +26,16 @@
       image-rendering: high-quality;
       height: 160px;
       width: 160px;
+
+      @media (min-width: $big-breakpoint) {
+        width: clamp(130px, 10.5vw, 160px);
+        height: clamp(130px, 10.5vw, 160px);
+      }
+
+      @media (max-width: $big-breakpoint) {
+        width: clamp(130px, 22.5vw, 160px);
+        height: clamp(130px, 22.5vw, 160px);
+      }
     }
 
     .skill-desc {
@@ -38,10 +48,14 @@
 
       .skill-title {
         margin: 0 0 12px;
-        @include titleFontBuilder(32px);
+        @include titleFontBuilder;
 
-        @media (max-width: $small-breakpoint) {
-          font-size: 26px;
+        @media (min-width: $big-breakpoint) {
+          font-size: clamp(26px, 2.1vw, 32px);
+        }
+
+        @media (max-width: $big-breakpoint) {
+          font-size: clamp(26px, 4.5vw, 32px);
         }
       }
 

@@ -8,6 +8,7 @@
 
 body,
 html {
+  min-width: 320px;
   scroll-behavior: smooth;
   overflow-x: hidden;
   padding: 0;
@@ -44,7 +45,7 @@ a {
     position: relative;
     background-color: #41B883;
     transition: width 0.25s ease-out;
-    bottom: 3px;
+    bottom: 4px;
     height: 1px;
     width: 0; }
   .link:hover::after {
@@ -54,10 +55,10 @@ a {
 img {
   user-select: none; }
 
-#content-wrapper {
+.content-wrapper {
   margin-left: 40%; }
   @media (max-width: 1199px) {
-    #content-wrapper {
+    .content-wrapper {
       margin-left: 0; } }
 
 @keyframes animateProjectForward {
@@ -156,18 +157,24 @@ img {
   font: 44px "Ubuntu", sans-serif;
   font-weight: bold;
   color: #263238; }
-  @media (max-width: 599px) {
+  @media (min-width: 1199px) {
     .sidebar-title {
-      font-size: 35px; } }
+      font-size: clamp(35px, 2.8vw, 44px); } }
+  @media (max-width: 1199px) {
+    .sidebar-title {
+      font-size: clamp(35px, 6.2vw, 44px); } }
 
 .sidebar-subtitle {
   margin: 0 0 26px 0;
   font: 30px "Ubuntu", sans-serif;
   font-weight: bold;
   color: #263238; }
-  @media (max-width: 599px) {
+  @media (min-width: 1199px) {
     .sidebar-subtitle {
-      font-size: 24px; } }
+      font-size: clamp(24px, 1.9vw, 30px); } }
+  @media (max-width: 1199px) {
+    .sidebar-subtitle {
+      font-size: clamp(24px, 4.2vw, 30px); } }
 
 .sidebar-content {
   margin: auto auto; }
@@ -188,7 +195,7 @@ img {
     #sidebar {
       position: relative;
       justify-content: center;
-      height: 100%;
+      height: 80vh;
       width: 100%; } }
 
 .project-single {
@@ -224,9 +231,12 @@ img {
         font: 32px "Ubuntu", sans-serif;
         font-weight: bold;
         color: #263238; }
-        @media (max-width: 599px) {
+        @media (min-width: 1199px) {
           .project-single .project-header .project-info .project-title {
-            font-size: 26px; } }
+            font-size: clamp(26px, 2.1vw, 32px); } }
+        @media (max-width: 1199px) {
+          .project-single .project-header .project-info .project-title {
+            font-size: clamp(26px, 4.5vw, 32px); } }
       .project-single .project-header .project-info .project-short-desc {
         margin: 0;
         font: 16px "Open Sans", sans-serif;
@@ -393,6 +403,14 @@ img {
       image-rendering: high-quality;
       height: 160px;
       width: 160px; }
+      @media (min-width: 1199px) {
+        .skill-single .skill-content .skill-img {
+          width: clamp(130px, 10.5vw, 160px);
+          height: clamp(130px, 10.5vw, 160px); } }
+      @media (max-width: 1199px) {
+        .skill-single .skill-content .skill-img {
+          width: clamp(130px, 22.5vw, 160px);
+          height: clamp(130px, 22.5vw, 160px); } }
     .skill-single .skill-content .skill-desc {
       max-width: 100%;
       width: 360px; }
@@ -404,9 +422,12 @@ img {
         font: 32px "Ubuntu", sans-serif;
         font-weight: bold;
         color: #263238; }
-        @media (max-width: 599px) {
+        @media (min-width: 1199px) {
           .skill-single .skill-content .skill-desc .skill-title {
-            font-size: 26px; } }
+            font-size: clamp(26px, 2.1vw, 32px); } }
+        @media (max-width: 1199px) {
+          .skill-single .skill-content .skill-desc .skill-title {
+            font-size: clamp(26px, 4.5vw, 32px); } }
       .skill-single .skill-content .skill-desc .skill-details {
         list-style: none;
         padding: 0;

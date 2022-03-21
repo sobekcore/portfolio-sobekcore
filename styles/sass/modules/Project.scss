@@ -31,8 +31,12 @@
         margin: 0;
         @include titleFontBuilder;
 
-        @media (max-width: $small-breakpoint) {
-          font-size: 26px;
+        @media (min-width: $big-breakpoint) {
+          font-size: clamp(26px, 2.1vw, 32px);
+        }
+
+        @media (max-width: $big-breakpoint) {
+          font-size: clamp(26px, 4.5vw, 32px);
         }
       }
 

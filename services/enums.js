@@ -1,7 +1,11 @@
 export default {
   NAME: "David Sobotka",
   EMAIL: "sobekcore@gmail.com",
-  SANITY_GQL_URL: "https://ypl2q7wt.api.sanity.io/v1/graphql/production/default",
+
+  TWITTER_CONTACT_URL: "https://twitter.com/sobekcore",
+  LINKEDIN_CONTACT_URL: "https://www.linkedin.com/in/dawid-sobotka",
+  GITHUB_CONTACT_URL: "https://github.com/sobekcore",
+
   DECORATORS: "decorators/",
   ICONS: "icons/",
 };

@@ -18,10 +18,10 @@ export default function ContactIcons() {
 
   return (
     <div className="contact-icons">
-      <a className="contact-link" href="https://twitter.com/sobekcore" target="_blank">
+      <a className="contact-link" href={enums.TWITTER_CONTACT_URL} target="_blank">
         <img className="contact-icon-img" alt="Twitter" src={enums.ICONS + "twitter.svg"} />
       </a>
-      <a className="contact-link" href="https://www.linkedin.com/in/dawid-sobotka/" target="_blank">
+      <a className="contact-link" href={enums.LINKEDIN_CONTACT_URL} target="_blank">
         <img className="contact-icon-img" alt="LinkedIn" src={enums.ICONS + "linkedin.svg"} />
       </a>
       <a
@@ -30,7 +30,7 @@ export default function ContactIcons() {
         onClick={planeFly}>
         <img className="contact-icon-img" alt="Email" src={enums.ICONS + "mail.svg"} />
       </a>
-      <a className="contact-link" alt="GitHub" href="https://github.com/sobekcore" target="_blank">
+      <a className="contact-link" alt="GitHub" href={enums.GITHUB_CONTACT_URL} target="_blank">
         <img className="contact-icon-img" alt="Github" src={enums.ICONS + "github.svg"} />
       </a>
     </div>

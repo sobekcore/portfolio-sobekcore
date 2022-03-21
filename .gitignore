@@ -4,6 +4,9 @@ node_modules
 # Next.js
 .next
 
-# Output
+# Build
 out
 dist
+
+# Project Settings
+.idea

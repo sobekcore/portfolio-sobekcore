@@ -40,31 +40,31 @@ export default function Project({ project }) {
   return (
     <section ref={projectElement} className="project-single" style={{ background: project.color }}>
       <div className="project-header">
-        <img alt="Logo" className="project-logo" src={project.logo.asset.url} />
+        <img alt="Logo" className="project-logo" src={project.logo.url} />
         <div className="project-info">
           <h3 className="project-title">{project.title}</h3>
-          <p className="project-short-desc">{project.short_description}</p>
+          <p className="project-short-desc">{project.descriptions.short}</p>
         </div>
       </div>
       {!isToggled && (
-        <img className={`project-img ${projectImageClass}`} src={project.thumbnail.asset.url} />
+        <img className={`project-img ${projectImageClass}`} src={project.thumbnail.url} />
       )}
       {isToggled && (
         <div className={`project-details ${projectDetailsClass}`}>
-          <div className="project-desc">{project.description}</div>
+          <div className="project-desc">{project.descriptions.long}</div>
           <div className="project-details-bottom">
             <ul className="project-sites">
-              {project.website_link && (
+              {project.links.website && (
                 <li className="project-site">
-                  <a className="project-link" href={project.website_link} target="_blank">
+                  <a className="project-link" href={project.links.website} target="_blank">
                     <MaterialIcon icon="open_in_new" className="project-icon" />
                     <span className="project-link-title">Live preview</span>
                   </a>
                 </li>
               )}
-              {project.code_link && (
+              {project.links.code && (
                 <li className="project-site">
-                  <a className="project-link" href={project.code_link} target="_blank">
+                  <a className="project-link" href={project.links.code} target="_blank">
                     <MaterialIcon icon="code" className="project-icon" />
                     <span className="project-link-title">Code</span>
                   </a>

@@ -20,11 +20,11 @@ export default function App({ Component, pageProps }) {
           optimization and new technologies. Making stuff just right."
         />
         <meta name="theme-color" content="#263238" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="Dave's Personal Website" />
         <meta property="og:image" content="https://www.sobekcore.com/og-image.png" />
         <meta property="og:url" content="https://www.sobekcore.com" />
         <meta property="og:locale" content="en_US" />
-        <style></style>
       </Head>
       <Component {...pageProps} />
     </>

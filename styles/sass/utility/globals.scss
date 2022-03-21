@@ -6,6 +6,7 @@
 
 body,
 html {
+  min-width: 320px;
   scroll-behavior: smooth;
   overflow-x: hidden;
   padding: 0;
@@ -46,7 +47,7 @@ a {
     position: relative;
     background-color: $main-action-color;
     transition: width 0.25s ease-out;
-    bottom: 3px;
+    bottom: 4px;
     height: 1px;
     width: 0;
   }
@@ -63,7 +64,7 @@ img {
   user-select: none;
 }
 
-#content-wrapper {
+.content-wrapper {
   margin-left: 40%;
 
   @media (max-width: $big-breakpoint) {
