@@ -4,28 +4,17 @@ import TechSection from "../components/organisms/tech-section";
 import ProjectsSection from "../components/organisms/projects-section";
 import FooterSection from "../components/organisms/footer-section";
 
-import client from "../graphql/apollo-client";
-import sanityQuery from "../graphql/sanity.query.gql";
+import projects from "../data/projects.json";
+import skills from "../data/skills.json";
 
-export default function HomePage({ technologies, projects }) {
+export default function HomePage() {
   return (
     <>
       <Loader />
       <HomeSection />
-      <TechSection technologies={technologies} />
+      <TechSection technologies={skills} />
       <ProjectsSection projects={projects} />
       <FooterSection />
     </>
   );
-}
-
-export async function getStaticProps() {
-  const { data } = await client.query({ query: sanityQuery });
-
-  return {
-    props: {
-      technologies: data.allTechnologies,
-      projects: data.allProjects,
-    },
-  };
 }

@@ -2,11 +2,11 @@ export default function Project({ project }) {
   return (
     <li className="project-single">
       <div className="project-name">
-        <img alt="Logo" className="logo" src={project.image.asset.url} />
-        <a href={project.website_link} target="_blank">
+        <img alt="Logo" className="logo" src={project.logo.url} />
+        <a href={project.links.website} target="_blank">
           <h2 title="Open live website">{project.title}</h2>
         </a>
-        <a className="code-link" href={project.code_link} target="_blank">
+        <a className="code-link" href={project.links.code} target="_blank">
           <h2 role="img" title="Open code on GitHub">
             {"</>"}
           </h2>
@@ -17,7 +17,7 @@ export default function Project({ project }) {
           <li key={technology}>{technology}</li>
         ))}
       </ul>
-      <p>{project.description}</p>
+      <p>{project.descriptions.long}</p>
     </li>
   );
 }
