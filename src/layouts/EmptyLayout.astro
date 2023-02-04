@@ -2,14 +2,14 @@
 import CoreLayout from '@/layouts/CoreLayout.astro';
 
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <CoreLayout title={title}>
-	<main>
-		<slot />
-	</main>
+  <main>
+    <slot />
+  </main>
 </CoreLayout>

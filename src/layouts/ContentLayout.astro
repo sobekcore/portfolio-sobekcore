@@ -2,38 +2,38 @@
 import CoreLayout from '@/layouts/CoreLayout.astro';
 
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <CoreLayout title={title}>
-	<nav>
-		<a href="/">Back</a>
-	</nav>
+  <nav>
+    <a href="/">Back</a>
+  </nav>
 
-	<main>
-		<slot />
-	</main>
+  <main>
+    <slot />
+  </main>
 </CoreLayout>
 
 <style>
-nav {
-	padding: 4rem;
-}
+  nav {
+    padding: 4rem;
+  }
 
-nav a {
-	color: black;
-	text-decoration: none;
-}
+  nav a {
+    color: black;
+    text-decoration: none;
+  }
 
-main {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 65rem;
-	padding-left: 2rem;
-	padding-right: 2rem;
-	width: 100%;
-}
+  main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 65rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+  }
 </style>

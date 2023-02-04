@@ -5,7 +5,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint --fix 'src/**/*.{ts,astro,vue}' && prettier --write 'src/**/*.{ts,astro,vue}'"
   },
   "dependencies": {
     "@astrojs/vue": "^2.0.1",
@@ -16,6 +17,15 @@
     "@swup/a11y-plugin": "^2.1.0",
     "@swup/head-plugin": "^1.3.0",
     "@swup/slide-theme": "^1.0.5",
+    "@typescript-eslint/parser": "^5.50.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.9.0",
+    "prettier": "^2.8.3",
+    "prettier-plugin-astro": "^0.8.0",
     "swup": "^3.0.4"
   }
 }
