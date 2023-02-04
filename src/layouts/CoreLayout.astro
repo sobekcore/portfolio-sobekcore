@@ -1,0 +1,61 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title} | sobekcore.com</title>
+	</head>
+	<body>
+		<div id="swup">
+    	<slot />
+		</div>
+	</body>
+</html>
+
+<script>
+import Swup from 'swup';
+import SwupSlideTheme from '@swup/slide-theme';
+import SwupHeadPlugin from '@swup/head-plugin';
+import SwupA11yPlugin from '@swup/a11y-plugin';
+
+new Swup({
+	plugins: [
+		new SwupSlideTheme(),
+		new SwupHeadPlugin(),
+		new SwupA11yPlugin(),
+	],
+});
+</script>
+
+<style is:global>
+*, *::before *::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: system-ui, sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+span[id^="live-region"] {
+	width: 0 !important;
+	height: 0 !important;
+}
+
+main[tabindex="-1"] {
+  outline: none;
+}
+</style>

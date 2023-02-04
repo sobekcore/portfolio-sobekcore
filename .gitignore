@@ -1,12 +1,15 @@
-# Dependencies
-node_modules
+# build output
+dist/
 
-# Next.js
-.next
+# generated types
+.astro/
 
-# Build
-out
-dist
+# dependencies
+node_modules/
 
-# Project Settings
+# environment variables
+.env
+.env.production
+
+# editor settings
 .idea
