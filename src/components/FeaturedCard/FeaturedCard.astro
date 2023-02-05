@@ -1,0 +1,46 @@
+---
+import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
+import FeaturedCardBackground from './FeaturedCardBackground.astro';
+import FeaturedCardTitle from './FeaturedCardTitle.astro';
+
+export interface Props {
+  title: string;
+  href: string;
+  icon: string;
+  color: string;
+}
+
+const { title, href, icon, color } = Astro.props;
+---
+
+<li>
+  <a href={href}>
+    <FeaturedCardBackground color={color} />
+    <FeaturedCardIcon icon={icon} color={color} />
+    <FeaturedCardTitle title={title} />
+  </a>
+</li>
+
+<style>
+  li {
+    list-style: none;
+  }
+
+  li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    box-shadow: rgb(0 0 0 / 6%) 0 0.125rem 0.25rem, rgb(0 0 0 / 5%) 0 0.05rem 0.1rem;
+    transition: all 0.3s ease-out;
+  }
+
+  li a:hover,
+  li a:focus-visible {
+    box-shadow: rgb(0 0 0 / 22%) 0 1.25rem 2.5rem, rgb(0 0 0 / 18%) 0 0.25rem 0.75rem;
+    transform: translateY(-0.2rem);
+  }
+</style>

@@ -1,0 +1,38 @@
+---
+import MaterialIcon from '../Base/MaterialIcon.astro';
+
+const TYPE_MUI = 'mui';
+const TYPE_FILE = 'file';
+
+export interface Props {
+  icon: string;
+  color: string;
+}
+
+const { icon, color } = Astro.props;
+
+const [type, src] = icon.split(':');
+---
+
+{type === TYPE_MUI && <MaterialIcon name={src} class="icon" style={{ color: color }} />}
+{type === TYPE_FILE && <img src={src} class="icon file" />}
+
+<style>
+  .icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    opacity: 0.3;
+    z-index: 2;
+  }
+
+  .icon.material-icons {
+    font-size: 10rem;
+  }
+
+  .icon.file {
+    height: 8rem;
+    width: 8rem;
+  }
+</style>

@@ -1,0 +1,21 @@
+---
+import type { PropsClass, PropsStyle } from '@/types/props';
+
+export interface Props {
+  name: string;
+  class?: PropsClass;
+  style?: PropsStyle;
+}
+
+const { name, class: className, style } = Astro.props;
+---
+
+<span class:list={['material-icons', className]} style={style}>
+  {name}
+</span>
+
+<style>
+  .material-icons {
+    user-select: none;
+  }
+</style>

@@ -1,0 +1,42 @@
+---
+import MaterialIcon from '@/components/Base/MaterialIcon.astro';
+---
+
+<nav>
+  <a href="/">
+    <MaterialIcon name="keyboard_backspace" class="icon" />
+  </a>
+</nav>
+
+<style>
+  @keyframes animation {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(0.4rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  nav {
+    padding: 4rem;
+  }
+
+  nav a {
+    display: inline-flex;
+    text-decoration: none;
+  }
+
+  nav a:hover,
+  nav a:focus-visible {
+    animation: animation 0.6s infinite;
+  }
+
+  nav a .icon {
+    color: black;
+    font-size: 3rem;
+  }
+</style>

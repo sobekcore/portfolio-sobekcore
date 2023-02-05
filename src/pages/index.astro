@@ -1,16 +1,26 @@
 ---
 import EmptyLayout from '@/layouts/EmptyLayout.astro';
-import Tile from '@/components/Tile.astro';
+import FeaturedCard from '@/components/FeaturedCard/FeaturedCard.astro';
 ---
 
 <EmptyLayout title="Launchpad">
   <ul>
-    <Tile title="About" href="/about" />
-    <Tile title="Places" href="/places" />
-    <Tile title="TBD" href="/tbd" />
-    <Tile title="TBD" href="/tbd" />
-    <Tile title="TBD" href="/tbd" />
-    <Tile title="TBD" href="/tbd" />
+    <FeaturedCard title="About" href="/about" icon="mui:interests" color="#34a853" />
+    <FeaturedCard title="Places" href="/places" icon="mui:hub" color="#fbbc04" />
+    <FeaturedCard
+      title="Black Desert Market"
+      href="/black-desert-market"
+      icon="file:/projects/icons/black-desert-market.png"
+      color="#885e43"
+    />
+    <FeaturedCard
+      title="Simple Facebook Customizer"
+      href="/simple-facebook-customizer"
+      icon="file:/projects/icons/simple-facebook-customizer.png"
+      color="#1876f2"
+    />
+    <FeaturedCard title="TBD" href="/tbd" icon="mui:polyline" color="#696969" />
+    <FeaturedCard title="More" href="/more" icon="mui:hive" color="#ee675c" />
   </ul>
 </EmptyLayout>
 
@@ -23,7 +33,8 @@ import Tile from '@/components/Tile.astro';
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     min-height: 100vh;
-    padding: 0;
+    gap: 2rem;
+    padding: 2rem;
     margin: 0;
   }
 </style>
