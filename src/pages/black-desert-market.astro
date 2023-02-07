@@ -1,7 +1,11 @@
 ---
+import { blackDesertMarket as content } from '~/content/featured-card.json';
 import ContentLayout from '@/layouts/ContentLayout.astro';
+import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
+import FeaturedCardTitle from '@/components/FeaturedCard/FeaturedCardTitle.astro';
 ---
 
-<ContentLayout title="Black Desert Market">
-  <h1>Black Desert Market</h1>
+<ContentLayout title="Black Desert Market" color={content.color}>
+  <FeaturedCardIcon icon={content.icon} color={content.color} />
+  <FeaturedCardTitle title={content.title} />
 </ContentLayout>

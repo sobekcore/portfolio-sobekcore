@@ -1,26 +1,47 @@
 ---
+import content from '~/content/featured-card.json';
 import EmptyLayout from '@/layouts/EmptyLayout.astro';
 import FeaturedCard from '@/components/FeaturedCard/FeaturedCard.astro';
 ---
 
 <EmptyLayout title="Launchpad">
   <ul>
-    <FeaturedCard title="About" href="/about" icon="mui:interests" color="#34a853" />
-    <FeaturedCard title="Places" href="/places" icon="mui:hub" color="#fbbc04" />
     <FeaturedCard
-      title="Black Desert Market"
-      href="/black-desert-market"
-      icon="file:/projects/icons/black-desert-market.png"
-      color="#885e43"
+      title={content.about.title}
+      href={content.about.href}
+      icon={content.about.icon}
+      color={content.about.color}
     />
     <FeaturedCard
-      title="Simple Facebook Customizer"
-      href="/simple-facebook-customizer"
-      icon="file:/projects/icons/simple-facebook-customizer.png"
-      color="#1876f2"
+      title={content.places.title}
+      href={content.places.href}
+      icon={content.places.icon}
+      color={content.places.color}
     />
-    <FeaturedCard title="TBD" href="/tbd" icon="mui:polyline" color="#696969" />
-    <FeaturedCard title="More" href="/more" icon="mui:hive" color="#ee675c" />
+    <FeaturedCard
+      title={content.blackDesertMarket.title}
+      href={content.blackDesertMarket.href}
+      icon={content.blackDesertMarket.icon}
+      color={content.blackDesertMarket.color}
+    />
+    <FeaturedCard
+      title={content.simpleFacebookCustomizer.title}
+      href={content.simpleFacebookCustomizer.href}
+      icon={content.simpleFacebookCustomizer.icon}
+      color={content.simpleFacebookCustomizer.color}
+    />
+    <FeaturedCard
+      title={content.empty.title}
+      href={content.empty.href}
+      icon={content.empty.icon}
+      color={content.empty.color}
+    />
+    <FeaturedCard
+      title={content.more.title}
+      href={content.more.href}
+      icon={content.more.icon}
+      color={content.more.color}
+    />
   </ul>
 </EmptyLayout>
 
@@ -31,10 +52,11 @@ import FeaturedCard from '@/components/FeaturedCard/FeaturedCard.astro';
 
   ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-template-columns: var(--FEATURED_CARD_GRID);
+    gap: var(--FEATURED_CARD_MARGIN);
+    padding: var(--FEATURED_CARD_MARGIN);
     min-height: 100vh;
-    gap: 2rem;
-    padding: 2rem;
     margin: 0;
   }
 </style>

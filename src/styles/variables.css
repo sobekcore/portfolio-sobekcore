@@ -1,0 +1,31 @@
+:root {
+  --BACKGROUND_COLOR: 242, 242, 242;
+  --TEXT_COLOR: 0, 0, 0;
+
+  --FEATURED_CARD_GRID: repeat(3, 1fr);
+  --FEATURED_CARD_PADDING: 4rem;
+  --FEATURED_CARD_MARGIN: 2rem;
+  --FEATURED_CARD_TITLE_Z-INDEX: 1;
+
+  --CONTENT_WIDTH: 1000px;
+  --CONTENT_NAVIGATION_Z-INDEX: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --FEATURED_CARD_GRID: repeat(2, 1fr);
+    --FEATURED_CARD_MARGIN: 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --FEATURED_CARD_GRID: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --FEATURED_CARD_PADDING: 3rem;
+  }
+}

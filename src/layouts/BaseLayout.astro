@@ -1,4 +1,8 @@
 ---
+import '@/styles/variables.css';
+import '@/styles/base.css';
+import 'material-icons/iconfont/material-icons.css';
+
 export interface Props {
   title: string;
 }
@@ -33,35 +37,3 @@ const { title } = Astro.props;
     plugins: [new SwupSlideTheme(), new SwupHeadPlugin(), new SwupScriptsPlugin(), new SwupA11yPlugin()],
   });
 </script>
-
-<style is:global>
-  @import 'material-icons/iconfont/material-icons.css';
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
-  html {
-    font-family: system-ui, sans-serif;
-  }
-
-  body {
-    background: #f2f2f2;
-    margin: 0;
-  }
-
-  span[id^='live-region'] {
-    width: 0 !important;
-    height: 0 !important;
-  }
-
-  main[tabindex='-1'] {
-    outline: none;
-  }
-
-  img {
-    user-select: none;
-  }
-</style>

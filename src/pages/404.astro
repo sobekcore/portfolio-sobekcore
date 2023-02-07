@@ -1,13 +1,15 @@
 ---
 import ContentLayout from '@/layouts/ContentLayout.astro';
+import FeaturedCardTitle from '../components/FeaturedCard/FeaturedCardTitle.astro';
 ---
 
-<ContentLayout title="Page Not Found">
-  <h1>Page Not Found</h1>
+<ContentLayout title="Page Not Found" color="#696969">
+  <FeaturedCardTitle title="Page Not Found" class="title" />
 </ContentLayout>
 
 <style>
-  h1 {
+  .title {
     text-align: center;
+    margin-top: 8rem;
   }
 </style>

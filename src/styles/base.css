@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  min-width: 300px;
+}
+
+body {
+  background: rgb(var(--BACKGROUND_COLOR));
+  margin: 0;
+}
+
+span[id^='live-region'] {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+main[tabindex='-1'] {
+  outline: none;
+}
+
+img {
+  user-select: none;
+}

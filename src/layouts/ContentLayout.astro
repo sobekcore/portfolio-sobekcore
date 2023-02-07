@@ -1,27 +1,42 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ContentLayoutNavigation from '@/layouts/partials/ContentLayoutNavigation.astro';
+import FeaturedCardBackground from '@/components/FeaturedCard/FeaturedCardBackground.astro';
 
 export interface Props {
   title: string;
+  color: string;
 }
 
-const { title } = Astro.props;
+const { title, color } = Astro.props;
 ---
 
 <BaseLayout title={title}>
-  <ContentLayoutNavigation />
+  <section>
+    <FeaturedCardBackground color={color} />
+    <ContentLayoutNavigation />
+  </section>
   <main>
     <slot />
   </main>
 </BaseLayout>
 
 <style>
+  section {
+    position: sticky;
+    top: 0;
+    margin-bottom: var(--FEATURED_CARD_MARGIN);
+    background: rgba(var(--BACKGROUND_COLOR), 0.65);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 40%);
+    backdrop-filter: blur(0.25rem);
+    z-index: var(--CONTENT_NAVIGATION_Z-INDEX);
+  }
+
   main {
-    max-width: 65rem;
+    max-width: var(--CONTENT_WIDTH);
+    padding-left: var(--FEATURED_CARD_MARGIN);
+    padding-right: var(--FEATURED_CARD_MARGIN);
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 </style>

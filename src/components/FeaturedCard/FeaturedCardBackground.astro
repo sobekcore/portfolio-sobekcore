@@ -1,19 +1,19 @@
 ---
 export interface Props {
   color: string;
+  class?: string;
 }
 
-const { color } = Astro.props;
+const { color, class: className } = Astro.props;
 ---
 
-<div style={{ background: color }}></div>
+<div class:list={className} style={{ background: color }}></div>
 
 <style>
   div {
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    opacity: 0.15;
-    z-index: 1;
+    opacity: 15%;
   }
 </style>

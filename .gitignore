@@ -1,15 +1,15 @@
-# build output
+# Build output
 dist/
 
-# generated types
+# Generated types
 .astro/
 
-# dependencies
+# Dependencies
 node_modules/
 
-# environment variables
+# Environment variables
 .env
 .env.production
 
-# editor settings
+# Editor settings
 .idea

@@ -1,7 +1,11 @@
 ---
+import { more as content } from '~/content/featured-card.json';
 import ContentLayout from '@/layouts/ContentLayout.astro';
+import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
+import FeaturedCardTitle from '@/components/FeaturedCard/FeaturedCardTitle.astro';
 ---
 
-<ContentLayout title="More">
-  <h1>More</h1>
+<ContentLayout title="More" color={content.color}>
+  <FeaturedCardIcon icon={content.icon} color={content.color} />
+  <FeaturedCardTitle title={content.title} />
 </ContentLayout>

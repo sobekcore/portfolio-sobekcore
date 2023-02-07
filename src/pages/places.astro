@@ -1,7 +1,11 @@
 ---
+import { places as content } from '~/content/featured-card.json';
 import ContentLayout from '@/layouts/ContentLayout.astro';
+import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
+import FeaturedCardTitle from '@/components/FeaturedCard/FeaturedCardTitle.astro';
 ---
 
-<ContentLayout title="Places">
-  <h1>Places</h1>
+<ContentLayout title="Places" color={content.color}>
+  <FeaturedCardIcon icon={content.icon} color={content.color} />
+  <FeaturedCardTitle title={content.title} />
 </ContentLayout>

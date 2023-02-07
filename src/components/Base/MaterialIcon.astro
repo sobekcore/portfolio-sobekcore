@@ -1,10 +1,8 @@
 ---
-import type { PropsClass, PropsStyle } from '@/types/props';
-
 export interface Props {
   name: string;
-  class?: PropsClass;
-  style?: PropsStyle;
+  class?: string;
+  style?: object;
 }
 
 const { name, class: className, style } = Astro.props;

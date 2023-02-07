@@ -16,8 +16,8 @@ const { title, href, icon, color } = Astro.props;
 <li>
   <a href={href}>
     <FeaturedCardBackground color={color} />
-    <FeaturedCardIcon icon={icon} color={color} />
-    <FeaturedCardTitle title={title} />
+    <FeaturedCardIcon icon={icon} color={color} class="icon" />
+    <FeaturedCardTitle title={title} class="title" />
   </a>
 </li>
 
@@ -32,15 +32,28 @@ const { title, href, icon, color } = Astro.props;
     justify-content: center;
     position: relative;
     height: 100%;
+    padding: var(--FEATURED_CARD_PADDING);
     border-radius: 0.25rem;
     text-decoration: none;
-    box-shadow: rgb(0 0 0 / 6%) 0 0.125rem 0.25rem, rgb(0 0 0 / 5%) 0 0.05rem 0.1rem;
+    box-shadow: rgba(0, 0, 0, 6%) 0 0.125rem 0.25rem, rgba(0, 0, 0, 5%) 0 0.05rem 0.1rem;
     transition: all 0.3s ease-out;
   }
 
   li a:hover,
   li a:focus-visible {
-    box-shadow: rgb(0 0 0 / 22%) 0 1.25rem 2.5rem, rgb(0 0 0 / 18%) 0 0.25rem 0.75rem;
+    box-shadow: rgba(0, 0, 0, 22%) 0 1.25rem 2.5rem, rgba(0, 0, 0, 18%) 0 0.25rem 0.75rem;
     transform: translateY(-0.2rem);
+  }
+
+  li a .icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+
+  li a .title {
+    text-align: center;
+    z-index: var(--FEATURED_CARD_TITLE_Z-INDEX);
   }
 </style>
