@@ -19,4 +19,5 @@ module.exports = {
       },
     },
   ],
+  ignorePatterns: ['env.d.ts'],
 };

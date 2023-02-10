@@ -1,11 +1,13 @@
 ---
-import { more as content } from '~/content/featured-card.json';
+import { getEntryBySlug } from 'astro:content';
 import ContentLayout from '@/layouts/ContentLayout.astro';
 import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
 import FeaturedCardTitle from '@/components/FeaturedCard/FeaturedCardTitle.astro';
+
+const content = await getEntryBySlug('pages', 'more');
 ---
 
-<ContentLayout title="More" color={content.color}>
-  <FeaturedCardIcon icon={content.icon} color={content.color} />
-  <FeaturedCardTitle title={content.title} />
+<ContentLayout title={content.data.title} color={content.data.color}>
+  <FeaturedCardIcon icon={content.data.icon} color={content.data.color} />
+  <FeaturedCardTitle title={content.data.title} />
 </ContentLayout>

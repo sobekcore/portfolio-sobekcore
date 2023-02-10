@@ -1,47 +1,24 @@
 ---
-import content from '~/content/featured-card.json';
+import { getCollection } from 'astro:content';
 import EmptyLayout from '@/layouts/EmptyLayout.astro';
 import FeaturedCard from '@/components/FeaturedCard/FeaturedCard.astro';
+
+const order: string[] = ['about', 'places', 'black-desert-market', 'simple-facebook-customizer', 'empty', 'more'];
+
+const content = await getCollection('pages');
+
+content.sort((current, next): number => {
+  return order.indexOf(current.slug) > order.indexOf(next.slug) ? 1 : -1;
+});
 ---
 
 <EmptyLayout title="Launchpad">
   <ul>
-    <FeaturedCard
-      title={content.about.title}
-      href={content.about.href}
-      icon={content.about.icon}
-      color={content.about.color}
-    />
-    <FeaturedCard
-      title={content.places.title}
-      href={content.places.href}
-      icon={content.places.icon}
-      color={content.places.color}
-    />
-    <FeaturedCard
-      title={content.blackDesertMarket.title}
-      href={content.blackDesertMarket.href}
-      icon={content.blackDesertMarket.icon}
-      color={content.blackDesertMarket.color}
-    />
-    <FeaturedCard
-      title={content.simpleFacebookCustomizer.title}
-      href={content.simpleFacebookCustomizer.href}
-      icon={content.simpleFacebookCustomizer.icon}
-      color={content.simpleFacebookCustomizer.color}
-    />
-    <FeaturedCard
-      title={content.empty.title}
-      href={content.empty.href}
-      icon={content.empty.icon}
-      color={content.empty.color}
-    />
-    <FeaturedCard
-      title={content.more.title}
-      href={content.more.href}
-      icon={content.more.icon}
-      color={content.more.color}
-    />
+    {
+      content.map((page): string => (
+        <FeaturedCard title={page.data.title} href={page.data.href} icon={page.data.icon} color={page.data.color} />
+      ))
+    }
   </ul>
 </EmptyLayout>
 

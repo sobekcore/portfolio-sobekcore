@@ -1,7 +1,7 @@
 ---
+import FeaturedCardBackground from '@/components/FeaturedCard/FeaturedCardBackground.astro';
 import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
-import FeaturedCardBackground from './FeaturedCardBackground.astro';
-import FeaturedCardTitle from './FeaturedCardTitle.astro';
+import FeaturedCardTitle from '@/components/FeaturedCard/FeaturedCardTitle.astro';
 
 export interface Props {
   title: string;
@@ -15,7 +15,7 @@ const { title, href, icon, color } = Astro.props;
 
 <li>
   <a href={href}>
-    <FeaturedCardBackground color={color} />
+    <FeaturedCardBackground color={color} class="background" />
     <FeaturedCardIcon icon={icon} color={color} class="icon" />
     <FeaturedCardTitle title={title} class="title" />
   </a>
@@ -35,13 +35,13 @@ const { title, href, icon, color } = Astro.props;
     padding: var(--FEATURED_CARD_PADDING);
     border-radius: 0.25rem;
     text-decoration: none;
-    box-shadow: rgba(0, 0, 0, 6%) 0 0.125rem 0.25rem, rgba(0, 0, 0, 5%) 0 0.05rem 0.1rem;
-    transition: all 0.3s ease-out;
+    box-shadow: rgba(var(--SHADOW_COLOR), 6%) 0 0.125rem 0.25rem, rgba(var(--SHADOW_COLOR), 5%) 0 0.05rem 0.1rem;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
   }
 
   li a:hover,
   li a:focus-visible {
-    box-shadow: rgba(0, 0, 0, 22%) 0 1.25rem 2.5rem, rgba(0, 0, 0, 18%) 0 0.25rem 0.75rem;
+    box-shadow: rgba(var(--SHADOW_COLOR), 22%) 0 1.25rem 2.5rem, rgba(var(--SHADOW_COLOR), 18%) 0 0.25rem 0.75rem;
     transform: translateY(-0.2rem);
   }
 
@@ -55,5 +55,19 @@ const { title, href, icon, color } = Astro.props;
   li a .title {
     text-align: center;
     z-index: var(--FEATURED_CARD_TITLE_Z-INDEX);
+  }
+
+  /**
+   * @see https://m2.material.io/design/color/dark-theme.html#properties
+   */
+  @media (prefers-color-scheme: dark) {
+    li a .background {
+      transition: opacity 0.3s ease-out;
+    }
+
+    li a:hover .background,
+    li a:focus-visible .background {
+      opacity: 30%;
+    }
   }
 </style>

@@ -14,6 +14,15 @@ const { color, class: className } = Astro.props;
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    opacity: 15%;
+    opacity: 20%;
+  }
+
+  /**
+   * @see https://m2.material.io/design/color/dark-theme.html#ui-application
+   */
+  @media (prefers-color-scheme: dark) {
+    div {
+      filter: grayscale(40%);
+    }
   }
 </style>

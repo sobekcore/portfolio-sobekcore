@@ -1,15 +1,18 @@
 ---
-import { about as content } from '~/content/featured-card.json';
+import { getEntryBySlug } from 'astro:content';
 import ContentLayout from '@/layouts/ContentLayout.astro';
 import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
 import FeaturedCardTitle from '@/components/FeaturedCard/FeaturedCardTitle.astro';
+import ContentArticle from '@/components/Content/ContentArticle.astro';
+
+const content = await getEntryBySlug('pages', 'about');
+const { Content } = await content.render();
 ---
 
-<ContentLayout title="About" color={content.color}>
-  <FeaturedCardIcon icon={content.icon} color={content.color} />
-  <FeaturedCardTitle title={content.title} />
-  <p>
-    This website is a "Launchpad" for side-projects of mine, as well as an aggregation of all the necessary information
-    about stuff that i do and which i would like to share with the world.
-  </p>
+<ContentLayout title={content.data.title} color={content.data.color}>
+  <FeaturedCardIcon icon={content.data.icon} color={content.data.color} />
+  <FeaturedCardTitle title={content.data.title} />
+  <ContentArticle>
+    <Content />
+  </ContentArticle>
 </ContentLayout>

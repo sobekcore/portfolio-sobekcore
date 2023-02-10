@@ -1,6 +1,7 @@
 :root {
   --BACKGROUND_COLOR: 242, 242, 242;
-  --TEXT_COLOR: 0, 0, 0;
+  --TEXT_COLOR: 38, 50, 56;
+  --SHADOW_COLOR: 0, 0, 0;
 
   --FEATURED_CARD_GRID: repeat(3, 1fr);
   --FEATURED_CARD_PADDING: 4rem;
@@ -9,6 +10,13 @@
 
   --CONTENT_WIDTH: 1000px;
   --CONTENT_NAVIGATION_Z-INDEX: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BACKGROUND_COLOR: 22, 26, 29;
+    --TEXT_COLOR: 195, 209, 219;
+  }
 }
 
 @media screen and (max-width: 1000px) {

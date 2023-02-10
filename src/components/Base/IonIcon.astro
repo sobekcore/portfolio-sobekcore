@@ -1,0 +1,16 @@
+---
+import * as icons from 'ionicons/icons/index.mjs';
+import { kebabCaseToCamelCase } from '@/helpers/case-converter';
+
+export interface Props {
+  name: string;
+  class?: string;
+  style?: object;
+}
+
+const { name, class: className, style } = Astro.props;
+
+const icon: string = icons[kebabCaseToCamelCase(name)];
+---
+
+<ion-icon icon={icon} class={className} style={style}></ion-icon>

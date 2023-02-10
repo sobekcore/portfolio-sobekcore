@@ -1,7 +1,7 @@
 ---
-import MaterialIcon from '@/components/Base/MaterialIcon.astro';
+import IonIcon from '@/components/Base/IonIcon.astro';
 
-const TYPE_MUI = 'mui';
+const TYPE_ION = 'ion';
 const TYPE_FILE = 'file';
 
 export interface Props {
@@ -15,20 +15,29 @@ const { icon, color, class: className } = Astro.props;
 const [type, src] = icon.split(':');
 ---
 
-{type === TYPE_MUI && <MaterialIcon name={src} class={`icon ${className}`} style={{ color: color }} />}
+{type === TYPE_ION && <IonIcon name={src} class={`icon ion ${className}`} style={{ color: color }} />}
 {type === TYPE_FILE && <img src={src} class:list={['icon', 'file', className]} />}
 
 <style>
   .icon {
-    opacity: 0.3;
+    opacity: 30%;
   }
 
-  .icon.material-icons {
+  .icon.ion {
     font-size: 8rem;
   }
 
   .icon.file {
     height: 8rem;
     width: 8rem;
+  }
+
+  /**
+   * @see https://m2.material.io/design/color/dark-theme.html#ui-application
+   */
+  @media (prefers-color-scheme: dark) {
+    .icon.ion {
+      filter: grayscale(40%);
+    }
   }
 </style>
