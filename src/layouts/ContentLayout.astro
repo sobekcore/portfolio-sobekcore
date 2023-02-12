@@ -25,7 +25,6 @@ const { title, color } = Astro.props;
   section {
     position: sticky;
     top: 0;
-    margin-bottom: var(--FEATURED_CARD_MARGIN);
     background: rgba(var(--BACKGROUND_COLOR), 0.65);
     box-shadow: 0 0.25rem 0.5rem rgba(var(--SHADOW_COLOR), 40%);
     backdrop-filter: blur(0.25rem);
@@ -34,9 +33,7 @@ const { title, color } = Astro.props;
 
   main {
     max-width: var(--CONTENT_WIDTH);
-    padding-left: var(--FEATURED_CARD_MARGIN);
-    padding-right: var(--FEATURED_CARD_MARGIN);
-    margin-left: auto;
-    margin-right: auto;
+    padding: var(--FEATURED_CARD_MARGIN);
+    margin: 0 auto;
   }
 </style>

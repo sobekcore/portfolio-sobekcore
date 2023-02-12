@@ -4,13 +4,8 @@
   box-sizing: border-box;
 }
 
-*:focus-visible {
-  outline: 3px dashed rgb(var(--TEXT_COLOR));
-  outline-offset: 0;
-}
-
 html {
-  font-family: system-ui, sans-serif;
+  font-family: 'Open Sans', system-ui, sans-serif;
   min-width: 300px;
 }
 
@@ -29,5 +24,6 @@ main[tabindex='-1'] {
 }
 
 img {
+  max-width: 100%;
   user-select: none;
 }

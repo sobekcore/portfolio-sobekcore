@@ -1,0 +1,6 @@
+.link {
+  display: inline-flex;
+  color: rgb(var(--TEXT_COLOR));
+  text-decoration-style: dotted;
+  text-underline-offset: 4px;
+}

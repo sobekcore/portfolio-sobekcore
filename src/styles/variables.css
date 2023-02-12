@@ -4,8 +4,8 @@
   --SHADOW_COLOR: 0, 0, 0;
 
   --FEATURED_CARD_GRID: repeat(3, 1fr);
-  --FEATURED_CARD_PADDING: 4rem;
-  --FEATURED_CARD_MARGIN: 2rem;
+  --FEATURED_CARD_PADDING: 64px;
+  --FEATURED_CARD_MARGIN: 32px;
   --FEATURED_CARD_TITLE_Z-INDEX: 1;
 
   --CONTENT_WIDTH: 1000px;
@@ -14,6 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
     --BACKGROUND_COLOR: 22, 26, 29;
     --TEXT_COLOR: 195, 209, 219;
   }
@@ -22,18 +23,19 @@
 @media screen and (max-width: 1000px) {
   :root {
     --FEATURED_CARD_GRID: repeat(2, 1fr);
-    --FEATURED_CARD_MARGIN: 1rem;
+    --FEATURED_CARD_MARGIN: 16px;
   }
 }
 
 @media screen and (max-width: 800px) {
   :root {
     --FEATURED_CARD_GRID: 1fr;
+    --FEATURED_CARD_PADDING: 48px;
   }
 }
 
 @media screen and (max-width: 600px) {
   :root {
-    --FEATURED_CARD_PADDING: 3rem;
+    --FEATURED_CARD_PADDING: 32px;
   }
 }

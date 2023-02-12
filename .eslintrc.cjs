@@ -5,6 +5,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:astro/recommended',
+    'plugin:mdx/recommended',
     'plugin:vue/vue3-recommended',
     '@vue/typescript/recommended',
     'plugin:prettier/recommended',
@@ -17,6 +18,10 @@ module.exports = {
         parser: '@typescript-eslint/parser',
         extraFileExtensions: ['.astro'],
       },
+    },
+    {
+      files: ['*.mdx'],
+      extends: 'plugin:mdx/recommended',
     },
   ],
   ignorePatterns: ['env.d.ts'],
