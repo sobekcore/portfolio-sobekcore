@@ -4,9 +4,11 @@ import IonIcon from '@/components/Base/IonIcon.astro';
 
 export interface Props {
   name: string;
+  title?: string;
+  href?: string;
 }
 
-const { name } = Astro.props;
+const { name, title, href } = Astro.props;
 
 const content = await getEntryBySlug('socials', name);
 
@@ -15,15 +17,15 @@ if (!content) {
 }
 ---
 
-<a href={content.data.href} target={content.data.external ? '_blank' : '_self'} class="link">
+<a href={href ?? content.data.href} target={content.data.external ? '_blank' : '_self'} class="link">
   <IonIcon name={content.data.icon} class="icon" />
-  <span>{content.data.title}</span>
+  <span>{title ?? content.data.title}</span>
 </a>
 
 <style>
   a {
     align-items: center;
-    column-gap: 0.75rem;
+    column-gap: 0.5rem;
   }
 
   a .icon {

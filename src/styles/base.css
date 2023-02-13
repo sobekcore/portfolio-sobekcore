@@ -14,15 +14,6 @@ body {
   margin: 0;
 }
 
-span[id^='live-region'] {
-  width: 0 !important;
-  height: 0 !important;
-}
-
-main[tabindex='-1'] {
-  outline: none;
-}
-
 img {
   max-width: 100%;
   user-select: none;

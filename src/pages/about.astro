@@ -14,5 +14,8 @@ const { Content } = await content.render();
   <FeaturedCardTitle title={content.data.title} />
   <ContentArticle>
     <Content />
+    <p>
+      <em>The website was generated with {Astro.generator}.</em>
+    </p>
   </ContentArticle>
 </ContentLayout>

@@ -4,3 +4,29 @@ href: '/more'
 icon: 'ion:extension-puzzle'
 color: '#ee675c'
 ---
+
+import ContentLinkedLocation from '@/components/Content/ContentLinkedLocation.astro';
+import SocialLink from '@/components/Base/SocialLink.astro';
+import BaseLink from '@/components/Base/BaseLink.astro';
+
+This page is a mix between my side projects and interesting stuff that i found on the web. Any content that is worth sharing and is related to tech can be found here.
+
+## Side projects
+
+<ContentLinkedLocation title="Rick & Morty Database" icon="file:/projects/rick-and-morty-database/logo.png">
+  <SocialLink name="live-preview" href="https://rick-and-morty.sobekcore.com" />
+  <SocialLink name="github" href="https://github.com/sobekcore/rick-and-morty-db" />
+</ContentLinkedLocation>
+
+<ContentLinkedLocation title="Array Visualizer" icon="file:/projects/array-visualizer/logo.png">
+  <SocialLink name="live-preview" href="https://arrays.sobekcore.com" />
+  <SocialLink name="github" href="https://github.com/sobekcore/array-visualizer" />
+</ContentLinkedLocation>
+
+## Valuable content
+
+<ContentLinkedLocation title="Google Chrome Comics" icon="ion:link">
+  <BaseLink href="https://www.google.com/googlebooks/chrome/small_00.html">
+    {'https://www.google.com/googlebooks/chrome/small_00.html'}
+  </BaseLink>
+</ContentLinkedLocation>

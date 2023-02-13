@@ -3,11 +3,22 @@ import { getEntryBySlug } from 'astro:content';
 import ContentLayout from '@/layouts/ContentLayout.astro';
 import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
 import FeaturedCardTitle from '@/components/FeaturedCard/FeaturedCardTitle.astro';
+import ContentArticle from '@/components/Content/ContentArticle.astro';
 
 const content = await getEntryBySlug('pages', 'more');
+const { Content } = await content.render();
 ---
 
 <ContentLayout title={content.data.title} color={content.data.color}>
   <FeaturedCardIcon icon={content.data.icon} color={content.data.color} />
   <FeaturedCardTitle title={content.data.title} />
+  <ContentArticle>
+    <Content />
+  </ContentArticle>
 </ContentLayout>
+
+<style is:global>
+  h2 {
+    margin-top: 1.66em;
+  }
+</style>
