@@ -25,4 +25,7 @@ module.exports = {
     },
   ],
   ignorePatterns: ['env.d.ts'],
+  rules: {
+    'astro/no-unused-define-vars-in-style': 'off',
+  },
 };

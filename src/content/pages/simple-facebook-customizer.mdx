@@ -2,9 +2,10 @@
 title: 'Simple Facebook Customizer'
 href: '/simple-facebook-customizer'
 icon: 'file:/projects/simple-facebook-customizer/logo.png'
-color: '#1876f2'
+color: '24, 118, 242'
 ---
 
+import ColorSchemeToggle from '@/components/Vue/ColorSchemeToggle.vue';
 import BaseLink from '@/components/Base/BaseLink.astro';
 import BaseImage from '@/components/Base/BaseImage.astro';
 
@@ -12,10 +13,20 @@ This project is a Chrome Web Store extension designed to tailor Facebook experie
 
 The widget allows users to toggle between various different settings that make some changes in the UI, for example it can hide navigation bars, message windows, content sections, adds and more.
 
-<BaseImage
-  src="/projects/simple-facebook-customizer/thumbnail.png"
-  caption="It can be opened at the top right-hand side of a browser window."
-/>
+<ColorSchemeToggle client:visible>
+  <BaseImage
+    slot="light"
+    src="/projects/simple-facebook-customizer/thumbnail-light.png"
+    caption="It can be opened at the top right-hand side of a browser window."
+    aspectRatio="16 / 10"
+  />
+  <BaseImage
+    slot="dark"
+    src="/projects/simple-facebook-customizer/thumbnail-dark.png"
+    caption="It can be opened at the top right-hand side of a browser window."
+    aspectRatio="16 / 10"
+  />
+</ColorSchemeToggle>
 
 The widget follows <BaseLink href="https://about.meta.com/brand/resources/facebookapp/guidelines">Facebook Brand Guidelines</BaseLink> to create a visual identity that is the same as original Facebook application. This creates an experience like it would be Facebook built-in settings instead of an extension.
 

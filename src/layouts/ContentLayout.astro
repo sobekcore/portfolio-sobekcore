@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import HeadThemeColor from '@/components/Base/HeadThemeColor.astro';
 import FeaturedCardBackground from '@/components/FeaturedCard/FeaturedCardBackground.astro';
 import ContentNavigation from '@/components/Content/ContentNavigation.astro';
 
@@ -12,6 +13,7 @@ const { title, color } = Astro.props;
 ---
 
 <BaseLayout title={title}>
+  <HeadThemeColor slot="head" color={color} />
   <section>
     <FeaturedCardBackground color={color} class="background" />
     <ContentNavigation />
@@ -21,7 +23,7 @@ const { title, color } = Astro.props;
   </main>
 </BaseLayout>
 
-<style>
+<style define:vars={{ THEME_COLOR: color }}>
   html {
     overflow-y: scroll;
     scrollbar-gutter: stable;

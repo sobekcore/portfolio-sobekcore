@@ -15,29 +15,21 @@ const { icon, color, class: className } = Astro.props;
 const [type, src] = icon.split(':');
 ---
 
-{type === TYPE_ION && <IonIcon name={src} class={`icon ion ${className}`} style={{ color: color }} />}
+{type === TYPE_ION && <IonIcon name={src} class={`icon ion ${className}`} style={{ color: `rgb(${color})` }} />}
 {type === TYPE_FILE && <img src={src} class:list={['icon', 'file', className]} />}
 
 <style>
   .icon {
-    opacity: 45%;
+    opacity: 60%;
   }
 
   .icon.ion {
     font-size: 8rem;
+    filter: var(--THEME_COLOR_FILTER);
   }
 
   .icon.file {
     height: 8rem;
     width: 8rem;
-  }
-
-  /**
-   * @see https://m2.material.io/design/color/dark-theme.html#ui-application
-   */
-  @media (prefers-color-scheme: dark) {
-    .icon.ion {
-      filter: grayscale(40%);
-    }
   }
 </style>

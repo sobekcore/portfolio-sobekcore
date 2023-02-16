@@ -1,7 +1,12 @@
 :root {
   --BACKGROUND_COLOR: 242, 242, 242;
+  --SECTION_COLOR: 200, 200, 200;
   --TEXT_COLOR: 38, 50, 56;
+  --THEME_COLOR: 65, 184, 131;
+  --WHITE_COLOR: 255, 255, 255;
   --SHADOW_COLOR: 0, 0, 0;
+
+  --THEME_COLOR_FILTER: none;
 
   --FEATURED_CARD_GRID: repeat(3, 1fr);
   --FEATURED_CARD_PADDING: 64px;
@@ -15,8 +20,15 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
+
     --BACKGROUND_COLOR: 22, 26, 29;
+    --SECTION_COLOR: 62, 64, 66;
     --TEXT_COLOR: 195, 209, 219;
+
+    /**
+     * @see https://m2.material.io/design/color/dark-theme.html#ui-application
+     */
+    --THEME_COLOR_FILTER: grayscale(40%);
   }
 }
 
