@@ -1,0 +1,25 @@
+.link {
+  display: inline-flex;
+  color: rgb(var(--TEXT_COLOR));
+  text-decoration-style: dotted;
+  text-underline-offset: 4px;
+  word-break: break-all;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.image::after {
+  content: 'Could not load image';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(var(--TEXT_COLOR));
+  background: rgb(var(--SECTION_COLOR));
+}

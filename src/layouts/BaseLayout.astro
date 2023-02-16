@@ -1,0 +1,84 @@
+---
+import '@/styles/variables.css';
+import '@/styles/base.css';
+import '@/styles/globals.css';
+import '@/styles/fonts.css';
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="keywords" content="frontend, developer, dev, tech, modern, react, vue" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="This website is a “Launchpad” for projects of mine, as well as an aggregation of all the necessary information about stuff that i do and which i would like to share with the world."
+    />
+    <meta
+      property="og:description"
+      content="This website is a “Launchpad” for projects of mine, as well as an aggregation of all the necessary information about stuff that i do and which i would like to share with the world."
+    />
+    <meta property="og:title" content="Dawid Sobotka Personal Website" />
+    <meta property="og:image" content="https://sobekcore.com/thumbnail.png" />
+    <meta property="og:url" content="https://sobekcore.com" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{title} | sobekcore.com</title>
+    <slot name="head" />
+  </head>
+  <body>
+    <div id="swup">
+      <slot />
+    </div>
+  </body>
+</html>
+
+<script>
+  import Swup from 'swup';
+  import SwupSlideTheme from '@swup/slide-theme';
+  import SwupHeadPlugin from '@swup/head-plugin';
+  import SwupScriptsPlugin from '@swup/scripts-plugin';
+  import SwupScrollPlugin from '@swup/scroll-plugin';
+  import SwupA11yPlugin from '@swup/a11y-plugin';
+  import { defineCustomElement } from 'ionicons/components/ion-icon';
+
+  new Swup({
+    plugins: [
+      new SwupSlideTheme(),
+      new SwupHeadPlugin(),
+      new SwupScriptsPlugin(),
+      new SwupScrollPlugin({
+        animateScroll: {
+          betweenPages: false,
+        },
+      }),
+      new SwupA11yPlugin(),
+    ],
+  });
+
+  defineCustomElement();
+</script>
+
+<style is:global>
+  html.is-animating {
+    overflow: hidden;
+  }
+
+  main[tabindex='-1'] {
+    outline: none;
+  }
+
+  span[id^='live-region'] {
+    width: 0 !important;
+    height: 0 !important;
+  }
+</style>

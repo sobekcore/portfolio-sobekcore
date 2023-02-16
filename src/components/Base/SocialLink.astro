@@ -1,0 +1,34 @@
+---
+import { getEntryBySlug } from 'astro:content';
+import IonIcon from '@/components/Base/IonIcon.astro';
+
+export interface Props {
+  name: string;
+  title?: string;
+  href?: string;
+}
+
+const { name, title, href } = Astro.props;
+
+const content = await getEntryBySlug('socials', name);
+
+if (!content) {
+  throw new TypeError(`No such entry "${name}" exists in content collection "socials"`);
+}
+---
+
+<a href={href ?? content.data.href} target={content.data.external ? '_blank' : '_self'} class="link">
+  <IonIcon name={content.data.icon} class="icon" />
+  <span>{title ?? content.data.title}</span>
+</a>
+
+<style>
+  a {
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+
+  a .icon {
+    font-size: 1.5rem;
+  }
+</style>

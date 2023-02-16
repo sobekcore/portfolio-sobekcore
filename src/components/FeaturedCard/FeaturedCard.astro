@@ -1,0 +1,74 @@
+---
+import FeaturedCardBackground from '@/components/FeaturedCard/FeaturedCardBackground.astro';
+import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
+import FeaturedCardTitle from '@/components/FeaturedCard/FeaturedCardTitle.astro';
+
+export interface Props {
+  title: string;
+  href: string;
+  icon: string;
+  color: string;
+}
+
+const { title, href, icon, color } = Astro.props;
+---
+
+<li>
+  <a href={href}>
+    <FeaturedCardBackground color={color} class="background" />
+    <FeaturedCardIcon icon={icon} color={color} class="icon" />
+    <FeaturedCardTitle title={title} class="title" />
+  </a>
+</li>
+
+<style>
+  li {
+    list-style: none;
+  }
+
+  li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    padding: var(--FEATURED_CARD_PADDING);
+    border-radius: 0.25rem;
+    text-decoration: none;
+    box-shadow: rgba(var(--SHADOW_COLOR), 6%) 0 0.125rem 0.25rem, rgba(var(--SHADOW_COLOR), 5%) 0 0.05rem 0.1rem;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  li a:hover,
+  li a:focus-visible {
+    box-shadow: rgba(var(--SHADOW_COLOR), 22%) 0 1.25rem 2.5rem, rgba(var(--SHADOW_COLOR), 18%) 0 0.25rem 0.75rem;
+    transform: translateY(-0.2rem);
+  }
+
+  li a .icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    opacity: 30%;
+  }
+
+  li a .title {
+    text-align: center;
+    z-index: var(--FEATURED_CARD_TITLE_Z-INDEX);
+  }
+
+  /**
+   * @see https://m2.material.io/design/color/dark-theme.html#properties
+   */
+  @media (prefers-color-scheme: dark) {
+    li a .background {
+      transition: opacity 0.3s ease-out;
+    }
+
+    li a:hover .background,
+    li a:focus-visible .background {
+      opacity: 40%;
+    }
+  }
+</style>

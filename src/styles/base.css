@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans', system-ui, sans-serif;
+  min-width: 300px;
+}
+
+body {
+  background: rgb(var(--BACKGROUND_COLOR));
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  user-select: none;
+}

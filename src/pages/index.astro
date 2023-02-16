@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import EmptyLayout from '@/layouts/EmptyLayout.astro';
+import FeaturedCard from '@/components/FeaturedCard/FeaturedCard.astro';
+
+const order: string[] = ['about', 'places', 'black-desert-market', 'simple-facebook-customizer', 'empty', 'more'];
+
+const content = await getCollection('pages');
+
+content.sort((current, next): number => {
+  return order.indexOf(current.slug) > order.indexOf(next.slug) ? 1 : -1;
+});
+---
+
+<EmptyLayout title="Launchpad">
+  <ul>
+    {
+      content.map((page): string => (
+        <FeaturedCard title={page.data.title} href={page.data.href} icon={page.data.icon} color={page.data.color} />
+      ))
+    }
+  </ul>
+</EmptyLayout>
+
+<style>
+  ul {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: var(--FEATURED_CARD_GRID);
+    gap: var(--FEATURED_CARD_MARGIN);
+    padding: var(--FEATURED_CARD_MARGIN);
+    min-height: 100vh;
+    margin: 0;
+  }
+</style>

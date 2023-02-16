@@ -1,0 +1,46 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import HeadThemeColor from '@/components/Base/HeadThemeColor.astro';
+import FeaturedCardBackground from '@/components/FeaturedCard/FeaturedCardBackground.astro';
+import ContentNavigation from '@/components/Content/ContentNavigation.astro';
+
+export interface Props {
+  title: string;
+  color: string;
+}
+
+const { title, color } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <HeadThemeColor slot="head" color={color} />
+  <section>
+    <FeaturedCardBackground color={color} class="background" />
+    <ContentNavigation />
+  </section>
+  <main>
+    <slot />
+  </main>
+</BaseLayout>
+
+<style define:vars={{ THEME_COLOR: color }}>
+  html {
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+  }
+
+  section {
+    position: sticky;
+    top: 0;
+    background: rgba(var(--BACKGROUND_COLOR), 0.65);
+    box-shadow: 0 0.25rem 0.5rem rgba(var(--SHADOW_COLOR), 40%);
+    backdrop-filter: blur(0.25rem);
+    z-index: var(--CONTENT_NAVIGATION_Z-INDEX);
+  }
+
+  main {
+    max-width: var(--CONTENT_WIDTH);
+    padding: var(--FEATURED_CARD_MARGIN);
+    margin: 0 auto;
+  }
+</style>

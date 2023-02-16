@@ -1,0 +1,18 @@
+---
+export interface Props {
+  title: string;
+  class?: string;
+}
+
+const { title, class: className } = Astro.props;
+---
+
+<h1 class:list={className}>
+  {title}
+</h1>
+
+<style>
+  h1 {
+    color: rgb(var(--TEXT_COLOR));
+  }
+</style>

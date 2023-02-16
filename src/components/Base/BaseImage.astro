@@ -1,0 +1,31 @@
+---
+export interface Props {
+  src: string;
+  caption?: string;
+  aspectRatio?: string;
+}
+
+const { src, caption, aspectRatio } = Astro.props;
+---
+
+<figure>
+  <img src={src} class="image" style={{ aspectRatio: aspectRatio }} />
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  figure {
+    margin-block: 2em;
+    margin-inline: 0;
+  }
+
+  figure img {
+    display: block;
+  }
+
+  figure figcaption {
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.33em;
+  }
+</style>

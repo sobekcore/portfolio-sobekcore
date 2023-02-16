@@ -1,0 +1,9 @@
+---
+export interface Props {
+  color: string;
+}
+
+const { color } = Astro.props;
+---
+
+<meta name="theme-color" content={`rgb(${color})`} />

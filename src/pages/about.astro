@@ -1,0 +1,21 @@
+---
+import { getEntryBySlug } from 'astro:content';
+import ContentLayout from '@/layouts/ContentLayout.astro';
+import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
+import FeaturedCardTitle from '@/components/FeaturedCard/FeaturedCardTitle.astro';
+import ContentArticle from '@/components/Content/ContentArticle.astro';
+
+const content = await getEntryBySlug('pages', 'about');
+const { Content } = await content.render();
+---
+
+<ContentLayout title={content.data.title} color={content.data.color}>
+  <FeaturedCardIcon icon={content.data.icon} color={content.data.color} />
+  <FeaturedCardTitle title={content.data.title} />
+  <ContentArticle>
+    <Content />
+    <p>
+      <em>The website was generated with {Astro.generator}.</em>
+    </p>
+  </ContentArticle>
+</ContentLayout>

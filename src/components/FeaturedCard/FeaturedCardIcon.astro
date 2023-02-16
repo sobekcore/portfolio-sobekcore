@@ -1,0 +1,35 @@
+---
+import IonIcon from '@/components/Base/IonIcon.astro';
+
+const TYPE_ION = 'ion';
+const TYPE_FILE = 'file';
+
+export interface Props {
+  icon: string;
+  color?: string;
+  class?: string;
+}
+
+const { icon, color, class: className } = Astro.props;
+
+const [type, src] = icon.split(':');
+---
+
+{type === TYPE_ION && <IonIcon name={src} class={`icon ion ${className}`} style={{ color: `rgb(${color})` }} />}
+{type === TYPE_FILE && <img src={src} class:list={['icon', 'file', className]} />}
+
+<style>
+  .icon {
+    opacity: 60%;
+  }
+
+  .icon.ion {
+    font-size: 8rem;
+    filter: var(--THEME_COLOR_FILTER);
+  }
+
+  .icon.file {
+    height: 8rem;
+    width: 8rem;
+  }
+</style>
