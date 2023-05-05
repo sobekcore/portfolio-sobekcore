@@ -8,14 +8,18 @@ color: '136, 94, 67'
 import BaseLink from '@/components/Base/BaseLink.astro';
 import BaseImage from '@/components/Base/BaseImage.astro';
 
-This project is a web recration of Central Market from the game <BaseLink href="https://en.wikipedia.org/wiki/Black_Desert_Online">Black Desert Online</BaseLink>.
+This project is a web recreation of Central Market from the game <BaseLink href="https://en.wikipedia.org/wiki/Black_Desert_Online">Black Desert Online</BaseLink>.
 
-Originally the UI was made with a C++ graphics engine and used internal game API, recration however is made in a techstack of <BaseLink href="https://vuejs.org">Vue.js</BaseLink> + <BaseLink href="https://tailwindcss.com">Tailwind</BaseLink> for the UI and <BaseLink href="https://nestjs.com">Nest.js</BaseLink> for the API.
+Originally the UI was made with a C++ graphics engine and used internal game API, recreation however is made in a tech-stack of <BaseLink href="https://vuejs.org">Vue.js</BaseLink> + <BaseLink href="https://tailwindcss.com">Tailwind</BaseLink> for the UI and <BaseLink href="https://nestjs.com">Nest.js</BaseLink> for the API.
 
 Color palette is mainly dark gray and brown colors with some exceptions for the most important UI elements. These colors attempt to mimic the color scheme used in the game.
 
 <BaseImage src="/projects/black-desert-market/palette.png" aspectRatio="4 / 1" />
 
-_Project is currently in a Work In Progress state._
+Visual language of the application UI tries to be the same as the original in-game implementation. Main goal is that any player should immediately recognise these components and their purpose. One example of that interaction might be the tooltip component, as seen below.
 
-_More content to be added soon._
+<BaseImage src="/projects/black-desert-market/tooltips.png" aspectRatio="16 / 9" />
+
+Any BDO player will know what this element is responsible for. Thus unifying the expirience between this application and an in-game market.
+
+Besides bringing well-known market experience, in the future application will be able to e.g. send push notifications when item drops below certain price or even install it as an multi-platform application.

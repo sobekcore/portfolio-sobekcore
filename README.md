@@ -1,7 +1,7 @@
 # Personal Website
 To visit, head over to: [https://sobekcore.com](https://sobekcore.com).
 
-This website is a “Launchpad” for projects of mine, as well as an aggregation of all the necessary information about stuff that i do and which i would like to share with the world.
+This website is a “Launchpad” for projects of mine, as well as an aggregation of all the necessary information about stuff that I do and which I would like to share with the world.
 
 ## Technologies
 The site is built with Astro at its core, but is using some interesting techniques to enhance user experience:
@@ -10,4 +10,4 @@ The site is built with Astro at its core, but is using some interesting techniqu
 - [Swup Library](https://github.com/swup/swup) to transition between page redirects
 
 ## Delivery
-To deliver the website as fast as possible, AWS S3 alongisde AWS CloudFront is used. It it performing this fast thanks to AWS' globally-distributed network, which is optimized by client request specific region.
+To deliver the website as fast as possible, AWS S3 alongside AWS CloudFront is used. It is performing this fast thanks to AWS' globally-distributed network, which is optimized by client request specific region.
