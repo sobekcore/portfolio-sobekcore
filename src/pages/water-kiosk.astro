@@ -1,0 +1,24 @@
+---
+import { getEntryBySlug } from 'astro:content';
+import ContentLayout from '@/layouts/ContentLayout.astro';
+import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
+import FeaturedCardTitle from '@/components/FeaturedCard/FeaturedCardTitle.astro';
+import ContentArticle from '@/components/Content/ContentArticle.astro';
+import ContentLinks from '@/components/Content/ContentLinks.astro';
+import SocialLink from '@/components/Base/SocialLink.astro';
+
+const content = await getEntryBySlug('pages', 'water-kiosk');
+const { Content } = await content.render();
+---
+
+<ContentLayout title={content.data.title} color={content.data.color}>
+  <FeaturedCardIcon icon={content.data.icon} color={content.data.color} />
+  <FeaturedCardTitle title={content.data.title} />
+  <ContentLinks>
+    <SocialLink name="live-preview" href="https://water.sobekcore.com" />
+    <SocialLink name="github" href="https://github.com/sobekcore/water-kiosk" />
+  </ContentLinks>
+  <ContentArticle>
+    <Content />
+  </ContentArticle>
+</ContentLayout>
