@@ -1,7 +1,4 @@
 ---
-import * as icons from 'ionicons/icons/index.mjs';
-import { kebabCaseToCamelCase } from '@/helpers/case-converter';
-
 export interface Props {
   name: string;
   class?: string;
@@ -10,14 +7,7 @@ export interface Props {
 
 const { name, class: className, style } = Astro.props;
 
-const icon: string = icons[kebabCaseToCamelCase(name)];
+const { default: icon } = await import(`../../../node_modules/ionicons/dist/ionicons/svg/${name}.svg?raw`);
 ---
 
-<ion-icon icon={icon} class={className} style={style}></ion-icon>
-
-<style>
-  ion-icon {
-    width: 1em;
-    height: 1em;
-  }
-</style>
+<span set:html={icon} class:list={className} style={style} />

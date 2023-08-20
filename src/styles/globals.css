@@ -1,3 +1,10 @@
+.icon {
+  display: inline-flex;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+}
+
 .link {
   display: inline-flex;
   color: rgb(var(--TEXT_COLOR));
