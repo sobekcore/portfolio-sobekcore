@@ -1,0 +1,34 @@
+---
+title: 'Simple Website Customizer'
+href: '/simple-website-customizer'
+icon: 'file:/projects/simple-website-customizer/logo.png'
+color: '126, 93, 255'
+---
+
+import ColorSchemeToggle from '@/components/Vue/ColorSchemeToggle.vue';
+import BaseImage from '@/components/Base/BaseImage.astro';
+
+This project is a Chrome Web Store extension designed to tailor websites experience to your needs.
+
+The widget allows users to toggle between various different settings that make some changes in the UI. Enlarge and shrink - change colors - move and hide elements, and that's just the tip of the iceberg.
+
+<ColorSchemeToggle client:visible>
+  <BaseImage
+    slot="light"
+    src="/projects/simple-website-customizer/thumbnail-light.png"
+    alt="Simple Website Customizer extension preview in light mode."
+    caption="It can be opened at the top right-hand side of a browser window."
+    aspectRatio="16 / 10"
+  />
+  <BaseImage
+    slot="dark"
+    src="/projects/simple-website-customizer/thumbnail-dark.png"
+    alt="Simple Website Customizer extension preview in dark mode."
+    caption="It can be opened at the top right-hand side of a browser window."
+    aspectRatio="16 / 10"
+  />
+</ColorSchemeToggle>
+
+The widget follows best practises for building small, embeddable UIs to create a consistent visual identity. This creates an experience like it would be browser built-in settings instead of an extension.
+
+Widget also allows for adding custom settings to truly make it your own. There is a creator for them with great UX, which means it is really easy to create even advanced settings.

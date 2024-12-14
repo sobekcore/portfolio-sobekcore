@@ -7,7 +7,7 @@ import ContentArticle from '@/components/Content/ContentArticle.astro';
 import ContentLinks from '@/components/Content/ContentLinks.astro';
 import SocialLink from '@/components/Base/SocialLink.astro';
 
-const content = await getEntry('pages', 'simple-facebook-customizer');
+const content = await getEntry('pages', 'simple-website-customizer');
 const { Content } = await content.render();
 ---
 
@@ -17,9 +17,9 @@ const { Content } = await content.render();
   <ContentLinks>
     <SocialLink
       name="chrome-web-store"
-      href="https://chrome.google.com/webstore/detail/simple-facebook-customize/lggklkfbhcbpdighlgjicacbddhjabni"
+      href="https://chromewebstore.google.com/detail/simple-website-customizer/lggklkfbhcbpdighlgjicacbddhjabni"
     />
-    <SocialLink name="github" href="https://github.com/sobekcore/simple-facebook-customizer" />
+    <SocialLink name="github" href="https://github.com/sobekcore/simple-website-customizer" />
   </ContentLinks>
   <ContentArticle>
     <Content />
