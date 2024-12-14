@@ -5,9 +5,9 @@ export interface Props {
   style?: object;
 }
 
-const { name, class: className, style } = Astro.props;
+const { name, class: className, style, ...props } = Astro.props;
 
 const { default: icon } = await import(`../../../node_modules/ionicons/dist/ionicons/svg/${name}.svg?raw`);
 ---
 
-<span set:html={icon} class:list={className} style={style} />
+<span set:html={icon} class:list={className} style={style} {...props} />

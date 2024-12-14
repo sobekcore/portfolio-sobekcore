@@ -1,11 +1,11 @@
 ---
-import { getEntryBySlug } from 'astro:content';
+import { getEntry } from 'astro:content';
 import ContentLayout from '@/layouts/ContentLayout.astro';
 import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
 import FeaturedCardTitle from '@/components/FeaturedCard/FeaturedCardTitle.astro';
 import ContentArticle from '@/components/Content/ContentArticle.astro';
 
-const content = await getEntryBySlug('pages', 'places');
+const content = await getEntry('pages', 'places');
 const { Content } = await content.render();
 ---
 

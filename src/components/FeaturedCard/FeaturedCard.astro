@@ -35,13 +35,19 @@ const { title, href, icon, color } = Astro.props;
     padding: var(--FEATURED_CARD_PADDING);
     border-radius: 0.25rem;
     text-decoration: none;
-    box-shadow: rgba(var(--SHADOW_COLOR), 6%) 0 0.125rem 0.25rem, rgba(var(--SHADOW_COLOR), 5%) 0 0.05rem 0.1rem;
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    box-shadow:
+      rgba(var(--SHADOW_COLOR), 6%) 0 0.125rem 0.25rem,
+      rgba(var(--SHADOW_COLOR), 5%) 0 0.05rem 0.1rem;
+    transition:
+      transform 0.3s ease-out,
+      box-shadow 0.3s ease-out;
   }
 
   li a:hover,
   li a:focus-visible {
-    box-shadow: rgba(var(--SHADOW_COLOR), 22%) 0 1.25rem 2.5rem, rgba(var(--SHADOW_COLOR), 18%) 0 0.25rem 0.75rem;
+    box-shadow:
+      rgba(var(--SHADOW_COLOR), 22%) 0 1.25rem 2.5rem,
+      rgba(var(--SHADOW_COLOR), 18%) 0 0.25rem 0.75rem;
     transform: translateY(-0.2rem);
   }
 

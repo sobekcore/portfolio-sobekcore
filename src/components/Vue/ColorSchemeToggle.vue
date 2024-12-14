@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Ref, ref } from 'vue';
+import { type Ref, ref } from 'vue';
 import ToggleField from '@/components/Vue/Base/ToggleField.vue';
 
 const dark: Ref<boolean> = ref(false);

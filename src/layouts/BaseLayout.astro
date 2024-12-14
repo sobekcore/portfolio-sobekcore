@@ -1,6 +1,7 @@
 ---
 import '@/styles/variables.css';
 import '@/styles/base.css';
+import '@/styles/swup.css';
 import '@/styles/globals.css';
 import '@/styles/fonts.css';
 
@@ -11,7 +12,7 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -39,43 +40,6 @@ const { title } = Astro.props;
     <div id="swup">
       <slot />
     </div>
+    <script src="../index.ts"></script>
   </body>
 </html>
-
-<script>
-  import Swup from 'swup';
-  import SwupSlideTheme from '@swup/slide-theme';
-  import SwupHeadPlugin from '@swup/head-plugin';
-  import SwupScriptsPlugin from '@swup/scripts-plugin';
-  import SwupScrollPlugin from '@swup/scroll-plugin';
-  import SwupA11yPlugin from '@swup/a11y-plugin';
-
-  new Swup({
-    plugins: [
-      new SwupSlideTheme(),
-      new SwupHeadPlugin(),
-      new SwupScriptsPlugin(),
-      new SwupScrollPlugin({
-        animateScroll: {
-          betweenPages: false,
-        },
-      }),
-      new SwupA11yPlugin(),
-    ],
-  });
-</script>
-
-<style is:global>
-  html.is-animating {
-    overflow: hidden;
-  }
-
-  main[tabindex='-1'] {
-    outline: none;
-  }
-
-  span[id^='live-region'] {
-    width: 0 !important;
-    height: 0 !important;
-  }
-</style>

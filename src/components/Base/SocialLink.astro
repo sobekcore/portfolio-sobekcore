@@ -1,5 +1,5 @@
 ---
-import { getEntryBySlug } from 'astro:content';
+import { getEntry } from 'astro:content';
 import IonIcon from '@/components/Base/IonIcon.astro';
 
 export interface Props {
@@ -10,7 +10,7 @@ export interface Props {
 
 const { name, title, href } = Astro.props;
 
-const content = await getEntryBySlug('socials', name);
+const content = await getEntry('socials', name);
 
 if (!content) {
   throw new TypeError(`No such entry "${name}" exists in content collection "socials"`);

@@ -4,10 +4,10 @@ export interface Props {
   class?: string;
 }
 
-const { title, class: className } = Astro.props;
+const { title, class: className, ...props } = Astro.props;
 ---
 
-<h1 class:list={className}>
+<h1 class:list={className} {...props}>
   {title}
 </h1>
 

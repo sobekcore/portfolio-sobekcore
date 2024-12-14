@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Ref, ref } from 'vue';
+import { type Ref, ref } from 'vue';
 
 const emit = defineEmits({
   'update:modelValue': (modelValue): boolean => {
@@ -60,7 +60,9 @@ label::after {
   background-clip: padding-box;
   border: 0.2em solid transparent;
   border-radius: 1.5em;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 input:focus-visible + label {

@@ -10,13 +10,21 @@ export interface Props {
   class?: string;
 }
 
-const { icon, color, class: className } = Astro.props;
+const { icon, color, class: className, ...props } = Astro.props;
 
 const [type, src] = icon.split(':');
 ---
 
-{type === TYPE_ION && <IonIcon name={src} class={`icon ion ${className}`} style={{ color: `rgb(${color})` }} />}
-{type === TYPE_FILE && <img src={src} class:list={['icon', 'file', className]} />}
+{
+  type === TYPE_ION && (
+    <IonIcon name={src} class:list={['icon', 'ion', className]} style={{ color: `rgb(${color})` }} {...props} />
+  )
+}
+{
+  type === TYPE_FILE && (
+    <img src={src} alt="Featured card logo preview." class:list={['icon', 'file', className]} {...props} />
+  )
+}
 
 <style>
   .icon {

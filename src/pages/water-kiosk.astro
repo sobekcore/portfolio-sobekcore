@@ -1,5 +1,5 @@
 ---
-import { getEntryBySlug } from 'astro:content';
+import { getEntry } from 'astro:content';
 import ContentLayout from '@/layouts/ContentLayout.astro';
 import FeaturedCardIcon from '@/components/FeaturedCard/FeaturedCardIcon.astro';
 import FeaturedCardTitle from '@/components/FeaturedCard/FeaturedCardTitle.astro';
@@ -7,7 +7,7 @@ import ContentArticle from '@/components/Content/ContentArticle.astro';
 import ContentLinks from '@/components/Content/ContentLinks.astro';
 import SocialLink from '@/components/Base/SocialLink.astro';
 
-const content = await getEntryBySlug('pages', 'water-kiosk');
+const content = await getEntry('pages', 'water-kiosk');
 const { Content } = await content.render();
 ---
 

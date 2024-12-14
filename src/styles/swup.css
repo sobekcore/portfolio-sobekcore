@@ -1,0 +1,12 @@
+html.is-animating {
+  overflow: hidden;
+}
+
+main[tabindex='-1'] {
+  outline: none;
+}
+
+span[id^='live-region'] {
+  width: 0 !important;
+  height: 0 !important;
+}
