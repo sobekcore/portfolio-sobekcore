@@ -11,14 +11,8 @@
   "dependencies": {
     "@astrojs/mdx": "^4.0.2",
     "@astrojs/vue": "^5.0.2",
-    "@swup/a11y-plugin": "^5.0.0",
-    "@swup/head-plugin": "^2.3.1",
-    "@swup/scripts-plugin": "^2.1.0",
-    "@swup/scroll-plugin": "^3.3.2",
-    "@swup/slide-theme": "^2.0.1",
     "astro": "^5.0.5",
     "ionicons": "^7.4.0",
-    "swup": "^4.8.1",
     "vue": "^3.5.13"
   },
   "devDependencies": {

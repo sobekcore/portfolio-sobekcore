@@ -1,9 +1,13 @@
 ---
+import { ClientRouter } from 'astro:transitions';
 import '@/styles/variables.css';
 import '@/styles/base.css';
-import '@/styles/swup.css';
+import '@/styles/transition.css';
 import '@/styles/globals.css';
 import '@/styles/fonts.css';
+
+const TRANSITION_DURATION = '0.3s';
+const TRANSITION_EASING = 'ease';
 
 export interface Props {
   title: string;
@@ -13,7 +17,27 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  transition:animate={{
+    forwards: {
+      old: [
+        {
+          name: 'leave-page',
+          duration: TRANSITION_DURATION,
+          easing: TRANSITION_EASING,
+        },
+      ],
+      new: [
+        {
+          name: 'enter-page',
+          duration: TRANSITION_DURATION,
+          easing: TRANSITION_EASING,
+        },
+      ],
+    },
+  }}
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -34,12 +58,17 @@ const { title } = Astro.props;
     <meta property="og:locale" content="en_US" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{title} | sobekcore.com</title>
+    <noscript>
+      <style>
+        .noscript {
+          display: none !important;
+        }
+      </style>
+    </noscript>
+    <ClientRouter />
     <slot name="head" />
   </head>
   <body>
-    <div id="swup">
-      <slot />
-    </div>
-    <script src="../index.ts"></script>
+    <slot />
   </body>
 </html>

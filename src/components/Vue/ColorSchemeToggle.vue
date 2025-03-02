@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="field">
+    <div class="field noscript">
       <ToggleField v-model="dark" name="dark" />
       <label for="dark">
         <small>Switch between light and dark mode preview</small>

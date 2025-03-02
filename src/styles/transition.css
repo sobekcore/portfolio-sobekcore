@@ -1,0 +1,6 @@
+@import url(animations/leave-page.css);
+@import url(animations/enter-page.css);
+
+html[data-astro-transition] {
+  overflow: hidden;
+}
